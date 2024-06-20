@@ -1,0 +1,52 @@
+\section{Contexto e Motivação}
+
+Estima-se que 1,57 bilhão de pessoas em todo o mundo tenham algum grau de perda auditiva, o que representa cerca de 20\% da população global \cite{Forbes2023}. Uma parte significativa dessas pessoas se comunica por meio das línguas de sinais, permitindo que conversas e informações sejam transmitidas visualmente usando diferentes formas de comunicação sinalizadas. Seus usuários combinam gestos articulados com as mãos, expressões faciais e movimentos corporais para se comunicarem \cite{Duke2009, Quadros2019, Honora2017}.
+
+No entanto, a \textit{World Federation of the Deaf} (WFD) destaca que não existe uma língua de sinais universal, principalmente devido às singularidades linguísticas em questão, as quais impõem barreiras contundentes para a universalidade das línguas de sinais \cite{ONU2023, Quadros2019}. Segundo a WFD, há aproximadamente 70 milhões de surdos em todo o mundo, que coletivamente utilizam mais de 300 línguas de sinais diferentes \cite{ONU2023}. Tal diversidade linguística gera uma falta de consistência na interpretação e tradução das línguas de sinais, evidenciando uma linha de pesquisa relevante \cite{Napier2019}. Em um cenário hipotético de unificação, as línguas de sinais seriam o terceiro idioma mais falado nos EUA e o quarto no mundo \cite{Duke2009}.
+
+No Brasil, a Língua Brasileira de Sinais (Libras) foi oficialmente reconhecida em 2002 \cite{Quadros2019, Honora2017}, marcando um passo importante para a inclusão social e cultural de seus usuários. Desde então, diversas iniciativas têm sido promovidas visando a inclusão deste público. Segundo o Instituto Brasileiro de Geografia e Estatística (IBGE), 1,2\% da população brasileira com 2 anos ou mais enfrenta dificuldades para ouvir, mesmo com o uso de aparelhos auditivos, o que representa cerca de 2,5 milhões de pessoas \cite{IBGE2022}. Apesar de não serem específicos sobre a Libras, esses números reforçam a relevância desta língua e a necessidade de ampliar as ações de inclusão e acessibilidade.
+
+No âmbito educacional, apesar dos avanços, o Brasil ainda enfrenta desafios consideráveis quanto ao acesso e permanência de Pessoas com Deficiência (PcD) nas escolas. Dados de 2022 revelam que 19,5\% das PcD estão fora do ambiente escolar, uma taxa significativamente superior aos 4,1\% observados entre pessoas sem deficiência \cite{IBGE2022}. Esta disparidade em educação formal pode ser parcialmente atribuída à escassez de tecnologias assistivas, ressaltando a necessidade de inovação e investimento nesta área.
+
+É neste cenário que as Tecnologias de Informação e Comunicação (TICs) ganham importância substancial. Em especial, o \textit{Global Education Monitoring Report} da UNESCO destaca o papel transformador das TICs na educação, impulsionando a inclusão e acessibilidade. Entre as TICs emergentes, as Inteligências Artificiais (IAs) se destacam, sendo identificadas como ferramentas promissoras para o desenvolvimento de tecnologias assistivas alinhadas ao Design Universal. Este conceito preconiza a criação de soluções acessíveis a todos, independente de suas habilidades ou deficiências, um princípio que é vital para fomentar ambientes educacionais inclusivos e promover igualdade no acesso à educação \cite{UNESCO2023}.
+
+A acessibilidade digital, portanto, emerge como um pilar central para a inclusão efetiva de todos os estudantes. O ``Guia de Boas Práticas para Acessibilidade Digital'', elaborado pelo Governo Brasileiro em colaboração com o Reino Unido, oferece diretrizes valiosas para esse fim \cite{GovBr2023}. O guia cobre desde os fundamentos dos princípios de acessibilidade até as melhores práticas em gestão de projetos, desenvolvimento, design e conteúdo, assegurando que as soluções tecnológicas desenvolvidas sejam verdadeiramente acessíveis e atendam às necessidades de todos os usuários, incluindo aqueles que se comunicam através da Libras.
+
+Neste contexto de inovação e inclusão, este projeto de doutorado avança com a proposta da Arquitetura \textit{Speech2Learning}, uma solução de software desenhada para expandir a acessibilidade de objetos de aprendizagem por meio do reconhecimento de fala. Com base na colaboração com a EdTech Brasileira DIO, que disponibilizou uma gama de recursos educacionais e a infraestrutura necessária, o projeto se desdobra em dois estudos de caso cruciais, cada um visando avaliar e implementar instâncias concretas dessa arquitetura com o objetivo de aprimorar a acessibilidade educacional:
+
+\begin{itemize}
+    \item \textbf{\textit{Estudo de Caso 1: Legendas Automáticas de Videoaulas}} - Implementação de uma API REST, alinhada às diretrizes da \textit{Speech2Learning}, para a transcrição e legendagem de vídeoaulas. Este esforço foi meticulosamente avaliado através de análises estatísticas da precisão das transcrições automáticas fornecidas por gigantes tecnológicos como Amazon, Google, IBM, Microsoft e OpenAI \cite{FalvoJr2023_HICSS}. Um aspecto complementar desta avaliação envolveu a criação de um Survey, concentrado em questões quantitativas, para realizar uma triangulação dos dados obtidos e capturar as percepções dos usuários sobre a acurácia das transcrições.
+    \item \textbf{\textit{Estudo de Caso 2: Player de Vídeo com Avatar de Libras}} - Desenvolvimento de um player de vídeo acessível, integrado com avatares de Libras baseados em texto, projetado especificamente para atender às necessidades da comunidade surda. A sinergia com a API desenvolvida no primeiro estudo de caso permite que este player destaque o reconhecimento de fala como um pilar essencial para tornar os objetos de aprendizagem mais inclusivos. Avaliações qualitativas desta instância, por meio de entrevistas com intérpretes de Libras, visam explorar a eficácia e o impacto dessa solução na acessibilidade à educação.
+\end{itemize}
+
+Este projeto de doutorado, portanto, não apenas aborda um problema social relevante, mas também contribui para o campo da acessibilidade digital, oferecendo uma base sólida para soluções que podem ser construídas e adaptadas em contextos educacionais diversos. Através da Arquitetura \textit{Speech2Learning} e de suas instâncias implementadas, espera-se promover um impacto positivo significativo na acessibilidade educacional, abrindo novos caminhos para a inclusão e a igualdade no acesso à educação para todos.
+
+\section{Objetivos e Questões da Pesquisa}
+
+O principal objetivo deste projeto de doutorado é desenvolver e avaliar a Arquitetura \textit{Speech2Learning}, com o intuito de expandir a acessibilidade de objetos de aprendizagem, não apenas para a comunidade surda, mas também para um público mais amplo que necessita de soluções acessíveis. Para atingir este objetivo, o projeto é guiado pelas seguintes questões de pesquisa:
+
+\begin{itemize}
+\item \textbf{QP1:} Como a tecnologia de reconhecimento de fala pode ser efetivamente utilizada para melhorar a acessibilidade de objetos de aprendizagem?
+\begin{itemize}
+\item \textbf{QP1.1:} Qual é o nível de precisão das soluções de reconhecimento de fala automático nos processos de transcrição e legendagem de videoaulas?
+\end{itemize}
+\item \textbf{QP2:} De que forma a integração de um player de vídeo com avatares de Libras, baseados em texto, pode afetar o processo de ensino-aprendizagem de usuários surdos?
+\begin{itemize}
+\item \textbf{QP2.1:} Qual é a percepção dos intérpretes de Libras e da comunidade surda em relação à eficácia e à precisão dos avatares?
+\end{itemize}
+\item \textbf{QP3:} Como as soluções desenvolvidas a partir da Arquitetura \textit{Speech2Learning} podem ser replicadas e adaptadas para outros contextos educacionais, promovendo a inclusão e a igualdade no acesso à educação?
+\end{itemize}
+
+\textbf{Objetivos Específicos:}
+
+\begin{enumerate}
+\item Desenvolver uma API REST para a transcrição automática de videoaulas.
+\item Implementar um player de vídeo acessível que integre avatares de Libras, promovendo a inclusão da comunidade surda.
+\item Avaliar a precisão das transcrições automáticas e a eficácia dos avatares de Libras por meio de estudos de caso.
+\item Investigar o impacto desta tecnologia assistiva na comunidade surda por meio de entrevistas com intérpretes de Libras sobre as soluções desenvolvidas.
+\item Explorar a possibilidade de replicação e adaptação das soluções desenvolvidas para outros contextos educacionais.
+\end{enumerate}
+
+\section{Organização}
+
+Este documento está organizado em cinco capítulos principais, além de referências e apêndices. Após a introdução, que contextualiza a pesquisa e define seus objetivos, a fundamentação teórica é explorada no \autoref{chapter2}, discutindo os principais conceitos e trabalhos relacionados ao tema de pesquisa. O \autoref{chapter3} detalha a Arquitetura \textit{Speech2Learning}, descrevendo sua concepção e camadas, além de suas respectivas responsabilidades para promover OAs mais acessíveis. O \autoref{chapter4} apresenta a aplicação prática da Arquitetura \textit{Speech2Learning} em dois estudos de caso, demonstrando algumas de suas possibilidades de implementação. Por fim, o \autoref{chapter5} consolida nossas conclusões e expande algumas discussões com foco em insigths para trabalhos futuros.
