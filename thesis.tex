@@ -29,9 +29,11 @@
 % Pacotes e Comandos Adicionais (FalvoJr)
 % ---------------------------------------------------------------------------
 \usepackage{caption}
-\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{fontawesome}
 
 \newcolumntype{C}[1]{>{\centering}m{#1}}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
 % ---------------------------------------------------------------------------
 
 
@@ -90,10 +92,10 @@
 \incluilistadetabelas
 
 % Inclui a lista de quadros
-\incluilistadequadros
+%\incluilistadequadros
 
 % Inclui a lista de algoritmos
-\incluilistadealgoritmos
+%\incluilistadealgoritmos
 
 % Inclui a lista de códigos
 \incluilistadecodigos
@@ -125,7 +127,7 @@
 \label{chapter3}
 \input{chapters/3-speech2learning-arch}
 
-\chapter{Arquitetura Speech2Learning na Prática: Análise Detalhada de Estudos de Caso}
+\chapter{Arquitetura Speech2Learning na Prática: Estudos de Caso na Industria}
 \label{chapter4}
 \input{chapters/4-speech2learning-cases}
 
