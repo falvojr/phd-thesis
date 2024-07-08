@@ -396,19 +396,19 @@ A essência dos OAs reside na criação de pequenos módulos instrucionais reuti
 \centering
 \caption{Mapa Conceitual Sobre Objetos de Aprendizagem}
 \label{chapter2:figure:lo-mindmap}
-\includegraphics[width=0.8\textwidth]{images/chapter2-lo-mindmap.jpg}
+\includegraphics[width=0.88\textwidth]{images/chapter2-lo-mindmap.jpg}
 \fadaptada{Tarouco2021}
 \end{figure}
 
 \subsection{Estratégias de Identificação e Utilização de OAs}
 
-O uso e reuso de OAs envolve várias estratégias que facilitam sua adaptação a diferentes contextos educacionais. Conforme discutido por \citeonline{Tarouco2021}, os OAs podem variar em tamanho, escopo e nível de granularidade, afetando diretamente sua reusabilidade (\autoref{chapter2:figure:lo-granularity}). Objetos com granularidade alta, como imagens ou pequenos vídeos, são mais fáceis de reutilizar devido à sua simplicidade e especificidade. Em contraste, OAs de granularidade baixa, como cursos, oferecem uma experiência educacional mais completa e integrada, mas são mais difíceis de adaptar a novos contextos de ensino-aprendizagem.
+O uso e reuso de OAs envolve várias estratégias que facilitam sua adaptação a diferentes contextos educacionais. Conforme discutido por \citeonline{Tarouco2021}, os OAs podem variar em tamanho, escopo e nível de granularidade, afetando diretamente sua reusabilidade (\autoref{chapter2:figure:lo-granularity}). Objetos com granularidade fina, como imagens ou pequenos vídeos, são mais fáceis de reutilizar devido à sua simplicidade e especificidade. Em contraste, OAs de granularidade grande, como cursos, oferecem uma experiência educacional mais completa e integrada, mas são mais difíceis de adaptar a novos contextos de ensino-aprendizagem.
 
 \begin{figure}[htb]
 \centering
 \caption{Granularidade de Objetos de Aprendizagem}
 \label{chapter2:figure:lo-granularity}
-\includegraphics[width=0.65\textwidth]{images/chapter2-lo-granularity.jpg}
+\includegraphics[width=0.7\textwidth]{images/chapter2-lo-granularity.jpeg}
 \fadaptada{Tarouco2021}
 \end{figure}
 
@@ -419,7 +419,7 @@ Nesse sentido, a adoção de padrões de metadados é essencial para a organiza�
 \begin{itemize}
     \item \textit{Dublin Core}\footnote{Mais informações em \url{https://dublincore.org}}: Um padrão internacional que fornece um conjunto simples e padronizado de termos para descrever recursos. O Dublin Core é conhecido por sua simplicidade e extensibilidade, permitindo sua aplicação em diversos contextos, desde bibliotecas digitais até sistemas de informação corporativos.
     \item \sigla{SCORM}{\textit{Sharable Content Object Reference Model}}\footnote{Mais informações em \url{https://adlnet.gov/scorm}}: Um conjunto de padrões e especificações para e-learning que define a comunicação entre o conteúdo de aprendizado online e os sistemas de gerenciamento de aprendizado (LMS). Desenvolvido pela Advanced Distributed Learning (ADL), o SCORM facilita a interoperabilidade e a reutilização de conteúdos educacionais em diferentes plataformas de aprendizado.
-    \item \textit{Motion Imagery Standard Board} (MISB)\footnote{Mais informações em \url{https://nsgreg.nga.mil/misb.jsp}}: Padrão desenvolvido para a gestão e utilização de imagens em movimento, particularmente em contextos que exigem alta precisão e interoperabilidade, como vigilância e análise de vídeo. O MISB, parte da National Geospatial-Intelligence Agency (NGA), assegura que os dados de vídeo sejam consistentes e compatíveis em diferentes sistemas.
+    \item \textit{Motion Imagery Standard Board} (MISB)\footnote{Mais informações em \url{https://nsgreg.nga.mil/misb.jsp}}: Padrão desenvolvido para a gestão e utilização de imagens em movimento, particularmente em contextos que exigem alta precisão e interoperabilidade, como vigilância e análise de vídeo. O MISB, parte da \textit{National Geospatial-Intelligence Agency} (NGA), assegura que os dados de vídeo sejam consistentes e compatíveis em diferentes sistemas.
     \item \sigla{LOM}{\textit{Learning Object Metadata}}\footnote{Mais informações em \url{https://ieeexplore.ieee.org/document/9262118}}: Um padrão para a descrição de metadados de OAs, abrangendo aspectos como a finalidade educacional, estrutura, nível de agregação e condições de uso. Publicado pelo IEEE, o LOM é amplamente utilizado para descrever e categorizar recursos educacionais digitais, facilitando sua descoberta e reutilização.
     \item \sigla{RDF}{\textit{Resource Description Framework}}\footnote{Mais informações em \url{https://w3.org/rdf}}: Uma especificação da W3C que fornece uma base para a descrição de recursos da web. O RDF é utilizado para modelagem de informações, permitindo a interoperabilidade entre diferentes sistemas de informação e facilitando a integração de dados de diversas fontes.
 \end{itemize}
@@ -427,12 +427,12 @@ Nesse sentido, a adoção de padrões de metadados é essencial para a organiza�
 \begin{table}[htb]
 \caption{Comparação Entre os Padrões de Metadados} 
 \label{chapter2:table:lo-metadata}
-\begin{tabular}{P{3.5cm}|P{3cm}|P{3cm}|P{3cm}}\hline
+\begin{tabular}{|P{3.5cm}|P{3cm}|P{3cm}|P{3cm}|}\hline
 \textbf{Padrão de Metadados} & \textbf{Documentação Completa} & \textbf{Processamento Automatizado} & \textbf{Flexibilidade para ES} \\ \hline
-Dublin Core & X & X & X \\ 
-SCORM & X & X & X \\
-MISB & X & X & \\
-LOM & X & X & X \\
+Dublin Core & X & X & X \\  \hline
+SCORM & X & X & X \\ \hline
+MISB & X & X & \\ \hline
+LOM & X & X & X \\ \hline
 RDF & X & X & X \\ \hline
 \end{tabular}
 \fadaptada{Santana2023}
@@ -454,76 +454,138 @@ A próxima seção discorrerá sobre a intencionalidade pedagógica, exemplifica
 
 \subsection{Intencionalidade Pedagógica}
 
-A intencionalidade pedagógica dos OAs pode ser exemplificada pela Taxonomia de Bloom, que categoriza objetivos educacionais em uma hierarquia de complexidade cognitiva \cite{Bloom1984}. Em um trabalho mais recente, \citeonline{Krathwohl2002} propôs uma revisão da taxonomia original, passando a trabalhar este sistema de classificação numa perspectiva bi-dimensional. A primeira é a dimensão do conhecimento e desdobra-se em quatro tipos: Factual, Conceitual, Procedimental e Metaconhecimento.
-
-De acordo com \citeonline{Krathwohl2002}, a segunda dimensão trata sobre os processos cognitivos (comumente chamada de Taxonomia de Bloom Revisada), expressos através das seis categorias adaptadas da taxonomia original de \citeonline{Bloom1984}. O autor introduziu mudanças significativas, com destaque para o uso de verbos ativos em vez de substantivos e a reestruturação de alguns dos níveis. Como resultado, a nova versão organiza os objetivos de aprendizagem nas seguintes categorias: Recordar, Entender, Aplicar, Analisar, Avaliar e Criar \cite{Krathwohl2002}.
-
-Poder usar um OA em diferentes contextos e por diversos usuários é uma de suas características fundamentais. Alguns OAs podem ser mais orientados a trabalhar o desenvolvimento de competências para alcançar uma ou outra categoria, mas podem-se encontrar objetos que são apropriados para mais de uma categoria, ou seja, eles podem ser utilizados em diversas etapas do processo de ensino-aprendizagem como:
+A intencionalidade pedagógica dos OAs pode ser exemplificada pela Taxonomia de Bloom, que categoriza objetivos educacionais em uma hierarquia de complexidade cognitiva \cite{Bloom1984}. Em um trabalho mais recente, \citeonline{Krathwohl2002} propôs uma revisão da taxonomia original, estruturando-a em uma perspectiva bi-dimensional. A primeira dimensão é a do conhecimento, que se desdobra em quatro tipos:
 
 \begin{itemize}
-    \item \textbf{Etapa A}: Como introdução ao conteúdo a ser estudado;
-    \item \textbf{Etapa B}: Para demonstração da teoria estudada;
-    \item \textbf{Etapa C}: Como exemplo de aplicação do conteúdo estudado;
-    \item \textbf{Etapa D}: Como instrumento de avaliação da aprendizagem.
+    \item \textbf{Factual}: conhecimento básico de terminologias e detalhes específicos;
+    \item \textbf{Conceitual}: inter-relações entre os elementos básicos em uma estrutura maior;
+    \item \textbf{Procedimental}: métodos e critérios para realizar tarefas e resolver problemas;
+    \item \textbf{Metaconhecimento}: conhecimento sobre o próprio conhecimento e sua regulação.
 \end{itemize}
 
-%A \autoref{chapter2:lo:bloom-evolution} compara as categorias da taxonomia original e revisada, fornecendo descrições claras para cada nível \citeonline{Tarouco2021}.
-% \begin{table}[htb]
-% \centering
-% \caption{Taxonomia Original \cite{Bloom1984} e Revisada \cite{Krathwohl2002}}
-% \label{chapter2:lo:bloom-evolution}
-% \begin{tabular}{C{2.4cm}|C{1.9cm}|p{10cm}} \hline
-% \textbf{Original} & \textbf{Revisada} & \textbf{Descrição da Categoria} \\ \hline
-% Conhecimento                & Recordar                    & Capacidade de reter conhecimento na memória de longo prazo.         \\ \hline
-% Compreensão                 & Entender                    & Capacidade de construir significado a partir do material instrucional. \\ \hline
-% Aplicação                   & Aplicar                     & Capacidade de utilizar o(s) procedimento(s) adequado(s) à situação vivenciada. \\ \hline
-% Análise                     & Analisar                    & Capacidade de identificar diferentes partes constituintes de um material compreendendo suas inter-relações. \\ \hline
-% Síntese                     & Avaliar                     & Capacidade de estabelecer julgamentos a partir de critérios e padrões. \\ \hline
-% Avaliação                   & Criar                       & Capacidade de transpor o conhecimento construído para novas situações a partir de produtos originais de autoria do próprio estudante. \\ \hline
-% \end{tabular}
-% \fadaptada{Tarouco2021}
-% \end{table}
+A segunda dimensão trata dos processos cognitivos, referida como Taxonomia de Bloom Revisada, que propõem seis categorias adaptadas da taxonomia original de \citeonline{Bloom1984}. \citeonline{Krathwohl2002} introduziu mudanças significativas, com destaque para o uso de verbos ativos em vez de substantivos e a reestruturação de alguns dos níveis. Como resultado, a nova versão organiza os OAs nas seguintes categorias:
 
-Além disso, os OAs podem ser utilizados de forma individual ou coletiva. A escolha dependerá da intencionalidade pedagógica do professor e de sua escolha metodológica. A \autoref{chapter2:lo:samples-bloom-and-steps} ilustra exemplos de atividades com diferentes tipos de OAs, classificados de acordo com as duas dimensões propostas por \citeonline{Krathwohl2002} e apresentadas nesta ordem na Tabela: 1. Taxonomia de Bloom Revisada (Processo Cognitivo); 2. Etapas de Ensino-Aprendizagem.
+\begin{itemize}
+    \item \textbf{Recordar}: Capacidade de reter conhecimento na memória de longo prazo;
+    \item \textbf{Entender}: Capacidade de construir significado a partir do material instrucional;
+    \item \textbf{Aplicar}: Capacidade de utilizar o(s) procedimento(s) adequado(s) à situação vivenciada;
+    \item \textbf{Analisar}: Capacidade de identificar diferentes partes constituintes de um material compreendendo suas inter-relações;
+    \item \textbf{Avaliar}: Capacidade de estabelecer julgamentos a partir de critérios e padrões;
+    \item \textbf{Criar}: Capacidade de transpor o conhecimento construído para novas situações a partir de produtos originais de autoria do próprio estudante.
+\end{itemize}
+
+Em virtude da representação bidimensional dos OAs propostos pela Taxonomia de Bloom Revisada, optou-se por adotar o uso de uma tabela de duas dimensões (\autoref{chapter2:lo:los-categories}) para a classificação destes objetivos. Na tabela proposta, a dimensão do conhecimento é representada pelo eixo vertical, enquanto que a dimensão dos processos cognitivos está no eixo horizontal. O desenvolvimento das dimensões é representado por um verbo (ações associadas ao processo cognitivo pretendido) ou um objeto (um substantivo que descreve o tipo de conhecimento que os alunos esperam adquirir ou construir), que corresponde a cada uma das várias combinações do processo cognitivo e as dimensões do conhecimento.
 
 \begin{table}[htbp]
-\small
+\footnotesize
 \centering
-\caption{Tipos de OAs: Processos Cognitivos e Etapas de Ensino}
-\label{chapter2:lo:samples-bloom-and-steps}
-\begin{tabular}{lP{1.37cm}|P{1.35cm}|P{1.12cm}|P{1.3cm}|P{1.1cm}|P{0.9cm}*{4}{|P{0.4cm}}}
+\caption{Categorização de OAs}
+\label{chapter2:lo:los-categories}
+\begin{tabular}{|P{2.5cm}|c|c|c|c|c|c|}
 \hline
-\multirow{2}{*}{\textbf{Tipo de OA}} & \multicolumn{6}{c|}{\textbf{Processo Cognitivo}} & \multicolumn{4}{c}{\textbf{Etapa de Ensino}} \\ \cline{2-11}
+Dimensão do & \multicolumn{6}{c|}{Dimensão dos Processos Cognitivos} \\ \cline{2-7}
+Conhecimento & \textbf{Recordar} & \textbf{Entender} & \textbf{Aplicar} & \textbf{Analisar} & \textbf{Avaliar} & \textbf{Criar} \\ \hline
+\textbf{Factual} & Listar & Resumir & Responder & Selecionar & Verificar & Generalizar \\ \hline
+\textbf{Conceitual} & Reconhecer & Classificar & Providenciar & Diferenciar & Determinar & Montar \\ \hline
+\textbf{Procedimental} & Recomendar & Esclarecer & Executar & Integrar & Julgar & Projetar \\ \hline
+\textbf{Metacognitivo} & Identificar & Prever & Usar & Desconstruir & Refletir & Criar \\ \hline
+\end{tabular}
+\fadaptada{Mayer2021}
+\end{table}
+
+Poder usar um OA em diferentes contextos e por diversos usuários é uma de suas características fundamentais. Alguns OAs podem ser mais orientados a trabalhar o desenvolvimento de competências para alcançar uma ou outra categoria, mas podem-se encontrar objetos que são apropriados para mais de uma categoria. Ou seja, eles podem ser utilizados em diversas etapas do processo de ensino-aprendizagem, tais como:
+
+\begin{itemize}
+\item \textbf{Etapa A}: Introdução ao conteúdo a ser estudado;
+\item \textbf{Etapa B}: Demonstração da teoria estudada;
+\item \textbf{Etapa C}: Exemplo de aplicação do conteúdo estudado;
+\item \textbf{Etapa D}: Instrumento de avaliação da aprendizagem.
+\end{itemize}
+
+Além disso, os OAs podem ser utilizados de forma individual ou coletiva. A escolha dependerá da intencionalidade pedagógica do professor e de sua escolha metodológica. Para simplificar a contextualização dos OAs dentro das etapas do processo de ensino-aprendizagem, a \autoref{chapter2:lo:samples-bloom-and-steps} foca exclusivamente na dimensão dos processos cognitivos da Taxonomia de Bloom Revisada \cite{Krathwohl2002}. 
+
+Na prática, as etapas do processo de ensino-aprendizagem (introdução, demonstração, aplicação, avaliação) estão mais diretamente relacionadas aos processos cognitivos que os alunos desenvolvem durante essas atividades. Portanto, conectar os processos cognitivos com as etapas do ensino-aprendizagem permite uma visualização mais prática e objetiva dos diferentes tipos de OAs, proporcionando clareza na utilização dos recursos educacionais de acordo com a intencionalidade pedagógica desejada.
+
+\begin{table}[htbp]
+\centering
+\caption{Tipos de OAs: Processos Cognitivos e Etapas de Ensino-Aprendizagem}
+\label{chapter2:lo:samples-bloom-and-steps}
+\begin{tabular}{|l*{6}{|c}*{4}{|P{0.4cm}}|}
+\hline
+\multirow{2}{*}{\textbf{Tipo de OA}} & \multicolumn{6}{c|}{\textbf{Processo Cognitivo}} & \multicolumn{4}{c|}{\textbf{Etapa de Ensino}} \\ \cline{2-11}
  & Recordar & Entender & Aplicar & Analisar & Avaliar & Criar & A & B & C & D \\ \hline
-Texto & \faCheckCircle & \faCheckCircle & \faCheckCircle & \faCheckCircle & \faCheckCircle & \faCheckCircle & \faCheck & \faCheck & \faCheck & \faCheck \\
-Jogo & \faCheckCircle & \faCheckCircle & \faCheckCircle & \faCheckCircleO & \faCheckCircleO & \faCheckCircleO & \faCheck & \faCheck & \faCheck & \faCheck \\
-Simulação & \faCheckCircle & \faCheckCircle & \faCheckCircle & \faCheckCircleO & \faCheckCircleO & \faCheckCircleO & \faCheck & \faCheck & \faCheck & \faCheck \\
-Áudio/Vídeo & \faCheckCircle & \faCheckCircle & \faCheckCircleO & \faCheckCircle & \faCheckCircleO & \faCheckCircleO & \faCheck & \faCheck & \faCheck & \faCheck \\
-Slides & \faCheckCircle & \faCheckCircle & \faCheckCircleO & \faCheckCircle & \faCheckCircleO & \faCheckCircleO & \faCheck & \faCheck & \faCheck & \faCheck \\
-Exercícios & \faCheckCircle & \faCheckCircle & \faCheckCircle & \faCheckCircle & \faCheckCircleO & \faCheckCircleO & \faCheck & \faTimes & \faTimes & \faCheck \\
-Mapa Mental & \faCheckCircle & \faCheckCircle & \faCheckCircle & \faCheckCircle & \faCheckCircleO & \faCheckCircle & \faCheck & \faCheck & \faCheck & \faCheck \\
-Experimento & \faCheckCircle & \faCheckCircle & \faCheckCircle & \faCheckCircle & \faCheckCircle & \faCheckCircleO & \faCheck & \faCheck & \faCheck & \faCheck \\
+Texto & \faCheckCircle & \faCheckCircle & \faCheckCircle & \faCheckCircle & \faCheckCircle & \faCheckCircle & \faCheck & \faCheck & \faCheck & \faCheck \\ \hline
+Jogo & \faCheckCircle & \faCheckCircle & \faCheckCircle & \faCheckCircleO & \faCheckCircleO & \faCheckCircleO & \faCheck & \faCheck & \faCheck & \faCheck \\ \hline
+Simulação & \faCheckCircle & \faCheckCircle & \faCheckCircle & \faCheckCircleO & \faCheckCircleO & \faCheckCircleO & \faCheck & \faCheck & \faCheck & \faCheck \\ \hline
+Áudio/Vídeo & \faCheckCircle & \faCheckCircle & \faCheckCircleO & \faCheckCircle & \faCheckCircleO & \faCheckCircleO & \faCheck & \faCheck & \faCheck & \faCheck \\ \hline
+Slides & \faCheckCircle & \faCheckCircle & \faCheckCircleO & \faCheckCircle & \faCheckCircleO & \faCheckCircleO & \faCheck & \faCheck & \faCheck & \faCheck \\ \hline
+Exercícios & \faCheckCircle & \faCheckCircle & \faCheckCircle & \faCheckCircle & \faCheckCircleO & \faCheckCircleO & \faCheck & \faTimes & \faTimes & \faCheck \\ \hline
+Mapa Mental & \faCheckCircle & \faCheckCircle & \faCheckCircle & \faCheckCircle & \faCheckCircleO & \faCheckCircle & \faCheck & \faCheck & \faCheck & \faCheck \\ \hline
+Experimento & \faCheckCircle & \faCheckCircle & \faCheckCircle & \faCheckCircle & \faCheckCircle & \faCheckCircleO & \faCheck & \faCheck & \faCheck & \faCheck \\ \hline
 Infográfico & \faCheckCircle & \faCheckCircle & \faCheckCircle & \faCheckCircle & \faCheckCircle & \faCheckCircle & \faCheck & \faCheck & \faCheck & \faCheck \\ \hline
 \end{tabular}
 \fadaptada{Mayer2021}
-\caption*{Legenda: \faCheckCircle~(uso comum); \faCheckCircleO~(uso em potencial); \faCheck~(aplicável); \faTimes~(não aplicável).}
+\caption*{Legenda: \faCheckCircle~(uso comum); \faCheckCircleO~(uso em potencial); \faCheck~(aplicado); \faTimes~(não aplicado).}
 \end{table}
 
-Com isso, fica evidente a flexibilidade dos conteúdos do tipo texto no processo de ensino-aprendizagem, que são comumente usados em todos os itens da taxonomia, além de fazer parte de todas as etapas de ensino, demonstrando seu impacto na educação atualmente. Essa característica foi importante para definirmos o escopo da \textit{Speech2Learning} em tornar OAs audíveis mais acessíveis através de ASR, transformando conteúdos de áudio/vídeo em texto, aumentando assim o alcance e acessibilidade desse tipo de OAs.
+Interpretando a \autoref{chapter2:lo:samples-bloom-and-steps}, fica evidente a flexibilidade dos OAs do tipo texto no processo de ensino-aprendizagem atual. Isso porque eles são comumente usados nas seis categorias da taxonomia revisada, além de serem relevantes em todas as etapas do processo de ensino-aprendizagem. Esta característica foi fundamental para delimitarmos o escopo do \textit{Speech2Learning}, cujo foco foi tornar os OAs audíveis mais acessíveis através de ASR/STT, transformando conteúdos de áudio/vídeo em texto, aumentando assim o alcance e a acessibilidade desses tipos de OAs.
+
+Em consonância, o uso de novas tecnologias foi discutido por \citeonline{Tarouco2021} como um fator determinante para potencializar o desempenho de aprendizagem e engajamento dos alunos. Nesse sentido, a 
+\autoref{figure:chapter2-lo-engagement} ilustra como a tutoria individualizada proporciona um desempenho superior, mas com custos excessivos, enquanto novas TICs, incluindo IAGen, podem oferecer melhorias significativas na aprendizagem em escala.
+
+\begin{figure}[htb]
+\centering
+\caption{Impacto de Diferentes Estratégias de Interatividade na Aprendizagem}
+\label{figure:chapter2-lo-engagement}
+\includegraphics[width=1\textwidth]{images/chapter2-lo-engagement.jpg}
+\fadaptada{Tarouco2021}
+\end{figure}
+
+Na próxima seção, exploraremos como o reconhecimento de fala pode promover a acessibilidade digital, abordando temas emergentes como IAGen, \sigla{NLP}{Processamento de Linguagem Natural} e \sigla{LLMs}{Grandes Modelos de Linguagem}. Através dessas tecnologias disruptivas, pretendemos potencializar ainda mais o alcance e a qualidade dos OAs nos mais diversos ambientes educacionais.
 
 \section{Reconhecimento de Fala: Promovendo Acessibilidade Digital com IA}
 \label{section:foundation:asr}
 
-Na era digital, a educação está em constante evolução à medida que as tecnologias emergentes podem remodelar as abordagens pedagógicas tradicionais. Neste contexto, o ASR, interpretado neste trabalho como um sinônimo de STT, emerge como uma ferramenta poderosa. O conceito de ASR não apenas pode potencializar a acessibilidade de conteúdos com transcrições e legendas, mas também representa um passo significativo em direção a uma educação mais inclusiva. Nesse sentido, concordamos com \citeonline{Homburg2019} sobre o potencial do ASR nas TAs para surdos, dentre as quais destacamos os avatares de línguas de sinais baseados em texto em nosso MS \cite{FalvoJr2020_FIE, FalvoJr2020_SBIE, FalvoJr2021_RENOTE}.
+Na era digital, a educação está em constante evolução à medida que as tecnologias emergentes podem remodelar as abordagens pedagógicas tradicionais. Neste contexto, o ASR, interpretado neste trabalho como um sinônimo de STT, emerge como uma ferramenta poderosa. 
 
-Segundo \citeonline{fleischmann2021}, a ascensão do ensino remoto, acelerada por circunstâncias como a pandemia da COVID-19, impulsionou a busca por métodos inovadores para a criação e compartilhamento de conteúdos educacionais. Nessa conjuntura, o ASR se consolidou como uma ferramenta promissora, particularmente em ambientes colaborativos ou conferências online. 
+O conceito de ASR não apenas pode potencializar a acessibilidade de conteúdos com transcrições e legendas, mas também representa um passo significativo em direção a uma educação mais inclusiva. Nesse sentido, concordamos com \citeonline{Homburg2019} sobre o potencial do ASR nas TAs para surdos, dentre as quais destacamos os avatares de línguas de sinais baseados em texto em nosso MS \cite{FalvoJr2020_FIE, FalvoJr2020_SBIE, FalvoJr2021_RENOTE}.
 
-Desta forma, soluções baseadas em ASR desempenham um papel vital ao quebrar barreiras linguísticas, otimizando a comunicação entre falantes de diferentes línguas. Este argumento e reforçado por \citeonline{Homburg2019}, que destaca a relevância da tradução de voz para línguas de sinais visando promover a inclusão da comunidade surda no processo de ensino-aprendizagem.
+Segundo \citeonline{fleischmann2021}, a ascensão do ensino remoto, acelerada por circunstâncias como a pandemia da COVID-19, impulsionou a busca por métodos inovadores para a criação e compartilhamento de conteúdos educacionais. Nessa conjuntura, o ASR se consolidou como uma ferramenta promissora, particularmente em ambientes colaborativos ou conferências online.
+
+Desta forma, soluções baseadas em ASR desempenham um papel vital ao quebrar barreiras linguísticas, otimizando a comunicação entre falantes de diferentes línguas. Este argumento é reforçado por \citeonline{Homburg2019}, que destaca a relevância da tradução de voz para línguas de sinais visando promover a inclusão da comunidade surda no processo de ensino-aprendizagem.
 
 Apesar de seu potencial, o ASR enfrenta diversos obstáculos e desafios de pesquisa. O trabalho de \citeonline{Koenecke2020} destaca alguns deles, apontando para disparidades raciais e as sutilezas de características linguísticas, como sotaques e peculiaridades regionais, assim como identificamos em nosso MS para a Libras. Essas constatações reforçam a relevância de promover soluções baseadas em ASR que sejam verdadeiramente inclusivas e que contemplem um espectro mais amplo de considerações sociolinguísticas em seu projeto e implementação.
 
-\citeonline{Mayer2021} afirmam que o uso de tecnologias disruptivas, como o ASR, é fundamental para ampliar o alcance dos OAs a uma diversidade maior de aprendizes, promovendo conteúdos educacionais mais acessível. Na prática, \citeonline{Parakh2022} descreve OAs como unidades digitais reutilizáveis que muitas vezes são integradas em iniciativas \textit{open-source}, desempenhando um papel crucial ao moldar experiências de ensino-aprendizagem adaptáveis, democráticas e contextualizadas.
+\citeonline{Mayer2021} afirmam que o uso de tecnologias disruptivas, como o ASR, é fundamental para ampliar o alcance dos OAs a uma diversidade maior de aprendizes, promovendo conteúdos educacionais mais acessíveis. Na prática, \citeonline{Parakh2022} descreve OAs como unidades digitais reutilizáveis que muitas vezes são integradas em iniciativas \textit{open-source}, desempenhando um papel crucial ao moldar experiências de ensino-aprendizagem adaptáveis, democráticas e contextualizadas.
 
-Estas recentes perspectivas reforçam e expandem nossas percepções obtidas em nosso MS, que enfatizou a importância das inovações tecnológicas no processo de ensino e aprendizagem de línguas de sinais, revelando gaps interessantes. Nesse sentido, notamos a falta de padrões de projeto, além de boas práticas de código e reuso, o que compromete a qualidade, o compartilhamento e o potencial de impacto desses OAs. Diante destas lacunas e das tendências emergentes citadas, projetamos a Arquitetura \textit{Speech2Learning}. Uma abstração que propõem diretrizes de desenvolvimento para a criação de soluções \textit{ASR-based}, promovendo maior acessibilidade de seus OAs, em especial os audíveis.
+Estas recentes perspectivas reforçam e expandem nossas percepções obtidas em nosso MS, que enfatizou a importância das inovações tecnológicas no processo de ensino e aprendizagem de línguas de sinais, revelando gaps interessantes. Nesse sentido, notamos a falta de padrões de projeto, além de boas práticas de código e reuso, o que compromete a qualidade, o compartilhamento e o potencial de impacto desses OAs. 
+
+Diante destas lacunas e das tendências emergentes citadas, projetamos a Arquitetura \textit{Speech2Learning}. Uma abstração que propõe diretrizes de desenvolvimento para a criação de soluções \textit{ASR-based}, promovendo maior acessibilidade de seus OAs, em especial os audíveis.
+
+A evolução e sofisticação do ASR estão intimamente ligadas aos avanços em \sigla{ML}{\textit{Machine Learning}} e IA. A aplicação de modelos de ML em ASR permite a otimização contínua e a adaptação a diferentes contextos linguísticos e acústicos. Isso é alcançado através de técnicas de treinamento supervisionado e não supervisionado, utilizando vastas quantidades de dados de fala para melhorar a precisão e a robustez dos sistemas de reconhecimento.
+
+O fluxo de processamento de fala em sistemas ASR é ilustrado na \autoref{figure:chapter2-asr-diagram}. O processo começa com a captura do sinal de fala, que é submetido a uma etapa de pré-processamento. Nessa fase, o sinal é filtrado para remover ruídos e normalizado para padrões específicos. Em seguida, ocorre a extração de características, onde as propriedades acústicas relevantes da fala são convertidas em vetores de características. Esses vetores representam os componentes principais da fala que serão utilizados nas próximas etapas.
+
+\begin{figure}[htb]
+\centering
+\caption{Fluxo do Processamento de Fala em Sistemas ASR}
+\label{figure:chapter2-asr-diagram}
+\includegraphics[width=0.9\textwidth]{images/chapter2-asr-diagram.png}
+\fadaptada{Li2018}
+\end{figure}
+
+Após a extração de características, os vetores resultantes são alimentados em um decodificador. O decodificador utiliza modelos acústicos, um dicionário de pronúncia e um modelo de linguagem para interpretar os vetores de características e mapear palavras/frases correspondentes. Os modelos acústicos são responsáveis por capturar as nuances dos sons da fala, enquanto o dicionário de pronúncia fornece a correspondência entre as sequências de fonemas e palavras. 
+
+O modelo de linguagem, que pode ser um LLM, ajuda a prever a sequência mais provável de palavras com base no contexto linguístico. Esta abordagem estruturada e baseada em modelos de ML e IA permite que sistemas de ASR sejam precisos e adaptáveis a uma ampla gama de variabilidades na fala humana.
+
+A distinção entre ASR e STT é muitas vezes sutil e pode ser usada de forma intercambiável, como optamos neste trabalho para simplificação. Enquanto ASR geralmente refere-se ao campo de estudo e tecnologia de reconhecimento automático de fala, STT descreve a função específica de converter fala em texto. Ambos os termos são fundamentais para o desenvolvimento de tecnologias de acessibilidade e têm aplicações que se sobrepõem consideravelmente.
+
+Em resumo, o reconhecimento de fala, através do uso de tecnologias como ASR e STT, suportado por avanços em ML e IA, tem um potencial transformador para promover a acessibilidade digital. Estas tecnologias não só facilitam a criação de conteúdos mais inclusivos, mas também permitem a adaptação e personalização da educação para atender às necessidades de uma diversidade maior de aprendizes. Assim, a integração de ASR representa um marco significativo na trajetória para uma educação mais acessível.
 
 \section{Considerações Finais}
+
+As análises e discussões apresentadas nesta fundamentação teórica permitiram uma compreensão abrangente das interseções entre TICs e línguas de sinais no contexto educacional. O MS realizado, detalhado na \autoref{section:foundation:sm}, revelou importantes lacunas tecnológicas e de pesquisa na utilização de línguas de sinais para o ensino-aprendizagem, destacando áreas onde inovações são urgentemente necessárias. Esses gaps tecnológicos foram essenciais para orientar a condução de um levantamento bibliográfico adicional, visando identificar e explorar TICs promissoras que pudessem mitigar os desafios identificados e promover uma educação mais inclusiva.
+
+No decorrer desta fundamentação teórica, exploramos de forma aprofundada diversos aspectos cruciais, incluindo Arquiteturas de Software, OAs e ASR. A \autoref{section:foundation:arch} discute arquiteturas de software inovadoras que suportam a integração eficiente de TICs no processo educacional, enquanto a \autoref{section:foundation:lo} foca nos OAs, destacando sua importância na criação de materiais educacionais adaptáveis e acessíveis. Particularmente, a \autoref{section:foundation:asr} demonstrou como as tecnologias de ASR podem ser aplicadas para melhorar a acessibilidade de conteúdos educacionais, proporcionando uma base teórica robusta para a arquitetura \textit{Speech2Learning}.
+
+Através da síntese destas temáticas, esta fundamentação teórica estabelece os alicerces para a proposição da \textit{Speech2Learning}, uma arquitetura inovadora que visa tornar os Objetos de Aprendizagem audíveis mais acessíveis. Definida em detalhes no \autoref{chapter3}, a \textit{Speech2Learning} representa uma proposta baseada no uso de ASR para educação inclusiva, aproveitando as últimas inovações em TICs e IA para criar soluções educacionais que atendam às necessidades de uma diversidade maior de aprendizes. Esta fundamentação teórica, portanto, não apenas ilumina as lacunas existentes, mas também propõe caminhos concretos para superá-las, contribuindo para o avanço da pesquisa e prática educacional inclusiva.

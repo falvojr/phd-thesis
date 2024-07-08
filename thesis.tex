@@ -34,6 +34,9 @@
 
 \newcolumntype{C}[1]{>{\centering}m{#1}}
 \newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\newcommand{\fullcite}[5]{%
+  #1 \emph{#2}. \textbf{#3}. #4. #5.
+}
 % ---------------------------------------------------------------------------
 
 
@@ -169,17 +172,13 @@
 % ---
 % Inicia os apêndices
 % ---
-% \begin{apendicesenv}
+\begin{apendicesenv}
 
-%     \chapter{Documento básico usando a classe \textit{icmc}}
-%     \label{chapter:documento-basico}
-%     \input{tex/appendix/documento-basico}
-    
-%     \chapter{Configuração do programa JabRef}
-%     \label{chapter:configuracao-jabref}
-%     \input{tex/appendix/configuracao-jabref}
+\chapter{Entrevista Intérpretes de Libras}
+\label{appendix:interview-form}
+\input{tex/appendix/interview-form}
 
-% \end{apendicesenv}
+\end{apendicesenv}
 % ---
 
 

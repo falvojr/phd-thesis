@@ -26,7 +26,7 @@ Conforme o diagrama da \autoref{fig:chapter4-cs1-poc-diagram}, a API REST segue 
 
 \begin{figure}[htb]
 \centering
-\caption{1ª Instância da \textit{Speech2Learning}: API REST para Legendar Videoaulas}
+\caption{Visão 1ª Instância da \textit{Speech2Learning}: API REST para Legendar Videoaulas}
 \label{fig:chapter4-cs1-poc-diagram}
 \includegraphics[width=\columnwidth]{images/chapter4-cs1-poc-diagram.png}
 \fdireta{FalvoJr2023_HICSS}
@@ -48,23 +48,23 @@ Para uma análise mais robusta, procuramos diversificar as línguas e os profess
 \centering
 \caption{\textit{Dataset} do Estudo de Caso 1 (Áudios Extraídos das Videoaulas)}
 \label{tab:chapter4-poc-audios-summary}
-\begin{tabular}{cccclc}
+\begin{tabular}{|c|c|c|c|l|c|}
 \hline
 \textbf{ID} & \textbf{Língua} & \textbf{Sotaque} & \textbf{Gênero} & \textbf{Tópico Educacional} & \textbf{Tempo} \\ \hline
-1 & pt-BR & BRA & M & Apps Android & 0:17 \\
-2 & pt-BR & BRA & M & SCRUM & 0:26 \\
-3 & pt-BR & BRA & F & Selenium WebDriver & 0:23 \\
-4 & pt-BR & BRA & F & Blockchain & 0:20 \\
-5 & pt-BR & BRA & M & Kernel Híbrido & 0:24 \\
-6 & en-US & BRA & F & Visto de Trânsito & 0:29 \\
-7 & en-US & USA & Ambos & Entrevista de Emprego & 0:16 \\ 
-8 & en-US & BRA & F & Oportunidades de Emprego & 0:20 \\ 
-9 & en-US & BRA & F & Liderança Servidora & 0:15 \\ 
-10 & en-US & BRA & M & Goroutines & 0:15 \\ 
-11 & es-AR & ARG & F & Lógica de Programação & 0:12 \\ 
-12 & es-AR & ARG & F & Linguagens de programação & 0:21 \\ 
-13 & es-AR & ARG & F & Tipos de Dados em Python & 0:14 \\ 
-14 & es-AR & ARG & F & Hello World com Python & 0:17 \\ 
+1 & pt-BR & BRA & M & Apps Android & 0:17 \\ \hline
+2 & pt-BR & BRA & M & SCRUM & 0:26 \\ \hline
+3 & pt-BR & BRA & F & Selenium WebDriver & 0:23 \\ \hline
+4 & pt-BR & BRA & F & Blockchain & 0:20 \\ \hline
+5 & pt-BR & BRA & M & Kernel Híbrido & 0:24 \\ \hline
+6 & en-US & BRA & F & Visto de Trânsito & 0:29 \\ \hline
+7 & en-US & USA & Ambos & Entrevista de Emprego & 0:16 \\  \hline
+8 & en-US & BRA & F & Oportunidades de Emprego & 0:20 \\  \hline
+9 & en-US & BRA & F & Liderança Servidora & 0:15 \\  \hline
+10 & en-US & BRA & M & Goroutines & 0:15 \\  \hline
+11 & es-AR & ARG & F & Lógica de Programação & 0:12 \\  \hline
+12 & es-AR & ARG & F & Linguagens de programação & 0:21 \\  \hline
+13 & es-AR & ARG & F & Tipos de Dados em Python & 0:14 \\  \hline
+14 & es-AR & ARG & F & Hello World com Python & 0:17 \\  \hline
 15 & es-AR & ARG & F & String Slicing com Python & 0:26 \\ \hline
 \end{tabular}
 \fadaptada{FalvoJr2023_HICSS}
@@ -88,7 +88,7 @@ Como consequência, tanto os dados de similaridade léxica quanto as respostas d
 
 Adicionalmente, nossa metodologia integra um terceiro aspecto de coleta de dados através de uma pesquisa documental focada em ASR/STT, além de aplicar a Teoria Fundamentada \cite{Charmaz2009} para assegurar um processo de análise de conteúdo. Portanto, nossa pesquisa documental visa fornecer dados qualitativos sobre o fenômeno observado \cite{LimaJunior2021}.
 
-Ao triangular os dados coletados de similaridade léxica, das respostas do \textit{Survey} anônimo e da pesquisa documental complementar (\autoref{fig:chap4:triangulation-sources}), buscamos oferecer uma compreensão abrangente dos desafios e oportunidades associados à utilização de tecnologias ASR para aumentar a acessibilidade de OAs no domínio educacional.
+Ao triangular os dados coletados de similaridade léxica, das respostas do \textit{Survey} anônimo e da pesquisa documental complementar (\autoref{fig:chap4:triangulation-sources}), buscamos oferecer uma compreensão abrangente dos desafios e oportunidades associados à utilização de tecnologias ASR para aumentar a acessibilidade de OAs no domínio educacional. 
 
 \begin{figure}[htb]
 \centering
@@ -98,13 +98,13 @@ Ao triangular os dados coletados de similaridade léxica, das respostas do \text
 \fdireta{FalvoJr2024_FIE}
 \end{figure}
 
-Nas subseções seguintes, delineamos cada fonte de evidência e suas técnicas de coleta, esclarecendo todo o processo de triangulação e sua contribuição para uma compreensão robusta do impacto das tecnologias ASR, como o STT, na acessibilidade educacional.
+A seguir, delineamos cada fonte de evidência e suas técnicas de coleta, esclarecendo todo o processo de triangulação e sua contribuição para uma compreensão robusta do impacto das tecnologias ASR, como o STT, na acessibilidade educacional.
 
 \subsubsection{1ª Fonte de Evidência: Métodos de Similaridade Léxica}
 
 Esta seção apresenta a metodologia definida para a primeira fonte de evidências da triangulação de dados, onde métodos de similaridade léxica têm como objetivo avaliar e identificar o provedor de ASR/STT mais assertivo para transcrição automática. Nesse sentido, algoritmos de similaridade léxica são métricas particularmente relevantes para a avaliação da precisão de transcrições automáticas, conforme discutimos detalhadamente em \citeonline{FalvoJr2023_HICSS}.
 
-Medir a semelhança entre textos é uma prática comum em pesquisas acadêmicas, geralmente apoiada por métodos de análise léxica \cite{Majumdar2022}. Para comparar nossas transcrições automáticas e de referência, precisamos definir como extrairemos nossos dados quantitativos utilizando técnicas de similaridade léxica. No nosso contexto, algumas das alternativas mais interessantes são:
+Medir a semelhança entre textos é uma prática comumente investigada em pesquisas acadêmicas, em geral apoiada por métodos de análise/similaridade léxica \cite{Majumdar2022}. Para comparar nossas transcrições automáticas e de referência, precisamos definir como extrairemos nossos dados quantitativos utilizando técnicas de similaridade léxica. No nosso contexto, algumas das alternativas mais interessantes são:
 
 \begin{itemize}
 
@@ -134,11 +134,13 @@ Para mitigar vieses, os provedores foram anonimizados e receberam um identificad
 
 \subsubsection{3ª Fonte de Evidência: Pesquisa Documental}
 
-Uma revisão de literatura complementa nossos achados empíricos ao identificar estudos relevantes sobre tecnologias ASR e STT. Esta revisão apoia a contextualização e o enriquecimento dos dados quantitativos, proporcionando uma compreensão mais profunda do potencial e das limitações das tecnologias atuais baseadas em ASR.
+Para contextualizar e enriquecer nossos dados quantitativos, realizamos uma revisão de literatura que complementa nossos achados empíricos, identificando estudos relevantes sobre tecnologias ASR e STT. Esta revisão proporciona uma compreensão mais profunda do potencial e das limitações das tecnologias atuais baseadas em ASR.
 
-Empregamos a Teoria Fundamentada \cite{Charmaz2009} como um \textit{framework} orientador para nossa análise documental. A Teoria Fundamentada é uma metodologia sistemática para a análise de dados qualitativos com o objetivo de desenvolver teorias, permitindo o surgimento de temas e padrões a partir dos próprios dados, em vez de impor noções preconcebidas.
+Empregamos a \textit{Grounded Theory}, ou \sigla{TFD}{Teoria Fundamentada nos Dados}, como um \textit{framework} orientador para nossa análise documental. A TFD é uma metodologia sistemática e rigorosa utilizada na pesquisa qualitativa para desenvolver teorias emergentes diretamente dos dados \cite{Charmaz2009}. Diferentemente de abordagens que partem de hipóteses preconcebidas, a Teoria Fundamentada nos Dados permite a descoberta de temas e padrões de maneira indutiva, por meio de um processo iterativo de coleta e análise de dados.
 
-Nossa Pesquisa Documental envolveu uma revisão abrangente da literatura relevante, incluindo artigos acadêmicos, livros e relatórios, focando nas tecnologias ASR e STT no contexto da acessibilidade educacional. Através desta análise, buscamos identificar temas recorrentes, guias teóricos e lacunas nas pesquisas existentes, contribuindo para uma compreensão mais detalhada do assunto.
+Neste estudo, utilizamos a TFD para examinar os estudos selecionados na pesquisa documental. Este processo incluiu a codificação aberta dos dados, a identificação de temas recorrentes e a integração desses temas em uma teoria coesa. Assim, garantimos que nossas conclusões fossem baseadas diretamente nas evidências coletadas, sem impor noções preconcebidas.
+
+Nossa pesquisa documental envolveu uma revisão complementar da literatura, incluindo artigos, livros e relatórios, focando nas tecnologias ASR e STT no contexto da acessibilidade educacional. Através dessa análise, buscamos identificar temas recorrentes, diretrizes teóricas e lacunas nas pesquisas existentes, contribuindo para uma compreensão mais detalhada do assunto.
 
 Ao integrar \textit{insights} do Conjunto de Dados de Similaridade Lexical, das Respostas do \textit{Survey} e da Pesquisa Documental, visamos fornecer uma exploração abrangente e multidimensional do papel do ASR e do STT na melhoria da acessibilidade educacional.
 
@@ -179,18 +181,37 @@ Em segundo lugar, avaliamos a qualidade das transcrições automáticas consider
 Para a pesquisa documental, adotamos uma abordagem qualitativa para investigar de maneira mais ampla e exploratória como as tecnologias de reconhecimento de fala para transcrição automática (ASR e STT) influenciam a acessibilidade dos OAs. A questão de pesquisa que orienta nossa análise documental é:
 
 \begin{itemize}
-\item \textbf{Questão de Pesquisa}: Como as tecnologias baseadas em ASR e STT estão influenciando a acessibilidade na área da educação?
+\item \textbf{Questão de Pesquisa}: Como as tecnologias de reconhecimento de fala (ASR/STT) podem contribuir para uma educação mais acessível?
 \end{itemize}
 
-Essa combinação de hipóteses quantitativas e uma questão de pesquisa qualitativa permite uma triangulação robusta de dados, fornecendo uma visão abrangente e multidimensional do impacto das tecnologias de ASR/STT na acessibilidade educacional. A análise das respostas do \textit{Survey}, juntamente com os métodos de similaridade léxica e a pesquisa documental, nos permitirá corroborar os achados, identificar as convergências entre nossas fontes de evidências e enriquecer as discussões, fortalecendo a validade do estudo.
+Essa combinação de hipóteses quantitativas e uma questão de pesquisa qualitativa permite uma triangulação robusta de dados, fornecendo uma visão abrangente e multidimensional do impacto das tecnologias de ASR/STT na acessibilidade educacional. A análise das respostas do \textit{Survey}, juntamente com os métodos de similaridade léxica e a pesquisa documental, nos permitirá identificar as convergências entre nossas fontes de evidências e enriquecer as discussões, fortalecendo a validade do estudo.
+
+Para fornecer uma visão formal, mas simplificada, deste primeiro Estudo de Caso, sintetizamos suas principais características na Tabela \autoref{tab:chapter4-cs1-summary}. Esta síntese foi elaborada seguindo as diretrizes metodológicas e as perspectivas de pesquisa descritas por \citeonline{CastroFilho2021}, garantindo uma abordagem estruturada e coerente com os padrões de pesquisa científica em informática na educação.
+
+\begin{table}[htb]
+\centering
+\caption{Síntese do Estudo de Caso 1: Legendas Automáticas em Videoaulas}
+\label{tab:chapter4-cs1-summary}
+\begin{tabular}{|C{3cm}|m{11.75cm}|}\hline
+\textbf{Objeto de Estudo} & Serviços de Reconhecimento de Fala (ASR/STT) \\\hline
+\textbf{Perspectiva} & Explanatória (Explicativa) \\\hline
+\textbf{Característica} & Explicação de causas ou efeitos relacionais ao fenômeno \cite{CastroFilho2021}. \\\hline
+\textbf{Objetivos} & \begin{tabular}[c]{@{}m{11.75cm}@{}}1. Avaliar a qualidade das transcrições automáticas fornecidas por diferentes serviços de ASR/STT. \\ 2. Investigar a variação na qualidade das transcrições automáticas em diferentes idiomas (Português, Inglês e Espanhol). \\ 3. Explorar como as transcrições automáticas podem melhorar a acessibilidade educacional.\end{tabular} \\\hline
+\textbf{Questões de Pesquisa} & Como as tecnologias de reconhecimento de fala (ASR/STT) podem contribuir para uma educação mais acessível? \\\hline
+\textbf{Hipóteses} & \begin{tabular}[c]{@{}m{11.75cm}@{}}1. Existe diferença estatisticamente significativa na precisão das transcrições automáticas entre os provedores de ASR/STT. \\ 2. Existe diferença estatisticamente significativa na precisão das transcrições automáticas para Português, Inglês e Espanhol entre os provedores de ASR/STT.\end{tabular} \\\hline
+\textbf{Fontes de Dados} & \begin{tabular}[c]{@{}m{11.75cm}@{}}1. Dados quantitativos de métodos de similaridade léxica (precisão). \\ 2. Respostas quantitativas de um \textit{Survey} anônimo (precisão). \\ 3. Dados qualitativos de uma pesquisa documental.\end{tabular} \\\hline
+\textbf{Método de Coleta de Dados} & \begin{tabular}[c]{@{}m{11.75cm}@{}}Triangulação de Dados, com as seguintes fontes de evidência: \\ 1. Métodos de Similaridade Léxica. \\ 2. Respostas do \textit{Survey}. \\ 3. Pesquisa Documental.\end{tabular} \\\hline
+\textbf{Tipo de Análise} & Mista (Quantitativa e Qualitativa) \\\hline
+\end{tabular}
+\end{table}
 
 \subsection{Resultados e Discussões}
 
 \subsubsection{Métodos de Similaridade Léxica}
 
-Sabemos que o \textit{dataset} quantitativo deste Estudo de Caso foi construído para avaliar a qualidade das transcrições automáticas dos serviços de ASR/STT oferecidos por provedores líderes como Amazon, Google, IBM, Microsoft e OpenAI. Esta avaliação utilizou três métodos de similaridade léxica: CS, JI e LD. Nesse sentido, considerando as características dos dados coletados, focamos no JI devido ao seu desempenho estatístico mais robusto, sendo nossa única amostra com distribuição normal.
+Considerando nossas fontes de evidência quantitativas, usamos um \textit{dataset} projetado para avaliar a qualidade das transcrições automáticas de provedores líderes de ASR/STT (Amazon, Google, IBM, Microsoft e OpenAI) através de três métricas de similaridade léxica (CS, JI e LD). Nesse sentido, considerando as características dos dados coletados, focamos no JI devido ao seu desempenho estatístico mais robusto, sendo nossa única amostra com distribuição normal.
 
-Apenas relembrando, o JI mede a similaridade entre dois conjuntos de dados calculando o tamanho da interseção dividido pelo tamanho da união dos conjuntos de amostras. No nosso contexto, ele compara as palavras da transcrição automática com as da transcrição de referência (revisada por especialistas), proporcionando uma medida quantitativa de precisão.
+Lembrando que, o método de Jaccard mede a similaridade entre dois conjuntos de dados calculando o tamanho da interseção dividido pelo tamanho da união dos conjuntos de amostras. No nosso contexto, ele compara as palavras da transcrição automática com as da transcrição de referência (revisada por especialistas), proporcionando uma medida quantitativa de precisão. 
 
 Sendo assim, vamos apresentar os resultados do JI como métrica principal de similaridade léxica para avaliar os provedores de ASR/STT. Os achados iniciais desta fonte de evidência podem ser visualizados por meio do conjunto de gráficos da \autoref{fig:chapter4-cs1-lexical-all}.
 
@@ -267,7 +288,7 @@ Adicionalmente, tendo em vista nossos dois conjuntos de hipóteses de pesquisa, 
 \centering
 \caption{Índice de Jaccard: Gráfico dos Provedores Agrupados Por Idioma.}
 \label{fig:chapter4-cs1-lexical-by-lang-barplot}
-\includegraphics[width=0.95\textwidth]{images/chapter4-cs1-lexical-by-lang-barplot.png}
+\includegraphics[width=0.9\textwidth]{images/chapter4-cs1-lexical-by-lang-barplot.png}
 \fadaptada{FalvoJr2023_HICSS}
 \end{figure}
 
@@ -303,11 +324,13 @@ As avaliações estatísticas correspondentes (\autoref{tab:chapter4-results-ji-
 \fadaptada{FalvoJr2023_HICSS}
 \end{table}
 
-Esses resultados destacam diferenças significativas na qualidade das transcrições automáticas dos provedores avaliados em relação à similaridade léxica. Além disso, abrem caminho para uma exploração mais aprofundada de como essas características podem impactar a experiência do usuário em várias aplicações dessas transcrições. Isso inclui a satisfação do aluno e a percepção sobre a precisão da transcrição em diferentes contextos linguísticos. Esses pontos são discutidos na subseção seguinte com base nos resultados do \textit{Survey}.
+Esses resultados destacam diferenças significativas na qualidade das transcrições automáticas dos provedores avaliados em relação à similaridade léxica. Além disso, abrem caminho para uma exploração mais aprofundada de como essas características podem impactar a experiência do usuário em várias aplicações dessas transcrições. Isso inclui a satisfação do aluno e a percepção sobre a precisão da transcrição em diferentes contextos linguísticos. Tais aspectos são discutidos na subseção seguinte com base nos resultados do \textit{Survey}.
 
 \subsubsection{Respostas do \textit{Survey}}
 
-Com base nos \textit{insights} do estudo de similaridade léxica, esta seção apresenta os resultados de uma pesquisa anônima baseada nas percepções dos participantes sobre a qualidade das transcrições automáticas, explorando o mesmo \textit{dataset} definido para as fontes de evidência quantitativas. Essa pesquisa teve como objetivo correlacionar os dados de similaridade léxica com as avaliações subjetivas de pessoas reais sobre a qualidade das transcrições dos diferentes provedores de serviços de ASR/STT.
+Com base nos \textit{insights} do estudo de similaridade léxica, esta seção apresenta os resultados de uma pesquisa anônima baseada nas percepções dos participantes sobre a qualidade das transcrições automáticas, explorando o \textit{dataset} definido para as fontes de evidência quantitativas. 
+
+Essa pesquisa teve como objetivo comparar os dados objetivos de similaridade léxica com as avaliações subjetivas de pessoas reais sobre a qualidade das transcrições dos diferentes provedores de serviços de ASR/STT.
 
 Os resultados desta pesquisa foram sintetizados na \autoref{fig:chapter4-cs1-survey-all} para ilustrar as avaliações médias e a distribuição das respostas. O Gráfico de Barras mostra as avaliações médias para cada provedor, com a OpenAI recebendo a maior pontuação, sugerindo uma preferência entre os participantes (\ref{fig:chapter4-cs1-survey-all-barplot}). O Gráfico de Boxplot detalha a dispersão e a tendência central das avaliações para cada provedor, destacando a variação na satisfação dos usuários (\ref{fig:chapter4-cs1-survey-all-boxplot}), enquanto o Gráfico KDE fornece uma estimativa visual da densidade da distribuição das avaliações (\ref{fig:chapter4-cs1-survey-all-kdeplot}).
 
@@ -342,11 +365,13 @@ Um gráfico adicional detalha as avaliações por idioma, indicando variações 
 \centering
 \caption{Respostas do \textit{Survey}: Gráfico dos Provedores Agrupados Por Idioma.}
 \label{fig:chapter4-cs1-survey-by-lang-barplot}
-\includegraphics[width=0.95\textwidth]{images/chapter4-cs1-survey-by-lang-barplot.png}
+\includegraphics[width=1\textwidth]{images/chapter4-cs1-survey-by-lang-barplot.png}
 \fadaptada{FalvoJr2024_FIE}
 \end{figure}
 
-As análises estatísticas, consolidadas na \autoref{tab:chapter4-results-survey-tests}), indicaram que as respostas do \textit{Survey} não seguiram uma distribuição normal, característica confirmada pelos testes de \textit{Kolmogorov-Smirnov} \cite{Kolmogorov1933,Smirnov1948} e \textit{Shapiro-Wilk} \cite{Shapiro1965}. Por isso, se fez necessário o uso de testes não paramétricos para as análises posteriores. O teste de \textit{Kruskal-Wallis} \cite{Kruskal1952}, uma alternativa não paramétrica ao ANOVA, foi empregado para determinar se havia diferenças significativas nas medianas das pontuações entre os diferentes grupos. Este teste mostrou diferenças significativas entre os provedores (\ensuremath{p < 0.05}), sugerindo que as percepções dos participantes variavam significativamente dependendo do provedor.
+As análises estatísticas, consolidadas na \autoref{tab:chapter4-results-survey-tests}, indicaram que as respostas do \textit{Survey} não seguiram uma distribuição normal, característica confirmada pelos testes de \textit{Kolmogorov-Smirnov} \cite{Kolmogorov1933,Smirnov1948} e \textit{Shapiro-Wilk} \cite{Shapiro1965}. Por isso, se fez necessário a avaliação e aplicação de testes não paramétricos para as análises subsequentes. 
+
+O teste de \textit{Kruskal-Wallis} \cite{Kruskal1952}, uma alternativa não paramétrica ao ANOVA, foi empregado para determinar se havia diferenças significativas nas medianas das pontuações entre os diferentes grupos. Este teste mostrou diferenças significativas entre os provedores (\ensuremath{p < 0.05}), sugerindo que as percepções dos participantes variavam significativamente dependendo do provedor.
 
 \begin{table}[htb]
 \centering
@@ -384,9 +409,7 @@ As análises estatísticas, consolidadas na \autoref{tab:chapter4-results-survey
 \fadaptada{FalvoJr2024_FIE}
 \end{table}
 
-Dada a distribuição não normal dos dados, o teste de \textit{Dunn} \cite{Dunn1964} foi escolhido em detrimento do teste de \textit{Conover} \cite{Conover1999} para a análise \textit{post-hoc} devido às suas suposições menos rigorosas sobre a distribuição dos dados e sua capacidade de lidar efetivamente com dados que possuem \textit{outliers} (\autoref{tab:chapter4-results-survey-tests}), embora ambos tenham produzido resultados análogos em testes informais. 
-
-O teste de \textit{Dunn} comparou pares de provedores, indicando diferenças significativas entre quase todos os pares. Notavelmente, todas as comparações envolvendo OpenAI e outros provedores demonstraram diferenças significativas, sugerindo uma virtual superioridade desse provedor.
+Dada a distribuição não normal dos dados, o teste de \textit{Dunn} \cite{Dunn1964} foi escolhido em detrimento do teste de \textit{Conover} \cite{Conover1999} para a análise \textit{post-hoc} devido às suas suposições menos rigorosas sobre a distribuição dos dados e sua capacidade de lidar efetivamente com dados que possuem \textit{outliers} (\autoref{tab:chapter4-results-survey-tests}), embora ambos tenham produzido resultados análogos em testes informais. O teste de \textit{Dunn} comparou pares de provedores, indicando diferenças significativas entre quase todos os pares. Notavelmente, todas as comparações envolvendo OpenAI e outros provedores demonstraram diferenças significativas, sugerindo uma virtual superioridade desse provedor.
 
 Os resultados estratificados por idioma reforçaram essas descobertas, com todos os grupos de idiomas mostrando diferenças significativas entre os provedores na forma como as transcrições automáticas foram avaliadas. Isso sugere que a qualidade percebida pelos participantes não depende apenas do provedor, mas também varia com o idioma, destacando os desafios de fornecer transcrições de alta qualidade de forma uniforme em diferentes contextos linguísticos (\autoref{tab:chapter4-results-survey-by-lang-tests}).
 
@@ -439,17 +462,17 @@ Os resultados estratificados por idioma reforçaram essas descobertas, com todos
 
 A análise da pesquisa efetivamente conecta as medidas objetivas de similaridade léxica e as percepções subjetivas da qualidade das transcrições. A correlação entre as pontuações de similaridade léxica e as excelentes avaliações dos participantes, particularmente para a OpenAI, ressalta a relevância prática da precisão léxica na satisfação dos usuários finais. 
 
-Esses \textit{insights} são cruciais para provedores que buscam otimizar seus serviços de transcrição para conteúdos educacionais, pois ilustram a importância tanto da precisão linguística quanto da percepção do usuário na avaliação da qualidade das transcrições. As descobertas sugerem um roteiro para futuras melhorias e a potencial customização de serviços para atender de forma mais eficaz às diversas necessidades linguísticas.
+Esses \textit{insights} são fundamentais para provedores que buscam otimizar seus serviços de transcrição para conteúdos educacionais, pois ilustram a importância tanto da precisão linguística quanto da percepção dos usuários finais na avaliação da qualidade das transcrições automáticas. As descobertas sugerem um roteiro para futuras melhorias e a potencial customização de serviços para atender de forma mais eficaz às diversas necessidades linguísticas.
 
 \subsubsection{Pesquisa Documental}
 
 Nesta fase, ampliamos nossa visão sobre as tecnologias de ASR/STT, examinando a literatura para complementar nossas descobertas quantitativas com percepções qualitativas adicionais. Esta análise documental aprofunda-se em diversos estudos que contribuíram significativamente para o campo de ASR e STT, proporcionando uma compreensão mais ampla de como essas tecnologias, impulsionadas por avanços em \textit{Machine Learning} (ML) e AI, podem melhorar a acessibilidade de OAs.
 
-O estudo de \citeonline{Ferraro2023} apresenta uma investigação extensa sobre a transcrição de linguagem falada usando modelos de ML. Sua análise compara serviços de STT de código aberto e pagos, com foco na qualidade e variedade de entrada. A pesquisa utiliza diversos conjuntos de dados de entrevistas, palestras e discursos, empregando métricas como a Taxa de Erro de Palavras (WER) para avaliação. O trabalho de \citeonline{Ferraro2023} fornece um ponto de referência, alternativo aos métodos de similaridade léxica, para avaliar a precisão da transcrição, estabelecendo uma base sólida para trabalhos futuros.
+O estudo de \citeonline{Ferraro2023} apresenta uma investigação extensa sobre a transcrição de língua falada usando modelos de ML. Sua análise compara serviços de STT de código aberto e pagos, com foco na qualidade das transcrições automáticas e na diversidade dos dados de entrada. A pesquisa utiliza diversos conjuntos de dados de entrevistas, palestras e discursos, empregando métricas como a Taxa de Erro de Palavras (WER) para avaliação. O trabalho de \citeonline{Ferraro2023} fornece um ponto de referência, alternativo aos métodos de similaridade léxica, para avaliar a precisão da transcrição, estabelecendo uma base sólida para trabalhos futuros.
 
 \citeonline{Bengesi2024} oferecem uma revisão abrangente dos avanços recentes em IAGen, destacando suas aplicações potenciais em processos automáticos de transcrição. Embora não se concentrem diretamente na conversão de fala em texto, sua exploração de modelos de ponta, incluindo Redes Adversárias Generativas (GANs), Transformadores Pré-treinados Generativos (GPT), \textit{autoencoders} e modelos de difusão, fornece uma base para entender como a IAGen pode aprimorar a precisão da transcrição.
 
-\citeonline{Homburg2019} investigam o uso de robôs humanoides como avatares para tradução de linguagem de sinais, visando melhorar a inclusão para a comunidade surda. Diferente de pesquisas anteriores focadas apenas no reconhecimento de linguagem de sinais, seu estudo explora uma abordagem inovadora ao empregar robôs como intermediários para comunicação em linguagem de sinais. Ao entrevistar 50 participantes surdos, eles avaliam a eficácia percebida dos robôs humanoides na facilitação da tradução de linguagem de sinais, oferecendo \textit{insights} inovadores para soluções de acessibilidade.
+\citeonline{Homburg2019} exploram o uso de robôs humanoides como avatares para a tradução de língua de sinais, buscando aprimorar a inclusão da comunidade surda. Diferentemente de pesquisas anteriores, que se concentravam apenas no reconhecimento da língua de sinais, este estudo adota uma abordagem inovadora ao utilizar robôs como intermediários na comunicação. Entrevistando 50 participantes surdos, eles avaliam a eficácia percebida dos robôs humanoides na tradução da língua de sinais, oferecendo \textit{insights} inovadores para soluções de acessibilidade.
 
 \citeonline{Alshaikh2024} exploram a integração da IAGen na educação por meio do desenvolvimento e avaliação de um Assistente de Vídeo Educacional com IA. Fundamentado na Teoria Cognitiva da Aprendizagem Multimídia (CTML), seu ferramental, equipado com módulos de Transcrição, Engajamento e Reforço, utiliza tecnologias ASR para aprimorar a experiência de aprendizagem. Ao focar em experiências de aprendizagem multimodal, seu estudo demonstra o potencial das técnicas avançadas de IA, incluindo STT, para melhorar os resultados educacionais.
 
@@ -460,13 +483,13 @@ Com base nas contribuições desses estudos, pretendemos aplicar os princípios 
 Ao integrar os resultados coletados de nossas fontes de evidência, buscamos identificar padrões e \textit{insights} sobre o uso de tecnologias ASR e STT na melhoria da acessibilidade dos OAs. Para facilitar essa análise, categorizamos os achados de cada estudo dentro da Teoria Fundamentada em temas distintos, permitindo uma compreensão abrangente das implicações tecnológicas e educacionais das ferramentas ASR e STT. Essas categorias incluem:
 
 \begin{itemize}
-\item \textbf{Avaliação da Qualidade de Transcrição (AQT)}: Avaliação do desempenho e qualidade das tecnologias baseadas em ASR/STT em tarefas de transcrição. Esta categoria foca na precisão das transcrições, utilizando métricas como a Taxa de Erro de Palavras (WER) e comparações entre diferentes serviços de STT, sejam eles de código aberto ou pagos.
+\item \textbf{Avaliação da Qualidade de Transcrição (AQT)}: Avaliação de desempenho e qualidade em soluções baseadas nas tecnologias de ASR e STT para tarefas de transcrição de fala. Esta categoria foca na precisão das transcrições, utilizando métricas como a Taxa de Erro de Palavras (WER) e comparações entre diferentes serviços de STT, sejam eles de código aberto ou pagos.
 
 \item \textbf{IAGen na Educação (IAGenE)}: Exploração da integração da IAGen em contextos educacionais para aprimorar experiências de aprendizagem. Aqui, a atenção está na aplicação de técnicas de IA, como GANs, GPTs e \textit{autoencoders}, para melhorar processos educacionais, incluindo a transcrição automática de aulas e a personalização da aprendizagem.
 
-\item \textbf{Tecnologias Assistivas (TAs)}: Investigação de abordagens inovadoras, como robôs humanoides e ferramentas de aprendizagem multimodal, para melhorar a acessibilidade para diversos alunos. Esta categoria abrange o uso de tecnologias avançadas para suportar a inclusão de alunos com necessidades especiais, como a tradução/sinalização de línguas de sinais.
+\item \textbf{Tecnologias Assistivas (TAs)}: Investigação de abordagens inovadoras, como robôs humanoides e ferramentas de aprendizagem multimodal, para melhorar a acessibilidade para diversos alunos. Esta categoria abrange o uso de TAs para suportar a inclusão de alunos com necessidades especiais, como a tradução/sinalização de línguas de sinais.
 
-\item \textbf{Desafios e Oportunidades (DO)}: Identificação de desafios e oportunidades para melhorar a precisão e eficácia do ASR em contextos educacionais. Este tema envolve a análise das dificuldades encontradas na implementação de tecnologias ASR em ambientes ruidosos e colaborativos, além de identificar possíveis melhorias e inovações para superar essas barreiras.
+\item \textbf{Desafios e Oportunidades (DO)}: Identificação de obstáculos e possibilidades para aprimorar a precisão e eficácia do ASR em contextos educacionais. Este tema envolve os desafios na implementação de tecnologias ASR em ambientes ruidosos e colaborativos, buscando soluções para um reconhecimento de fala assertivo mesmo em situações adversas.
 \end{itemize}
 
 Na \autoref{tab:chapter4-grounded-theory-results}, apresentamos a categorização de cada estudo dentro da Teoria Fundamentada, fornecendo uma visão detalhada dos temas abordados em cada estudo e sua relevância para nossos objetivos de pesquisa. Esta análise nos permite estabelecer conexões críticas entre as diferentes vertentes de investigação, revelando como cada estudo contribui para a compreensão das tecnologias ASR e STT em contextos educacionais.
@@ -475,7 +498,7 @@ Na \autoref{tab:chapter4-grounded-theory-results}, apresentamos a categorizaçã
 \centering
 \caption{Categorização dos Artigos usando Teoria Fundamentada}
 \label{tab:chapter4-grounded-theory-results} 
-\begin{tabular}{c|p{6.8cm}|p{5.7cm}}
+\begin{tabular}{|c|p{6.8cm}|p{5.7cm}|}\hline
 \textbf{Categoria} & \textbf{Descrição} & \textbf{Estudos} \\ \hline
 \textbf{AQT} & Avalia o desempenho e qualidade do ASR/STT em tarefas de transcrição. & \citeonline{Ferraro2023} \\ \hline
 \textbf{IAGenE} & Explora a integração da IAGen em contextos educacionais. & \citeonline{Bengesi2024,Alshaikh2024} \\ \hline
@@ -503,7 +526,7 @@ A integração desses três conjuntos de dados -- métodos de similaridade léxi
 
 \begin{itemize}
 
-\item \textbf{Similaridade Léxica vs. Percepções dos Usuários}: Os dados de similaridade léxica revelaram que diferentes provedores de STT têm diferenças estatisticamente significativas na precisão das transcrições, conforme medido pelo JI. Notavelmente, a OpenAI mostrou desempenho superior em vários idiomas comparado a outros provedores importantes como Google e IBM. No entanto, os resultados do \textit{Survey}, que também focaram em avaliações quantitativas, mas usando escala Likert, indicam que a satisfação do usuário é influenciada por mais do que apenas a precisão léxica. Embora a OpenAI também tenha alcançado a maior satisfação entre os participantes, as diferenças estatísticas nas respostas do \textit{Survey} sugerem que as percepções dos usuários são influenciadas por fatores como compreensão do contexto e tolerância a erros, que não são totalmente capturados pelos métodos de similaridade léxica.
+\item \textbf{Similaridade Léxica vs. Percepções dos Usuários}: Os dados de similaridade léxica revelaram que diferentes provedores de STT têm diferenças estatisticamente significativas na precisão das transcrições. Notavelmente, a OpenAI mostrou um desempenho superior (geral e por idioma) quando comparada a outros provedores de peso como Google e IBM. No entanto, os resultados do \textit{Survey}, que também focaram em avaliações quantitativas, mas usando escala Likert, indicam que a satisfação do usuário é influenciada por mais do que apenas a precisão léxica. Embora a OpenAI também tenha alcançado a maior satisfação entre os participantes, as diferenças estatísticas nas respostas do \textit{Survey} sugerem que as percepções dos usuários são influenciadas por fatores como compreensão do contexto e tolerância a erros, que não são totalmente capturados pelos métodos de similaridade léxica.
 
 \item \textbf{\textit{Insights} Qualitativos da Pesquisa Documental}: A integração da Teoria Fundamentada \cite{Charmaz2009} na nossa análise documental permitiu uma compreensão mais profunda dos temas que afetam a qualidade das transcrições automáticas. Estudos relevantes, como os de \citeonline{Ferraro2023,Alshaikh2024}, enfatizam a importância de considerar tipos de dados diversos e ambientes de aprendizagem ao avaliar tecnologias de ASR/STT. Esses achados sugerem que a eficácia educacional das aplicações de reconhecimento de fala vai além da mera precisão da transcrição, abrangendo a facilidade de integração, as capacidades de personalização e a habilidade da tecnologia de se adaptar às necessidades educacionais diversificadas.
 
@@ -530,4 +553,131 @@ Seguindo esta linha de investigação, o próximo estudo de caso explorará a Po
 
 \section{Estudo de Caso 2: Player com Avatar de Libras}
 
+Nosso segundo estudo de caso concentrou-se no desenvolvimento de um player de vídeo, projetado com base no conceito de Design Universal para criar um produto final mais flexível e acessível do ponto de vista educacional \cite{GovBr2023}. Este estudo também foi conduzido com o apoio da DIO, explorando a API REST desenvolvida como PoC no primeiro estudo de caso para acesso às videoaulas da \textit{EdTech}. Na prática, a integração com a API permite que este player utilize o reconhecimento de fala como um componente central para tornar seus OAs mais inclusivos.
+
+A relevância deste estudo está em sua capacidade de explorar a eficácia e o impacto de avatares de Libras baseados em texto na acessibilidade educacional para a comunidade surda. Para isso, conduzimos avaliações qualitativas através de entrevistas com intérpretes de Libras, investigando como essa solução tecnológica pode melhorar a acessibilidade a OAs audíveis.
+
+\subsection{Prova de Conceito: Player de Vídeo com Design Universal}
+
+A \autoref{fig:chapter4-cs2-poc-diagram} ilustra, por meio de um diagrama de sequência, a dinâmica do player de vídeo desenvolvido, que utiliza as capacidades da arquitetura \textit{Speech2Learning} para ampliar a acessibilidade de videoaulas. Esta representação demonstra como o player de vídeo promove novas formas de explorar OAs audíveis, aproveitando os metadados fornecidos pela API desenvolvida anteriormente.
+
+\begin{figure}[htbp]
+\centering
+\caption{Visão 2ª Instância da \textit{Speech2Learning}: Player de Vídeo com Avatar de Libras}
+\label{fig:chapter4-cs2-poc-diagram}
+\includegraphics[width=.94\textwidth]{images/chapter4-cs2-poc-diagram.png}
+\end{figure}
+
+A integração entre o player de vídeo e a API REST ilustra a capacidade da arquitetura \textit{Speech2Learning} de fomentar ambientes educacionais mais inclusivos. Adotando esta abordagem, os desenvolvedores podem criar sistemas robustos, tecnologicamente independentes e flexíveis, capazes de atender às especificidades de cada projeto.
+
+O objetivo central deste estudo é projetar, implementar e avaliar um player de vídeo que siga as recomendações do ``Guia de Boas Práticas para Acessibilidade Digital'' definidas por \citeonline{GovBr2023} e os princípios de Design Universal promovidos pela \citeonline{UNESCO2023}. Este player, integrado com a arquitetura \textit{Speech2Learning}, visa promover a educação inclusiva para surdos através da Libras.
+
+Tecnicamente, o player foi implementado utilizando HTML, CSS e JavaScript de forma ``pura'' (\textit{vanilla}), ou seja, evitando bibliotecas e/ou implementações alternativas para uma solução mais padronizada e manutenível baseada na Web \cite{GovBr2023}. Os \textit{wireframes} preliminares na Figura \ref{fig:chapter4-cs2-poc-wireframes} oferecem uma visão simplificada, destacando características universais e o símbolo ``Acessível em Libras'', sublinhando o compromisso com a educação inclusiva.
+
+\begin{figure}[htbp]
+\centering
+\caption{\textit{Wireframes} do Player de Vídeo Acessível (Modos Claro e Escuro)}
+\label{fig:chapter4-cs2-poc-wireframes}
+\includegraphics[width=1\textwidth]{images/chapter4-cs2-poc-wireframes.png}
+\end{figure}
+
+Em particular, esta PoC contou com dois projetos de Iniciação Científica (IC), um com foco no desenvolvimento do Design Universal da solução e outro na implementação da mesma como uma biblioteca flexível e aberta.
+
+Sendo assim, fez-se necessário o uso de um processo de desenvolvimento de software para que as entregas fossem previsíveis e devidamente validadas. Para isso, seguimos uma metodologia ágil, com ritos simplificados e \textit{Sprints} de duas semanas.
+
+\subsection{Metodologia}
+
+Para investigar o impacto e a eficácia do player de vídeo com avatares de Libras baseados em texto, adotamos uma perspectiva exploratória, caracterizada pela elaboração de conhecimentos ou levantamento de informações sobre um fenômeno ainda pouco conhecido \cite{CastroFilho2021}. Este estudo de caso visa atingir dois principais objetivos: (i) investigar o impacto de avatares de Libras na acessibilidade de conteúdos para surdos; e (ii) explorar a eficácia desses avatares integrados à transcrição automática de videoaulas para a compreensão de OAs audíveis. 
+
+Para alcançar esses objetivos, formulamos a seguinte questão de pesquisa, que é similar à que orientou nossa análise documental, mas com foco em usuários da Libras, incluindo principalmente a comunidade surda:
+
+\begin{itemize}
+    \item \textbf{Questão de Pesquisa}: Como as tecnologias de reconhecimento de fala (ASR/STT) podem contribuir para uma educação mais acessível para usuários da Libras?
+\end{itemize}
+
+A metodologia empregada foi predominantemente qualitativa, utilizando dados coletados através de entrevistas semi-estruturadas com intérpretes de Libras. Esses dados qualitativos foram fundamentais para compreender as percepções dos intérpretes sobre a precisão, usabilidade e impacto dos avatares de Libras integrados a transcrições automáticas de videoaulas.
+
+A principal fonte de dados para este estudo foram entrevistas qualitativas com intérpretes de Libras. As entrevistas foram cuidadosamente planejadas e conduzidas para explorar profundamente as percepções e experiências dos intérpretes ao utilizar o player de vídeo com avatares de Libras. A coleta de dados seguiu um protocolo estruturado, assegurando que todas as áreas relevantes fossem abordadas durante as entrevistas.
+
+A análise dos dados foi conduzida utilizando a TFD \cite{Charmaz2009}, uma metodologia que possibilita o desenvolvimento de teorias emergentes diretamente dos dados. Este processo iterativo envolveu a codificação aberta para identificar e categorizar os principais temas nas respostas dos intérpretes de Libras. A abordagem garantiu que os temas e padrões emergissem dos dados, proporcionando uma compreensão aprofundada das percepções e experiências dos participantes sem a imposição de noções preconcebidas.
+
+Esperamos que esta segunda instância da arquitetura \textit{Speech2Learning}, através do uso de um player de vídeo acessível com avatares de Libras, melhore significativamente a acessibilidade de conteúdos educacionais para alunos surdos. Este estudo visa demonstrar que tal solução tecnológica pode:
+
+\begin{itemize}
+    \item Ampliar de maneira significativa o acesso à OAs audíveis para alunos surdos, fornecendo uma TA que potencializa a inclusão por meio do conceito de ASR, intrínseco em soluções baseadas na arquitetura \textit{Speech2Learning}.
+    \item Mostrar a viabilidade e precisão dos avatares de Libras como TA, complementando as estratégias existentes de acessibilidade presentes nas premissas de Design Universal, por exemplo.
+    \item Fornecer \textit{insights} valiosos sobre as preferências dos intérpretes de Libras e suas percepções sobre a usabilidade, precisão e impacto dos avatares integrados à transcrições automáticas na educação para surdos.
+\end{itemize}
+
+Para concluir, a síntese da \autoref{tab:chapter4-cs2-summary} resume a abordagem metodológica adotada, destacando a importância das entrevistas qualitativas para a compreensão das percepções dos intérpretes de Libras. A análise qualitativa proporcionou uma visão detalhada dos desafios e benefícios percebidos na utilização de avatares de Libras, contribuindo para o desenvolvimento de práticas pedagógicas mais inclusivas e acessíveis.
+
+\begin{table}[htb]
+\centering
+\caption{Síntese do Estudo de Caso 2: Player de Vídeo com Avatar de Libras}
+\label{tab:chapter4-cs2-summary}
+\begin{tabular}{|C{3cm}|m{11.75cm}|}\hline
+\textbf{Objeto de Estudo} & Player de Vídeo com Avatar de Libras Baseado em Texto (Transcrição Automática) \\\hline
+\textbf{Perspectiva} & Exploratório \\\hline
+\textbf{Característica} & Elaboração de conhecimentos ou levantamento de informação acerca do fenômeno ainda pouco conhecido \cite{CastroFilho2021}. \\\hline
+\textbf{Objetivos} & \begin{tabular}[c]{@{}m{11.75cm}@{}}1. Investigar o impacto de avatares de Libras baseados em texto na acessibilidade de conteúdos para surdos. \\ 2. Explorar a eficácia de avatares de Libras integrados à transcrição automática de videoaulas para a compreensão de OAs audíveis.\end{tabular} \\\hline
+\textbf{Questões de Pesquisa} & Como as tecnologias de reconhecimento de fala (ASR/STT) podem contribuir para uma educação mais acessível para usuários da Libras? \\\hline
+\textbf{Hipóteses} & Não aplicável \\\hline
+\textbf{Fontes de Dados} & Dados qualitativos de entrevistas com intérpretes de Libras. \\\hline
+\textbf{Método de Coleta de Dados} & Entrevistas semi-estruturadas \\\hline
+\textbf{Tipo de Análise} & Qualitativa \\\hline
+\end{tabular}
+\end{table}
+
+\subsection{Resultados e Discussões}
+
+Os estudos de caso desta tese de doutorado foram aprovados pelo \sigla{CEP}{Comitê de Ética e Pesquisa}, sob o CAAE 78381524.3.0000.5390. É importante destacar que, embora ambos os estudos tenham sido descritos no projeto submetido ao CEP, o foco principal foi no Estudo de Caso 2, devido à realização de entrevistas com intérpretes de Libras e sua natureza qualitativa. Por outro lado, o Estudo de Caso 1, centrado majoritariamente em análises quantitativas da precisão de transcrições automáticas, não necessitou de uma submissão individual para avaliação ética devido às suas características.
+
+Atualmente, as entrevistas estão sendo agendadas e conduzidas com os intérpretes de Libras da QS Inclusão (\url{https://qsinclusao.com.br}). Embora os resultados ainda não tenham sido totalmente analisados e estratificados para discussões mais aprofundadas, o roteiro completo para as entrevistas com os intérpretes está disponível no \autoref{appendix:interview-form}.
+
+Na prática, tendo em vista o nosso planejamento e previsão financeira, utilizamos apenas o \textit{VLibras} como avatar de Libras. Ele foi priorizado em detrimento ao \textit{Hand Talk} por ser gratuito, \textit{open-source} e mantido pelo governo brasileiro. Além disso, possui configurações avançadas relacionadas à regionalidade e, nos últimos anos, voltou a ser atualizado com frequência.
+
+Algo interessante, que se alinha com esta seção, foi que tivemos a oportunidade de apresentar uma demonstração do nosso player de vídeo (\autoref{fig:chapter4-cs2-poc-demo}) no ``\textit{Workshop on Opportunities and Challenges of Generative AI in Education}'' da ``\textit{57th Hawaii International Conference on System Sciences}'' (HICSS). Seguem algumas dúvidas e feedbacks relevantes deste evento:
+
+\begin{figure}[htbp]
+\centering
+\caption{\textit{Screenshots} da Demo do Player Apresentada no HICSS.}
+\label{fig:chapter4-cs2-poc-demo}
+\begin{subfigure}[b]{0.83\textwidth}
+\centering
+\includegraphics[width=\textwidth]{images/chapter4-cs2-poc-demo1.png}
+\caption{Player de Vídeo: Transcrições e Legendas.}
+\label{fig:chapter4-cs2-poc-demo1}
+\end{subfigure} ~
+\begin{subfigure}[b]{0.83\textwidth}
+\centering
+\includegraphics[width=\textwidth]{images/chapter4-cs2-poc-demo2.png}
+\caption{Player de Vídeo: Avatar de Libras (VLibras) Sinalizando.}
+\label{fig:chapter4-cs2-poc-demo2}
+\end{subfigure} ~
+\begin{subfigure}[b]{0.83\textwidth}
+\centering
+\includegraphics[width=\textwidth]{images/chapter4-cs2-poc-demo3.png}
+\caption{Player de Vídeo: Avatar de Libras (VLibras) Regionalismo.}
+\label{fig:chapter4-cs2-poc-demo3}
+\end{subfigure}
+\fautor
+\end{figure}
+
+\begin{itemize}
+    \item \textbf{Como lidar com as variações regionais das próprias línguas de sinais?}
+    É fundamental reconhecer a importância das regionalidades e sotaques tanto na língua falada quanto na sinalizada. A variação regional é uma característica intrínseca das línguas de sinais, que varia conforme a localização geográfica. Em nosso estudo, utilizamos o \textit{VLibras}, que possui configurações de regionalidade para cada estado do Brasil, garantindo que o avatar considere essas variações ao sinalizar. Este aspecto é crucial para a aceitação e eficácia do avatar de Libras, pois respeita as particularidades culturais e linguísticas dos usuários.
+    \item \textbf{Qual seria o esforço para integrar o Player de Vídeo a avatares de outras línguas de sinais, como a ASL?}
+    Nosso player foi implementado seguindo as práticas de Design Universal, que preconizam que as soluções atendam ao maior número possível de usuários. O player é, essencialmente, uma biblioteca HTML, CSS e JavaScript, garantindo que o player de vídeo HTML, bem como sua descrição, transcrições e legendas, sigam as boas práticas de semântica, estilos e interações. Dessa forma, o player não precisa "conhecer" o avatar de língua de sinais específico, pois está preparado estruturalmente para integrá-lo, facilitando a adaptação para outras línguas de sinais, como a ASL.
+    \item \textbf{Como as IAGen estão ajudando no desenvolvimento de projetos relacionados à Arquitetura Speech2Learning?}
+    Os modelos de ML têm evoluído consideravelmente nos últimos anos, e hoje é comum ouvirmos falar de GPT e outras siglas comuns na IA. As tecnologias de ASR e STT têm se beneficiado muito dessa revolução. O modelo de reconhecimento de fala da OpenAI, por exemplo, chamado Whisper, é baseado na ideia de \textit{Transformers}, a mesma tecnologia subjacente ao ChatGPT. Notavelmente, o Whisper se destacou em nossos testes e análises estatísticas, e foi escolhido como provedor padrão em nossa API de transcrição e legendagem de videoaulas devido à sua precisão e confiabilidade.
+\end{itemize}
+
+Em síntese, nosso estudo de caso sobre o Player de Vídeo com Avatar de Libras demonstra um avanço significativo na inclusão educacional para alunos surdos. A implementação da arquitetura \textit{Speech2Learning} com o uso de avatares de Libras, como o VLibras, potencializa a acessibilidade de conteúdos educacionais, respeitando as particularidades regionais e culturais dos usuários. A apresentação e os feedbacks recebidos no HICSS reforçam a relevância e a aplicabilidade de nossa solução, destacando a importância de continuar explorando e aperfeiçoando tecnologias assistivas no contexto educacional.
+
 \section{Considerações Finais}
+
+Os dois estudos de caso apresentados nesta seção demonstram a importância e a viabilidade de utilizar tecnologias de reconhecimento de fala para promover a inclusão educacional. No primeiro estudo de caso, focado em legendas automáticas para videoaulas, comprovamos que transcrições automáticas precisas podem aumentar significativamente o potencial de acessibilidade em OAs audíveis. No segundo estudo de caso, o desenvolvimento de um player de vídeo com Design Universal, integrado com transcrições automáticas de videoaulas, mostrou-se uma solução promissora para atender às necessidades específicas da comunidade surda, oferecendo uma TA flexível e compatível com avatares de Libras baseados em texto.
+
+Os resultados obtidos até o momento indicam que a integração de tecnologias como ASR/STT com soluções educacionais pode proporcionar uma educação mais inclusiva e acessível. A continuidade deste trabalho incluirá a análise detalhada dos dados coletados nas entrevistas com intérpretes de Libras. Além disso, futuras pesquisas poderão explorar a adaptação de avatares de outras línguas de sinais e o uso de novas tecnologias de IA para aprimorar ainda mais as soluções desenvolvidas.
+
+Em conclusão, os estudos de caso apresentados nesta tese representam um avanço significativo na direção de uma educação verdadeiramente acessível a todos. A aplicação da arquitetura \textit{Speech2Learning} e o uso de avatares de Libras destacam-se como abordagens inovadoras e eficazes para promover a inclusão educacional, contribuindo para a construção de um ambiente educacional mais justo e igualitário.
