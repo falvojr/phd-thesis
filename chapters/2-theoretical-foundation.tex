@@ -1,13 +1,13 @@
 \section{Considerações Iniciais}
 
-A fundamentação teórica deste estudo começa com um \sigla{MS}{Mapeamento Sistemático}, cujo objetivo é identificar a interseção entre as TICs e as línguas de sinais no contexto educacional. A \autoref{section:foundation:sm} oferece um resumo deste MS, enquanto análises mais detalhadas dos estudos primários, que abrangem tanto o panorama nacional quanto internacional, estão disponíveis em nossas publicações anteriores: \citeonline{FalvoJr2020_FIE, FalvoJr2020_SBIE, FalvoJr2021_RENOTE}.
+A fundamentação teórica deste estudo começa com um MS, cujo objetivo é identificar a interseção entre as TICs e as línguas de sinais no contexto educacional. A \autoref{section:foundation:sm} oferece um resumo deste MS, enquanto análises mais detalhadas dos estudos primários, que abrangem tanto o panorama nacional quanto internacional, estão disponíveis em uma série de publicações \cite{FalvoJr2020_FIE, FalvoJr2020_SBIE, FalvoJr2021_RENOTE}, que foram essenciais para o desenvolvimento deste doutorado.
 
 A realização deste estudo permitiu identificar \textit{gaps} tecnológicos no uso de línguas de sinais no ensino-aprendizagem, destacando a necessidade de novas pesquisas na literatura. Complementar ao MS, um levantamento bibliográfico complementar foi conduzido para explorar conceitos e TICs promissoras que possam enfrentar esses desafios. As seções subsequentes expandem essas temáticas, abordando Arquiteturas de Software (\autoref{section:foundation:arch}), OAs (\autoref{section:foundation:lo}) e ASR (\autoref{section:foundation:asr}). Fornecendo assim, a base teórica para a \textit{Speech2Learning}, uma arquitetura baseada em ASR para OAs audíveis mais acessíveis, definida em detalhes no \autoref{chapter3}.
 
 \section{Mapeamento Sistemático: TICs e Línguas de Sinais na Educação}
 \label{section:foundation:sm}
 
-Para definir o escopo deste projeto, foi crucial realizar um estudo sistemático de literatura para identificar lacunas e oportunidades tecnológicas no processo de ensino e aprendizagem com línguas de sinais. De acordo com \citeonline{Kitchenham2007}, existem duas abordagens principais para este tipo de estudo: revisão ou mapeamento sistemáticos. Optou-se pelo MS devido à sua capacidade de apresentar evidências de um domínio de estudo em um alto nível de granularidade, agrupando-as em áreas de similaridade e identificando tendências emergentes.
+Para definir o escopo deste projeto, foi crucial realizar um estudo sistemático de literatura para identificar lacunas e oportunidades tecnológicas no processo de ensino-aprendizagem com línguas de sinais. De acordo com \citeonline{Kitchenham2007}, existem duas abordagens principais para este tipo de estudo: revisão ou mapeamento sistemáticos. Optou-se pelo MS devido à sua capacidade de apresentar evidências de um domínio de estudo em um alto nível de granularidade, agrupando-as em áreas de similaridade e identificando tendências emergentes.
 
 O protocolo de pesquisa para o MS foi cuidadosamente definido com base em diretrizes formais  \cite{Kitchenham2007, Nakagawa2010, Zhang2011, Petersen2015}. A abordagem de \citeonline{Zhang2011} foi particularmente relevante, pois orientou a estratégia de busca e os critérios de qualidade adotados no estudo. Essa estratégia foi adaptada para aumentar o rigor do processo de pesquisa, incorporando o \sigla{QGS}{\textit{Quasi-Gold Standard}} e seguindo boas práticas recomendadas na literatura (\autoref{ms:zhang-approach}).
 
@@ -24,17 +24,17 @@ O protocolo de pesquisa para o MS foi cuidadosamente definido com base em diretr
 
 As \sigla{QP}{Questões de Pesquisa} são essenciais para definir o escopo e identificar possíveis palavras-chave em um estudo sistemático de literatura \cite{Kitchenham2007,Petersen2015}. Neste contexto, uma abordagem comum se dá através da aplicação dos critérios de PICO \cite{Petticrew2008}. A \autoref{table:pico} representa o PICO, que derivaram as seguintes QP que definem o escopo deste MS.
 
-\begin{table}[htb]
+\begin{quadro}[htb]
 \centering
 \caption{Critérios de PICO.}
 \label{table:pico}
-\begin{tabularx}{\textwidth}{lX} \hline
-\textit{\textbf{P}opulation} & Aprendizes/Educadores interessados em línguas de sinais. \\
-\textit{\textbf{I}ntervention} & TICs relevantes no processo de ensino-aprendizagem com línguas de sinais. \\
-\textit{\textbf{C}omparison} & Não se aplica. \\
+\begin{tabularx}{\textwidth}{l|X} \hline
+\textit{\textbf{P}opulation} & Aprendizes/Educadores interessados em línguas de sinais. \\ \hline
+\textit{\textbf{I}ntervention} & TICs relevantes no processo de ensino-aprendizagem com línguas de sinais. \\ \hline
+\textit{\textbf{C}omparison} & Não se aplica. \\ \hline
 \textit{\textbf{O}utcome} & Panorama tecnológico sobre o ensino-aprendizagem com línguas de sinais. \\ \hline
 \end{tabularx}
-\end{table}
+\end{quadro}
 
 \begin{itemize}
     \setlength\itemsep{0em}
@@ -51,21 +51,21 @@ As \sigla{QP}{Questões de Pesquisa} são essenciais para definir o escopo e ide
     % \end{itemize}
 \end{itemize}
 
-Segundo \citeonline{Kitchenham2007,Petersen2015}, os estudos sistemáticos requerem critérios explícitos de inclusão e exclusão para avaliar seus potenciais estudos primários. Assim, foram definimos os seguintes critérios de seleção:
+Segundo \citeonline{Kitchenham2007,Petersen2015}, os estudos sistemáticos requerem critérios explícitos de inclusão e exclusão para avaliar seus potenciais estudos primários. Assim, foram definimos os seguintes critérios de seleção (\autoref{tab:ms:criterios-selecao}):
 
-\begin{table}[htb]
+\begin{quadro}[htb]
 \centering
 \caption{Critérios de Inclusão (CI) e Exclusão (CE).}
 \label{tab:ms:criterios-selecao}
-\begin{tabularx}{\textwidth}{lX} \hline
+\begin{tabularx}{\textwidth}{l|X} \hline
 \textbf{CI1} & Os estudos apresentam contribuições (software ou hardware ou teóricas) para o ensino e a aprendizagem de línguas de sinais. \\ \hline
 \textbf{CE1} & Estudos que não foram publicados no período de 2000 a 2019, seguindo um racional semelhante à \citeonline{Radermacher2013,Scatalon2019}, os quais sugerem que estudos anteriores a 2000 não representam as abordagens educacionais atuais, especialmente considerando o contexto de tecnologia. \\ \hline
 \textbf{CE2} & Estudos classificados como resumos, resumos de conferências/editoriais, literatura cinza ou capítulos de livros. \\ \hline
 \textbf{CE3} & Estudos não apresentados em inglês ou português. \\ \hline
 \textbf{CE4} & Estudos não acessíveis em texto completo. \\ \hline
-\textbf{CE5} & Estudos duplicados ou superficialmente complementares de outros estudos. \\ \bottomrule
+\textbf{CE5} & Estudos duplicados ou superficialmente complementares de outros estudos. \\ \hline
 \end{tabularx}
-\end{table}
+\end{quadro}
 
 \subsection{Condução das Buscas Manual e Automatizada}
 \label{ms:conducao-busca-manual}
@@ -78,14 +78,14 @@ Por sua vez, a \autoref{ms:table:busca-manual-internacional} apresenta as confer
 \centering
 \caption{Busca Manual Nacional.}
 \label{ms:table:busca-manual-nacional}
-\begin{tabular}{lcc} \hline
+\begin{tabular}{l|c|c} \hline
 \textbf{Conferências/Periódicos} & \textbf{Fonte} & \textbf{Selecionados} \\ \hline
-DesafIE                          & CEIE           & -                     \\
-JAIE                             & CEIE           & -                     \\
+DesafIE                          & CEIE           & 0                     \\
+JAIE                             & CEIE           & 0                     \\
 RBIE                             & CEIE           & 2                     \\
 RENOTE                           & CINTED         & 13                    \\
 SBIE                             & CEIE           & 13                    \\
-WAVE2                            & CEIE           & -                     \\
+WAVE2                            & CEIE           & 0                     \\
 WCBIE                            & CEIE           & 11                    \\
 WIE                              & CEIE           & 7                     \\ \hline
 \multicolumn{2}{l}{\textbf{Total}}                & \textbf{46}           \\ \hline
@@ -96,7 +96,7 @@ WIE                              & CEIE           & 7                     \\ \hl
 \centering
 \caption{Busca Manual Internacional (Equivalente ao QGS).}
 \label{ms:table:busca-manual-internacional}
-\begin{tabular}{lcc} \hline
+\begin{tabular}{l|c|c} \hline
 \textbf{Conferência/Periódico} & \textbf{Fonte}     & \textbf{Selecionados (QGS)} \\ \hline
 ACM TOCE                       & ACM                & 0            \\ 
 Computers \& Education         & Elsevier           & 5            \\ 
@@ -109,7 +109,7 @@ Informatics in Education       & Vilnius University & 0            \\
 ITiCSE                         & ACM                & 2            \\ 
 Learning @ Scale               & ACM                & 0            \\ 
 SIGCSE                         & ACM                & 1            \\ \hline
-\textbf{Total}                 & \textbf{}          & \textbf{19}  \\ \hline
+\multicolumn{2}{l}{\textbf{Total}}                  & \textbf{19}  \\ \hline
 \end{tabular}
 \end{table}
 
@@ -127,14 +127,14 @@ A \autoref{method:table:automated-search} resume os resultados da busca automati
 \centering
 \caption{Resultados da Busca Automatizada.}
 \label{method:table:automated-search}
-\begin{tabular}{lllll} \hline
+\begin{tabular}{ll|lll} \hline
  &  & Busca Final &                 &                   \\ \cline{3-5} 
 Base de Dados & \textbf{QGS} & Recuperados    & \textbf{no QGS} & \textbf{Relevantes} \\ \hline
 ACM DigitalLibrary & 3            & 922          & 3               & 47                \\
 IEEE Xplore        & 6            & 359          & 5               & 59                \\
 ScienceDirect      & 5            & 1,961        & 5               & 20                \\
 SpringerLink       & 5            & 4,980        & 5               & 36                \\ \hline
-\textbf{Total}   & \textbf{19}  & 8,222        & \textbf{18}     & \textbf{162}      \\ \hline
+\multicolumn{1}{l}{\textbf{Total}}   & \textbf{19}  & 8,222        & \textbf{18}     & \textbf{162}      \\ \hline
 \end{tabular}
 \end{table}
 
@@ -143,7 +143,7 @@ SpringerLink       & 5            & 4,980        & 5               & 36         
 \text{\textit{quasi-sensibility}} = \frac{\text{\textit{Estudos relevantes recuperados (\textbf{no QGS})}}}{\text{\textit{Total de estudos relevantes (\textbf{QGS})}}}
 \end{equation}
 
-Como resultado, a \textit{quasi-sensitivity} calculada foi de 94,74\% (18/19), um desempenho adequado segundo \citeonline{Zhang2011}. Portanto, os 163 artigos selecionados pelas buscas (manual internacional e automatizada) foram considerados estudos primários em potencial. Nesta etapa, 24 estudos foram excluídos de acordo com os critérios de inclusão e exclusão pré-estabelecidos. A \autoref{method:figure:evaluation-refinement} organiza os \textbf{139 estudos primários selecionados pela busca sistemática baseada em QGS}.
+Como resultado, a \textit{quasi-sensitivity} calculada foi de 94,74\% (18/19), um desempenho adequado segundo \citeonline{Zhang2011}. Portanto, os 163 artigos selecionados pelas buscas (manual internacional e automatizada) foram considerados estudos primários em potencial. Nesta etapa, 24 estudos foram excluídos de acordo com os critérios de inclusão e exclusão pré-estabelecidos. Sendo assim, a \autoref{method:figure:evaluation-refinement} organiza os \textbf{139 estudos primários selecionados pela busca sistemática baseada em QGS}.
 
 \begin{figure}[htb]
 \centering 
@@ -158,29 +158,28 @@ Para extrair as informações relevantes dos estudos primários identificados, u
 \sigla*{SWEBOK}{\textit{Software Engineering Body of Knowledge}}
 \sigla*{ES}{Engenharia de Software}
 
-\begin{table}[htb]
+\begin{quadro}[htb]
 \centering
 \caption{Formulário de Extração de Dados.}
 \label{method:table:data-extraction}
-\begin{tabular}{lll} \hline
-\textbf{Item} & \textbf{Descrição} & \textbf{QP} \\ \hline
-\textit{\textbf{Informações Gerais}} & & \\ \hline
-ID & Identificador (prefixos \textit{INT} ou \textit{BRA}). & \\
-Título & Título do estudo. & \\
-Autores & Nomes dos autores. & \\
-Ano & Ano de publicação do artigo. & \\
-Conferência/Periódico & Nome do meio de publicação. & \\
-Tipo de busca & Manual; Automatizada; Ambas. & \\
-Língua & Inglês; Português. & \\
-País & País da afiliação do primeiro autor. & \\ \hline
-\textit{\textbf{Informações Específicas}} & & \\ \hline
+\begin{tabular}{l|l|l} \hline
+\textbf{Informações Gerais} & \multicolumn{2}{l}{\textbf{Descrição}} \\ \hline
+ID & \multicolumn{2}{l}{Identificador (prefixos \textit{INT} ou \textit{BRA}).} \\
+Título & \multicolumn{2}{l}{Título do estudo.} \\
+Autores & \multicolumn{2}{l}{Nomes dos autores.} \\
+Ano & \multicolumn{2}{l}{Ano de publicação do artigo.} \\
+Conferência/Periódico & \multicolumn{2}{l}{Nome do meio de publicação.} \\
+Tipo de busca & \multicolumn{2}{l}{Manual; Automatizada; Ambas.} \\
+Língua & \multicolumn{2}{l}{Inglês; Português.} \\
+País & \multicolumn{2}{l}{País da afiliação do primeiro autor.} \\ \hline
+\textbf{Informações Específicas} & \textbf{Descrição} & \textbf{QP} \\ \hline
 Área da Eng. de Software (ES) & Área de conhecimento da ES (SWEBOK). & QP1 \\
 Tipo de solução & Software; Hardware; Teórica. & QP1 \\
 Estratégia empírica & Quais estratégias empíricas foram encontradas. & QP1 \\
 Tópico educacional & Quais tópicos educacionais foram encontrados. & QP2 \\
 Línguas de sinais & Quais línguas de sinais foram encontradas. & QP3 \\ \hline
 \end{tabular}
-\end{table}
+\end{quadro}
 
 \subsection{Resultados e Discussões}
 \label{ms:resultados}
@@ -192,7 +191,7 @@ Portanto, o MS contou com 185 estudos primários selecionados: 46 da busca manua
 \centering 
 \caption{Linha de Tendência Linear Crescente de Publicações por Ano.}
 \label{results:figure:publications-year}
-\includegraphics[width=.95\textwidth]{images/chapter2-sm-publications-timeline.png}
+\includegraphics[width=1\textwidth]{images/chapter2-sm-publications-timeline.png}
 \fautor
 \end{figure}
 
@@ -228,7 +227,7 @@ As áreas presentes na \autoref{results:table:se-areas} destacam a importância 
 \caption{QP1: Áreas da ES no SWEBOK \cite{Bourque2014}.}
 \label{results:table:se-areas}
 \centering
-\begin{tabular}{lcc|cc} \hline
+\begin{tabular}{l|cc|cc} \hline
  & \multicolumn{2}{c|}{\textit{\textbf{INT}}} & \multicolumn{2}{c}{\textit{\textbf{BRA}}} \\ \cline{2-5} 
 \textbf{Área da ES} & \textbf{Estudos} & \textbf{\%} & \textbf{Estudos} & \textbf{\%} \\ \hline
 Construção de Software & 65 & 47\% & 23 & 50\% \\
@@ -251,7 +250,7 @@ A \autoref{results:table:educational-topics} apresenta uma ampla diversidade de 
 \caption{QP2: Tópicos Educacionais.}
 \label{results:table:educational-topics}
 \centering
-\begin{tabular}{lcc|cc} \hline
+\begin{tabular}{l|cc|cc} \hline
  & \multicolumn{2}{c|}{\textit{\textbf{INT}}} & \multicolumn{2}{c}{\textit{\textbf{BRA}}} \\ \cline{2-5} 
 \textbf{Tópico Educacional} & \textbf{Estudos} & \textbf{\%} & \textbf{Estudos} & \textbf{\%} \\ \hline
 Línguas de Sinais & 59 & 42,5\% & 19 & 41,3\% \\
@@ -278,7 +277,7 @@ As línguas de sinais mais comuns, destacadas na \autoref{results:table:sign-lan
 \caption{QP3: Línguas de Sinais.}
 \label{results:table:sign-languages}
 \centering
-\begin{tabular}{lcc|cc} \hline
+\begin{tabular}{l|cc|cc} \hline
  & \multicolumn{2}{c|}{\textit{\textbf{INT}}} & \multicolumn{2}{c}{\textit{\textbf{BRA}}} \\ \cline{2-5} 
 \textbf{Língua de Sinais} & \textbf{Estudos} & \textbf{\%} & \textbf{Estudo} & \textbf{\%} \\ \hline
 ASL & 21 & 15.11\% & - & - \\
@@ -304,13 +303,13 @@ A análise dos resultados obtidos pelas QP fornece um panorama do uso das TICs n
 
 Uma das principais lacunas identificadas no MS foi a carência de padrões e boas práticas que permitam o reuso e a adaptação das soluções no ensino e aprendizagem com línguas de sinais. Muitos dos estudos primários apresentaram contribuições técnicas relevantes, mas não detalharam as arquiteturas de software utilizadas, dificultando a evolução e derivação dessas soluções para outros contextos e domínios de aplicação. Por isso, discutiremos como as arquiteturas podem contribuir para o desenvolvimento de TAs replicáveis, flexíveis e independentes de tecnologia, seguindo alguns princípios e diretrizes da ES.
 
-Nesse sentido, uma arquitetura de software pode ser definida como o conjunto de estruturas necessárias para o entendimento de um sistema, compreendendo desde seus componentes de software e hardware até suas relações/propriedades internas e externas \cite{Bass2021}. Essa definição enfatiza que a arquitetura não se limita apenas a decisões iniciais, mas inclui todas as decisões que moldam a estrutura do projeto e suas interações. A arquitetura é fundamental para a criação de sistemas complexos e facilita a análise de requisitos não funcionais, como desempenho, segurança e escalabilidade \cite{Pressman2016, Sommerville2015}.
+Nesse sentido, uma arquitetura de software pode ser definida como o conjunto de estruturas necessárias para o entendimento de um sistema, compreendendo desde seus componentes de software e hardware até suas relações e propriedades internas e externas \cite{Bass2021}. Essa definição enfatiza que a arquitetura inclui todas as decisões que moldam a estrutura do projeto e suas interações, não se limitando apenas às decisões iniciais. A arquitetura é fundamental para a criação de sistemas complexos e facilita a análise de requisitos não funcionais, como desempenho, segurança e escalabilidade \cite{Pressman2016, Sommerville2015}.
 
-Diferentemente de outras definições focadas em decisões antecipadas, a arquitetura, conforme \citeonline{Bass2021}, é sobre estruturas que permitem o raciocínio e a análise do sistema. Essa perspectiva permite uma compreensão mais ampla e flexível da arquitetura, considerando suas múltiplas dimensões e aspectos envolvidos no desenvolvimento e manutenção do software.
+Conforme \citeonline{Bass2021}, a arquitetura abrange estruturas que permitem o raciocínio e a análise do sistema, oferecendo uma compreensão ampla e flexível, considerando suas múltiplas dimensões e aspectos envolvidos no desenvolvimento e manutenção do software. A seguir, exploraremos as diferentes estruturas e visões arquiteturais, bem como os critérios que definem uma ``boa'' arquitetura.
 
 \subsection{Estruturas e Visões Arquiteturais}
 
-Resumidamente, a arquitetura pode ser vista como um conjunto de estruturas que proporcionam diferentes perspectivas sobre o sistema, cada uma com seu foco específico, o qual pode ser necessário em diferentes fases do ciclo de vida do software. Formalmente, \citeonline{Bass2021} identificam três tipos principais de estruturas arquiteturais, que formam as principais visões neste contexto:
+Resumidamente, uma arquitetura pode ser vista como um conjunto de estruturas que proporcionam multiplas perspectivas sobre o sistema, cada uma com seu foco específico, o qual pode ser necessário em diferentes fases do ciclo de vida do software. \citeonline{Bass2021} propõem três tipos principais de estruturas arquiteturais, que formam as principais visões neste contexto:
 
 \begin{itemize}
 
@@ -322,14 +321,23 @@ Resumidamente, a arquitetura pode ser vista como um conjunto de estruturas que p
     
 \end{itemize}
 
-Essas estruturas arquiteturais são análogas às diferentes especialidades médicas que focam em partes específicas do corpo humano, como ilustra a \autoref{chapter2:figure:physiological-structures}. Essa analogia facilita a compreensão de como diferentes visões se complementam para fornecer uma compreensão abrangente do sistema como um todo \cite{Bass2021}.
+Essas estruturas arquiteturais podem ser compreendidas de maneira análoga através dos diferentes sistemas fisiológicos humanos, conforme ilustrado na \autoref{chapter2:figure:physiological-structures}. Essa analogia facilita a compreensão de como diferentes visões se complementam para fornecer uma compreensão abrangente do sistema como um todo \cite{Bass2021}. Na figura, os diferentes sistemas fisiológicos representam de maneira análoga as estruturas arquiteturais:
 
 \begin{figure}[htb]
 \centering
 \caption{Fisiologia Humana: Análoga às Estruturas e Visões Arquiteturais}
 \label{chapter2:figure:physiological-structures}
-\includegraphics[width=0.60\textwidth]{images/chapter2-arch-physiological-structures.jpeg}
+\includegraphics[width=0.75\textwidth]{images/chapter2-arch-physiological-structures.jpeg}
+\fautor{Bass2021}
 \end{figure}
+
+\begin{itemize}
+    \item \textbf{Esqueleto $\equiv$ Estruturas de Módulos}: Assim como o esqueleto fornece a estrutura e suporte básico para o corpo, as estruturas de módulos organizam e definem a base do software, dividindo-o em partes manejáveis e específicas, como classes e pacotes. Diagramas de classes e pacotes são exemplos de representações visuais que ilustram essas estruturas.
+
+    \item \textbf{Músculos e Sistema Circulatório $\equiv$ Estruturas de C\&C}: Os músculos permitem o movimento e a interação entre as partes do corpo, enquanto o sistema circulatório transporta nutrientes e oxigênio, facilitando a comunicação. De forma similar, as estruturas de componentes e conectores permitem a interação e execução das funcionalidades do sistema, garantindo comunicação eficiente entre os componentes. Diagramas de componentes e de sequência são exemplos de como essas estruturas podem ser representadas visualmente.
+
+    \item \textbf{Sistema Nervoso $\equiv$ Estruturas de Alocação}: O sistema nervoso controla e coordena as ações do corpo, assim como as estruturas de alocação determinam onde e como os componentes de software são executados, garantindo uma distribuição eficiente e gestão de recursos durante todo o ciclo de vida do sistema. Diagramas de implantação e de distribuição ilustram essas estruturas.
+\end{itemize}
 
 Essas três categorias de estruturas facilitam a criação de representações visuais que auxiliam na compreensão da arquitetura de software em diferentes etapas do desenvolvimento. A arquitetura \textit{Speech2Learning}, por exemplo, adota essas estruturas para garantir clareza arquitetural desde sua concepção até a avaliação em seus estudos de caso (detalhes nos Capítulos \ref{chapter3} e \ref{chapter4}). Essa abordagem sistematiza e torna mais eficiente a implementação de TAs.
 
@@ -341,12 +349,14 @@ Padrões arquiteturais são composições de elementos arquiteturais que foram d
 
 Entretanto, não existe uma arquitetura intrinsecamente ``boa'' ou ``ruim''; a adequação de uma arquitetura depende de como ela atende aos requisitos específicos do sistema. Uma arquitetura projetada para um sistema de comércio eletrônico pode não ser adequada para um sistema de controle de voo, por exemplo. A avaliação da arquitetura em relação a objetivos específicos é crucial para garantir que ela atenda às necessidades do sistema \cite{Pressman2016, Sommerville2015}.
 
-Para orientar o desenvolvimento de uma boa arquitetura de software, \citeonline{Bass2021} propõem algumas boas práticas, categorizadas em recomendações de processo e estruturais. Primeiramente, as \textbf{recomendações de processo} focam na maneira como a arquitetura deve ser desenvolvida e gerenciada ao longo do ciclo de vida do sistema, garantindo que a integridade conceitual e a qualidade sejam mantidas de forma contínua:
+Para orientar o desenvolvimento de uma boa arquitetura de software, \citeonline{Bass2021} propõem algumas boas práticas, categorizadas em recomendações de processo e recomendações estruturais. Primeiramente, as \textbf{recomendações de processo} focam na maneira como a arquitetura deve ser desenvolvida e gerenciada ao longo do ciclo de vida do sistema, garantindo que a integridade conceitual e a qualidade sejam mantidas de forma contínua:
 
 \begin{enumerate}
-    \item \textbf{Desenvolvimento por lideranças técnicas}: É fundamental que a arquitetura seja concebida por um arquiteto ou uma pequena equipe de arquitetos com um líder técnico identificado, garantindo a integridade conceitual e a consistência técnica. Esse princípio também se aplica a projetos ágeis e de código aberto, evitando designs impraticáveis e desconectados da realidade do desenvolvimento.
+    \item \textbf{Condução por lideranças técnicas}: É fundamental que a arquitetura seja concebida por um arquiteto ou uma pequena equipe de arquitetos com um líder técnico identificado, assegurando a integridade conceitual e a consistência técnica. 
     
-    \item \textbf{Foco nos requisitos de qualidade}: A arquitetura deve se basear continuamente em uma lista priorizada de requisitos de qualidade bem definidos. Esses requisitos informam as decisões de \textit{trade-offs} que sempre ocorrem, sendo mais relevantes do que a funcionalidade em si.
+    Esse princípio também se aplica a projetos ágeis e de código aberto, evitando designs impraticáveis e desconectados da realidade do desenvolvimento.
+    
+    \item \textbf{Foco nos requisitos de qualidade}: A arquitetura deve se basear continuamente em uma lista priorizada de requisitos de qualidade bem definidos. Esses requisitos guiam as decisões de \textit{trade-offs}, que sempre ocorrem, sendo mais relevantes do que a funcionalidade em si.
     
     \item \textbf{Documentação por meio de visões arquiteturais}: A arquitetura deve ser documentada através de visões que representem uma ou mais estruturas arquiteturais. Essas visões devem abordar as preocupações dos \textit{stakeholders} mais importantes e apoiar o cronograma do projeto, fornecendo uma documentação que pode ser inicialmente minimalista, mas detalhada posteriormente.
     
@@ -382,9 +392,9 @@ Nesse contexto, a arquitetura \textit{Speech2Learning} surge como uma proposta p
 \section{Objetos de Aprendizagem: Diversidade em Conteúdos Educacionais}
 \label{section:foundation:lo}
 
-A diversidade em conteúdos educacionais é uma necessidade cada vez mais reconhecida, como evidenciado em nosso MS. Sendo assim, os OAs emergem como uma solução promissora para atender a essa demanda, permitindo a criação de recursos personalizados e adaptáveis a diferentes contextos e públicos. No âmbito da arquitetura \textit{Speech2Learning}, os OAs desempenham um papel fundamental no acesso a materiais didáticos audíveis, enriquecidos pela tecnologia de ASR para maior acessibilidade \cite{FalvoJr2023_HICSS}.
+A crescente demanda por diversidade em conteúdos educacionais é amplamente reconhecida, conforme evidenciado em nosso MS. Dessa forma, os OAs emergem como uma solução promissora para atender a essa demanda, permitindo a criação de recursos personalizados e adaptáveis a diferentes contextos e públicos. No âmbito da arquitetura \textit{Speech2Learning}, os OAs desempenham um papel fundamental no acesso a materiais didáticos audíveis, enriquecidos pela tecnologia de ASR para maior acessibilidade \cite{FalvoJr2023_HICSS}.
 
-Os OAs abrangem um amplo espectro de recursos digitais projetados para enriquecer o processo de ensino-aprendizagem. Eles vão além da mera entrega de conteúdo, proporcionando uma experiência mais rica e interativa \cite{Wiley2000}. A importância da multimídia no aprendizado é destacada por \citeonline{Mayer2021}, que argumenta que a combinação eficaz de texto, áudio, vídeo e elementos interativos pode potencializar a retenção e aplicação do conhecimento.
+Os OAs abrangem uma vasta gama de recursos digitais projetados para enriquecer o processo de ensino-aprendizagem. Eles transcendem a mera entrega de conteúdo, proporcionando uma experiência mais rica e interativa \cite{Wiley2000}. A importância da multimídia no aprendizado é destacada por \citeonline{Mayer2021}, que argumenta que a combinação eficaz de texto, áudio, vídeo e elementos interativos pode potencializar a educação.
 
 \sigla*{IEEE}{\textit{Institute of Electrical and Electronics Engineers}}
 
@@ -396,23 +406,23 @@ A essência dos OAs reside na criação de pequenos módulos instrucionais reuti
 \centering
 \caption{Mapa Conceitual Sobre Objetos de Aprendizagem}
 \label{chapter2:figure:lo-mindmap}
-\includegraphics[width=0.88\textwidth]{images/chapter2-lo-mindmap.jpg}
+\includegraphics[width=0.925\textwidth]{images/chapter2-lo-mindmap.jpg}
 \fadaptada{Tarouco2021}
 \end{figure}
 
 \subsection{Estratégias de Identificação e Utilização de OAs}
 
-O uso e reuso de OAs envolve várias estratégias que facilitam sua adaptação a diferentes contextos educacionais. Conforme discutido por \citeonline{Tarouco2021}, os OAs podem variar em tamanho, escopo e nível de granularidade, afetando diretamente sua reusabilidade (\autoref{chapter2:figure:lo-granularity}). Objetos com granularidade fina, como imagens ou pequenos vídeos, são mais fáceis de reutilizar devido à sua simplicidade e especificidade. Em contraste, OAs de granularidade grande, como cursos, oferecem uma experiência educacional mais completa e integrada, mas são mais difíceis de adaptar a novos contextos de ensino-aprendizagem.
+O uso e reuso de OAs envolve várias estratégias que facilitam sua adaptação a diferentes contextos educacionais. Conforme discutido por \citeonline{Tarouco2021}, os OAs podem variar em tamanho, escopo e nível de granularidade, afetando diretamente sua reusabilidade (\autoref{chapter2:figure:lo-granularity}). Objetos com granularidade alta, como imagens ou pequenos vídeos, são mais fáceis de reutilizar devido à sua simplicidade e especificidade. Em contraste, OAs de granularidade baixa, como cursos, oferecem uma experiência educacional mais completa e integrada, mas são mais difíceis de adaptar a novos contextos de ensino-aprendizagem.
 
 \begin{figure}[htb]
 \centering
 \caption{Granularidade de Objetos de Aprendizagem}
 \label{chapter2:figure:lo-granularity}
-\includegraphics[width=0.7\textwidth]{images/chapter2-lo-granularity.jpeg}
+\includegraphics[width=0.6\textwidth]{images/chapter2-lo-granularity.jpg}
 \fadaptada{Tarouco2021}
 \end{figure}
 
-A granularidade dos OAs está intimamente ligada à intencionalidade pedagógica, definida pela finalidade educacional para a qual o objeto foi criado. De acordo com \citeonline{Bloom1984}, a eficácia de um OA depende da clareza de seus objetivos pedagógicos e da adequação às necessidades dos estudantes. Dessa forma, a escolha de OAs deve considerar tanto a granularidade quanto a intencionalidade pedagógica para garantir uma aprendizagem eficaz e significativa.
+A granularidade está estreitamente relacionada à intencionalidade pedagógica, definida pela finalidade educacional para a qual o OA foi criado. A eficácia de um objeto depende da clareza de seus objetivos pedagógicos e da adequação às necessidades dos alunos \cite{Bloom1984}. Dessa forma, a escolha de OAs deve considerar tanto a granularidade quanto a intencionalidade pedagógica para garantir uma aprendizagem eficaz e significativa.
 
 Nesse sentido, a adoção de padrões de metadados é essencial para a organização, indexação e reutilização de OAs. \citeonline{Santana2023} destacam a importância desses padrões e sua aplicabilidade no contexto da ES experimental, cujo compartilhamento de OAs é vital para replicações e pesquisas futuras. A \autoref{chapter2:table:lo-metadata} apresenta uma comparação entre vários padrões de metadados, destacando suas características principais:
 
@@ -424,10 +434,10 @@ Nesse sentido, a adoção de padrões de metadados é essencial para a organiza�
     \item \sigla{RDF}{\textit{Resource Description Framework}}\footnote{Mais informações em \url{https://w3.org/rdf}}: Uma especificação da W3C que fornece uma base para a descrição de recursos da web. O RDF é utilizado para modelagem de informações, permitindo a interoperabilidade entre diferentes sistemas de informação e facilitando a integração de dados de diversas fontes.
 \end{itemize}
 
-\begin{table}[htb]
+\begin{quadro}[htb]
 \caption{Comparação Entre os Padrões de Metadados} 
 \label{chapter2:table:lo-metadata}
-\begin{tabular}{|P{3.5cm}|P{3cm}|P{3cm}|P{3cm}|}\hline
+\begin{tabular}{P{3.5cm}|P{3cm}|P{3cm}|P{3cm}}\hline
 \textbf{Padrão de Metadados} & \textbf{Documentação Completa} & \textbf{Processamento Automatizado} & \textbf{Flexibilidade para ES} \\ \hline
 Dublin Core & X & X & X \\  \hline
 SCORM & X & X & X \\ \hline
@@ -436,25 +446,27 @@ LOM & X & X & X \\ \hline
 RDF & X & X & X \\ \hline
 \end{tabular}
 \fadaptada{Santana2023}
-\end{table}
+\end{quadro}
 
 Segundo \citeonline{Santana2023}, o Dublin Core se destaca por sua simplicidade, documentação abrangente e capacidade de processamento automatizado, permitindo sua aplicação em diferentes linhas de pesquisa na área da ES. No entanto, no contexto deste trabalho, qualquer padrão de metadados pode ser adequado, visto que o papel de uma arquitetura de software não é o de definir ``detalhes de implementação''. 
 
 Por outro lado, o LOM merece destaque pelo seu foco intrínseco em aspectos educacionais, demonstrando uma sinergia natural com o conceito de OAs. Além disso, com exceção do MISB, todos os padrões são tão robustos quanto o Dublin Core, considerando os critérios de comparação da \autoref{chapter2:table:lo-metadata}.
 
-Ao conhecer os conceitos de granularidade e padrões de metadados, fica mais simples entendermos como os OAs podem ser encontrados. Nesse sentido, os Repositórios de Objetos de Aprendizagem (ROAs) são plataformas que armazenam e disponibilizam OAs para educadores, estudantes e desenvolvedores. Eles desempenham um papel crucial na disseminação de recursos educacionais e na promoção do uso e reuso de OAs. No Brasil, de acordo com \citeonline{Tarouco2021}, alguns dos principais ROAs incluem: \textit{Portal do Professor}\footnote{Mais informações em \url{http://portaldoprofessor.mec.gov.br}}, \textit{Domínio Público}\footnote{Mais informações em \url{http://www.dominiopublico.gov.br}} e \textit{eduCAPES} \footnote{Mais informações em \url{https://educapes.capes.gov.br}}.
+Ao conhecer os conceitos de granularidade e padrões de metadados, fica mais simples entendermos como os OAs podem ser encontrados. Nesse sentido, os \sigla{ROAs}{Repositórios de OAs} são plataformas que armazenam e disponibilizam OAs para educadores, estudantes e desenvolvedores. Eles desempenham um papel crucial na disseminação de recursos educacionais e na promoção do uso e reuso de OAs. No Brasil, de acordo com \citeonline{Tarouco2021}, alguns dos principais ROAs incluem: \textit{Portal do Professor}\footnote{Mais informações em \url{http://portaldoprofessor.mec.gov.br}}, \textit{Domínio Público}\footnote{Mais informações em \url{http://www.dominiopublico.gov.br}} e \textit{eduCAPES} \footnote{Mais informações em \url{https://educapes.capes.gov.br}}.
 
 A utilização de padrões de metadados, como o LOM, nesses repositórios facilita a indexação e a busca eficiente de OAs, permitindo que educadores encontrem rapidamente os recursos que atendam às suas necessidades pedagógicas. A combinação de granularidade adequada e metadados padronizados assegura que os OAs possam ser reutilizados em diversos contextos educacionais, maximizando seu impacto e alcance.
 
 %Um exemplo prático da adaptabilidade dos OAs é a inclusão de transcrições em materiais audíveis, como videoaulas. Essa prática não apenas flexibiliza o acesso à informação para todos os alunos, mas também destaca a capacidade dos OAs de se adaptarem às necessidades de uma gama diversificada de aprendizes, promovendo uma educação mais inclusiva. O potencial de adaptação dos OAs reforça a importância das TICs, como o ASR, na ampliação da acessibilidade e personalização dos conteúdos educacionais, conforme identificado no MS como um \textit{insight} relevante para a concepção da arquitetura \textit{Speech2Learning} \cite{FalvoJr2023_HICSS}.
 
-A granularidade, os padrões de metadados e os repositórios de OAs convergem para apoiar a intencionalidade pedagógica. A intencionalidade pedagógica, por sua vez, refere-se à finalidade educacional para a qual os OAs são criados e utilizados. De acordo com \citeonline{Bloom1984}, a eficácia de um OA depende da clareza de seus objetivos pedagógicos e da adequação às necessidades dos estudantes.
+A granularidade, os padrões de metadados e os repositórios de OAs se alinham para apoiar a intencionalidade pedagógica. Essa intencionalidade refere-se aos objetivos educacionais específicos para os quais os OAs são desenvolvidos e utilizados. De acordo com \citeonline{Bloom1984}, a eficácia de um OA depende da clareza de seus objetivos pedagógicos e da adequação às necessidades dos estudantes.
 
 A próxima seção discorrerá sobre a intencionalidade pedagógica, exemplificando como a Taxonomia de Bloom e sua revisão podem ser aplicadas na seleção e utilização de OAs para maximizar o processo de ensino-aprendizagem.
 
 \subsection{Intencionalidade Pedagógica}
 
-A intencionalidade pedagógica dos OAs pode ser exemplificada pela Taxonomia de Bloom, que categoriza objetivos educacionais em uma hierarquia de complexidade cognitiva \cite{Bloom1984}. Em um trabalho mais recente, \citeonline{Krathwohl2002} propôs uma revisão da taxonomia original, estruturando-a em uma perspectiva bi-dimensional. A primeira dimensão é a do conhecimento, que se desdobra em quatro tipos:
+A intencionalidade pedagógica dos OAs pode ser exemplificada pela Taxonomia de Bloom, que categoriza objetivos educacionais em uma hierarquia de complexidade cognitiva \cite{Bloom1984}. Em um trabalho mais recente, \citeonline{Krathwohl2002} propôs uma revisão da taxonomia original, estruturando-a em uma perspectiva bidimensional. 
+
+A primeira dimensão é a do conhecimento, que se desdobra em quatro tipos:
 
 \begin{itemize}
     \item \textbf{Factual}: conhecimento básico de terminologias e detalhes específicos;
@@ -463,7 +475,7 @@ A intencionalidade pedagógica dos OAs pode ser exemplificada pela Taxonomia de 
     \item \textbf{Metaconhecimento}: conhecimento sobre o próprio conhecimento e sua regulação.
 \end{itemize}
 
-A segunda dimensão trata dos processos cognitivos, referida como Taxonomia de Bloom Revisada, que propõem seis categorias adaptadas da taxonomia original de \citeonline{Bloom1984}. \citeonline{Krathwohl2002} introduziu mudanças significativas, com destaque para o uso de verbos ativos em vez de substantivos e a reestruturação de alguns dos níveis. Como resultado, a nova versão organiza os OAs nas seguintes categorias:
+A segunda dimensão trata dos processos cognitivos, referida como Taxonomia de Bloom Revisada, que propõe seis categorias adaptadas da taxonomia original de \citeonline{Bloom1984}. \citeonline{Krathwohl2002} introduziu mudanças significativas, com destaque para o uso de verbos ativos em vez de substantivos e a reestruturação de alguns dos níveis. Como resultado, a nova versão organiza os OAs nas seguintes categorias:
 
 \begin{itemize}
     \item \textbf{Recordar}: Capacidade de reter conhecimento na memória de longo prazo;
@@ -474,26 +486,29 @@ A segunda dimensão trata dos processos cognitivos, referida como Taxonomia de B
     \item \textbf{Criar}: Capacidade de transpor o conhecimento construído para novas situações a partir de produtos originais de autoria do próprio estudante.
 \end{itemize}
 
-Em virtude da representação bidimensional dos OAs propostos pela Taxonomia de Bloom Revisada, optou-se por adotar o uso de uma tabela de duas dimensões (\autoref{chapter2:lo:los-categories}) para a classificação destes objetivos. Na tabela proposta, a dimensão do conhecimento é representada pelo eixo vertical, enquanto que a dimensão dos processos cognitivos está no eixo horizontal. O desenvolvimento das dimensões é representado por um verbo (ações associadas ao processo cognitivo pretendido) ou um objeto (um substantivo que descreve o tipo de conhecimento que os alunos esperam adquirir ou construir), que corresponde a cada uma das várias combinações do processo cognitivo e as dimensões do conhecimento.
+Dada a representação bidimensional dos OAs proposta pela Taxonomia de Bloom Revisada de \citeonline{Krathwohl2002}, optou-se por utilizar uma tabela de duas dimensões (\autoref{chapter2:lo:los-categories}) para a classificação desses objetivos. Na tabela, a dimensão do conhecimento é representada pelo eixo vertical, enquanto a dimensão dos processos cognitivos está no eixo horizontal. 
 
-\begin{table}[htbp]
-\footnotesize
+\begin{quadro}[htbp]
 \centering
+\resizebox{\textwidth}{!}{
 \caption{Categorização de OAs}
 \label{chapter2:lo:los-categories}
-\begin{tabular}{|P{2.5cm}|c|c|c|c|c|c|}
+\begin{tabular}{P{2.6cm}|c|c|c|c|c|c}
 \hline
-Dimensão do & \multicolumn{6}{c|}{Dimensão dos Processos Cognitivos} \\ \cline{2-7}
+Dimensão do & \multicolumn{6}{c}{Dimensão dos Processos Cognitivos} \\ \cline{2-7}
 Conhecimento & \textbf{Recordar} & \textbf{Entender} & \textbf{Aplicar} & \textbf{Analisar} & \textbf{Avaliar} & \textbf{Criar} \\ \hline
 \textbf{Factual} & Listar & Resumir & Responder & Selecionar & Verificar & Generalizar \\ \hline
 \textbf{Conceitual} & Reconhecer & Classificar & Providenciar & Diferenciar & Determinar & Montar \\ \hline
 \textbf{Procedimental} & Recomendar & Esclarecer & Executar & Integrar & Julgar & Projetar \\ \hline
 \textbf{Metacognitivo} & Identificar & Prever & Usar & Desconstruir & Refletir & Criar \\ \hline
 \end{tabular}
+}
 \fadaptada{Mayer2021}
-\end{table}
+\end{quadro}
 
-Poder usar um OA em diferentes contextos e por diversos usuários é uma de suas características fundamentais. Alguns OAs podem ser mais orientados a trabalhar o desenvolvimento de competências para alcançar uma ou outra categoria, mas podem-se encontrar objetos que são apropriados para mais de uma categoria. Ou seja, eles podem ser utilizados em diversas etapas do processo de ensino-aprendizagem, tais como:
+Cada célula da \autoref{chapter2:lo:los-categories} relaciona um tipo de conhecimento com uma categoria de processo cognitivo, utilizando verbos para descrever ações esperadas dos alunos e substantivos para definir o conhecimento a ser adquirido. Isso facilita a adaptação dos OAs para diferentes objetivos pedagógicos.
+
+Devido a essa flexibilidade, os OAs podem ser utilizados em diferentes contextos educacionais. Dependendo da intencionalidade pedagógica, alguns OAs podem focar mais no desenvolvimento de competências específicas dentro de uma categoria, enquanto outros podem abranger várias categorias simultaneamente. Dessa forma, os OAs se mostram valiosos em diversas etapas do processo de ensino-aprendizagem, como:
 
 \begin{itemize}
 \item \textbf{Etapa A}: Introdução ao conteúdo a ser estudado;
@@ -502,17 +517,18 @@ Poder usar um OA em diferentes contextos e por diversos usuários é uma de suas
 \item \textbf{Etapa D}: Instrumento de avaliação da aprendizagem.
 \end{itemize}
 
-Além disso, os OAs podem ser utilizados de forma individual ou coletiva. A escolha dependerá da intencionalidade pedagógica do professor e de sua escolha metodológica. Para simplificar a contextualização dos OAs dentro das etapas do processo de ensino-aprendizagem, a \autoref{chapter2:lo:samples-bloom-and-steps} foca exclusivamente na dimensão dos processos cognitivos da Taxonomia de Bloom Revisada \cite{Krathwohl2002}. 
+Ademais, os OAs podem ser utilizados individualmente ou coletivamente, dependendo da intencionalidade pedagógica do professor e de sua escolha metodológica. Para simplificar a representação dos OAs nas etapas de ensino-aprendizagem, a \autoref{chapter2:lo:samples-bloom-and-steps} foca exclusivamente na dimensão dos processos cognitivos da Taxonomia de Bloom Revisada \cite{Krathwohl2002}. 
 
 Na prática, as etapas do processo de ensino-aprendizagem (introdução, demonstração, aplicação, avaliação) estão mais diretamente relacionadas aos processos cognitivos que os alunos desenvolvem durante essas atividades. Portanto, conectar os processos cognitivos com as etapas do ensino-aprendizagem permite uma visualização mais prática e objetiva dos diferentes tipos de OAs, proporcionando clareza na utilização dos recursos educacionais de acordo com a intencionalidade pedagógica desejada.
 
-\begin{table}[htbp]
+\begin{quadro}[htbp]
 \centering
+\resizebox{\textwidth}{!}{
 \caption{Tipos de OAs: Processos Cognitivos e Etapas de Ensino-Aprendizagem}
 \label{chapter2:lo:samples-bloom-and-steps}
-\begin{tabular}{|l*{6}{|c}*{4}{|P{0.4cm}}|}
+\begin{tabular}{l*{6}{|c}*{4}{|P{0.41cm}}}
 \hline
-\multirow{2}{*}{\textbf{Tipo de OA}} & \multicolumn{6}{c|}{\textbf{Processo Cognitivo}} & \multicolumn{4}{c|}{\textbf{Etapa de Ensino}} \\ \cline{2-11}
+\multirow{2}{*}{\textbf{Tipo de OA}} & \multicolumn{6}{c|}{\textbf{Processo Cognitivo}} & \multicolumn{4}{c}{\textbf{Etapa de Ensino}} \\ \cline{2-11}
  & Recordar & Entender & Aplicar & Analisar & Avaliar & Criar & A & B & C & D \\ \hline
 Texto & \faCheckCircle & \faCheckCircle & \faCheckCircle & \faCheckCircle & \faCheckCircle & \faCheckCircle & \faCheck & \faCheck & \faCheck & \faCheck \\ \hline
 Jogo & \faCheckCircle & \faCheckCircle & \faCheckCircle & \faCheckCircleO & \faCheckCircleO & \faCheckCircleO & \faCheck & \faCheck & \faCheck & \faCheck \\ \hline
@@ -524,14 +540,14 @@ Mapa Mental & \faCheckCircle & \faCheckCircle & \faCheckCircle & \faCheckCircle 
 Experimento & \faCheckCircle & \faCheckCircle & \faCheckCircle & \faCheckCircle & \faCheckCircle & \faCheckCircleO & \faCheck & \faCheck & \faCheck & \faCheck \\ \hline
 Infográfico & \faCheckCircle & \faCheckCircle & \faCheckCircle & \faCheckCircle & \faCheckCircle & \faCheckCircle & \faCheck & \faCheck & \faCheck & \faCheck \\ \hline
 \end{tabular}
+}
 \fadaptada{Mayer2021}
-\caption*{Legenda: \faCheckCircle~(uso comum); \faCheckCircleO~(uso em potencial); \faCheck~(aplicado); \faTimes~(não aplicado).}
-\end{table}
+\nota{Legenda: \faCheckCircle~(uso comum); \faCheckCircleO~(uso em potencial); \faCheck~(aplicado); \faTimes~(não aplicado).}
+\end{quadro}
 
-Interpretando a \autoref{chapter2:lo:samples-bloom-and-steps}, fica evidente a flexibilidade dos OAs do tipo texto no processo de ensino-aprendizagem atual. Isso porque eles são comumente usados nas seis categorias da taxonomia revisada, além de serem relevantes em todas as etapas do processo de ensino-aprendizagem. Esta característica foi fundamental para delimitarmos o escopo do \textit{Speech2Learning}, cujo foco foi tornar os OAs audíveis mais acessíveis através de ASR/STT, transformando conteúdos de áudio/vídeo em texto, aumentando assim o alcance e a acessibilidade desses tipos de OAs.
+Interpretando a \autoref{chapter2:lo:samples-bloom-and-steps}, fica evidente a flexibilidade dos OAs do tipo texto no processo de ensino-aprendizagem atual. Eles são comumente utilizados nas seis categorias da taxonomia revisada e são relevantes em todas as etapas de ensino-aprendizagem. Essa característica foi fundamental para delimitar o escopo do \textit{Speech2Learning}, que se concentrou em tornar os OAs audíveis mais acessíveis através de ASR, transformando conteúdos de áudio/vídeo em texto e, assim, aumentando o alcance e a acessibilidade desses tipos de OAs.
 
-Em consonância, o uso de novas tecnologias foi discutido por \citeonline{Tarouco2021} como um fator determinante para potencializar o desempenho de aprendizagem e engajamento dos alunos. Nesse sentido, a 
-\autoref{figure:chapter2-lo-engagement} ilustra como a tutoria individualizada proporciona um desempenho superior, mas com custos excessivos, enquanto novas TICs, incluindo IAGen, podem oferecer melhorias significativas na aprendizagem em escala.
+De acordo com \citeonline{Tarouco2021}, o uso de novas tecnologias é um fator determinante para potencializar o desempenho de aprendizagem e o engajamento dos aprendizes. Nesse sentido, a \autoref{figure:chapter2-lo-engagement} demonstra que a tutoria individualizada oferece resultados superiores, mas os autores ressaltam que ela muitas vezes é inviável devido aos custos e recursos necessários. No entanto, novas TICs, como ASR ou IAGen, podem proporcionar melhorias significativas no processo de ensino-aprendizagem, alcançando resultados comparáveis aos de uma tutoria 1:1.
 
 \begin{figure}[htb]
 \centering
@@ -541,26 +557,28 @@ Em consonância, o uso de novas tecnologias foi discutido por \citeonline{Tarouc
 \fadaptada{Tarouco2021}
 \end{figure}
 
-Na próxima seção, exploraremos como o reconhecimento de fala pode promover a acessibilidade digital, abordando temas emergentes como IAGen, \sigla{NLP}{Processamento de Linguagem Natural} e \sigla{LLMs}{Grandes Modelos de Linguagem}. Através dessas tecnologias disruptivas, pretendemos potencializar ainda mais o alcance e a qualidade dos OAs nos mais diversos ambientes educacionais.
+Na próxima seção, exploraremos como o reconhecimento de fala pode promover a acessibilidade digital por meio do ASR/STT, abordando temas emergentes como IAGen, \sigla{NLP}{Processamento de Linguagem Natural} e \sigla{LLMs}{Grandes Modelos de Linguagem}. Através dessas tecnologias disruptivas, pretendemos potencializar ainda mais o alcance e a qualidade dos OAs nos mais diversos ambientes educacionais.
 
 \section{Reconhecimento de Fala: Promovendo Acessibilidade Digital com IA}
 \label{section:foundation:asr}
 
-Na era digital, a educação está em constante evolução à medida que as tecnologias emergentes podem remodelar as abordagens pedagógicas tradicionais. Neste contexto, o ASR, interpretado neste trabalho como um sinônimo de STT, emerge como uma ferramenta poderosa. 
+Na era digital, a educação está em constante evolução à medida que as tecnologias emergentes remodelam as abordagens pedagógicas tradicionais. Neste contexto, o ASR, interpretado neste trabalho como um sinônimo de STT, emerge como uma ferramenta poderosa.
 
-O conceito de ASR não apenas pode potencializar a acessibilidade de conteúdos com transcrições e legendas, mas também representa um passo significativo em direção a uma educação mais inclusiva. Nesse sentido, concordamos com \citeonline{Homburg2019} sobre o potencial do ASR nas TAs para surdos, dentre as quais destacamos os avatares de línguas de sinais baseados em texto em nosso MS \cite{FalvoJr2020_FIE, FalvoJr2020_SBIE, FalvoJr2021_RENOTE}.
+O ASR não apenas amplia a acessibilidade de conteúdos por meio de transcrições e legendas, mas também representa um avanço significativo rumo a uma educação mais inclusiva. Corroborando essa visão, \citeonline{Homburg2019} enfatizam o potencial do ASR em TAs para surdos, como os avatares de línguas de sinais baseados em texto, explorados em nosso MS \cite{FalvoJr2020_FIE, FalvoJr2020_SBIE, FalvoJr2021_RENOTE}.
 
-Segundo \citeonline{fleischmann2021}, a ascensão do ensino remoto, acelerada por circunstâncias como a pandemia da COVID-19, impulsionou a busca por métodos inovadores para a criação e compartilhamento de conteúdos educacionais. Nessa conjuntura, o ASR se consolidou como uma ferramenta promissora, particularmente em ambientes colaborativos ou conferências online.
+De acordo com \citeonline{Jurafsky2024}, a função do ASR é converter ondas sonoras da fala em uma sequência de palavras correspondentes. Embora a transcrição automática de fala de qualquer locutor e em qualquer ambiente ainda apresente desafios, a tecnologia de ASR já está suficientemente avançada para ser aplicada em diversas tarefas práticas, como a geração automática de legendas para áudio e vídeo, transcrição de conversas e comunicação assistiva para PcD, facilitando a interação entre computadores e humanos.
 
-Desta forma, soluções baseadas em ASR desempenham um papel vital ao quebrar barreiras linguísticas, otimizando a comunicação entre falantes de diferentes línguas. Este argumento é reforçado por \citeonline{Homburg2019}, que destaca a relevância da tradução de voz para línguas de sinais visando promover a inclusão da comunidade surda no processo de ensino-aprendizagem.
+\citeonline{fleischmann2021} ressaltam que o crescimento do ensino remoto, intensificado pela pandemia da COVID-19, impulsionou a busca por métodos inovadores para criar e compartilhar conteúdo educacional. Nesse contexto, o ASR se firmou como uma ferramenta promissora, especialmente em ambientes colaborativos e conferências online.
+
+Soluções baseadas em ASR desempenham um papel vital ao quebrar barreiras linguísticas, otimizando a comunicação entre falantes de diferentes línguas. Este argumento é reforçado por \citeonline{Homburg2019}, que destaca a relevância da tradução de voz para línguas de sinais visando promover a inclusão da comunidade surda no processo de ensino-aprendizagem.
 
 Apesar de seu potencial, o ASR enfrenta diversos obstáculos e desafios de pesquisa. O trabalho de \citeonline{Koenecke2020} destaca alguns deles, apontando para disparidades raciais e as sutilezas de características linguísticas, como sotaques e peculiaridades regionais, assim como identificamos em nosso MS para a Libras. Essas constatações reforçam a relevância de promover soluções baseadas em ASR que sejam verdadeiramente inclusivas e que contemplem um espectro mais amplo de considerações sociolinguísticas em seu projeto e implementação.
 
-\citeonline{Mayer2021} afirmam que o uso de tecnologias disruptivas, como o ASR, é fundamental para ampliar o alcance dos OAs a uma diversidade maior de aprendizes, promovendo conteúdos educacionais mais acessíveis. Na prática, \citeonline{Parakh2022} descreve OAs como unidades digitais reutilizáveis que muitas vezes são integradas em iniciativas \textit{open-source}, desempenhando um papel crucial ao moldar experiências de ensino-aprendizagem adaptáveis, democráticas e contextualizadas.
+\citeonline{Mayer2021} destacam a importância de tecnologias disruptivas, como o ASR, para expandir o alcance dos OAs, tornando o conteúdo educacional mais acessível a diversos aprendizes. Complementando essa perspectiva, \citeonline{Parakh2022} define OAs como unidades digitais reutilizáveis, frequentemente integradas a projetos \textit{open-source}, que desempenham um papel fundamental na criação de experiências de ensino-aprendizagem adaptáveis, democráticas e contextualizadas.
 
-Estas recentes perspectivas reforçam e expandem nossas percepções obtidas em nosso MS, que enfatizou a importância das inovações tecnológicas no processo de ensino e aprendizagem de línguas de sinais, revelando gaps interessantes. Nesse sentido, notamos a falta de padrões de projeto, além de boas práticas de código e reuso, o que compromete a qualidade, o compartilhamento e o potencial de impacto desses OAs. 
+Estas recentes perspectivas reforçam e expandem nossas percepções obtidas em nosso MS, que enfatizou a importância das inovações tecnológicas no processo de ensino e aprendizagem de línguas de sinais, revelando lacunas interessantes. Nesse sentido, notamos a falta de padrões de projeto, além de boas práticas de código e reuso, o que compromete a qualidade, o compartilhamento e o potencial de impacto desses OAs.
 
-Diante destas lacunas e das tendências emergentes citadas, projetamos a Arquitetura \textit{Speech2Learning}. Uma abstração que propõe diretrizes de desenvolvimento para a criação de soluções \textit{ASR-based}, promovendo maior acessibilidade de seus OAs, em especial os audíveis.
+Diante destas lacunas e das tendências emergentes citadas, projetamos a Arquitetura \textit{Speech2Learning}. Essa abstração propõe diretrizes de desenvolvimento para a criação de soluções baseadas em ASR, promovendo maior acessibilidade de seus OAs, em especial os audíveis.
 
 A evolução e sofisticação do ASR estão intimamente ligadas aos avanços em \sigla{ML}{\textit{Machine Learning}} e IA. A aplicação de modelos de ML em ASR permite a otimização contínua e a adaptação a diferentes contextos linguísticos e acústicos. Isso é alcançado através de técnicas de treinamento supervisionado e não supervisionado, utilizando vastas quantidades de dados de fala para melhorar a precisão e a robustez dos sistemas de reconhecimento.
 
@@ -570,21 +588,49 @@ O fluxo de processamento de fala em sistemas ASR é ilustrado na \autoref{figure
 \centering
 \caption{Fluxo do Processamento de Fala em Sistemas ASR}
 \label{figure:chapter2-asr-diagram}
-\includegraphics[width=0.9\textwidth]{images/chapter2-asr-diagram.png}
+\includegraphics[width=0.95\textwidth]{images/chapter2-asr-diagram.png}
 \fadaptada{Li2018}
 \end{figure}
 
-Após a extração de características, os vetores resultantes são alimentados em um decodificador. O decodificador utiliza modelos acústicos, um dicionário de pronúncia e um modelo de linguagem para interpretar os vetores de características e mapear palavras/frases correspondentes. Os modelos acústicos são responsáveis por capturar as nuances dos sons da fala, enquanto o dicionário de pronúncia fornece a correspondência entre as sequências de fonemas e palavras. 
+Após a extração de características, os vetores resultantes são alimentados em um decodificador. O decodificador utiliza modelos acústicos, um dicionário de pronúncia e um modelo de linguagem para interpretar os vetores de características e mapear palavras/frases correspondentes. Os modelos acústicos são responsáveis por capturar as nuances dos sons da fala, enquanto o dicionário de pronúncia fornece a correspondência entre as sequências de fonemas e palavras.
 
 O modelo de linguagem, que pode ser um LLM, ajuda a prever a sequência mais provável de palavras com base no contexto linguístico. Esta abordagem estruturada e baseada em modelos de ML e IA permite que sistemas de ASR sejam precisos e adaptáveis a uma ampla gama de variabilidades na fala humana.
 
-A distinção entre ASR e STT é muitas vezes sutil e pode ser usada de forma intercambiável, como optamos neste trabalho para simplificação. Enquanto ASR geralmente refere-se ao campo de estudo e tecnologia de reconhecimento automático de fala, STT descreve a função específica de converter fala em texto. Ambos os termos são fundamentais para o desenvolvimento de tecnologias de acessibilidade e têm aplicações que se sobrepõem consideravelmente.
+A distinção entre ASR e STT é muitas vezes sutil e pode ser usada de forma intercambiável, como optamos neste trabalho para simplificação. Enquanto ASR geralmente se refere ao campo de estudo e tecnologia de reconhecimento automático de fala, STT descreve a função específica de converter fala em texto. Ambos os termos são fundamentais para o desenvolvimento de tecnologias de acessibilidade e têm aplicações que se sobrepõem consideravelmente.
 
-Em resumo, o reconhecimento de fala, através do uso de tecnologias como ASR e STT, suportado por avanços em ML e IA, tem um potencial transformador para promover a acessibilidade digital. Estas tecnologias não só facilitam a criação de conteúdos mais inclusivos, mas também permitem a adaptação e personalização da educação para atender às necessidades de uma diversidade maior de aprendizes. Assim, a integração de ASR representa um marco significativo na trajetória para uma educação mais acessível.
+Para garantir que os sistemas de ASR cumpram seu papel de maneira eficaz e inclusiva, é essencial utilizar métodos robustos de avaliação. A próxima seção discutirá os métodos de avaliação de reconhecimento de fala, incluindo a \sigla{WER}{\textit{Word Error Rate}} e métodos de similaridade léxica, fundamentais para uma análise abrangente da qualidade desses sistemas.
+
+\subsection{Métodos de Avaliação de Reconhecimento de Fala}
+
+A avaliação da eficácia dos sistemas de reconhecimento de fala é essencial para o aprimoramento e a implementação eficaz dessas tecnologias. Um dos métodos mais tradicionais e amplamente utilizados é a WER, que mede a discrepância entre a transcrição gerada pelo sistema de ASR e uma transcrição de referência. Segundo \cite{Jurafsky2024}, o WER é definido como:
+
+\[
+\text{WER} = \frac{\text{Inserções} + \text{Substituições} + \text{Deleções}}{\text{Total de Palavras na Transcrição Correta}} \times 100
+\]
+
+O WER quantifica o número total de palavras que foram inseridas, substituídas ou deletadas na transcrição de ASR em comparação com uma referência, expressando esse total como uma porcentagem do número total de palavras na transcrição correta. Embora seja amplamente utilizado, o WER tem limitações, particularmente ao lidar com variações lexicais e semânticas, pois considera todas as palavras igualmente importantes e não distingue entre diferentes tipos de erro, como erros semânticos e sintáticos.
+
+Para complementar a análise de WER, métodos de similaridade léxica são frequentemente utilizados para fornecer uma visão mais detalhada da qualidade das transcrições geradas por ASR. Esses métodos avaliam a similaridade entre as transcrições com base em diversos critérios, como alterações lexicais e proximidade semântica. De acordo com \cite{Majumdar2022}, alguns dos métodos de similaridade léxica incluem:
+
+\begin{itemize}
+\item \textbf{Distância de Levenshtein}: Mede o número mínimo de operações necessárias para transformar uma palavra na outra. Este método é útil para capturar a similaridade em termos de alterações literais entre as transcrições automática e de referência.
+\item \textbf{Índice de Jaccard}: Avalia a similaridade entre conjuntos de palavras, calculando a razão entre o tamanho da interseção e o tamanho da união dos conjuntos de palavras de duas transcrições. É particularmente útil para medir a presença de palavras comuns e a diversidade de vocabulário.
+\item \textbf{Similaridade de Cosseno}: Mede a similaridade entre vetores de palavras, considerando o cosseno do ângulo entre eles. Este método é frequentemente usado para comparar representações vetoriais de frases ou textos, capturando a similaridade semântica além da simples correspondência de palavras.
+\end{itemize}
+
+Esses métodos de similaridade léxica oferecem uma análise complementar à WER, proporcionando uma visão mais rica e detalhada da precisão dos sistemas de ASR. Eles são especialmente úteis para capturar nuances linguísticas e semânticas nas transcrições, que podem não ser refletidas de forma adequada pela WER. Em nossos estudos de caso, optamos por utilizar métodos de similaridade léxica para obter uma avaliação mais holística e detalhada da qualidade das transcrições automáticas.
+
+Tais abordagens permitem uma avaliação mais abrangente dos sistemas de ASR, destacando não apenas a precisão em termos de correspondência palavra a palavra, mas também a preservação do significado e a fluidez das transcrições. Isso é fundamental para aplicações que exigem uma compreensão precisa e contextual do conteúdo falado.
+
+Em resumo, o reconhecimento de fala, por meio de tecnologias como ASR e STT, suportado por avanços em ML e IA, tem o potencial de transformar significativamente a acessibilidade digital. Estas tecnologias não só facilitam a criação de conteúdos mais inclusivos, mas também permitem a adaptação e personalização da educação para atender a uma diversidade maior de aprendizes. A integração de ASR, portanto, representa um marco crucial na busca por uma educação mais acessível e equitativa.
+
+Dessa forma, ao reconhecermos a importância das novas TICs, especialmente aquelas baseadas em IA, reafirmamos nosso compromisso com uma educação mais inclusiva e flexível. Combinando boas práticas arquiteturais, OAs e ASR, apresentamos a \textit{Speech2Learning}, que será detalhada em nosso próximo capítulo.
 
 \section{Considerações Finais}
 
-As análises e discussões apresentadas nesta fundamentação teórica permitiram uma compreensão abrangente das interseções entre TICs e línguas de sinais no contexto educacional. O MS realizado, detalhado na \autoref{section:foundation:sm}, revelou importantes lacunas tecnológicas e de pesquisa na utilização de línguas de sinais para o ensino-aprendizagem, destacando áreas onde inovações são urgentemente necessárias. Esses gaps tecnológicos foram essenciais para orientar a condução de um levantamento bibliográfico adicional, visando identificar e explorar TICs promissoras que pudessem mitigar os desafios identificados e promover uma educação mais inclusiva.
+As análises e discussões apresentadas nesta fundamentação teórica permitiram uma compreensão abrangente das interseções entre TICs e línguas de sinais no contexto educacional. O MS realizado, detalhado na \autoref{section:foundation:sm}, revelou importantes lacunas tecnológicas e de pesquisa na utilização de línguas de sinais para o ensino-aprendizagem, destacando áreas onde inovações são urgentemente necessárias. 
+
+Esses gaps tecnológicos foram essenciais para orientar a condução de um levantamento bibliográfico adicional, visando identificar e explorar TICs promissoras que pudessem mitigar os desafios identificados e promover uma educação mais inclusiva.
 
 No decorrer desta fundamentação teórica, exploramos de forma aprofundada diversos aspectos cruciais, incluindo Arquiteturas de Software, OAs e ASR. A \autoref{section:foundation:arch} discute arquiteturas de software inovadoras que suportam a integração eficiente de TICs no processo educacional, enquanto a \autoref{section:foundation:lo} foca nos OAs, destacando sua importância na criação de materiais educacionais adaptáveis e acessíveis. Particularmente, a \autoref{section:foundation:asr} demonstrou como as tecnologias de ASR podem ser aplicadas para melhorar a acessibilidade de conteúdos educacionais, proporcionando uma base teórica robusta para a arquitetura \textit{Speech2Learning}.
 
