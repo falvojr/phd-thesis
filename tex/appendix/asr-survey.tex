@@ -1,0 +1,455 @@
+\section{Introdução}
+
+\noindent
+Caro(a), você está sendo convidado(a) a participar da pesquisa intitulada "Avaliação de 
+Soluções Para Transcrição Automática de Videoaulas Sobre Tecnologia". Este estudo 
+tem como objetivo avaliar a qualidade da transcrição automática de videoaulas no 
+contexto do ensino e aprendizagem de tecnologia em múltiplas línguas (Português, 
+Inglês e Espanhol). Para atingir esse objetivo, submeteremos 15 vídeos curtos (5 em 
+cada idioma) às seguintes soluções de reconhecimento de fala:
+
+\begin{itemize}
+    \item Amazon: \url{https://aws.amazon.com/transcribe}
+    \item Google: \url{https://cloud.google.com/speech-to-text}
+    \item IBM: \url{https://www.ibm.com/cloud/watson-speech-to-text}
+    \item Microsoft: \url{https://azure.microsoft.com/en-us/products/ai-services/ai-speech}
+    \item OpenAI: \url{https://openai.com/research/whisper}
+\end{itemize}
+
+\noindent
+Neste estudo, contamos com a colaboração da edtech DIO (\url{https://dio.me}), que disponibilizou 
+trechos de videoaulas (com duração entre 10 e 30 segundos) presentes em sua 
+plataforma de ensino de tecnologia. O objetivo dessa parceria é investigar o potencial 
+das soluções baseadas em reconhecimento de fala para aprimorar a acessibilidade dos 
+conteúdos educacionais audíveis. Tais soluções são especialmente promissoras, visto 
+que podem viabilizar a criação de transcrições, legendas e até a sinalização em línguas 
+de sinais (por exemplo, utilizando um avatar de LIBRAS baseado em texto).
+
+\noindent
+Se você possui alguma experiência nas áreas de Tecnologia da Informação (TI), Letras, 
+Linguística ou Educação, está convidado(a) a responder as perguntas a seguir. Além disso, se 
+possível, pedimos que encaminhe a possíveis respondentes.
+
+\noindent
+Desde já agradecemos sua disponibilidade e participação.
+
+\section{Termo de Consentimento Livre e Esclarecido}
+
+\noindent
+Prezado(a) participante: Esta pesquisa é realizada de acordo com as recomendações 
+estabelecidas pelo Comitê de Ética da Universidade de São Paulo (USP). Em atendimento às 
+normas desse Comitê de Ética e orientações científicas, pedimos que registre sua 
+concordância na participação da pesquisa no campo abaixo.
+
+\noindent
+OBSERVAÇÃO: O Comitê de Ética em Pesquisa (CEP/EACH) funciona na Av. Arlindo Béttio, 
+1000, Ermelino Matarazzo, São Paulo-SP, tel: (11) 3091-1046, e-mail: \href{mailto:cep-each@usp.br}{cep-each@usp.br}.
+
+\noindent
+Ressaltamos que na divulgação dos resultados desta pesquisa, a identidade dos participantes 
+será mantida no mais rigoroso sigilo. Se precisar de mais informações sobre sua participação 
+ou sobre a pesquisa, faça contato para esclarecimentos: 
+
+\noindent
+Contato: Venilton FalvoJr \href{mailto:falvojr@usp.br}{falvojr@usp.br}
+
+\noindent
+Para CONCORDAR em participar desta pesquisa e preencher o questionário, responda CONCORDO no campo abaixo. Para DESISTIR definitivamente do preenchimento, basta FECHAR SEU NAVEGADOR. Agradecemos pela disponibilidade e atenção!
+
+\noindent
+\textit{[Campo de Seleção Única "CONCORDO"]}
+
+\section{Escala de Avaliação e Anonimato dos Provedores}
+
+\noindent
+As transcrições automáticas das videoaulas serão avaliadas utilizando uma escala de 5 
+alternativas, as quais serão individualmente definidas a fim de minimizar possíveis 
+interpretações incorretas: 
+
+\begin{enumerate}
+    \item Muito Incoerente: Transcrição sem sentido, tornando a compreensão impossível;
+    \item Incoerente: Muitos erros, permitindo apenas uma compreensão parcial;
+    \item Útil: Erros presentes, mas sem impedir a compreensão geral;
+    \item Coerente: Pequenas imprecisões, mas sem comprometer a compreensão total;
+    \item Muito Coerente: Transcrição perfeita, garantindo uma compreensão completa.
+\end{enumerate}
+
+\noindent
+Para evitar avaliações tendenciosas, não identificaremos os provedores pelo nome 
+(Amazon, Google, IBM, Microsoft ou OpenAI), mas sim por um identificador numérico 
+gerado aleatoriamente (de 1 a 5) para cada um deles. 
+
+\noindent
+Para aqueles interessados em detalhes técnicos, disponibilizamos um projeto no Google Colab contendo o código-fonte para integração com todos os provedores cujas transcrições automáticas são avaliadas nesta pesquisa: 
+
+\noindent
+\url{https://colab.research.google.com/drive/11kW6y7WJpWVywVnvXH_ZQpSHWod41OTd?usp=sharing}
+
+\noindent
+Antes de iniciarmos, gostaríamos de conhecer sua experiência nas áreas de interesse 
+desta pesquisa. Essas informações são importantes para uma análise precisa dos 
+resultados. Considere todas as formas de experiência adquirida e, caso não possua 
+experiência em alguma delas, responda com 0 (zero).
+
+\noindent
+\textbf{Quantos anos de experiência você possui na área de Tecnologia da Informação (TI)?}
+
+\noindent
+\textit{[Campo de Texto com Máscara Numérica]}
+
+\noindent
+\textbf{Quantos anos de experiência você possui na área de Letras, Linguística ou Educação?}
+
+\noindent
+\textit{[Campo de Texto com Máscara Numérica]}
+
+\section{Transcrições Automáticas em Português}
+
+\noindent
+Por favor, indique o seu nível de conhecimento em Português, a língua nativa das 
+próximas 5 videoaulas. Ao informar sua proficiência, você nos ajudará a conduzir uma 
+análise mais precisa e abrangente sobre a qualidade das transcrições automáticas.
+
+\noindent
+\textbf{Qual é o seu nível de proficiência em Português?}
+
+\noindent
+As alternativas simplificam o Quadro Europeu Comum de Referência para Línguas (QECR)\footnote{Mais informações em: \url{https://cambridgeenglish.org/br/exams-and-tests/cefr}}: "Básico" (A1 e A2); "Intermediário" (B1 e B2) e "Avançado" (C1 e C2). Por outro lado, caso não tenha conhecimento algum em Português, selecione a opção "Sem Proficiência" para não avaliar as videoaulas nesse idioma.
+
+\noindent
+\textit{[Grupo de Campos para Seleção Única com as Opções: ``Básico'', ``Intermediário'', ``Avançado'' e ``Sem Proficiência (Não Avaliar Vídeos em Português)'']}
+
+\subsection{Vídeo 1/5 - Desafio de Projeto App Android Nativo (pt-BR)}
+
+\noindent
+Transcrições Automáticas da videoaula \url{http://youtube.com/watch?v=bZ-PkhuAsGI}:
+
+\begin{itemize}
+    \item Provedor 1: O desafio para vocês é que vocês criem. Não é um aplicativo nativo em Android com a temática dos jogos do Brasil na Copa do Mundo, que vai ter ali algumas funcionalidades bem legais, né? Como o consumo da lista de partidas de uma p your este vai ter também é a questão de persistência local de algumas informações.
+    \item Provedor 2: O desafio para vocês é que vocês criem né um um aplicativo na ativa em android com a temática dos jogos do brasil na copa do mundo que vai ter ali algumas funcionalidades bem legais né como o consumo da lista de partidas de uma payerest vai ter também a questão de percidência local de algumas informações.
+    \item Provedor 3: O desafio para vocês é que vocês criem um aplicativo nativo em Android com a temática dos jogos do Brasil na Copa do Mundo, que vai ter algumas funcionalidades bem legais, como o consumo da lista de partidas de uma Payrest, vai ter também a questão de persistência local de algumas informações.
+    \item Provedor 4: O desafio para vocês é que vocês criam um aplicativo nativo em Android com a temática dos jogos do Brasil na Copa do Mundo, que vai ter ali algumas funcionalidades bem legais, como o consumo da lista de partidas de uma PME Oeste Vai ter também a questão de presidência local de algumas informações.
+    \item Provedor 5: Desafio para vocês aqui vocês criem é um aplicativo nativo em Android com a temática dos jogos do Brasil na copa do mundo que vai ter ali algumas funcionalidades bem legais né como consumo na lista de partidas de uma pessoa vai ter também a questão de persistência local de algumas informações.
+\end{itemize}
+
+\noindent
+\textbf{Qual é o nível de coerência das transcrições automáticas apresentadas?}
+
+\noindent
+\textit{[Grupo de Campos para Seleção Única (Escala) para Cada Provedor]}
+
+\noindent
+\textit{[Provedor 1: ``Muito Incoerente'', ``Incoerente'', ``Útil'', ``Coerente'' e ``Muito Coerente'']}
+
+\noindent
+\textit{[Provedor 2: ``Muito Incoerente'', ``Incoerente'', ``Útil'', ``Coerente'' e ``Muito Coerente'']}
+
+\noindent
+\textit{[Provedor 3: ``Muito Incoerente'', ``Incoerente'', ``Útil'', ``Coerente'' e ``Muito Coerente'']}
+
+\noindent
+\textit{[Provedor 4: ``Muito Incoerente'', ``Incoerente'', ``Útil'', ``Coerente'' e ``Muito Coerente'']}
+
+\noindent
+\textit{[Provedor 5: ``Muito Incoerente'', ``Incoerente'', ``Útil'', ``Coerente'' e ``Muito Coerente'']}
+
+\subsection{Vídeo 2/5 - Valores do SCRUM (pt-BR)}
+
+\noindent
+Transcrições Automáticas da videoaula \url{http://youtube.com/watch?v=R33d_lFxVMw}:
+
+\begin{itemize}
+    \item Provedor 1: Primeiro valor, indivíduos e interações mais que processos e ferramentas. Segundo o valor software em funcionamento, mais do que documentação abrangente. Terceiro valor, colaboração do cliente, mais do que negociação de contratos, quarto valor, responder a mudança mais do que seguir um plano.
+    \item Provedor 2: Primeiro valor indivíduos e interações mais que processos e ferramentas. Segundo o valor software em funcionamento mais do que documentação abrangente. Terceiro valor colaboração. Do cliente mais do que negociação de contratos. Quarto valor responder a mudança mais o que seguir um plano.
+    \item Provedor 3: Primeiro valor, indivíduos e interações, mais que processos e ferramentas. Segundo valor, software em funcionamento, mais do que documentação abrangente. Terceiro valor, colaboração do cliente, mais do que negociação de contratos. Quarto valor, responder a mudança, mais do que seguir um plano.
+    \item Provedor 4: O primeiro valor Indivíduos, Interações mais que processos e ferramentas segundo o valor sofrer em funcionamento mais do que documentação abrangente Terceiro valor Colaboração do cliente Mais do que negociação de contratos quarto valor responder a mudança, mais do que seguir um plano.
+    \item Provedor 5: Primeiro valor indivíduos e interações Mais Que processos e ferramentas segundo o valor software em funcionamento mais do que documentos são abrangente terceiro valor colaboração do cliente mais do que negociação de contratos quarto valor responder a dança mais do que seguir um plano.
+\end{itemize}
+
+\noindent
+\textbf{Qual é o nível de coerência das transcrições automáticas apresentadas?}
+
+\noindent
+\textit{[Grupo de Campos para Seleção Única (Escala) para Cada Provedor]}
+
+\noindent
+\textit{[Provedor 1: ``Muito Incoerente'', ``Incoerente'', ``Útil'', ``Coerente'' e ``Muito Coerente'']}
+
+\noindent
+\textit{[Provedor 2: ``Muito Incoerente'', ``Incoerente'', ``Útil'', ``Coerente'' e ``Muito Coerente'']}
+
+\noindent
+\textit{[Provedor 3: ``Muito Incoerente'', ``Incoerente'', ``Útil'', ``Coerente'' e ``Muito Coerente'']}
+
+\noindent
+\textit{[Provedor 4: ``Muito Incoerente'', ``Incoerente'', ``Útil'', ``Coerente'' e ``Muito Coerente'']}
+
+\noindent
+\textit{[Provedor 5: ``Muito Incoerente'', ``Incoerente'', ``Útil'', ``Coerente'' e ``Muito Coerente'']}
+
+\subsection{Vídeo 3/5 - Design Patterns no Selenium WebDriver (pt-BR)}
+
+\noindent
+Transcrições Automáticas da videoaula \url{http://youtube.com/watch?v=kyeiLwq-HQk}:
+
+\begin{itemize}
+    \item Provedor 1: Então, primeiramente, eu recomendo, para que você estude um pouco e leia sobre esse design pattern é chamado aí DPS de object. Ele é muito interessante e quando nós estamos trabalhando com automatização de testes, ele é muito utilizado. Tudo bem, então não vou entrar aqui nesse detalhe, porque o foco aqui do nosso treinamento é trabalhar e conhecer as funcionalidades do selênio web drive.
+    \item Provedor 2: Então o primeiramento recomendo para que você estude um pouco e leia sobre esse design patrior na chamada de perdi objeto ele é muito interessante e quando nós estamos trabalhando com automatização de testes ele é muito utilizado. Tudo bem então não vou entrar aqui é nesse detalhe porque o foco aqui do nosso treinamento é trabalhar e conhecesse uma finalidades do celenio web drive.
+    \item Provedor 3: Então, primeiramente, eu recomendo para que você estude um pouco e leia sobre esse design pattern, chamado de Page Object. Ele é muito interessante e quando nós estamos trabalhando com automatização de testes, ele é muito utilizado. Tudo bem? Então, eu não vou entrar aqui nesse detalhe, porque o foco aqui do nosso treinamento é trabalhar e conhecer as funcionalidades do Selenium WebDriver.
+    \item Provedor 4: Então, primeiramente o recomendo para que você estude um pouco leia sobre esse desempate. Na chamada ele é muito interessante. E quando nós estamos trabalhando com a automatização de testes, e ele é muito utilizado, tudo bem, então não foi entrar aqui nesse detalhe, porque o foco aqui no nosso treinamento é trabalhar e conhecer as personalidades do selênio Web Drive.
+    \item Provedor 5: Então primeiramente eu recomendo para que você estude um pouco e leia sobre esse design patterns não é chamado aí depois de ouvir ele é muito interessante e quando nós estamos trabalhando com automatização de testes ele é muito utilizado Tudo bem então não vou entrar aqui é desse de tarde porque eu faço para cuidar do nosso treinamento é trabalhar e conhecer as funcionalidades do Selenium web driver.
+\end{itemize}
+
+\noindent
+\textbf{Qual é o nível de coerência das transcrições automáticas apresentadas?}
+
+\noindent
+\textit{[Grupo de Campos para Seleção Única (Escala) para Cada Provedor]}
+
+\noindent
+\textit{[Provedor 1: ``Muito Incoerente'', ``Incoerente'', ``Útil'', ``Coerente'' e ``Muito Coerente'']}
+
+\noindent
+\textit{[Provedor 2: ``Muito Incoerente'', ``Incoerente'', ``Útil'', ``Coerente'' e ``Muito Coerente'']}
+
+\noindent
+\textit{[Provedor 3: ``Muito Incoerente'', ``Incoerente'', ``Útil'', ``Coerente'' e ``Muito Coerente'']}
+
+\noindent
+\textit{[Provedor 4: ``Muito Incoerente'', ``Incoerente'', ``Útil'', ``Coerente'' e ``Muito Coerente'']}
+
+\noindent
+\textit{[Provedor 5: ``Muito Incoerente'', ``Incoerente'', ``Útil'', ``Coerente'' e ``Muito Coerente'']}
+
+\subsection{Vídeo 4/5 - Características da Blockchain (pt-BR)}
+
+\noindent
+Transcrições Automáticas da videoaula \url{http://youtube.com/watch?v=DDmAIpo9EpA}:
+
+\begin{itemize}
+    \item Provedor 1: A grande sacada da blockchain é, não existe entidade centralizadora que está intermediando os acordos que acontecem os eventos que acontecem na rede, e sim toda a sua regra, toda sua lógica por trás da aplicação é o que define como que as coisas vão acontecer da autenticidade e a confiabilidade de todos os eventos.
+    \item Provedor 2: A grande sacada da block tinha não existe entidade centralizadora que está intermediando os acordos que acontecem os eventos que acontecem na rede e sim toda sua regra da sua lógica por trás da aplicação é o que define como que as coisas vão acontecer da autenticidade e a confiabilidade de todos os eventos.
+    \item Provedor 3: A grande sacada da blockchain é que não existe entidade centralizadora que está intermediando os acordos que acontecem, os eventos que acontecem na rede. E sim, toda a sua regra, toda a sua lógica por trás da aplicação é o que define como que as coisas vão acontecer. A autenticidade e a confiabilidade de todos os eventos.
+    \item Provedor 4: A grande sacada do bloco tinha. Não existe entidades centralizadoras que está intermediando os acordos que acontecem, os eventos que acontecem na rede, e sim toda sua regra da sua lógica por trás da aplicação. É o que define como que as coisas vão acontecer a autenticidade e a confiabilidade de todos os eventos.
+    \item Provedor 5: A grande tacada login e não existe entidade centralizadora que está intermediando os acordos que acontecem os eventos que acontecem na rede e sim toda sua regra dos Faróis traz aplicação é o que define como que as coisas vão acontecer a autenticidade e a confiabilidade e todos os.
+\end{itemize}
+
+\noindent
+\textbf{Qual é o nível de coerência das transcrições automáticas apresentadas?}
+
+\noindent
+\textit{[Grupo de Campos para Seleção Única (Escala) para Cada Provedor]}
+
+\noindent
+\textit{[Provedor 1: ``Muito Incoerente'', ``Incoerente'', ``Útil'', ``Coerente'' e ``Muito Coerente'']}
+
+\noindent
+\textit{[Provedor 2: ``Muito Incoerente'', ``Incoerente'', ``Útil'', ``Coerente'' e ``Muito Coerente'']}
+
+\noindent
+\textit{[Provedor 3: ``Muito Incoerente'', ``Incoerente'', ``Útil'', ``Coerente'' e ``Muito Coerente'']}
+
+\noindent
+\textit{[Provedor 4: ``Muito Incoerente'', ``Incoerente'', ``Útil'', ``Coerente'' e ``Muito Coerente'']}
+
+\noindent
+\textit{[Provedor 5: ``Muito Incoerente'', ``Incoerente'', ``Útil'', ``Coerente'' e ``Muito Coerente'']}
+
+\subsection{Vídeo 5/5 - SOs de Kernel Híbrido (pt-BR)}
+
+\noindent
+Transcrições Automáticas da videoaula \url{http://youtube.com/watch?v=3-8F2J8pzPQ}:
+
+\begin{itemize}
+    \item Provedor 1: Bom, o Kernel híbrido é utilizado nos sistemas operacionais da Apple. Não é uma que OSO Windows, né? Windows 10 aí no minix o minix, pra quem não sabe, é um sistema, um Mini sistema operacional, desenvolvido pelo professor André ator é também Ball, né? E para estudos, e ele utilizou como base é a base do Linux, tá Jóia.
+    \item Provedor 2: Bom oker no é utilizado nos sistemas operacionais da apple né o macos um windows né um e dois dez e no minix o minix para quem não sabe é um sistema mini sistema operacional desenvolvido pelo prof androton tanembal né e pra estudos e ele utilizou como base a base do linux tá joia.
+    \item Provedor 3: Bom, o kernel híbrido é utilizado nos sistemas operacionais da Apple, o MacOS, o Windows 10 e no Minix. O Minix, pra quem não sabe, é um mini sistema operacional desenvolvido pelo professor André Tannenbaum pra estudos e ele utilizou a base do Linux.
+    \item Provedor 4: Bom o quer no livro utilizados nos sistemas operacionais da época. Como é que um Windows Windows dez e no mínimo um mínimos para quem não sabe, é um sistema operacional desenvolvido pelo professor doutor também bol e para estudos, e ele utilizou como base a base do Linux.
+    \item Provedor 5: Bom o que é utilizado nos sistemas operacionais da Apple né O Michael é 100 Windows na Windows 10 ilumine omnix para quem não sabe é um sistema operacional desenvolvido pelo professor Antônio Aníbal né E para estudos e ele utilizou como base a base do Linux.
+\end{itemize}
+
+\noindent
+\textbf{Qual é o nível de coerência das transcrições automáticas apresentadas?}
+
+\noindent
+\textit{[Grupo de Campos para Seleção Única (Escala) para Cada Provedor]}
+
+\noindent
+\textit{[Provedor 1: ``Muito Incoerente'', ``Incoerente'', ``Útil'', ``Coerente'' e ``Muito Coerente'']}
+
+\noindent
+\textit{[Provedor 2: ``Muito Incoerente'', ``Incoerente'', ``Útil'', ``Coerente'' e ``Muito Coerente'']}
+
+\noindent
+\textit{[Provedor 3: ``Muito Incoerente'', ``Incoerente'', ``Útil'', ``Coerente'' e ``Muito Coerente'']}
+
+\noindent
+\textit{[Provedor 4: ``Muito Incoerente'', ``Incoerente'', ``Útil'', ``Coerente'' e ``Muito Coerente'']}
+
+\noindent
+\textit{[Provedor 5: ``Muito Incoerente'', ``Incoerente'', ``Útil'', ``Coerente'' e ``Muito Coerente'']}
+
+\section{Transcrições Automáticas em Inglês}
+
+Por favor, indique o seu nível de conhecimento em Inglês, a língua nativa das próximas 5 
+videoaulas. Ao informar sua proficiência, você nos ajudará a conduzir uma análise mais 
+precisa e abrangente sobre a qualidade das transcrições automáticas.
+
+\subsection{Vídeo 1/5 - O Que é Um Visto de Trabalho (en-US)}
+
+\noindent
+Transcrições Automáticas da videoaula \url{http://youtube.com/watch?v=VzhhqsIB_x0}:
+
+\begin{itemize}
+    \item Provedor 1: Transit visa is going to be a visa that allows you to go in transit between countries, but you're not gonna stay in that country. For example, let's suppose you want to travel. Your final destination is Canada, but you have to stop in the United States. So you need the transit visa to get inside the country while you wait for the next flight to go to your final destination.
+    \item Provedor 2: Trails it visa is gonna be a visa that allows you to go in transit between countries but you're not going to stay in that country for example that suppose you want to travel your final destination is canada but you have to stop in the united states so you need a transit visa to get inside the country while you wait for the next flight to go to your final destination.
+    \item Provedor 3: Transit visa is going to be a visa that allows you to go in transit between countries but you're not going to stay in that country, for example, let's suppose you want to travel, your final destination is Canada but you have to stop in the United States so you need a transit visa to get inside the country while you wait for the next flight to go to your final destination.
+    \item Provedor 4: Transit visa is going to be a visa that allows you to go in transit between countries, but you're not going to stay in that country. For example, let's suppose you want to travel, your final destination is Canada, but you have to stop in the United States. So you need a transit visa to get inside the country while you wait for the next flight to go to your final destination.
+    \item Provedor 5: Transit Visa is going to be a Visa that allows you to go in transit between countries but you're not going to stay in that country for example that supposed wants to travel your final destination is Canada but you have to stop in the United States do you need a transit Visa to get inside the country while you wait for the next flight to go to your final destination.
+\end{itemize}
+
+\subsection{Vídeo 2/5 - Entrevista de Emprego (en-US)}
+
+\noindent
+Transcrições Automáticas da videoaula \url{http://youtube.com/watch?v=VwHhRoHfyAM}:
+
+\begin{itemize}
+    \item Provedor 1: So now tell me a little bit about the technologies that you've been mastering during these years. In the recent years I've worked as a software architect mainly in projects in the Java programming language. In this context, my role is to design safe and scalable solutions in my banking domain.
+    \item Provedor 2: So now coming little bit about the technology that you've been master in general. In the reason years i worked at a software architect mainly in projects in the job of our running language in this contacts my role is designed safe and scaleable solutions and banking.
+    \item Provedor 3: So now tell me a little bit about the technologies that you've been mastering during these years. In the recent years I've worked as a software architect, mainly in projects in the Java programming language. In this context my role is to design safe and scalable solutions in a banking domain.
+    \item Provedor 4: So now tell me a little bit about the technologies that you've been mastering during these years. In the recent years, I've worked as a software architect mainly in projects in the Java programming language. Uh in this context, my role is to design safe and scalable solutions in the banking domain.
+    \item Provedor 5: Send me little bit about the technology. In the recent years I worked as a software architect mainly in projects in the Java programming language.
+\end{itemize}
+
+\subsection{Vídeo 3/5 - A Importância da Resiliência (en-US)}
+
+\noindent
+Transcrições Automáticas da videoaula \url{http://youtube.com/watch?v=w5ZUk6HUBNk}:
+
+\begin{itemize}
+    \item Provedor 1: And don't be scared. You will receive a lot of notes. I've received so many notes. I received hundreds of nose before I got to Sweden. So don't be, you know, disappointed. Don't be like, get a lot of strength and keep going because somebody will give you a chance.
+    \item Provedor 2: And don't be scared you will receive a lot of nose i've received so many nose i received hundreds of nose before i got to switten so don't be you know disappointed don't be like get a lot of strength and keep going because somebody will give you a chance.
+    \item Provedor 3: And don't be scared. You will receive a lot of no's. I've received so many no's. I received hundreds of no's before I got to Sweden. So don't be, you know, disappointed. Don't be like, get a lot of strength and keep going because somebody will give you a chance.
+    \item Provedor 4: And don't be scared. You will receive a lot of nos I've received so many nos I received hundreds of nos before I got to Sweden. So don't be, you know, disappointed, don't be like get a lot of strength and keep going because somebody will give you a chance.
+    \item Provedor 5: And don't be scared you will receive a lot of knows I've received so many knows I received hundreds of knows before I got to Sweden so don't be you know disappointed don't be like get a lot of strength and keep going because somebody will give you a chance.
+\end{itemize}
+
+\subsection{Vídeo 4/5 - Liderança Servidora (en-US)}
+
+\noindent
+Transcrições Automáticas da videoaula \url{http://youtube.com/watch?v=QJrnDA4mr_8}:
+
+\begin{itemize}
+    \item Provedor 1: A servant leader focuses on serving others first, listening and responding to people's needs, involving them in decision making and committing to people's growth and persuading them with empathy.
+    \item Provedor 2: A servant leader focuses on serving others first. Listening and responding to people's means involving them a decision making committing to people's growth and persuading them with empathy.
+    \item Provedor 3: A servant leader focuses on serving others first, listening and responding to people's needs, involving them in decision making, committing to people's growth and persuading them with empathy.
+    \item Provedor 4: A servant leader focuses on serving others first listening and responding to people's needs involving them in decision making, um committing to people's growth and persuading them with empathy.
+    \item Provedor 5: A servant leader focuses on serving others first listening and responding to people's need involving them and decision-making committing people's growth and persuading them with empathy.
+\end{itemize}
+
+\subsection{Vídeo 5/5 - Simplicidade das Goroutines (en-US)}
+
+\noindent
+Transcrições Automáticas da videoaula \url{http://youtube.com/watch?v=0FBZcEA6HGA}:
+
+\begin{itemize}
+    \item Provedor 1: Uh, so goroutines are even more lightweight than threads. And they're extremely simple to write. To the point where you literally just put the word go in front of the function and that function is now a go routine.
+    \item Provedor 2: Uh so governors are even more light weight than throws. And they are extremely supportive. To the point where you literally just put the word go in front of the function and that function is now augurity.
+    \item Provedor 3: So goroutines are even more lightweight than threads. And they are extremely simple to write. To the point where you literally just put the word go in front of a function, and that function is now a goroutine.
+    \item Provedor 4: Uh so go routes are even more lightweight than threads. And they are extremely simple to write to the point where you literally just put the word go in front of a function. And that function is now a go routine.
+    \item Provedor 5: Even more lightweight than threats. And they are extremely simple. To the point where you literally just put the word go in front of a function and its function is now a go routine.
+\end{itemize}
+
+\section{Transcrições Automáticas em Espanhol}
+
+Por favor, indique o seu nível de conhecimento em Espanhol, a língua nativa das próximas 
+5 videoaulas. Ao informar sua proficiência, você nos ajudará a conduzir uma análise mais 
+precisa e abrangente sobre a qualidade das transcrições automáticas.
+
+\subsection{Vídeo 1/5 - O Que é Programação (es-AR)}
+
+\noindent
+Transcrições Automáticas da videoaula \url{http://youtube.com/watch?v=EPsKQy73H38}:
+
+\begin{itemize}
+    \item Provedor 1: En definitiva, de la programación es la acción de poder escribir diferentes tipos de programas que obviamente van a estar y se van a ejecutar en una computadora con el objetivo de poder resolver una problemática en particular.
+    \item Provedor 2: En definitiva la programación es la acción de poder escribir diferentes tipos de programas que obviamente van a estar y se van a ejecutar en una computadora con el objetivo de poder resolver una problemática en particular.
+    \item Provedor 3: En definitiva, la programación es la acción de poder escribir diferentes tipos de programa que obviamente van a estar y se van a ejecutar en una computadora con el objetivo de poder resolver una problemática en particular.
+    \item Provedor 4: En definitiva. La programación es la acción de poder escribir diferentes tipos de programa que obviamente van a estar y se van a ejecutar en una computadora con el objetivo de poder resolver una problemática en particular.
+    \item Provedor 5: En definitiva la programación es la acción de poder escribir diferentes tipos de programa cuya mente van a estar y se van a ejecutar en una computadora con el objetivo de poder resolver una problemática en particular.
+\end{itemize}
+
+\subsection{Vídeo 2/5 - Linguagens de Programação (es-AR)}
+
+\noindent
+Transcrições Automáticas da videoaula \url{http://youtube.com/watch?v=y_lMhROqOR0}:
+
+Transcrições Automáticas
+
+\begin{itemize}
+    \item Provedor 1: Entonces existen muchísimos lenguajes de programación como Python comorco-mo.Net como Java como PHP. Todos tienen la misma lógica del del, desde la mirada de que tiene sus reglas, sus normas. Por eso es que 1 siempre habla de la importancia de aprender a programar y desarrollar la lógica de la programación.
+    \item Provedor 2: Entonces existen muchísimos lenguajes de programación como piton como r como punto net como java como p p todos tienen la misma lógica del del desde la mirada de que tiene sus reglas su normas por eso es que uno siempre abra de la importancia de aprender a programar y desarrosar la lógica en la programación.
+    \item Provedor 3: Entonces, existen muchísimos lenguajes de programación, como Python, como R, como .NET, como Java, como PHP. Todos tienen la misma lógica desde la mirada de que tiene sus reglas, sus normas. Por eso es que uno siempre habla de la importancia de aprender a programar y desarrollar la lógica de la programación.
+    \item Provedor 4: Entonces existen muchísimos lenguajes de programación, como Payton, como R, como punto net como Java, como PHP, todos tienen la misma lógica del del desde la mirada de que tiene sus reglas, normas. Por eso es que uno siempre habla de la importancia de aprender a programar y desarrollar la lógica de la programação.
+    \item Provedor 5: Entonces existen muchísimos lenguajes de programación como python como r como puntonet.Com hoja va como php todos tienen la mesma lógica de la mirada de que tiene sus reglas o normas por eso es que uno siempre habla de la importancia de aprender a programar y desarrollar la lógica en la programación.
+\end{itemize}
+
+\subsection{Vídeo 3/5 - Tipos de Dados em Python (es-AR)}
+
+\noindent
+Transcrições Automáticas da videoaula \url{http://youtube.com/watch?v=V98YCkiTULY}:
+
+\begin{itemize}
+    \item Provedor 1: Ahora si hablamos de los tipos de datos que existen, es importante tener en cuenta de que hay diferentes variedades Python, como cualquier lenguaje de programación, nos ofrece muchos tipos de datos con los cuales podemos trabajar.
+    \item Provedor 2: Ahora si hablamos de los tipos de datos que existen es importante tener en cuenta de que hay diferentes variedades. Payton como cualquier lenguaje de programación nos ofrece muchos tipos de datos con los cuales podemos trabajar.
+    \item Provedor 3: Ahora, si hablamos de los tipos de datos que existen, es importante tener en cuenta de que hay diferentes variedades. Python, como cualquier lenguaje de programación, nos oferece muchos tipos de datos con los cuales podemos trabajar.
+    \item Provedor 4: Ahora. Si hablamos de los tipos de datos que existen, es importante tener en cuenta de que hay diferentes variedades Payton. Como cualquier lenguaje de programación, nos ofrece muchos tipos de datos con los cuales podemos trabajar.
+    \item Provedor 5: Ahora sí Hablamos de los tipos de datos que existen es importante tener en cuenta de que hay diferentes variedades python como cualquier lenguaje de programación nos ofrece muchos tipos de datos con los cuales podemos trabajar.
+\end{itemize}
+
+\subsection{Vídeo 4/5 - "Olá Mundo" e 'Olá Mundo' em Python (es-AR)}
+
+\noindent
+Transcrições Automáticas da videoaula \url{http://youtube.com/watch?v=Ctv4to22eLY}:
+
+\begin{itemize}
+    \item Provedor 1: Ejecutamos hola mundo hola mundo. Esto es lo que nos lleva a pensar es que no hay inconvenientes con trabajar con comillas simples o dobles en Python, bien, pero recordemos que hay otros lenguajes de programación que esto sí que puede llegar a traer inconvenientes.
+    \item Provedor 2: Ejecutamos o la mundo y hola. Esto lo que no se va a pensar es que no hay inconvenientes con trabajar con comisas simples o dobles en python bien pero recordemos que hay otros lenguajes de programación que esto si que puedes llevar a traer inconvenientes.
+    \item Provedor 3: Ejecutamos hola mundo y hola mundo. Esto lo que nos lleva a pensar es que no hay inconvenientes con trabajar con comillas simples o dobles en Python, pero recordemos que hay otro lenguaje de programación que esto sí que puede llegar a traer inconvenientes.
+    \item Provedor 4: Ejecutamos. Hola, mundo. Hola, mundo. Esto lo que nos lleva a pensar es que no hay inconvenientes con trabajar con comillas simples o dobles en Brighton. Bien, pero recordemos que hay otro lenguaje de programación que esto sí que puede llegar a traer inconvenientes.
+    \item Provedor 5: Ejecutamos Hola mundo y Hola mundo Esto es lo que nos lleva a pensar es que no hay inconvenientes con trabajar con comillas simples o dobles en python meme pero recordemos que hay otro lenguaje de programación que estos y que puede llegar a traer inconvenientes.
+\end{itemize}
+
+\subsection{Vídeo 5/5 - String Slicing em Python (es-AR)}
+
+\noindent
+Transcrições Automáticas da videoaula \url{http://youtube.com/watch?v=iKKu8TFtLZY}:
+
+\begin{itemize}
+    \item Provedor 1: Y luego vamos a hacer un print, observemos da. Y, vamos a ver primero la posición cero. Y, cómo podemos identificar la posición cero es la ache. Siempre recordemos que la posición inicial en Python, todos los índices inician en cero. Ahora si nosotros ponemos la posición 1, que era el ejemplo que estaba propuesto en el slide, efectivamente visualizamos que es. El elemento de.
+    \item Provedor 2: Y luego vamos a hacer un print observemos de a. Y vamos a ver primero la posición cero y como podemos identificar la posición cero es la h siempre recordemos que la posición inicial en payton todos los índices inician en cero. Ahora si nosotros ponemos la posición uno que era el ejemplo que estaba propuesto nerslife efectivamente visualizamos que es. El elemento de.
+    \item Provedor 3: Y luego vamos a hacer un print, observemos, de A, y vamos a ver primero la posición cero, y como podemos identificar, la posición cero es la H. Siempre recordemos que la posición inicial en Python, todos los índices inician en cero. Ahora, si nosotros ponemos la posición uno, que era el ejemplo que estaba propuesto en el slide, efectivamente visualizamos que es el elemento D.
+    \item Provedor 4: Y luego vamos a hacer un brindis. Observemos de A y vamos a ver primero la posición cero. Y cómo podemos identificar la posición cero? Es la H. Siempre recordemos que la posición inicial en Payton todos los índices inician en cero. Ahora, si nosotros ponemos la posición uno, que era el ejemplo que estaba propuesto en el isla, hay efectivamente, visualizamos que es el elemento de.
+    \item Provedor 5: Y luego vamos a hacer un print observemos de a y vamos a ver primero la posición 0 y Cómo podemos identificar la posición 0 es la H siempre recordemos que la posición inicial en python todos los índices inician en ceros ahora si nosotros ponemos la posición uno que era el ejemplo que estaba propuesto en el slime efectivamente visualizamos Qué es el elemento de.
+\end{itemize}
+
+
+\section{Conclusão}
+
+Agradecemos por ter chegado até aqui e por dedicar seu tempo a participar deste estudo. 
+Você está na última seção e há apenas mais duas perguntas a serem respondidas. Sua 
+opinião é fundamental para nós, e valorizamos muito suas contribuições.
+
+Por fim, se você tem interesse em arquitetura de software e deseja acompanhar e participar 
+das discussões sobre o progresso desta pesquisa, convidamos você a se juntar ao nosso 
+grupo no WhatsApp: \url{https://chat.whatsapp.com/FwOiBx1U3u3BbQ51LxXQnM}
+
+Se desejar, compartilhe observações, sugestões ou feedbacks sobre as 
+transcrições automáticas dos vídeos em Espanhol.
+
+Por favor, compartilhe suas observações, sugestões ou feedbacks sobre este
+estudo. Sua percepção é fundamental para aperfeiçoarmos nossas futuras
+avaliações.
+
+Se deseja ser informado(a) sobre iniciativas futuras relacionadas a nossa
+pesquisa, por gentileza, deixe seu e-mail e/ou telefone abaixo.
