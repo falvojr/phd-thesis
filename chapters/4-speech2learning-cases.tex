@@ -42,13 +42,13 @@ Na prática, o acesso à PoC foi restrito à Equipe de Educação da DIO, garant
 
 Inspirados pelos \textit{insights} e desafios desta PoC, pensamos em expandir nossas percepções por meio de um Estudo de Caso mais amplo. Por sua vez, esta iniciativa de investigação visa analisar mais profundamente as nuances entre diferentes provedores de STT. Portanto, para nosso Estudo de Caso, selecionamos 15 videoaulas cujas transcrições foram revisadas por especialistas em idiomas da DIO durante a PoC. Esta quantidade e duração de vídeos foram estrategicamente definidas para controle financeiro (custo dos provedores de STT) e, principalmente, viabilizar um \textit{Survey} coeso para avaliação da precisão das transcrições automáticas sob novas perspectivas.
 
-Para uma análise mais robusta, procuramos diversificar as línguas e os professores das videoaulas, de forma a captar diferentes sotaques e regionalidades. A \autoref{tab:chapter4-poc-audios-summary} detalha as características linguísticas e técnicas dos áudios extraídos das videoaulas. Este conjunto diversificado de dados servirá como referência, nos permitindo analisar criticamente o desempenho de outros fornecedores de STT em múltiplos contextos de ensino-aprendizagem.
+Para uma análise mais robusta, procuramos diversificar as línguas e os professores das videoaulas, de forma a captar diferentes sotaques e regionalidades. O \autoref{quadro:c4:poc-audios-summary} detalha as características linguísticas e técnicas dos áudios extraídos das videoaulas. Este conjunto diversificado de dados servirá como referência, nos permitindo analisar criticamente o desempenho de outros fornecedores de STT em múltiplos contextos de ensino-aprendizagem.
 
-\begin{table}[htb]
+\begin{quadro}[htb]
 \centering
 \caption{\textit{Dataset} do Estudo de Caso 1 (Áudios Extraídos das Videoaulas)}
-\label{tab:chapter4-poc-audios-summary}
-\begin{tabular}{|c|c|c|c|l|c|}
+\label{quadro:c4:poc-audios-summary}
+\begin{tabular}{c|c|c|c|l|c}
 \hline
 \textbf{ID} & \textbf{Língua} & \textbf{Sotaque} & \textbf{Gênero} & \textbf{Tópico Educacional} & \textbf{Tempo} \\ \hline
 1 & pt-BR & BRA & M & Apps Android & 0:17 \\ \hline
@@ -62,13 +62,13 @@ Para uma análise mais robusta, procuramos diversificar as línguas e os profess
 9 & en-US & BRA & F & Liderança Servidora & 0:15 \\  \hline
 10 & en-US & BRA & M & Goroutines & 0:15 \\  \hline
 11 & es-AR & ARG & F & Lógica de Programação & 0:12 \\  \hline
-12 & es-AR & ARG & F & Linguagens de programação & 0:21 \\  \hline
+12 & es-AR & ARG & F & Linguagens de Programação & 0:21 \\  \hline
 13 & es-AR & ARG & F & Tipos de Dados em Python & 0:14 \\  \hline
 14 & es-AR & ARG & F & Hello World com Python & 0:17 \\  \hline
 15 & es-AR & ARG & F & String Slicing com Python & 0:26 \\ \hline
 \end{tabular}
 \fadaptada{FalvoJr2023_HICSS}
-\end{table}
+\end{quadro}
 
 Este conjunto de dados (\textit{dataset}) passou por um rigoroso controle de qualidade de áudio, protocolo padrão para todo conteúdo oferecido na plataforma educacional da DIO. Para garantir a transparência dessas informações, disponibilizamos uma pasta pública\footnote{\textit{Dataset} do Estudo de Caso 1: \url{https://bit.ly/S2L-Audios}} que contém todas as amostras de áudio suas respectivas transcrições revisadas por especialistas em línguas da DIO. 
 
@@ -118,7 +118,7 @@ Medir a semelhança entre textos é uma prática comumente investigada em pesqui
 
 Neste estudo, aplicamos os três métodos mencionados, destacando sua relevância em nossa metodologia. Primeiramente, geramos e revisamos as transcrições de referência usando a instância da \textit{Speech2Learning}, desenvolvida como uma PoC. Em seguida, transcrevemos automaticamente cada OA utilizando diferentes serviços de ASR/STT, permitindo a comparação entre as transcrições de referência e as automáticas. Dessa forma, utilizamos os métodos de similaridade léxica CS, JI e LD como métricas de precisão.
 
-Para essa finalidade, identificamos os principais provedores de ASR/STT baseados em IA do mercado \cite{Gartner2023}: Amazon, Google, IBM, Microsoft e OpenAI. Ademais, em colaboração com a DIO, garantimos que todos os OAs e suas transcrições de referência estavam devidamente revisadas e disponíveis no \textit{dataset} deste Estudo de Caso (\autoref{tab:chapter4-poc-audios-summary}).
+Para essa finalidade, identificamos os principais provedores de ASR/STT baseados em IA do mercado \cite{Gartner2023}: Amazon, Google, IBM, Microsoft e OpenAI. Ademais, em colaboração com a DIO, garantimos que o \textit{dataset} deste Estudo de Caso, devidamente revisado e sintetizado no \autoref{quadro:c4:poc-audios-summary}, estivesse disponível com todas as transcrições de referência dos OAs.
 
 Com os áudios otimizados do \textit{dataset}, integramos os serviços de ASR/STT de cada provedor e geramos suas respectivas transcrições automáticas. Para uma implementação organizada e documentada, utilizamos o Google Colab, detalhando todo o processo em um notebook público\footnote{Colab Notebook - Transcrições Automáticas com ASR/STT: \url{https://bit.ly/S2L-STTServices}}. De forma similar, comparamos as 15 transcrições automáticas com as transcrições de referência usando os três métodos de similaridade léxica (CS, JI e LD) em um segundo notebook\footnote{Colab Notebook - Algoritmos de Similaridade Léxica: \url{https://bit.ly/S2L-CaseStudy}}.
 
@@ -186,13 +186,13 @@ Para a pesquisa documental, adotamos uma abordagem qualitativa para investigar d
 
 Essa combinação de hipóteses quantitativas e uma questão de pesquisa qualitativa permite uma triangulação robusta de dados, fornecendo uma visão abrangente e multidimensional do impacto das tecnologias de ASR/STT na acessibilidade educacional. A análise das respostas do \textit{Survey}, juntamente com os métodos de similaridade léxica e a pesquisa documental, nos permitirá identificar as convergências entre nossas fontes de evidências e enriquecer as discussões, fortalecendo a validade do estudo.
 
-Para fornecer uma visão formal, mas simplificada, deste primeiro Estudo de Caso, sintetizamos suas principais características na Tabela \autoref{tab:chapter4-cs1-summary}. Esta síntese foi elaborada seguindo as diretrizes metodológicas e as perspectivas de pesquisa descritas por \citeonline{CastroFilho2021}, garantindo uma abordagem estruturada e coerente com os padrões de pesquisa científica em informática na educação.
+Para fornecer uma visão formal, mas simplificada, deste primeiro Estudo de Caso, sintetizamos suas principais características no \autoref{quadro:c4:cs1-summary}. Esta síntese foi elaborada seguindo as diretrizes metodológicas e as perspectivas de pesquisa descritas por \citeonline{CastroFilho2021}, garantindo uma abordagem estruturada e coerente com os padrões de pesquisa científica em informática na educação.
 
-\begin{table}[htb]
+\begin{quadro}[htb]
 \centering
 \caption{Síntese do Estudo de Caso 1: Legendas Automáticas em Videoaulas}
-\label{tab:chapter4-cs1-summary}
-\begin{tabular}{|C{3cm}|m{11.75cm}|}\hline
+\label{quadro:c4:cs1-summary}
+\begin{tabular}{C{3cm}|m{11.75cm}}\hline
 \textbf{Objeto de Estudo} & Serviços de Reconhecimento de Fala (ASR/STT) \\\hline
 \textbf{Perspectiva} & Explanatória (Explicativa) \\\hline
 \textbf{Característica} & Explicação de causas ou efeitos relacionais ao fenômeno \cite{CastroFilho2021}. \\\hline
@@ -203,7 +203,7 @@ Para fornecer uma visão formal, mas simplificada, deste primeiro Estudo de Caso
 \textbf{Método de Coleta de Dados} & \begin{tabular}[c]{@{}m{11.75cm}@{}}Triangulação de Dados, com as seguintes fontes de evidência: \\ 1. Métodos de Similaridade Léxica. \\ 2. Respostas do \textit{Survey}. \\ 3. Pesquisa Documental.\end{tabular} \\\hline
 \textbf{Tipo de Análise} & Mista (Quantitativa e Qualitativa) \\\hline
 \end{tabular}
-\end{table}
+\end{quadro}
 
 \subsection{Resultados e Discussões}
 
@@ -242,14 +242,14 @@ Sendo assim, vamos apresentar os resultados do JI como métrica principal de sim
 
 A \autoref{fig:chapter4-cs1-lexical-all} inclui um Gráfico de Barras (\ref{fig:chapter4-cs1-lexical-all-barplot}) que exibe o JI médio para cada provedor, um \textit{Boxplot} (\ref{fig:chapter4-cs1-lexical-all-boxplot}) que detalha a distribuição dos dados e um Gráfico KDE (\ref{fig:chapter4-cs1-lexical-all-kdeplot}) que ilustra a densidade de probabilidade das pontuações. Essas visualizações destacaram proeminentemente a OpenAI, que demonstrou a maior pontuação, sugerindo seu desempenho superior na captura da similaridade léxica em várias aplicações de transcrição.
 
-As análises estatísticas detalhadas na \autoref{tab:chapter4-results-ji-tests} corroboram as impressões iniciais dos gráficos. Os testes de normalidade, o \textit{Kolmogorov-Smirnov} \cite{Kolmogorov1933,Smirnov1948} e o \textit{Shapiro-Wilk} \cite{Shapiro1965}, confirmaram a distribuição normal dos dados, permitindo uma análise adicional por meio da \textit{One-Way ANOVA} \cite{Fisher1925}. 
+As análises estatísticas detalhadas na \autoref{tabble:c4:results-ji-tests} corroboram as impressões iniciais dos gráficos. Os testes de normalidade, o \textit{Kolmogorov-Smirnov} \cite{Kolmogorov1933,Smirnov1948} e o \textit{Shapiro-Wilk} \cite{Shapiro1965}, confirmaram a distribuição normal dos dados, permitindo uma análise adicional por meio da \textit{One-Way ANOVA} \cite{Fisher1925}. 
 
 Por sua vez, o teste de ANOVA revelou diferenças significativas entre os provedores. Portanto, as análises \textit{post-hoc} de \textit{Tukey HSD} \cite{Tukey1949} e de \textit{Bonferroni} \cite{Bonferroni1936} foram aplicadas para identificar essas diferenças explicitamente. 
 
 \begin{table}[htb]
 \centering
 \caption{Testes Estatísticos do Índice de Jaccard: Provedores Sem Agrupar Por Idioma}
-\label{tab:chapter4-results-ji-tests} 
+\label{tabble:c4:results-ji-tests} 
 \begin{tabular}{lcclc|}
 \hline
 \multicolumn{5}{|c|}{\textbf{Tests of Normality}} \\ \hline
@@ -294,12 +294,12 @@ Adicionalmente, tendo em vista nossos dois conjuntos de hipóteses de pesquisa, 
 
 Como resultado, foram identificadas diferenças estatisticamente significativas entre a OpenAI quando comparada com Google e IBM, além da Microsoft quando comparada ao Google. Essas diferenças evidenciam uma variabilidade na eficiência dos provedores ao lidar com a similaridade léxica em diferentes contextos de transcrição automática, sugerindo uma superioridade da OpenAI e da Microsoft tendo em vista suas medidas de Jaccard.
 
-As avaliações estatísticas correspondentes (\autoref{tab:chapter4-results-ji-by-lang-tests}) incluíram testes de normalidade e \textit{One-Way ANOVA} para cada idioma. Os resultados destacaram diferenças significativas em como os provedores geram transcrições automáticas em inglês. Disparidades específicas entre provedores foram detalhadas através de análises \textit{post-hoc}, como \textit{Tukey HSD} e \textit{Bonferroni} para o idioma inglês, indicando que o desempenho pode variar significativamente dependendo do idioma das transcrições.
+As avaliações estatísticas correspondentes (\autoref{table:c4:results-ji-by-lang-tests}) incluíram testes de normalidade e \textit{One-Way ANOVA} para cada idioma. Os resultados destacaram diferenças significativas em como os provedores geram transcrições automáticas em inglês. Disparidades específicas entre provedores foram detalhadas através de análises \textit{post-hoc}, como \textit{Tukey HSD} e \textit{Bonferroni} para o idioma inglês, indicando que o desempenho pode variar significativamente dependendo do idioma das transcrições.
 
 \begin{table}[htb]
 \centering
 \caption{Testes Estatísticos do Índice de Jaccard: Provedores Agrupados Por Idioma}
-\label{tab:chapter4-results-ji-by-lang-tests} 
+\label{table:c4:results-ji-by-lang-tests} 
 \begin{tabular}{|ccccc|}
 \hline
 \multicolumn{5}{|c|}{\textbf{Tests of Normality}} \\ \hline
@@ -369,14 +369,16 @@ Um gráfico adicional detalha as avaliações por idioma, indicando variações 
 \fadaptada{FalvoJr2024_FIE}
 \end{figure}
 
-As análises estatísticas, consolidadas na \autoref{tab:chapter4-results-Survey-tests}, indicaram que as respostas do \textit{Survey} não seguiram uma distribuição normal, característica confirmada pelos testes de \textit{Kolmogorov-Smirnov} \cite{Kolmogorov1933,Smirnov1948} e \textit{Shapiro-Wilk} \cite{Shapiro1965}. Por isso, se fez necessário a avaliação e aplicação de testes não paramétricos para as análises subsequentes. 
+As análises estatísticas, consolidadas na \autoref{table:c4:results-survey-tests}, indicaram que as respostas do \textit{Survey} não seguiram uma distribuição normal, característica confirmada pelos testes de \textit{Kolmogorov-Smirnov} \cite{Kolmogorov1933,Smirnov1948} e \textit{Shapiro-Wilk} \cite{Shapiro1965}. Por isso, se fez necessário a avaliação e aplicação de testes não paramétricos para as análises subsequentes. 
 
 O teste de \textit{Kruskal-Wallis} \cite{Kruskal1952}, uma alternativa não paramétrica ao ANOVA, foi empregado para determinar se havia diferenças significativas nas medianas das pontuações entre os diferentes grupos. Este teste mostrou diferenças significativas entre os provedores (\ensuremath{p < 0.05}), sugerindo que as percepções dos participantes variavam significativamente dependendo do provedor.
+
+Ainda analisando a \autoref{table:c4:results-survey-tests}, dada a distribuição não normal dos dados, o teste de \textit{Dunn} \cite{Dunn1964} foi escolhido em detrimento do teste de \textit{Conover} \cite{Conover1999} para a análise \textit{post-hoc} devido às suas suposições menos rigorosas sobre a distribuição dos dados e sua capacidade de lidar efetivamente com dados que possuem \textit{outliers}, embora ambos tenham produzido resultados análogos em testes informais. O teste de \textit{Dunn} comparou pares de provedores, indicando diferenças significativas entre quase todos os pares. Notavelmente, todas as comparações envolvendo OpenAI e outros provedores demonstraram diferenças significativas, sugerindo uma virtual superioridade desse provedor.
 
 \begin{table}[htb]
 \centering
 \caption{Testes Estatísticos do \textit{Survey}: Provedores Sem Agrupar Por Idioma}
-\label{tab:chapter4-results-Survey-tests} 
+\label{table:c4:results-survey-tests} 
 \begin{tabular}{|lcccc|}
 \hline
 \multicolumn{5}{|c|}{\textbf{Tests of Normality}} \\ \hline
@@ -409,14 +411,12 @@ O teste de \textit{Kruskal-Wallis} \cite{Kruskal1952}, uma alternativa não para
 \fadaptada{FalvoJr2024_FIE}
 \end{table}
 
-Dada a distribuição não normal dos dados, o teste de \textit{Dunn} \cite{Dunn1964} foi escolhido em detrimento do teste de \textit{Conover} \cite{Conover1999} para a análise \textit{post-hoc} devido às suas suposições menos rigorosas sobre a distribuição dos dados e sua capacidade de lidar efetivamente com dados que possuem \textit{outliers} (\autoref{tab:chapter4-results-Survey-tests}), embora ambos tenham produzido resultados análogos em testes informais. O teste de \textit{Dunn} comparou pares de provedores, indicando diferenças significativas entre quase todos os pares. Notavelmente, todas as comparações envolvendo OpenAI e outros provedores demonstraram diferenças significativas, sugerindo uma virtual superioridade desse provedor.
-
-Os resultados estratificados por idioma reforçaram essas descobertas, com todos os grupos de idiomas mostrando diferenças significativas entre os provedores na forma como as transcrições automáticas foram avaliadas. Isso sugere que a qualidade percebida pelos participantes não depende apenas do provedor, mas também varia com o idioma, destacando os desafios de fornecer transcrições de alta qualidade de forma uniforme em diferentes contextos linguísticos (\autoref{tab:chapter4-results-Survey-by-lang-tests}).
+Os resultados estratificados por idioma reforçaram essas descobertas, com todos os grupos de idiomas mostrando diferenças significativas entre os provedores na forma como as transcrições automáticas foram avaliadas. Isso sugere que a qualidade percebida pelos participantes não depende apenas do provedor, mas também varia com o idioma, destacando os desafios de fornecer transcrições de alta qualidade de forma uniforme em diferentes contextos linguísticos (\autoref{table:c4:results-survey-by-lang-tests}).
 
 \begin{table}[htb]
 \centering
 \caption{Testes Estatísticos do \textit{Survey}: Provedores Agrupados Por Idioma}
-\label{tab:chapter4-results-Survey-by-lang-tests} 
+\label{table:c4:results-survey-by-lang-tests} 
 \begin{tabular}{|lcccc|}
 \hline
 \multicolumn{5}{|c|}{\textbf{Tests of Normality}} \\ \hline
@@ -492,13 +492,13 @@ Ao integrar os resultados coletados de nossas fontes de evidência, buscamos ide
 \item \textbf{Desafios e Oportunidades (DO)}: Identificação de obstáculos e possibilidades para aprimorar a precisão e eficácia do ASR em contextos educacionais. Este tema envolve os desafios na implementação de tecnologias ASR em ambientes ruidosos e colaborativos, buscando soluções para um reconhecimento de fala assertivo mesmo em situações adversas.
 \end{itemize}
 
-Na \autoref{tab:chapter4-grounded-theory-results}, apresentamos a categorização de cada estudo dentro da Teoria Fundamentada, fornecendo uma visão detalhada dos temas abordados em cada estudo e sua relevância para nossos objetivos de pesquisa. Esta análise nos permite estabelecer conexões críticas entre as diferentes vertentes de investigação, revelando como cada estudo contribui para a compreensão das tecnologias ASR e STT em contextos educacionais.
+No \autoref{quadro:c4:grounded-theory-results}, apresentamos a categorização de cada estudo dentro da Teoria Fundamentada, fornecendo uma visão detalhada dos temas abordados em cada estudo e sua relevância para nossos objetivos de pesquisa. Esta análise nos permite estabelecer conexões críticas entre as diferentes vertentes de investigação, revelando como cada estudo contribui para a compreensão das tecnologias ASR e STT em contextos educacionais.
 
-\begin{table}
+\begin{quadro}
 \centering
 \caption{Categorização dos Artigos usando Teoria Fundamentada}
-\label{tab:chapter4-grounded-theory-results} 
-\begin{tabular}{|c|p{6.8cm}|p{5.7cm}|}\hline
+\label{quadro:c4:grounded-theory-results} 
+\begin{tabular}{c|p{6.8cm}|p{5.7cm}}\hline
 \textbf{Categoria} & \textbf{Descrição} & \textbf{Estudos} \\ \hline
 \textbf{AQT} & Avalia o desempenho e qualidade do ASR/STT em tarefas de transcrição. & \citeonline{Ferraro2023} \\ \hline
 \textbf{IAGenE} & Explora a integração da IAGen em contextos educacionais. & \citeonline{Bengesi2024,Alshaikh2024} \\ \hline
@@ -506,7 +506,7 @@ Na \autoref{tab:chapter4-grounded-theory-results}, apresentamos a categorizaçã
 \textbf{DO} & Identifica desafios e oportunidades no ASR/STT em contextos educacionais. & \citeonline{Cao2023} \\  \hline
 \end{tabular}
 \fadaptada{FalvoJr2024_FIE}
-\end{table}
+\end{quadro}
 
 A seguir, vamos discutir a convergência dos dados provenientes das três fontes de evidência investigadas: Métodos de Similaridade Léxica, Respostas do \textit{Survey} e Pesquisa Documental. Ao integrar essas diversas fontes, buscamos uma visão mais robusta sobre o impacto das tecnologias ASR e STT na acessibilidade e eficácia dos OAs. Esta abordagem integrada nos permitirá identificar sinergias e discrepâncias, fornecendo um panorama detalhado e multifacetado dos estados da prática e da arte.
 
@@ -612,13 +612,13 @@ Esperamos que esta segunda instância da arquitetura \textit{Speech2Learning}, a
     \item Fornecer \textit{insights} valiosos sobre as preferências dos intérpretes de Libras e suas percepções sobre a usabilidade, precisão e impacto dos avatares integrados à transcrições automáticas.
 \end{itemize}
 
-Para concluir, a síntese da \autoref{tab:chapter4-cs2-summary} resume a abordagem metodológica adotada, destacando a importância das entrevistas qualitativas para a compreensão das percepções dos intérpretes de Libras. A análise qualitativa proporcionou uma visão detalhada dos desafios e benefícios percebidos na utilização de avatares de Libras, contribuindo para o desenvolvimento de práticas pedagógicas mais inclusivas e acessíveis.
+Para concluir, o \autoref{quadro:c4:cs2-summary} resume a abordagem metodológica adotada, destacando a importância das entrevistas qualitativas para a compreensão das percepções dos intérpretes de Libras. A análise qualitativa proporcionou uma visão detalhada dos desafios e benefícios percebidos na utilização de avatares de Libras, contribuindo para o desenvolvimento de práticas pedagógicas mais inclusivas e acessíveis.
 
-\begin{table}[htb]
+\begin{quadro}[htb]
 \centering
 \caption{Síntese do Estudo de Caso 2: Player de Vídeo com Avatar de Libras}
-\label{tab:chapter4-cs2-summary}
-\begin{tabular}{|C{3cm}|m{11.75cm}|}\hline
+\label{quadro:c4:cs2-summary}
+\begin{tabular}{C{3cm}|m{11.75cm}}\hline
 \textbf{Objeto de Estudo} & Player de Vídeo com Avatar de Libras Baseado em Texto (Transcrição Automática) \\\hline
 \textbf{Perspectiva} & Exploratório \\\hline
 \textbf{Característica} & Elaboração de conhecimentos ou levantamento de informação acerca do fenômeno ainda pouco conhecido \cite{CastroFilho2021}. \\\hline
@@ -629,7 +629,7 @@ Para concluir, a síntese da \autoref{tab:chapter4-cs2-summary} resume a abordag
 \textbf{Método de Coleta de Dados} & \begin{tabular}[c]{@{}m{11.75cm}@{}}1. Survey\\ 2. Entrevistas semi-estruturadas\end{tabular} \\\hline
 \textbf{Tipo de Análise} & Mista (Quantitativa e Qualitativa) \\\hline
 \end{tabular}
-\end{table}
+\end{quadro}
 
 \subsection{Resultados e Discussões}
 
