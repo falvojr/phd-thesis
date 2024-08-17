@@ -238,7 +238,9 @@ Qualidade de Software & 3 & 2\% & 9 & 19\% \\ \hline
 \end{tabular}
 \end{table}
 
-Tecnicamente, a maioria das soluções é baseada em plataformas Web, Mobile ou Desktop, evidenciando uma preocupação genuína em criar recursos de TA para diferentes plataformas de ensino-aprendizagem. No entanto, poucos estudos foram estruturados de forma a facilitar o seu reuso e extensibilidade. Além disso, menos da metade dos estudos apresentou avaliações empíricas formais, como \textit{Surveys}, Experimentos e Estudos de Caso, indicando uma falta de rigor científico em parte das pesquisas \cite{Pressman2016, Sommerville2015}.
+Tecnicamente, a maioria das soluções é baseada em plataformas Web, Mobile ou Desktop, evidenciando uma preocupação genuína em criar recursos de TA para diferentes plataformas de ensino-aprendizagem. No entanto, poucos estudos foram estruturados de forma a facilitar o seu reuso e extensibilidade. 
+
+Além disso, menos da metade dos estudos apresentou avaliações empíricas formais, como \textit{Surveys}, Experimentos e Estudos de Caso, indicando uma falta de rigor científico em parte das pesquisas \cite{Pressman2016, Sommerville2015}.
 
 Em contrapartida, avatares de línguas de sinais baseados em texto, como o \textit{Hand Talk}\footnote{Mais informações em \url{https://handtalk.me}} e o \textit{VLibras}\footnote{Mais informações em \url{https://gov.br/governodigital/pt-br/vlibras}}, destacam-se ao transformar texto em língua de sinais, evidenciando o potencial de soluções de TA bem arquitetadas para potencializar a acessibilidade de conteúdos em diversos contextos educacionais. Portanto, a discussão sobre Arquiteturas de Software na \autoref{section:foundation:arch} será fundamental para compreender como essas soluções podem ser aprimoradas para desenvolver serviços de TA verdadeiramente escaláveis.
 
@@ -271,7 +273,7 @@ Com uma vasta gama de OAs inclusivos e adaptáveis, os educadores podem proporci
 
 \sigla*{IAGen}{Inteligências Artificiais Generativas}
 
-As línguas de sinais mais comuns, destacadas na \autoref{table:c2:sign-languages}, juntamente com o crescente interesse em ASR multilíngue, abrem caminho para avanços significativos na acessibilidade. A capacidade das IAs Generativas (IAGen) de transcrever e traduzir fala em texto em múltiplas línguas viabiliza a integração de avatares de línguas de sinais baseados em texto, resultando em OAs mais inclusivos e versáteis.
+As línguas de sinais mais comuns, destacadas na \autoref{table:c2:sign-languages}, juntamente com o crescente interesse em ASR multi-idiomas, abrem caminho para avanços significativos de acessibilidade. A capacidade das IAs Generativas (IAGen) de transcrever e traduzir fala em texto em múltiplas línguas viabiliza a integração de avatares de línguas de sinais baseados em texto, resultando em OAs mais inclusivos e versáteis.
 
 \begin{table}[htb]
 \caption{QP3: Línguas de Sinais.}
@@ -317,7 +319,7 @@ Resumidamente, uma arquitetura pode ser vista como um conjunto de estruturas que
     
     \item \textbf{Estruturas de Módulos}: Estas estruturas particionam o sistema em unidades de implementação, conhecidas como módulos, que são responsáveis por funções específicas e são a base para a organização do trabalho de desenvolvimento. Módulos podem representar classes, pacotes ou divisões de funcionalidade, cada um com um papel definido no sistema. As relações entre os módulos, como uso, generalização e composição, ajudam a entender a estrutura estática do sistema e a gerenciar sua evolução e manutenção \cite{Bass2021};
     
-    \item \textbf{Estruturas de Alocação}: Estas estruturas estabelecem a correspondência entre as estruturas de software e os componentes não software do sistema, como ambientes de desenvolvimento e execução. Elas respondem a questões críticas sobre onde cada elemento de software será executado, como os elementos estão armazenados e como são atribuídos às equipes de desenvolvimento. As estruturas de alocação são essenciais para a compreensão da distribuição do software e para a gestão de recursos durante todo o ciclo de vida do sistema \cite{Bass2021}.
+    \item \textbf{Estruturas de Alocação}: Essas estruturas estabelecem a correspondência entre os componentes de software e os elementos não-software do sistema, como ambientes de desenvolvimento e execução. Elas respondem a questões críticas sobre onde cada componente será executado, como estão armazenados e como são atribuídos às equipes de desenvolvimento. As estruturas de alocação são essenciais para compreender a distribuição do software e gerenciar recursos durante todo o ciclo de vida do sistema \cite{Bass2021}.
     
 \end{itemize}
 
@@ -327,7 +329,7 @@ Essas estruturas arquiteturais podem ser compreendidas de maneira análoga atrav
 \centering
 \caption{Fisiologia Humana: Análoga às Estruturas e Visões Arquiteturais}
 \label{chapter2:figure:physiological-structures}
-\includegraphics[width=0.75\textwidth]{images/chapter2-arch-physiological-structures.jpeg}
+\includegraphics[width=0.66\textwidth]{images/chapter2-arch-physiological-structures.jpeg}
 \fautor{Bass2021}
 \end{figure}
 
@@ -385,9 +387,9 @@ Por sua vez, as \textbf{recomendações estruturais} dizem respeito à organiza�
     \item \textbf{Gestão eficaz de áreas de contenção de recursos}: A arquitetura deve conter um conjunto específico e pequeno de áreas de contenção de recursos, cuja resolução deve ser claramente especificada e mantida. Por exemplo, se a utilização da rede é uma preocupação, o arquiteto deve produzir diretrizes para cada equipe de desenvolvimento que resultem em níveis aceitáveis de tráfego de rede.
 \end{enumerate}
 
-Em suma, uma arquitetura de software bem projetada não só atende aos requisitos funcionais imediatos, mas também oferece uma base sólida que permite a evolução e adaptação contínua do sistema, especialmente em áreas críticas como a educação inclusiva. A flexibilidade da arquitetura é essencial para suportar a evolução contínua das TICs e a adaptação às necessidades dos aprendizes, garantindo que as soluções sejam sustentáveis e capazes de atender às necessidades dos alunos a longo prazo.
+Portanto, uma arquitetura de software bem projetada não só atende aos requisitos funcionais imediatos, mas também oferece uma base sólida que permite a evolução e adaptação contínua do sistema, especialmente em áreas críticas como a educação inclusiva. A flexibilidade da arquitetura é essencial para suportar a evolução contínua das TICs e a adaptação às necessidades dos aprendizes, garantindo que as soluções sejam sustentáveis e capazes de atender às necessidades dos alunos a longo prazo.
 
-Nesse contexto, a arquitetura \textit{Speech2Learning} surge como uma proposta para impulsionar a construção de recursos e serviços de TA. Projetada para integrar soluções de ASR, ela visa facilitar a criação de OAs mais acessíveis a uma ampla gama de aprendizes \cite{FalvoJr2023_HICSS}. Nos próximos capítulos, são explorados em detalhes os conceitos de OAs e ASR, aprofundando o entendimento sobre como essas tecnologias se entrelaçam e formam a base da \textit{Speech2Learning}.
+Nesse contexto, a arquitetura \textit{Speech2Learning} surge como uma proposta para impulsionar a construção de recursos e serviços de TA. Projetada para integrar soluções de ASR, ela visa facilitar a criação de OAs mais acessíveis a uma ampla gama de aprendizes. Nos próximos capítulos, são explorados em detalhes os conceitos de OAs e ASR, aprofundando o entendimento sobre como essas tecnologias se entrelaçam e formam a base da \textit{Speech2Learning}.
 
 \section{Objetos de Aprendizagem: Diversidade em Conteúdos Educacionais}
 \label{section:foundation:lo}
@@ -400,29 +402,31 @@ Os OAs abrangem uma vasta gama de recursos digitais projetados para enriquecer o
 
 O \citeonline{LOM2000} define os OAs como entidades, digitais ou não-digitais, que podem ser usadas, reutilizadas ou referenciadas durante o ensino com suporte tecnológico. Essa definição abrange uma vasta gama de recursos, incluindo conteúdos multimídia, software instrucional, eventos educacionais, entre outros. \citeonline{Wiley2000} simplifica essa concepção ao descrever os OAs como recursos digitais que podem ser reutilizados para facilitar a aprendizagem, destacando a adaptabilidade e a reusabilidade como características centrais dos OAs.
 
-Segundo \citeonline{Tarouco2021}, a essência dos OAs reside na criação de pequenos módulos instrucionais reutilizáveis, combináveis de diferentes maneiras para atender às necessidades específicas de aprendizagem. Essa abordagem permite que educadores personalizem o ensino, adaptando materiais didáticos às suas metas pedagógicas individuais. O resultado é um processo de ensino-aprendizagem mais dinâmico, onde diferentes recursos se conectam para formar um todo coeso (\autoref{chapter2:figure:lo-mindmap}).
+Segundo \citeonline{Tarouco2021}, a essência dos OAs está na criação de pequenos módulos instrucionais reutilizáveis, combináveis de diferentes maneiras para atender às necessidades específicas de aprendizagem. Essa abordagem permite que educadores personalizem o ensino, adaptando materiais didáticos às suas metas pedagógicas individuais. O resultado é um processo de ensino-aprendizagem mais dinâmico, onde diferentes recursos se conectam para formar um todo coeso (\autoref{chapter2:figure:lo-mindmap}).
 
 \begin{figure}[htb]
 \centering
 \caption{Mapa Conceitual Sobre Objetos de Aprendizagem}
 \label{chapter2:figure:lo-mindmap}
-\includegraphics[width=0.925\textwidth]{images/chapter2-lo-mindmap.jpg}
+\includegraphics[width=1\textwidth]{images/chapter2-lo-mindmap.jpg}
 \fadaptada{Tarouco2021}
 \end{figure}
 
 \subsection{Estratégias de Identificação e Utilização de OAs}
 
-O uso e reuso de OAs envolve várias estratégias que facilitam sua adaptação a diferentes contextos educacionais. Conforme discutido por \citeonline{Tarouco2021}, os OAs podem variar em tamanho, escopo e nível de granularidade, afetando diretamente sua reusabilidade (\autoref{chapter2:figure:lo-granularity}). Objetos com granularidade alta, como imagens ou pequenos vídeos, são mais fáceis de reutilizar devido à sua simplicidade e especificidade. Em contraste, OAs de granularidade baixa, como cursos, oferecem uma experiência educacional mais completa e integrada, mas são mais difíceis de adaptar a novos contextos de ensino-aprendizagem.
+O uso e reuso de OAs envolve várias estratégias que facilitam sua adaptação a diferentes contextos educacionais. Conforme discutido por \citeonline{Tarouco2021}, os OAs podem variar em tamanho, escopo e nível de granularidade, afetando diretamente sua reusabilidade (\autoref{chapter2:figure:lo-granularity}). OAs com alta granularidade, como imagens ou pequenos vídeos, são mais fáceis de reutilizar devido à sua simplicidade e especificidade. Em contraste, objetos de baixa granularidade, como cursos, oferecem uma experiência educacional mais completa e integrada, mas são mais difíceis de adaptar a novos contextos de ensino-aprendizagem. O equilíbrio da granularidade é fundamental para que os OAs atinjam seus objetivos educacionais \cite{Tarouco2021}.
 
 \begin{figure}[htb]
 \centering
 \caption{Granularidade de Objetos de Aprendizagem}
 \label{chapter2:figure:lo-granularity}
-\includegraphics[width=0.6\textwidth]{images/chapter2-lo-granularity.jpg}
+\includegraphics[width=0.64\textwidth]{images/chapter2-lo-granularity.jpg}
 \fadaptada{Tarouco2021}
 \end{figure}
 
-A granularidade está estreitamente relacionada à intencionalidade pedagógica, definida pela finalidade educacional para a qual o OA foi criado. A eficácia de um objeto depende da clareza de seus objetivos pedagógicos e da adequação às necessidades dos alunos \cite{Bloom1984}. Dessa forma, a escolha de OAs deve considerar tanto a granularidade quanto a intencionalidade pedagógica para garantir uma aprendizagem eficaz e significativa.
+
+
+A granularidade está estreitamente relacionada à intencionalidade pedagógica, que se refere à finalidade educacional para a qual o OA foi criado. A eficácia de um objeto depende da clareza de seus objetivos pedagógicos e da adequação às necessidades dos alunos \cite{Bloom1984}. Portanto, a escolha de OAs deve considerar tanto a granularidade quanto a intencionalidade pedagógica para garantir uma aprendizagem eficaz e significativa.
 
 Nesse sentido, a adoção de padrões de metadados é essencial para a organização, indexação e reutilização de OAs. \citeonline{Santana2023} destacam a importância desses padrões e sua aplicabilidade no contexto da ES experimental, cujo compartilhamento de OAs é vital para replicações e pesquisas futuras. O \autoref{quadro:c2:lo-metadata} apresenta uma comparação entre vários padrões de metadados, destacando suas características principais:
 
@@ -464,9 +468,7 @@ A próxima seção discorrerá sobre a intencionalidade pedagógica, exemplifica
 
 \subsection{Intencionalidade Pedagógica}
 
-A intencionalidade pedagógica dos OAs pode ser exemplificada pela Taxonomia de Bloom, que categoriza objetivos educacionais em uma hierarquia de complexidade cognitiva \cite{Bloom1984}. Em um trabalho posterior, \citeonline{Krathwohl2002} propôs uma revisão da taxonomia original, estruturando-a em uma perspectiva bidimensional. 
-
-A primeira dimensão é a do conhecimento, que se desdobra em quatro tipos:
+A intencionalidade pedagógica dos OAs pode ser exemplificada pela Taxonomia de Bloom, que categoriza objetivos educacionais em uma hierarquia de complexidade cognitiva \cite{Bloom1984}. Em um trabalho posterior, \citeonline{Krathwohl2002} propôs uma revisão da taxonomia original, estruturando-a em uma perspectiva bidimensional. A primeira dimensão é a do conhecimento, que se desdobra em quatro tipos:
 
 \begin{itemize}
     \item \textbf{Factual}: conhecimento básico de terminologias e detalhes específicos;
@@ -553,11 +555,11 @@ De acordo com \citeonline{Tarouco2021}, o uso de novas tecnologias é um fator d
 \centering
 \caption{Impacto de Diferentes Estratégias de Interatividade na Aprendizagem}
 \label{figure:chapter2-lo-engagement}
-\includegraphics[width=1\textwidth]{images/chapter2-lo-engagement.jpg}
+\includegraphics[width=.96\textwidth]{images/chapter2-lo-engagement.jpg}
 \fadaptada{Tarouco2021}
 \end{figure}
 
-Na próxima seção, discute-se como o reconhecimento de fala pode promover a acessibilidade digital por meio do ASR/STT, abordando temas emergentes como IAGen, \sigla{NLP}{Processamento de Linguagem Natural} e \sigla{LLMs}{Grandes Modelos de Linguagem}. Através dessas tecnologias disruptivas, pretende-se potencializar ainda mais o alcance e a qualidade dos OAs nos mais diversos ambientes educacionais.
+Na seção a seguir, discute-se como o reconhecimento de fala pode promover a acessibilidade digital por meio do ASR, abordando intrinsecamente subáreas fundamentais da IAGen, como \sigla{NLP}{Processamento de Linguagem Natural} e \sigla{LLMs}{Grandes Modelos de Linguagem}. Através dessas tecnologias disruptivas, pretende-se potencializar ainda mais o alcance e a qualidade dos OAs nos mais diversos ambientes educacionais.
 
 \section{Reconhecimento de Fala: Promovendo Acessibilidade Digital com IA}
 \label{section:foundation:asr}
@@ -574,7 +576,7 @@ Soluções baseadas em ASR desempenham um papel vital ao quebrar barreiras lingu
 
 Apesar de seu potencial, o ASR enfrenta diversos obstáculos e desafios de pesquisa. O trabalho de \citeonline{Koenecke2020} destaca alguns deles, apontando para disparidades raciais e as sutilezas de características linguísticas, como sotaques e peculiaridades regionais, assim como identificado no MS para a Libras. Essas constatações reforçam a relevância de promover soluções baseadas em ASR que sejam verdadeiramente inclusivas e que contemplem um espectro mais amplo de considerações sociolinguísticas em seu projeto e implementação.
 
-\citeonline{Mayer2021} destacam a importância de tecnologias disruptivas, como o ASR, para expandir o alcance dos OAs, tornando o conteúdo educacional mais acessível a diversos aprendizes. Complementando essa perspectiva, \citeonline{Parakh2022} define OAs como unidades digitais reutilizáveis, frequentemente integradas a projetos \textit{open-source}, que desempenham um papel fundamental na criação de experiências de ensino-aprendizagem adaptáveis, democráticas e contextualizadas.
+\citeonline{Mayer2021} destacam a importância de tecnologias disruptivas, como o ASR, para expandir o alcance dos OAs, tornando o conteúdo educacional acessível a mais alunos. Complementando essa perspectiva, \citeonline{Parakh2022} define OAs como unidades digitais reutilizáveis, frequentemente integradas a projetos \textit{open-source}, que desempenham um papel fundamental na criação de experiências de ensino-aprendizagem adaptáveis, democráticas e contextualizadas.
 
 Estas recentes perspectivas reforçam e expandem as percepções obtidas no MS, que enfatizou a importância das inovações tecnológicas no processo de ensino e aprendizagem de línguas de sinais, revelando lacunas interessantes. Nesse sentido, foi possível observar a falta de padrões de projeto, além de boas práticas de código e reuso, o que compromete a qualidade, o compartilhamento e o potencial de impacto desses OAs.
 
@@ -592,17 +594,17 @@ O fluxo de processamento de fala em sistemas ASR é ilustrado na \autoref{figure
 \fadaptada{Li2018}
 \end{figure}
 
-Após a extração de características, os vetores resultantes são alimentados em um decodificador. O decodificador utiliza modelos acústicos, um dicionário de pronúncia e um modelo de linguagem para interpretar os vetores de características e mapear palavras/frases correspondentes. Os modelos acústicos são responsáveis por capturar as nuances dos sons da fala, enquanto o dicionário de pronúncia fornece a correspondência entre as sequências de fonemas e palavras.
+Após a extração de características, os vetores resultantes são enviados a um decodificador. O decodificador utiliza modelos acústicos, um dicionário de pronúncia e um modelo de linguagem para interpretar os vetores de características e mapear palavras/frases correspondentes. Os modelos acústicos são responsáveis por capturar as nuances dos sons da fala, enquanto o dicionário de pronúncia fornece a correspondência entre as sequências de fonemas e palavras.
 
 O modelo de linguagem, que pode ser um LLM, ajuda a prever a sequência mais provável de palavras com base no contexto linguístico. Esta abordagem estruturada e baseada em modelos de ML e IA permite que sistemas de ASR sejam precisos e adaptáveis a uma ampla gama de variabilidades na fala humana.
 
-A distinção entre ASR e STT é muitas vezes sutil e pode ser usada de forma intercambiável; neste trabalho, por motivo de simplificação, optou-se por essa abordagem. Enquanto ASR geralmente se refere ao campo de estudo e tecnologia de reconhecimento automático de fala, STT descreve a função específica de converter fala em texto. Ambos os termos são fundamentais para o desenvolvimento de tecnologias de acessibilidade e têm aplicações que se sobrepõem consideravelmente.
+A distinção entre ASR e STT é muitas vezes sutil e pode ser usada de forma intercambiável; neste trabalho, por motivo de simplificação, optou-se por essa abordagem. Enquanto ASR geralmente se refere ao campo de estudo e tecnologia de reconhecimento automático de fala, STT descreve a função específica de converter fala em texto. Ambos os termos são fundamentais para o desenvolvimento de TA e têm aplicações que se sobrepõem consideravelmente.
 
 Para garantir que os sistemas de ASR cumpram seu papel de maneira eficaz e inclusiva, é essencial utilizar métodos robustos de avaliação. A próxima seção discutirá os métodos de avaliação de reconhecimento de fala, incluindo a \sigla{WER}{\textit{Word Error Rate}} e métodos de similaridade léxica, fundamentais para uma análise abrangente da qualidade desses sistemas.
 
 \subsection{Métodos de Avaliação de Reconhecimento de Fala}
 
-A avaliação da eficácia dos sistemas de reconhecimento de fala é essencial para o aprimoramento e a implementação eficaz dessas tecnologias. Um dos métodos mais tradicionais e amplamente utilizados é a WER, que mede a discrepância entre a transcrição gerada pelo sistema de ASR e uma transcrição de referência. Segundo \cite{Jurafsky2024}, o WER é definido como:
+A avaliação da precisão dos sistemas baseados em ASR é essencial para o aprimoramento e a implementação eficaz dessas tecnologias. Um dos métodos mais tradicionais e amplamente utilizados é a WER, que mede a discrepância entre a transcrição gerada com ASR e uma transcrição de referência. Segundo \citeonline{Jurafsky2024}, o WER é definido como:
 
 \[
 \text{WER} = \frac{\text{Inserções} + \text{Substituições} + \text{Deleções}}{\text{Total de Palavras na Transcrição Correta}} \times 100
@@ -610,12 +612,12 @@ A avaliação da eficácia dos sistemas de reconhecimento de fala é essencial p
 
 O WER quantifica o número total de palavras que foram inseridas, substituídas ou deletadas na transcrição de ASR em comparação com uma referência, expressando esse total como uma porcentagem do número total de palavras na transcrição correta. Embora seja amplamente utilizado, o WER tem limitações, particularmente ao lidar com variações lexicais e semânticas, pois considera todas as palavras igualmente importantes e não distingue entre diferentes tipos de erro, como erros semânticos e sintáticos.
 
-Para complementar a análise de WER, métodos de similaridade léxica são frequentemente utilizados para fornecer uma visão mais detalhada da qualidade das transcrições geradas por ASR. Esses métodos avaliam a similaridade entre as transcrições com base em diversos critérios, como alterações lexicais e proximidade semântica. De acordo com \cite{Majumdar2022}, alguns dos métodos de similaridade léxica incluem:
+Para complementar a análise de WER, métodos de similaridade léxica são frequentemente utilizados para fornecer uma visão mais detalhada da qualidade das transcrições geradas por ASR. Esses métodos avaliam a similaridade entre as transcrições com base em diversos critérios, como alterações lexicais e proximidade semântica. De acordo com \citeonline{Majumdar2022}, alguns dos métodos de similaridade léxica incluem:
 
 \begin{itemize}
-\item \textbf{Distância de Levenshtein}: Mede o número mínimo de operações necessárias para transformar uma palavra na outra. Este método é útil para capturar a similaridade em termos de alterações literais entre as transcrições automática e de referência.
-\item \textbf{Índice de Jaccard}: Avalia a similaridade entre conjuntos de palavras, calculando a razão entre o tamanho da interseção e o tamanho da união dos conjuntos de palavras de duas transcrições. É particularmente útil para medir a presença de palavras comuns e a diversidade de vocabulário.
-\item \textbf{Similaridade de Cosseno}: Mede a similaridade entre vetores de palavras, considerando o cosseno do ângulo entre eles. Este método é frequentemente usado para comparar representações vetoriais de frases ou textos, capturando a similaridade semântica além da simples correspondência de palavras.
+\item \textbf{Distância de Levenshtein}: Mede o número mínimo de operações necessárias para transformar uma palavra na outra. Este método é útil para capturar a similaridade em termos de alterações literais entre as transcrições automática e de referência \cite{levens-1,levens-2}.
+\item \textbf{Índice de Jaccard}: Avalia a similaridade entre conjuntos de palavras, calculando a razão entre o tamanho da interseção e o tamanho da união dos conjuntos de palavras de duas transcrições. É particularmente útil para medir a presença de palavras comuns e a diversidade de vocabulário \cite{jaccard-1,jaccard-2}.
+\item \textbf{Similaridade de Cosseno}: Mede a similaridade entre vetores de palavras, considerando o cosseno do ângulo entre eles. Este método é frequentemente usado para comparar representações vetoriais de frases ou textos, capturando a similaridade semântica além da simples correspondência de palavras \cite{cosseno-1,cosseno-2,cosseno-3}.
 \end{itemize}
 
 Esses métodos de similaridade léxica oferecem uma análise complementar à WER, proporcionando uma visão mais rica e detalhada da precisão dos sistemas de ASR. Eles são especialmente úteis para capturar nuances linguísticas e semânticas nas transcrições, que podem não ser refletidas de forma adequada pela WER. Nos estudos de caso conduzidos, optou-se por utilizar métodos de similaridade léxica para obter uma avaliação mais holística e detalhada da qualidade das transcrições automáticas.
