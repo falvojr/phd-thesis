@@ -8,19 +8,19 @@ Este capítulo detalha a aplicação prática da \textit{Speech2Learning} por me
 
 \section{Estudo de Caso 1: Legendas em Videoaulas}
 
-Nosso primeiro Estudo de Caso buscou investigar a precisão dos principais serviços de ASR, uma vez que essa tecnologia é central na Arquitetura \textit{Speech2Learning}. Na prática, utilizamos um conjunto de recursos educacionais, disponíveis na plataforma de \textit{e-learning} da DIO, para a construção de uma \sigla{PoC}{Prova de Conceito} focada na transcrição e legendagem desses OAs através de serviços de ASR.
+Nosso primeiro Estudo de Caso buscou investigar a precisão dos principais serviços de ASR, uma vez que essa tecnologia é central na Arquitetura \textit{Speech2Learning}. Na prática, utilizamos um conjunto de recursos educacionais, disponíveis na plataforma de \textit{e-learning} da DIO, para a construção de uma \sigla{POC}{Prova de Conceito} focada na transcrição e legendagem desses OAs através de serviços de ASR.
 
 Sendo assim, o objetivo deste estudo é expandir nossa compreensão sobre o papel das transcrições e legendas automáticas para um processo de ensino-aprendizagem mais acessível. Para tal propósito, discutimos a convergência dos resultados quantitativos e qualitativos obtidos por meio das três fontes de dados distintas, uma estratégia oriunda da metodologia de triangulação de dados \cite{LimaJunior2021}.
 
 Segundo \cite{Farquhar2020}, é possível explorar múltiplas fontes de evidências (quantitativas e/ou qualitativas) e discutir suas respectivas convergências por meio de uma abordagem de triangulação de dados. No contexto deste Estudo de Caso, as seguintes fontes foram observadas: (i) métodos de similaridade léxica; (ii) respostas de um \textit{Survey} anônimo; e (iii) estudos de uma pesquisa documental complementar.
 
-Desta forma, as seções a seguir abordam desde a implementação da PoC junto a \textit{EdTech} DIO até os detalhes metodológicos e resultados obtidos. Com isso, desenvolvemos discussões e percepções muito interessantes sobre a importância e potencial de TICs como o ASR/STT na promoção de soluções educacionais mais acessíveis.
+Desta forma, as seções a seguir abordam desde a implementação da POC junto a \textit{EdTech} DIO até os detalhes metodológicos e resultados obtidos. Com isso, desenvolvemos discussões e percepções muito interessantes sobre a importância e potencial de TICs como o ASR/STT na promoção de soluções educacionais mais acessíveis.
 
 \subsection{Prova de Conceito: API REST para Legendar Videoaulas}
 
-O desenvolvimento de uma PoC, primeira instância da \textit{Speech2Learning}, surgiu de uma necessidade de negócio da \textit{EdTech} DIO de legendar suas videoaulas de forma escalável. Para isso, uma API REST foi implementada para transcrever videoaulas curtas (entre 15 e 30 segundos), algo comum considerando o conceito de \textit{microlearning} adaptado pela DIO para suas necessidades educacionais. 
+O desenvolvimento de uma POC, primeira instância da \textit{Speech2Learning}, surgiu de uma necessidade de negócio da \textit{EdTech} DIO de legendar suas videoaulas de forma escalável. Para isso, uma API REST foi implementada para transcrever videoaulas curtas (entre 15 e 30 segundos), algo comum considerando o conceito de \textit{microlearning} adaptado pela DIO para suas necessidades educacionais. 
 
-Com isso, foi possível explorar os padrões de metadados inerentes à Arquitetura \textit{Speech2Learning} e gerar transcrições e legendas para videoaulas em múltiplos idiomas. Nesse sentido, definimos o escopo da PoC aos idiomas suportados na plataforma da DIO: Português, Inglês e Espanhol. Desta forma, foi possível ampliar a acessibilidade desses OAs por meio de transcrições e legendas geradas automaticamente a priori.
+Com isso, foi possível explorar os padrões de metadados inerentes à Arquitetura \textit{Speech2Learning} e gerar transcrições e legendas para videoaulas em múltiplos idiomas. Nesse sentido, definimos o escopo da POC aos idiomas suportados na plataforma da DIO: Português, Inglês e Espanhol. Desta forma, foi possível ampliar a acessibilidade desses OAs por meio de transcrições e legendas geradas automaticamente a priori.
 
 Conforme o diagrama da \autoref{fig:chapter4-cs1-poc-diagram}, a API REST segue as diretrizes da \textit{Speech2Learning}, bem como apresenta uma visão da estrutura de C\&C \cite{Bass2021}. O esquema de cores dos componentes corresponde ao das camadas na \autoref{fig:chapter3-speech2learning-arch}, ilustrando uma implementação em conformidade com os limites lógicos/estruturais pré-definidos para uma API REST.
 
@@ -32,15 +32,15 @@ Conforme o diagrama da \autoref{fig:chapter4-cs1-poc-diagram}, a API REST segue 
 \fdireta{FalvoJr2023_HICSS}
 \end{figure}
 
-O diagrama define dois \textit{Casos de Uso} relacionados à transcrição de vídeos: \textit{Criar} e \textit{Revisar}. Esta visão é interessante pois esclarece as funcionalidades implementadas na PoC. Além disso, nossas entidades foram projetadas como \textit{OAs Audíveis}, uma vez que lidamos com videoaulas. Para concluir, detalhes sobre a implementação também são expostos claramente na camada de \textit{Infraestrutura}. Por exemplo, nosso ponto de entrada é uma \textit{API REST}, o \textit{MongoDB} é o banco de dados e \textit{Google STT API} (API externa) é o provedor de STT.
+O diagrama define dois \textit{Casos de Uso} relacionados à transcrição de vídeos: \textit{Criar} e \textit{Revisar}. Esta visão é interessante pois esclarece as funcionalidades implementadas na POC. Além disso, nossas entidades foram projetadas como \textit{OAs Audíveis}, uma vez que lidamos com videoaulas. Para concluir, detalhes sobre a implementação também são expostos claramente na camada de \textit{Infraestrutura}. Por exemplo, nosso ponto de entrada é uma \textit{API REST}, o \textit{MongoDB} é o banco de dados e \textit{Google STT API} (API externa) é o provedor de STT.
 
-Para oferecer uma perspectiva mais técnica, a PoC pode ser consumida sob demanda através de uma requisição HTTP POST para uma API REST reativa. Este endpoint aciona um fluxo de trabalho assíncrono para extrair o áudio do vídeo, otimizando assim o consumo de largura de banda antes de invocar a \textit{Google STT API}. Após a resposta dessa requisição, a transcrição é armazenada nos metadados do \textit{OA Audível}, tornando essa transcrição automática elegível para revisão.
+Para oferecer uma perspectiva mais técnica, a POC pode ser consumida sob demanda através de uma requisição HTTP POST para uma API REST reativa. Este endpoint aciona um fluxo de trabalho assíncrono para extrair o áudio do vídeo, otimizando assim o consumo de largura de banda antes de invocar a \textit{Google STT API}. Após a resposta dessa requisição, a transcrição é armazenada nos metadados do \textit{OA Audível}, tornando essa transcrição automática elegível para revisão.
 
 Para revisar a transcrição de um OA existente, basta fazer uma requisição HTTP PUT para atualizar este recurso, versionando suas transcrições por meio dos metadados. Vale lembrar que, a \textit{Speech2Learning} apenas define diretrizes para a criação de soluções baseadas em STT para promover a acessibilidade de OAs, sem impor decisões de design, tecnologias ou aspectos de segurança.
 
-Na prática, o acesso à PoC foi restrito à Equipe de Educação da DIO, garantindo que seus OAs (videoaulas) fossem criados e revisados com segurança e em um ambiente controlado. Ressaltamos que as transcrições automáticas exigiram uma extensa revisão por especialistas em línguas da empresa, destacando a necessidade de otimizar o processo de transcrição e explorar outros serviços de STT.
+Na prática, o acesso à POC foi restrito à Equipe de Educação da DIO, garantindo que seus OAs (videoaulas) fossem criados e revisados com segurança e em um ambiente controlado. Ressaltamos que as transcrições automáticas exigiram uma extensa revisão por especialistas em línguas da empresa, destacando a necessidade de otimizar o processo de transcrição e explorar outros serviços de STT.
 
-Inspirados pelos \textit{insights} e desafios desta PoC, pensamos em expandir nossas percepções por meio de um Estudo de Caso mais amplo. Por sua vez, esta iniciativa de investigação visa analisar mais profundamente as nuances entre diferentes provedores de STT. Portanto, para nosso Estudo de Caso, selecionamos 15 videoaulas cujas transcrições foram revisadas por especialistas em idiomas da DIO durante a PoC. Esta quantidade e duração de vídeos foram estrategicamente definidas para controle financeiro (custo dos provedores de STT) e, principalmente, viabilizar um \textit{Survey} coeso para avaliação da precisão das transcrições automáticas sob novas perspectivas.
+Inspirados pelos \textit{insights} e desafios desta POC, pensamos em expandir nossas percepções por meio de um Estudo de Caso mais amplo. Por sua vez, esta iniciativa de investigação visa analisar mais profundamente as nuances entre diferentes provedores de STT. Portanto, para nosso Estudo de Caso, selecionamos 15 videoaulas cujas transcrições foram revisadas por especialistas em idiomas da DIO durante a POC. Esta quantidade e duração de vídeos foram estrategicamente definidas para controle financeiro (custo dos provedores de STT) e, principalmente, viabilizar um \textit{Survey} coeso para avaliação da precisão das transcrições automáticas sob novas perspectivas.
 
 Para uma análise mais robusta, procuramos diversificar as línguas e os professores das videoaulas, de forma a captar diferentes sotaques e regionalidades. O \autoref{quadro:c4:poc-audios-summary} detalha as características linguísticas e técnicas dos áudios extraídos das videoaulas. Este conjunto diversificado de dados servirá como referência, nos permitindo analisar criticamente o desempenho de outros fornecedores de STT em múltiplos contextos de ensino-aprendizagem.
 
@@ -70,19 +70,19 @@ Para uma análise mais robusta, procuramos diversificar as línguas e os profess
 \fadaptada{FalvoJr2023_HICSS}
 \end{quadro}
 
-Este conjunto de dados (\textit{dataset}) passou por um rigoroso controle de qualidade de áudio, protocolo padrão para todo conteúdo oferecido na plataforma educacional da DIO. Para garantir a transparência dessas informações, disponibilizamos uma pasta pública\footnote{\textit{Dataset} do Estudo de Caso 1: \url{https://bit.ly/S2L-Audios}} que contém todas as amostras de áudio suas respectivas transcrições revisadas por especialistas em línguas da DIO. 
+Este conjunto de dados (\textit{dataset}) passou por um rigoroso controle de qualidade de áudio, protocolo padrão para todo conteúdo oferecido na plataforma educacional da DIO. Para garantir a transparência dessas informações, disponibilizamos uma pasta pública\footnote{\textit{Dataset} do Estudo de Caso 1: \url{https://bit.ly/S2L-CS1-AudibleLOs}} que contém todas as amostras de áudio suas respectivas transcrições revisadas por especialistas em línguas da DIO. 
 
 Tecnicamente, o \textit{dataset} atende ou excede os seguintes critérios de qualidade: canais de áudio duplos, taxa de amostragem de 44,1 kHz e precisão de 16 bits. Tais aspectos técnicos não só garantem excelente qualidade de som, mas também contribuem para transcrições automáticas mais precisas.
 
-Nesse contexto, a realização de um Estudo de Caso é uma excelente opção para ampliar esta PoC e orientar análises e discussões mais profundas. Resumidamente, a PoC identificou a necessidade de reduzir o retrabalho exigido na revisão das transcrições automáticas e assim melhorar a eficiência do processo de transcrição. Esta progressão da PoC para um Estudo de Caso reflete uma abordagem comum em pesquisa que permite o desenvolvimento iterativo \cite{Runeson2009}. 
+Nesse contexto, a realização de um Estudo de Caso é uma excelente opção para ampliar esta POC e orientar análises e discussões mais profundas. Resumidamente, a POC identificou a necessidade de reduzir o retrabalho exigido na revisão das transcrições automáticas e assim melhorar a eficiência do processo de transcrição. Esta progressão da POC para um Estudo de Caso reflete uma abordagem comum em pesquisa que permite o desenvolvimento iterativo \cite{Runeson2009}. 
 
-O \textit{dataset} compilado nesta PoC nos permitiu analisar a qualidade das transcrições automáticas em vários provedores de STT, usando as transcrições de referência revisadas pelos especialistas em idiomas da DIO como um controle confiável. A metodologia definida para o Estudo de Caso decorrente desta PoC, bem como seus resultados são apresentados a seguir.
+O \textit{dataset} compilado nesta POC nos permitiu analisar a qualidade das transcrições automáticas em vários provedores de STT, usando as transcrições de referência revisadas pelos especialistas em idiomas da DIO como um controle confiável. A metodologia definida para o Estudo de Caso decorrente desta POC, bem como seus resultados são apresentados a seguir.
 
 \subsection{Metodologia}
 
 Esta seção descreve a metodologia deste Estudo de Caso, com o objetivo de investigar o papel do ASR e do STT na melhoria da acessibilidade de OAs. Trata-se de uma investigação empírica, apoiada em raciocínio indutivo e pesquisa de campo. Ao contrário dos estudos experimentais, os Estudos de Caso reúnem informações de diversas fontes por meio de diferentes técnicas de coleta de dados \cite{Sommerville2015}.
 
-Como dito anteriormente, firmamos uma parceria com a \textit{EdTech} DIO, que compartilhou conosco videoaulas disponíveis em seu currículo, oferecendo uma oportunidade de conexão entre a indústria e nossa pesquisa. A DIO concedeu acesso a parte de sua infraestrutura em nuvem, além de disponibilizar especialistas em línguas que revisaram os resultados do ASR durante a PoC. Esse processo de revisão foi fundamental para que as fontes de evidência, baseadas na precisão das transcrições e legendas de videoaulas, tivessem referências sólidas para nossas comparações e análises.
+Como dito anteriormente, firmamos uma parceria com a \textit{EdTech} DIO, que compartilhou conosco videoaulas disponíveis em seu currículo, oferecendo uma oportunidade de conexão entre a indústria e nossa pesquisa. A DIO concedeu acesso a parte de sua infraestrutura em nuvem, além de disponibilizar especialistas em línguas que revisaram os resultados do ASR durante a POC. Esse processo de revisão foi fundamental para que as fontes de evidência, baseadas na precisão das transcrições e legendas de videoaulas, tivessem referências sólidas para nossas comparações e análises.
 
 Como consequência, tanto os dados de similaridade léxica quanto as respostas do \textit{Survey} avaliaram o mesmo conjunto de 15 videoaulas: 5 em inglês, 5 em português e 5 em espanhol. Essa abordagem facilitou a obtenção de duas perspectivas quantitativas distintas sobre a qualidade das transcrições automáticas: uma derivada de algoritmos de similaridade léxica e a outra baseada nas percepções dos aprendizes.
 
@@ -116,15 +116,15 @@ Medir a semelhança entre textos é uma prática comumente investigada em pesqui
 
 \end{itemize}
 
-Neste estudo, aplicamos os três métodos mencionados, destacando sua relevância em nossa metodologia. Primeiramente, geramos e revisamos as transcrições de referência usando a instância da \textit{Speech2Learning}, desenvolvida como uma PoC. Em seguida, transcrevemos automaticamente cada OA utilizando diferentes serviços de ASR/STT, permitindo a comparação entre as transcrições de referência e as automáticas. Dessa forma, utilizamos os métodos de similaridade léxica CS, JI e LD como métricas de precisão.
+Neste estudo, aplicamos os três métodos mencionados, destacando sua relevância em nossa metodologia. Primeiramente, geramos e revisamos as transcrições de referência usando a instância da \textit{Speech2Learning}, desenvolvida como uma POC. Em seguida, transcrevemos automaticamente cada OA utilizando diferentes serviços de ASR/STT, permitindo a comparação entre as transcrições de referência e as automáticas. Dessa forma, utilizamos os métodos de similaridade léxica CS, JI e LD como métricas de precisão.
 
 Para essa finalidade, identificamos os principais provedores de ASR/STT baseados em IA do mercado \cite{Gartner2023}: Amazon, Google, IBM, Microsoft e OpenAI. Ademais, em colaboração com a DIO, garantimos que o \textit{dataset} deste Estudo de Caso, devidamente revisado e sintetizado no \autoref{quadro:c4:poc-audios-summary}, estivesse disponível com todas as transcrições de referência dos OAs.
 
-Com os áudios otimizados do \textit{dataset}, integramos os serviços de ASR/STT de cada provedor e geramos suas respectivas transcrições automáticas. Para uma implementação organizada e documentada, utilizamos o Google Colab, detalhando todo o processo em um notebook público\footnote{Colab Notebook - Transcrições Automáticas com ASR/STT: \url{https://bit.ly/S2L-STTServices}}. De forma similar, comparamos as 15 transcrições automáticas com as transcrições de referência usando os três métodos de similaridade léxica (CS, JI e LD) em um segundo notebook\footnote{Colab Notebook - Algoritmos de Similaridade Léxica: \url{https://bit.ly/S2L-CaseStudy}}.
+Com os áudios otimizados do \textit{dataset}, integramos os serviços de ASR/STT de cada provedor e geramos suas respectivas transcrições automáticas. Para uma implementação organizada e documentada, utilizamos o Google Colab, detalhando todo o processo em um notebook público\footnote{Colab Notebook - Transcrições Automáticas com ASR/STT: \url{https://bit.ly/S2L-CS1-STTServices}}. De forma similar, comparamos as 15 transcrições automáticas com as transcrições de referência usando os três métodos de similaridade léxica (CS, JI e LD) em um segundo notebook\footnote{Colab Notebook - Algoritmos de Similaridade Léxica: \url{https://bit.ly/S2L-CS1-LexicalAnalysis}}.
 
 \subsubsection{2ª Fonte de Evidência: Respostas do \textit{Survey}}
 
-Conduzimos um \textit{Survey} para avaliar as percepções dos alunos sobre a qualidade das transcrições automáticas fornecidas por ASR/STT. Esta pesquisa, que contou com 56 respostas, coletou \textit{feedback} quantitativo e qualitativo de participantes com experiência em tecnologia e educação. Disponibilizamos as respostas (\url{https://bit.ly/S2L-SurveyResponses}), bem como uma cópia do formulário no \autoref{appendix:asr-survey} e outra online (\url{https://bit.ly/S2L-Survey}), garantindo uma compreensão completa dos dados e da dinâmica de preenchimento do questionário.
+Conduzimos um \textit{Survey} para avaliar as percepções dos alunos sobre a qualidade das transcrições automáticas fornecidas por ASR/STT. Esta pesquisa, que contou com 56 respostas, coletou \textit{feedback} quantitativo e qualitativo de participantes com experiência em tecnologia e educação. Disponibilizamos as respostas (\url{https://bit.ly/S2L-CS1-SurveyResp}), bem como uma cópia do formulário no \autoref{appendix:asr-survey} e outra online (\url{https://bit.ly/S2L-CS1-Survey}), garantindo uma compreensão completa dos dados e da dinâmica de preenchimento do questionário.
 
 O \textit{Survey} utilizou uma combinação de perguntas de escala Likert e perguntas abertas. As perguntas de escala Likert visavam avaliar quantitativamente a coerência das transcrições automáticas em três idiomas (inglês, português e espanhol). Esta estratégia nos permitiu uma análise cruzada entre as avaliações técnicas/léxicas e as centradas no usuário. As perguntas abertas buscavam obter \textit{insights} qualitativos sobre a eficácia percebida das soluções de ASR. No entanto, devido à conformidade ética, não exploraremos os dados qualitativos neste estudo.
 
@@ -181,7 +181,7 @@ Em segundo lugar, avaliamos a qualidade das transcrições automáticas consider
 Para a pesquisa documental, adotamos uma abordagem qualitativa para investigar de maneira mais ampla e exploratória como as tecnologias de reconhecimento de fala para transcrição automática (ASR e STT) influenciam a acessibilidade dos OAs. A questão de pesquisa que orienta nossa análise documental é:
 
 \begin{itemize}
-\item \textbf{Questão de Pesquisa}: Como as tecnologias de reconhecimento de fala (ASR/STT) podem contribuir para uma educação mais acessível?
+\item \textbf{Questão de Pesquisa}: De que maneira as tecnologias de Reconhecimento Automático de Fala (ASR) podem contribuir para melhorar a acessibilidade educacional?
 \end{itemize}
 
 Essa combinação de hipóteses quantitativas e uma questão de pesquisa qualitativa permite uma triangulação robusta de dados, fornecendo uma visão abrangente e multidimensional do impacto das tecnologias de ASR/STT na acessibilidade educacional. A análise das respostas do \textit{Survey}, juntamente com os métodos de similaridade léxica e a pesquisa documental, nos permitirá identificar as convergências entre nossas fontes de evidências e enriquecer as discussões, fortalecendo a validade do estudo.
@@ -193,11 +193,11 @@ Para fornecer uma visão formal, mas simplificada, deste primeiro Estudo de Caso
 \caption{Síntese do Estudo de Caso 1: Legendas Automáticas em Videoaulas}
 \label{quadro:c4:cs1-summary}
 \begin{tabular}{C{3cm}|m{11.75cm}}\hline
-\textbf{Objeto de Estudo} & Serviços de Reconhecimento de Fala (ASR/STT) \\\hline
+\textbf{Objeto de Estudo} & Serviços de Reconhecimento Automático de Fala (ASR/STT) \\\hline
 \textbf{Perspectiva} & Explanatória (Explicativa) \\\hline
 \textbf{Característica} & Explicação de causas ou efeitos relacionais ao fenômeno \cite{CastroFilho2021}. \\\hline
 \textbf{Objetivos} & \begin{tabular}[c]{@{}m{11.75cm}@{}}1. Avaliar a qualidade das transcrições automáticas fornecidas por diferentes serviços de ASR/STT. \\ 2. Investigar a variação na qualidade das transcrições automáticas em diferentes idiomas (Português, Inglês e Espanhol). \\ 3. Explorar como as transcrições automáticas podem melhorar a acessibilidade educacional.\end{tabular} \\\hline
-\textbf{Questões de Pesquisa} & Como as tecnologias de reconhecimento de fala (ASR/STT) podem contribuir para uma educação mais acessível? \\\hline
+\textbf{Questões de Pesquisa} & De que maneira as tecnologias de ASR/STT podem contribuir para melhorar a acessibilidade educacional? \\\hline
 \textbf{Hipóteses} & \begin{tabular}[c]{@{}m{11.75cm}@{}}1. Existe diferença estatisticamente significativa na precisão das transcrições automáticas entre os provedores de ASR/STT. \\ 2. Existe diferença estatisticamente significativa na precisão das transcrições automáticas para Português, Inglês e Espanhol entre os provedores de ASR/STT.\end{tabular} \\\hline
 \textbf{Fontes de Dados} & \begin{tabular}[c]{@{}m{11.75cm}@{}}1. Dados quantitativos de métodos de similaridade léxica (precisão). \\ 2. Respostas quantitativas de um \textit{Survey} anônimo (precisão). \\ 3. Dados qualitativos de uma pesquisa documental.\end{tabular} \\\hline
 \textbf{Método de Coleta de Dados} & \begin{tabular}[c]{@{}m{11.75cm}@{}}Triangulação de Dados, com as seguintes fontes de evidência: \\ 1. Métodos de Similaridade Léxica. \\ 2. Respostas do \textit{Survey}. \\ 3. Pesquisa Documental.\end{tabular} \\\hline
@@ -487,7 +487,7 @@ Ao integrar os resultados coletados de nossas fontes de evidência, buscamos ide
 
 \item \textbf{IAGen na Educação (IAGenE)}: Exploração da integração da IAGen em contextos educacionais para aprimorar experiências de aprendizagem. Aqui, a atenção está na aplicação de técnicas de IA, como GANs, GPTs e \textit{autoencoders}, para melhorar processos educacionais, incluindo a transcrição automática de aulas e a personalização da aprendizagem.
 
-\item \textbf{Tecnologias Assistivas (TAs)}: Investigação de abordagens inovadoras, como robôs humanoides e ferramentas de aprendizagem multimodal, para melhorar a acessibilidade para diversos alunos. Esta categoria abrange o uso de TAs para suportar a inclusão de alunos com necessidades especiais, como a tradução/sinalização de línguas de sinais.
+\item \textbf{Tecnologia Assistiva (TA)}: Investigação de abordagens inovadoras, como robôs humanoides e ferramentas de aprendizagem multimodal, para melhorar a acessibilidade para diversos alunos. Esta categoria abrange a área do conhecimento de TA, com ênfase no suporte e inclusão de alunos com necessidades especiais, por meio da tradução/sinalização de línguas de sinais, por exemplo.
 
 \item \textbf{Desafios e Oportunidades (DO)}: Identificação de obstáculos e possibilidades para aprimorar a precisão e eficácia do ASR em contextos educacionais. Este tema envolve os desafios na implementação de tecnologias ASR em ambientes ruidosos e colaborativos, buscando soluções para um reconhecimento de fala assertivo mesmo em situações adversas.
 \end{itemize}
@@ -502,7 +502,7 @@ No \autoref{quadro:c4:grounded-theory-results}, apresentamos a categorização d
 \textbf{Categoria} & \textbf{Descrição} & \textbf{Estudos} \\ \hline
 \textbf{AQT} & Avalia o desempenho e qualidade do ASR/STT em tarefas de transcrição. & \citeonline{Ferraro2023} \\ \hline
 \textbf{IAGenE} & Explora a integração da IAGen em contextos educacionais. & \citeonline{Bengesi2024,Alshaikh2024} \\ \hline
-\textbf{TAs} & Investiga TAs para maior inclusão e acessibilidade na educação. & \citeonline{Homburg2019,Alshaikh2024} \\ \hline
+\textbf{TA} & Investiga soluções de TA para maior inclusão e acessibilidade na educação. & \citeonline{Homburg2019,Alshaikh2024} \\ \hline
 \textbf{DO} & Identifica desafios e oportunidades no ASR/STT em contextos educacionais. & \citeonline{Cao2023} \\  \hline
 \end{tabular}
 \fadaptada{FalvoJr2024_FIE}
@@ -549,13 +549,13 @@ A convergência dos dados da análise léxica, dos \textit{Surveys} dos usuário
 
 Sendo assim, pesquisas futuras podem se concentrar em fechar a lacuna entre a proficiência técnica e a satisfação do usuário, enfatizando o desenvolvimento de sistemas adaptáveis, amigáveis ao usuário e conscientes do contexto que possam suportar uma ampla gama de ambientes e necessidades de aprendizagem.
 
-Seguindo esta linha de investigação, o próximo estudo de caso explorará a PoC implementada no primeiro estudo de caso para acelerar o desenvolvimento de um player de vídeo aderente ao conceito de Design Universal. Esta PoC se aproveita das transcrições e legendas para integrar o player com avatares de Libras baseados em texto, ampliando ainda mais a acessibilidade e a inclusão em ambientes educacionais.
+Seguindo esta linha de investigação, o próximo estudo de caso explorará a POC implementada no primeiro estudo de caso para acelerar o desenvolvimento de um player de vídeo aderente ao conceito de Design Universal. Esta POC se aproveita das transcrições e legendas para integrar o player com avatares de Libras baseados em texto, ampliando ainda mais a acessibilidade e a inclusão em ambientes educacionais.
 
 \section{Estudo de Caso 2: Player com Avatar de Libras}
 
 Nosso segundo estudo concentrou-se no desenvolvimento de um player de vídeo, projetado com base no conceito de Design Universal para criar um produto final mais flexível e acessível do ponto de vista educacional \cite{GovBr2023}. Este estudo também contou com o apoio da DIO, utilizando a API REST desenvolvida como prova de conceito no primeiro estudo de caso, facilitando o acesso às videoaulas da \textit{EdTech}. Na prática, essa integração permite que o player utilize transcrições/legendas como elementos centrais para tornar seus OAs mais inclusivos.
 
-A relevância deste estudo está em sua capacidade de explorar a eficácia e o impacto de avatares de Libras baseados em texto na acessibilidade educacional para a comunidade surda. Para isso, conduzimos avaliações quantitativas através de um Survey com intérpretes de Libras, seguido por entrevistas qualitativas, investigando como essa solução tecnológica pode melhorar a acessibilidade a OAs audíveis.
+A relevância deste estudo está em sua capacidade de explorar a eficácia e o impacto de avatares de Libras baseados em texto na acessibilidade educacional para a comunidade surda. Para isso, conduzimos avaliações quantitativas através de um \textit{Survey} com intérpretes de Libras, seguido por entrevistas qualitativas, investigando como essa solução tecnológica pode melhorar a acessibilidade a OAs audíveis.
 
 \subsection{Prova de Conceito: Player de Vídeo com Design Universal}
 
@@ -565,7 +565,8 @@ A \autoref{fig:chapter4-cs2-poc-diagram} ilustra, por meio de um diagrama de seq
 \centering
 \caption{Visão 2ª Instância da \textit{Speech2Learning}: Player de Vídeo com Avatar de Libras}
 \label{fig:chapter4-cs2-poc-diagram}
-\includegraphics[width=.94\textwidth]{images/chapter4-cs2-poc-diagram.png}
+\includegraphics[width=1\textwidth]{images/chapter4-cs2-poc-diagram.png}]
+\fautor
 \end{figure}
 
 A integração entre o player de vídeo e a API REST ilustra a capacidade da arquitetura \textit{Speech2Learning} de fomentar ambientes educacionais mais inclusivos. Adotando esta abordagem, os desenvolvedores podem criar sistemas robustos, tecnologicamente independentes e flexíveis, capazes de atender às especificidades de cada projeto.
@@ -579,28 +580,27 @@ Tecnicamente, o player foi implementado utilizando HTML, CSS e JavaScript de for
 \caption{\textit{Wireframes} do Player de Vídeo Acessível (Modos Claro e Escuro)}
 \label{fig:chapter4-cs2-poc-wireframes}
 \includegraphics[width=1\textwidth]{images/chapter4-cs2-poc-wireframes.png}
+\fautor
 \end{figure}
 
-Em particular, esta PoC contou com dois projetos de Iniciação Científica (IC), um com foco no desenvolvimento do Design Universal da solução e outro na implementação da mesma como uma biblioteca flexível e aberta.
-
-Sendo assim, fez-se necessário o uso de um processo de desenvolvimento de software para que as entregas fossem previsíveis e devidamente validadas. Para isso, seguimos uma metodologia ágil, com ritos simplificados e \textit{Sprints} de duas semanas.
+Em particular, esta POC contou com dois projetos de Iniciação Científica (IC), um com foco no desenvolvimento do \textit{Design} Universal da solução e outro na implementação da mesma como uma biblioteca flexível e aberta. Sendo assim, fez-se necessário o uso de um processo de desenvolvimento de software para que as entregas fossem previsíveis e devidamente validadas. Para isso, seguimos uma metodologia ágil, com ritos simplificados e \textit{Sprints} de duas semanas.
 
 \subsection{Metodologia}
 
 Para investigar o impacto e a eficácia do player de vídeo com avatares de Libras baseados em texto, adotamos uma abordagem exploratória, com o objetivo de gerar conhecimento sobre um fenômeno ainda pouco conhecido \cite{CastroFilho2021}. Este estudo de caso visa atingir dois principais objetivos: (i) investigar o impacto de avatares de Libras na acessibilidade de conteúdos para surdos; e (ii) explorar a eficácia desses avatares, integrados à transcrição automática de videoaulas, para a compreensão de OAs audíveis. Para alcançar esses objetivos, formulamos a seguinte questão de pesquisa, que orienta nossa investigação:
 
 \begin{itemize}
-\item \textbf{Questão de Pesquisa}: Como as tecnologias de reconhecimento de fala (ASR/STT) podem contribuir para uma educação mais acessível para usuários da Libras?
+\item \textbf{Questão de Pesquisa}: Como as tecnologias de ASR/STT podem ser adaptadas para atender às necessidades de acessibilidade de usuários da Libras?
 \end{itemize}
 
-Adotamos uma metodologia de análise mista, integrando dados quantitativos e qualitativos. Inicialmente, realizamos um Survey com todos os intérpretes da empresa QS Inclusão (\url{https://qsinclusao.com.br}), totalizando 7 participantes. No Survey, os intérpretes avaliaram quantitativamente as performances dos avatares VLibras e Hand Talk, baseados em transcrições automáticas de videoaulas. Para direcionar nossa análise quantitativa, formulamos duas hipóteses de pesquisa:
+Adotamos uma metodologia de análise mista, integrando dados quantitativos e qualitativos. Inicialmente, realizamos um \textit{Survey} com todos os intérpretes da empresa QS Inclusão (\url{https://qsinclusao.com.br}), totalizando 7 participantes convidados. No \textit{Survey}, os intérpretes avaliaram quantitativamente as performances dos avatares VLibras e Hand Talk, baseados em transcrições automáticas de videoaulas. Para direcionar nossa análise quantitativa, formulamos duas hipóteses de pesquisa:
 
 \begin{itemize}
 \item \textbf{H1}: Os avatares de Libras são úteis na compreensão de OAs audíveis transcritos automaticamente.
 \item \textbf{H2}: Existe diferença na qualidade de sinalização entre os avatares VLibras e Hand Talk ao utilizar transcrições automáticas.
 \end{itemize}
 
-Além do Survey, cada intérprete teve a oportunidade de agendar uma entrevista, complementando o Survey com dados qualitativos. Essas entrevistas foram planejadas para explorar profundamente as percepções e experiências dos intérpretes com o uso do player de vídeo e os avatares de Libras. A coleta de dados seguiu um protocolo semi-estruturado, garantindo que todas as áreas relevantes fossem abordadas.
+Além do \textit{Survey}, cada intérprete teve a oportunidade de agendar uma entrevista, complementando o \textit{Survey} com dados qualitativos. Essas entrevistas foram planejadas para explorar profundamente as percepções e experiências dos intérpretes com o uso do player de vídeo e os avatares de Libras. A coleta de dados seguiu um protocolo semi-estruturado, garantindo que todas as áreas relevantes fossem abordadas.
 
 A análise dos dados qualitativos foi realizada utilizando a TFD \cite{Charmaz2009}, uma metodologia que permite o desenvolvimento de teorias emergentes diretamente dos dados coletados. Este processo envolveu a codificação aberta, identificando e categorizando os principais temas nas respostas dos intérpretes de Libras. Essa abordagem assegurou que os temas emergissem naturalmente dos dados, proporcionando uma compreensão aprofundada das percepções e experiências dos participantes, sem preconceitos prévios.
 
@@ -623,10 +623,10 @@ Para concluir, o \autoref{quadro:c4:cs2-summary} resume a abordagem metodológic
 \textbf{Perspectiva} & Exploratório \\\hline
 \textbf{Característica} & Elaboração de conhecimentos ou levantamento de informação acerca do fenômeno ainda pouco conhecido \cite{CastroFilho2021}. \\\hline
 \textbf{Objetivos} & \begin{tabular}[c]{@{}m{11.75cm}@{}}1. Investigar o impacto de avatares de Libras baseados em texto na acessibilidade de conteúdos para surdos. \\ 2. Explorar a eficácia de avatares de Libras integrados à transcrição automática de videoaulas para a compreensão de OAs audíveis.\end{tabular} \\\hline
-\textbf{Questões de Pesquisa} & Como as tecnologias de reconhecimento de fala (ASR/STT) podem contribuir para uma educação mais acessível para usuários da Libras? \\\hline
+\textbf{Questões de Pesquisa} & Como as tecnologias de ASR/STT podem ser adaptadas para atender às necessidades de acessibilidade de usuários da Libras? \\\hline
 \textbf{Hipóteses} & \begin{tabular}[c]{@{}m{11.75cm}@{}}1. Os avatares de Libras são úteis na compreensão de OAs audíveis transcritos automaticamente. \\2. Existe diferença na qualidade de sinalização entre os avatares VLibras e Hand Talk ao utilizar transcrições automáticas.\end{tabular} \\\hline
-\textbf{Fontes de Dados} & Dados quantitativos do Survey e dados qualitativos de entrevistas com intérpretes de Libras. \\\hline
-\textbf{Método de Coleta de Dados} & \begin{tabular}[c]{@{}m{11.75cm}@{}}1. Survey\\ 2. Entrevistas semi-estruturadas\end{tabular} \\\hline
+\textbf{Fontes de Dados} & Dados quantitativos do \textit{Survey} e dados qualitativos de entrevistas com intérpretes de Libras. \\\hline
+\textbf{Método de Coleta de Dados} & \begin{tabular}[c]{@{}m{11.75cm}@{}}1. \textit{Survey}\\ 2. Entrevistas semi-estruturadas\end{tabular} \\\hline
 \textbf{Tipo de Análise} & Mista (Quantitativa e Qualitativa) \\\hline
 \end{tabular}
 \end{quadro}
@@ -635,13 +635,13 @@ Para concluir, o \autoref{quadro:c4:cs2-summary} resume a abordagem metodológic
 
 Os estudos de caso desta tese foram aprovados pelo \sigla{CEP}{Comitê de Ética e Pesquisa}, sob o CAAE 78381524.3.0000.5390. Embora ambos os estudos tenham sido descritos no projeto submetido ao CEP, o foco principal recai sobre o Estudo de Caso 2, que inclui tanto análises quantitativas quanto qualitativas. O Estudo de Caso 1 se concentrou principalmente em análises quantitativas da precisão de transcrições automáticas, o que não exigiu submissão ética individual. Em contraste, o Estudo de Caso 2 envolveu um componente qualitativo mais robusto, justificado pela realização de entrevistas com intérpretes de Libras.
 
-Para explorar o impacto dos avatares de Libras na acessibilidade de conteúdos educacionais, adotamos uma abordagem mista. Inicialmente, conduzimos um Survey com todos os intérpretes da empresa QS Inclusão, totalizando 7 participantes convidados. Este Survey foi projetado para capturar as percepções quantitativas dos intérpretes sobre a utilidade e a qualidade dos avatares VLibras e Hand Talk, baseados em transcrições automáticas de videoaulas.
+Para explorar o impacto dos avatares de Libras na acessibilidade de conteúdos educacionais, foi adotada uma abordagem mista. Como mencionado anteriormente, sete intérpretes de Libras da empresa QS Inclusão foram convidados, dos quais apenas dois responderam o \textit{Survey} e participaram da entrevista posteriormente. Esse \textit{Survey} foi projetado para capturar as percepções quantitativas dos intérpretes sobre a utilidade e a qualidade dos avatares VLibras e Hand Talk, com base em transcrições automáticas de videoaulas.
 
-Os resultados detalhados do Survey podem ser acessados pela planilha \url{https://bit.ly/S2L-SurveyLibrasResponses}, com a cópia do formulário disponível no Apêndice \autoref{appendix:libras-survey} e online em \url{https://bit.ly/S2L-SurveyLibras}. A análise quantitativa desses dados nos permitiu avaliar as hipóteses de pesquisa, verificando a utilidade dos avatares na compreensão de OAs e identificando diferenças na qualidade de sinalização entre os dois avatares.
+Os resultados detalhados do \textit{Survey} podem ser acessados na planilha \url{https://bit.ly/S2L-CS2SurveyResp}, com a cópia do formulário disponível no \autoref{appendix:libras-survey} e também online em \url{https://bit.ly/S2L-CS2Survey}. A análise quantitativa desses dados nos permitirá avaliar as hipóteses de pesquisa, verificando a utilidade dos avatares na compreensão de OAs e identificando diferenças na qualidade de sinalização entre os dois avatares.
 
-Para complementar os dados quantitativos do Survey, cada intérprete foi convidado a participar de entrevistas semi-estruturadas. Essas entrevistas foram planejadas para aprofundar as percepções capturadas no Survey, permitindo uma análise qualitativa rica das experiências e opiniões dos intérpretes sobre o uso de avatares de Libras em conteúdos educacionais.
+Para complementar os dados quantitativos do \textit{Survey}, os intérpretes foram convidados a participar de entrevistas semi-estruturadas. Essas entrevistas foram planejadas para aprofundar as percepções capturadas pelo \textit{Survey}, permitindo uma análise qualitativa rica das experiências e opiniões dos intérpretes sobre o uso de avatares de Libras em conteúdos educacionais.
 
-Embora os resultados das entrevistas ainda estejam em fase de análise, a integração dos dados qualitativos e quantitativos fornecerá uma visão mais abrangente e detalhada dos impactos e desafios na adoção dessas tecnologias. O roteiro completo para as entrevistas com os intérpretes está disponível no \autoref{appendix:libras-interview}, assegurando transparência no processo de coleta de dados e permitindo a reprodutibilidade dos métodos.
+Embora os resultados das entrevistas ainda estejam sendo conduzidas, a integração dos dados qualitativos e quantitativos fornecerá uma visão mais abrangente e detalhada dos impactos e desafios na adoção dessas tecnologias. O roteiro completo para as entrevistas com os intérpretes está disponível no \autoref{appendix:libras-interview}, assegurando transparência no processo de coleta de dados e permitindo a reprodutibilidade dos métodos.
 
 Na prática, tendo em vista o nosso planejamento e previsão financeira, utilizamos apenas o \textit{VLibras} como avatar de Libras. Ele foi priorizado em detrimento ao \textit{Hand Talk} por ser gratuito, \textit{open-source} e mantido pelo governo brasileiro. Além disso, possui configurações avançadas relacionadas à regionalidade e, nos últimos anos, voltou a ser atualizado com frequência.
 

@@ -1,20 +1,65 @@
 
-\noindent
-\textcolor{red}{
-Dúvidas e Pendências:
-\begin{itemize}
-    \item TODO: Padronizar as Tabelas e Figuras em Português ou Inglês?
-    \item TODO: \textit{Screenshots} da DIO no Estudo de Caso 1: Videoaulas com Legendadas?
-    \item TODO: Retomar as Hipóteses e QPs nos Resultados dos Estudos de Caso ou na Conclusão?
-    \item TODO: Incluir os Formulários/Surveys como Apêndices (como fiz com a Entrevista)?
-\end{itemize}
-}
+% \noindent
+% \textcolor{red}{
+% Dúvidas e Pendências:
+% \begin{itemize}
+%     \item TODO: Padronizar as Tabelas e Figuras em Português ou Inglês?
+%     \item TODO: \textit{Screenshots} da DIO no Estudo de Caso 1: Videoaulas com Legendadas?
+%     \item TODO: Retomar as Hipóteses e QPs nos Resultados dos Estudos de Caso ou na Conclusão?
+% \end{itemize}
+% }
 
 \section{Contribuições da Pesquisa}
 
+Esta pesquisa apresentou a definição e a avaliação da Arquitetura \textit{Speech2Learning}, projetada com o intuito de ampliar a acessibilidade de OAs audíveis, contribuindo para o debate sobre a inclusão educacional em diferentes contextos. A principal contribuição desta tese reside na proposição de uma abordagem que integra tecnologias de ASR para melhorar a acessibilidade educacional. As soluções desenvolvidas foram avaliadas por meio de POCs e estudos de caso, que exploraram a viabilidade prática da arquitetura em ambientes educacionais reais.
+
+Um dos principais achados da pesquisa foi a constatação de que os serviços de ASR, especialmente aqueles oferecidos pelos provedores OpenAI e Microsoft, demonstraram um nível de precisão elevado nas tarefas de transcrição e legendagem automática de videoaulas. Este resultado é particularmente relevante, pois confirma o potencial dessas tecnologias para contribuir de maneira significativa na acessibilidade de OAs audíveis. A precisão elevada das transcrições automáticas permite que os materiais educacionais sejam acessíveis a um público mais amplo de aprendizes, incluindo aqueles que possuem dificuldades auditivas e que dependem de legendas para compreender o conteúdo.
+
+Entretanto, a pesquisa também revelou limitações importantes quanto à aplicação de avatares de Libras como um recurso de TA para a comunidade surda. Apesar da integração de avatares às transcrições automáticas ter sido tecnicamente viável, os intérpretes de Libras expressaram preocupações significativas quanto à eficácia dessa abordagem. A principal crítica refere-se à complexidade inerente à Libras, que envolve nuances culturais, regionalidades e contextos que nem sempre são capturados adequadamente por avatares automatizados. Isso sugere que, embora as tecnologias de ASR possam oferecer suporte relevante, a adaptação dessas tecnologias para atender às necessidades específicas de usuários da Libras exige um aprofundamento maior e um desenvolvimento contínuo.
+
+Outro aspecto importante das contribuições desta pesquisa é a identificação de que nem todas as pessoas surdas ou com deficiência auditiva possuem fluência em português, o que ressalta a importância de soluções bilíngues e culturalmente sensíveis. A adoção de avatares de Libras, embora útil em determinados cenários, não substitui a necessidade de recursos mais completos e adaptáveis que respeitem a diversidade linguística e cultural da comunidade surda. Dessa forma, a pesquisa contribui para a compreensão dos desafios envolvidos na criação de soluções de TA mais inclusivas e eficazes.
+
+As instâncias da Arquitetura \textit{Speech2Learning}, ao integrar ASR e avatares de Libras, também proporcionaram \textit{insights} valiosos sobre como essas tecnologias podem ser adaptadas para melhorar a acessibilidade educacional. A pesquisa mostrou que, enquanto o ASR pode ser altamente eficiente em fornecer transcrições precisas, a integração com avatares de Libras precisa ser repensada e aprimorada para atender às necessidades dos usuários de forma mais eficaz. A combinação dessas tecnologias em um \textit{player} de vídeo com \textit{Design} Universal, apesar das limitações destacadas pelos intérpretes nas entrevistas, oferece um modelo flexível que pode ser adaptado para diferentes contextos educacionais, destacando a potencialidade da arquitetura para ser utilizada em diversas plataformas e aplicações.
+
+De modo geral, esta pesquisa avançou no desenvolvimento de uma arquitetura que pode ser replicada e adaptada para diferentes contextos educacionais, promovendo a inclusão e a acessibilidade de OAs audíveis. As contribuições apresentadas nesta tese são, portanto, significativas para o campo da TA aplicada à educação, oferecendo novas perspectivas e soluções para tornar o aprendizado mais acessível e inclusivo para uma diversidade maior de aprendizes.
+
 \section{Limitações da Pesquisa}
 
+Embora esta pesquisa tenha contribuições significativas, algumas limitações foram identificadas, as quais podem impactar tanto a replicação dos resultados quanto o desenvolvimento de soluções futuras. A seguir, são discutidas as principais limitações identificadas:
+
+\begin{itemize}
+
+    \item \textbf{Evolução das Soluções de ASR Impulsionadas pela IA Generativa:} A rapidez com que as tecnologias de ASR estão evoluindo, especialmente aquelas baseadas em IA, pode tornar os resultados desta pesquisa sobre a precisão dos provedores de ASR rapidamente obsoletos. A cada novo avanço, surgem melhorias nas capacidades de transcrição e legendagem automática, o que pode alterar significativamente os níveis de precisão relatados. Dessa forma, os resultados obtidos precisam ser revisitados em futuros estudos para garantir que reflitam o estado da arte das tecnologias de ASR.
+
+    \item \textbf{Surgimento de Novos Provedores de ASR Relevantes:} Durante o desenvolvimento desta pesquisa, novos provedores de ASR, como a NVIDIA e o Facebook, surgiram com soluções de reconhecimento de fala baseadas em seus modelos mais recentes de IAGen. Essa evolução do mercado é acompanhada por iniciativas como a plataforma HuggingFace, que promove a IA aberta e colaborativa, fornecendo um \textit{Leaderboard}\footnote{Mais informações em \url{https://huggingface.co/spaces/hf-audio/open_asr_leaderboard}} que compara o desempenho de diversos modelos oferecidos por esses e outros provedores de ASR. O surgimento de novos players e a constante atualização dos modelos destacam a necessidade de considerar esses avanços em estudos futuros, uma vez que as comparações realizadas nesta pesquisa refletem apenas os provedores disponíveis no momento da investigação.
+
+    \item \textbf{Uso de Algoritmos de Similaridade Léxica:} A avaliação da precisão dos serviços de ASR nesta pesquisa foi realizada utilizando algoritmos de similaridade léxica, que, embora sejam adequados para o contexto estudado, podem introduzir vieses significativos. Esses algoritmos avaliam a semelhança entre transcrições geradas automaticamente e transcrições de referência, mas podem falhar em capturar nuances contextuais e variações semânticas. Para futuros trabalhos, recomenda-se a combinação desses algoritmos com outras métricas, como o WER, que é utilizado pela HuggingFace em seu \textit{Leaderboard}.
+
+    \item \textbf{\textit{Feedback} Limitado de Intérpretes de Libras:} As entrevistas realizadas com intérpretes de Libras foram limitadas, uma vez que apenas dois dos sete intérpretes convidados participaram até o momento. A falta de um número maior de participantes impede uma avaliação mais ampla e robusta das percepções sobre o uso de avatares de Libras. Isso limita a generalização dos resultados e indica a necessidade de continuar essas entrevistas para obter uma amostra mais representativa.
+
+\end{itemize}
+
+Essas limitações ressaltam a importância de revisitar e atualizar os resultados à medida que novas tecnologias emergem e mais dados se tornam disponíveis.
+
 \section{Trabalhos Futuros}
+
+Com base nas limitações e nos resultados obtidos nesta pesquisa, diversas direções podem ser exploradas em trabalhos futuros. A seguir, são discutidas algumas das principais áreas que merecem atenção:
+
+\begin{itemize}
+
+    \item \textbf{Integração de Agentes na Arquitetura \textit{Speech2Learning}:} Com o crescente interesse no uso de agentes inteligentes, especialmente no contexto de IAGen, uma linha de pesquisa promissora envolve a integração desses agentes na \textit{Speech2Learning}. Agentes poderiam atuar em diversas camadas da arquitetura, oferecendo suporte dinâmico e adaptativo para melhorar a acessibilidade e a personalização dos OAs. A exploração dessas diretrizes pode transformar a maneira como as diferentes camadas da arquitetura, atualmente baseadas na \textit{Clean Architecture}, são observadas e implementadas, permitindo uma evolução mais profunda e adaptativa.
+
+    \item \textbf{Conclusão das Entrevistas com Intérpretes de Libras:} Embora esta pesquisa tenha incluído entrevistas iniciais com dois intérpretes de Libras, é essencial expandir esse conjunto de dados para uma análise mais abrangente. As entrevistas pendentes, envolvendo outros intérpretes, devem ser concluídas para fornecer uma visão mais completa sobre as percepções e desafios enfrentados na aplicação de avatares de Libras como solução de TA. A conclusão dessas entrevistas permitirá uma avaliação mais robusta e pode direcionar melhorias nas soluções desenvolvidas.
+
+    \item \textbf{Integração com Repositórios de OAs:} Um aspecto relevante para o sucesso da Arquitetura \textit{Speech2Learning} é a facilidade com que os OAs podem ser integrados e disponibilizados através da arquitetura proposta. Trabalhos futuros devem focar em simplificar essa integração, criando métodos mais naturais e eficientes para o acoplamento de OAs com a \textit{Speech2Learning}. Isso inclui o desenvolvimento de APIs e conectores que facilitem a disponibilização dos OAs de forma automática e intuitiva, reduzindo a necessidade de intervenções manuais.
+
+    \item \textbf{Melhorias no \textit{Player} de Vídeo com \textit{Design} Acessível:} Baseado nos \textit{feedbacks} recebidos durante esta pesquisa, futuros trabalhos devem focar em aprimorar tecnicamente o \textit{player} de vídeo desenvolvido. Isso inclui não apenas a integração mais fluida com avatares de Libras, mas também melhorias gerais na usabilidade e acessibilidade do \textit{player}. A realização de testes de usabilidade, baseados em heurísticas como as de Nielsen, pode fornecer percepções valiosas para aperfeiçoar a experiência do usuário. Além disso, a disponibilização do \textit{player} como uma biblioteca \textit{open-source} permitirá que a comunidade contribua com seu desenvolvimento e expansão.
+
+    \item \textbf{Documentação e Atualização da \textit{Speech2Learning}:} Embora a evolução das tecnologias de ASR não afete diretamente a \textit{Speech2Learning}, é crucial que a documentação e as definições da arquitetura acompanhem essas evoluções. Isso garantirá que a \textit{Speech2Learning} continue a ser uma ferramenta relevante, mesmo com o surgimento de novas tecnologias e metodologias. A documentação deve ser revisada e atualizada periodicamente para incorporar as melhores práticas e garantir a compatibilidade com os avanços tecnológicos.
+
+\end{itemize}
+
+Essas direções apontam para a necessidade de continuar a evolução da \textit{Speech2Learning} e suas aplicações, garantindo que a arquitetura se mantenha adaptável e relevante em um cenário educacional de constante transformação.
 
 \section{Publicações Resultantes}
 
@@ -29,6 +74,8 @@ As principais publicações resultantes das atividades conduzidas nesta pesquisa
     \item \fullcite{\textbf{FALVOJR, V.}; MARTINS FALVO, C.; SCATALON, L.; BARBOSA, E.}{Tecnologias Aplicadas ao Ensino e Aprendizagem com Línguas de Sinais: Um Mapeamento Sistemático Sob as Perspectivas Nacional e Internacional}{Revista Novas Tecnologias na Educação (RENOTE)}{2021}{Disponível em \url{doi.org/10.22456/1679-1916.110217}}
 
     \item \fullcite{\textbf{FALVOJR, V.}; MARCOLINO, A.; BRUNO, D.; MARTINS FALVO, C.; OSÓRIO, F.; BARBOSA, E.}{Lexical Analysis of Automatic Transcriptions Using Speech-to-Text Services: A Statistically Evaluated Case Study}{Hawaii International Conference on System Sciences (HICSS)}{2024}{Disponível em \url{hdl.handle.net/10125/107023}}
+
+    \item \fullcite{\textbf{FALVOJR, V.}; MARCOLINO, A.; BRUNO, D.; MARTINS FALVO, C.; OSÓRIO, F.; BARBOSA, E.}{Enhancing Learning Objects Accessibility Through Speech-To-Text Based Architecture: A Comprehensive Triangulation Study}{Frontiers in Education (FIE)}{2024}{Submetido em 20/05/2024 e Aprovado em 23/07/2024}
 \end{enumerate}
 
 De modo complementar, outros trabalhos indiretamente relacionados a esta pesquisa foram publicados. Esta colaboração contínua entre pesquisadores, muitas vezes de diferentes instituições, nos levou a descobertas e percepções fundamentais para a idealização e desenvolvimento deste trabalho de doutorado \cite{Soad2017_FIE,Oliveira2019_SBIE,FalvoJr2022_JUCS,FalvoJr2023_SMarty}:
@@ -42,10 +89,4 @@ De modo complementar, outros trabalhos indiretamente relacionados a esta pesquis
     \item \fullcite{\textbf{FALVOJR, V.}; MARCOLINO, A.; DUARTE FILHO, N.; OLIVEIRAJR, E.; BARBOSA, E.}{Variability-based Improvement of M-Learning Applications Development}{Journal of Universal Computer Science (J.UCS)}{2022}{Disponível em \url{doi.org/10.3897/jucs.90663}}
     
     \item \fullcite{\textbf{FALVOJR, V.}; MARCOLINO, A.; DUARTE FILHO, N.; OLIVEIRAJR, E.; BARBOSA, E.}{A Software Product Line for Mobile Learning Applications}{Capítulo 13 do Livro ``UML-Based Software Product Line Engineering with SMarty''}{2023}{Disponível em \url{doi.org/10.1007/978-3-031-18556-4_13}}
-\end{enumerate}
-    
-Por fim, a seguinte publicação se encontra em processo de revisão:
-
-\begin{enumerate}\setcounter{enumi}{8}
-    \item \fullcite{\textbf{FALVOJR, V.}; MARCOLINO, A.; BRUNO, D.; MARTINS FALVO, C.; OSÓRIO, F.; BARBOSA, E.}{Enhancing Learning Objects Accessibility Through Speech-To-Text Based Architecture: A Comprehensive Triangulation Study}{Frontiers in Education (FIE)}{2024}{Submetido em 20/05/2024 e Aprovado em 23/07/2024}
 \end{enumerate}

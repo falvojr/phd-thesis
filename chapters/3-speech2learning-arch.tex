@@ -1,6 +1,6 @@
 \section{Considerações Iniciais}
 
-A Arquitetura \textit{Speech2Learning} foi motivada por um MS prévio, detalhado na \autoref{section:foundation:sm}, cujo objetivo foi identificar o papel da tecnologia no ensino e aprendizagem, particularmente através das línguas de sinais \cite{FalvoJr2020_SBIE, FalvoJr2020_FIE, FalvoJr2021_RENOTE}. Este estudo proporcionou uma visão abrangente sobre o uso das TICs para o desenvolvimento de TAs, evidenciando a importância significativa de novas tecnologias para um processo de ensino-aprendizagem mais inclusivo.
+A Arquitetura \textit{Speech2Learning} foi motivada por um MS prévio, detalhado na \autoref{section:foundation:sm}, cujo objetivo foi identificar o papel da tecnologia no ensino e aprendizagem, particularmente através das línguas de sinais \cite{FalvoJr2020_SBIE, FalvoJr2020_FIE, FalvoJr2021_RENOTE}. Este estudo proporcionou uma visão abrangente sobre o uso das TICs para o desenvolvimento de TA, evidenciando a importância significativa de novas tecnologias para um processo de ensino-aprendizagem mais inclusivo.
 
 Contudo, foi observada uma lacuna importante: a ausência de padrões e boas práticas de desenvolvimento que facilitassem o compartilhamento e reuso de OAs. Como resposta a essa necessidade, a Arquitetura \textit{Speech2Learning} foi estabelecida para promover a criação de soluções estruturalmente preparadas para a inclusão, não apenas de pessoas surdas, mas também de aprendizes que necessitam de maior acessibilidade em conteúdos educacionais audíveis \cite{FalvoJr2023_HICSS}.
 
@@ -38,7 +38,7 @@ Cada camada da \textit{Speech2Learning} contribui de forma significativa para OA
 
 A ``Regra de Dependência'' define que as dependências de código devem apontar apenas para dentro, em direção aos OAs, nunca para fora. Desse modo, a \textit{Speech2Learning} favorece a adaptabilidade, independência tecnológica e testabilidade, fornecendo uma orientação estrutural para a criação de soluções educacionais mais acessíveis. 
 
-Para alcançar esses objetivos, é fundamental que as responsabilidades e boas práticas de suas camadas sejam bem compreendidas, pois elas estruturam diretrizes de projeto genéricas para a criação de TAs baseadas em reconhecimento de fala. As seções a seguir detalham cada uma dessas camadas.
+Para alcançar esses objetivos, é fundamental que as responsabilidades e boas práticas de suas camadas sejam bem compreendidas, pois elas estruturam diretrizes de projeto genéricas para a criação de soluções de TA baseadas em reconhecimento de fala. As seções a seguir detalham cada uma dessas camadas.
 
 \section{Camada de Entidades (Objetos de Aprendizagem)}
 
@@ -146,7 +146,7 @@ Para a \textit{Speech2Learning}, algumas abstrações são essenciais para a imp
     \item \textbf{Interfaces de Serviços Externos}: Abstrações que representam serviços externos necessários para a execução dos casos de uso, como APIs de reconhecimento de fala, serviços de tradução ou plataformas de gestão de conteúdos educacionais. Estas interfaces permitem que a Camada de Aplicação interaja com serviços externos de maneira flexível e desacoplada.
 \end{itemize}
 
-Nesse contexto, tem-se como exemplo um caso de uso que orquestra o processo de transcrição de áudio para texto, interagindo com serviços de reconhecimento de fala e atualizando os metadados do OA para incluir a transcrição gerada. Essa implementação fez parte de uma das PoCs implementadas ao longo deste trabalho de doutorado e pode ser acessada neste repositório \textit{open-source}: \url{https://bit.ly/S2L-UseCase}.
+Nesse contexto, tem-se como exemplo um caso de uso que orquestra o processo de transcrição de áudio para texto, interagindo com serviços de reconhecimento de fala e atualizando os metadados do OA para incluir a transcrição gerada. Essa implementação fez parte de uma das POCs implementadas ao longo deste trabalho de doutorado e pode ser acessada neste repositório \textit{open-source}: \url{https://bit.ly/S2L-UseCase}.
 
 Tais abstrações e exemplos demonstram como a Camada de Aplicação pode ser estruturada para orquestrar de forma eficiente os OAs aderentes aos princípios da \textit{Speech2Learning}, promovendo a acessibilidade por meio de soluções baseadas em reconhecimento de fala.
 
