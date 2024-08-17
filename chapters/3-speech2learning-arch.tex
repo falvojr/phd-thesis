@@ -32,13 +32,13 @@ Cada camada da \textit{Speech2Learning} contribui de forma significativa para OA
 \item \textbf{Objetos de Aprendizagem (Amarelo)}: Responsável pelos modelos e regras de negócio do domínio. Para garantir que os OAs sejam mais acessíveis e padronizados, as entidades podem incluir transcrição, legendagem e outras capacidades compatíveis com o domínio de aplicação e o padrão de metadados dos OAs audíveis. Além disso, o processo de reconhecimento de fala deve ser, idealmente, multimodal (abrangendo áudio e vídeo) e suportar múltiplos idiomas. Nesse sentido, considerar IAs, especialmente as generativas, é recomendado uma vez que elas resolvem de forma efetiva muitos desses desafios técnicos. Sendo assim, desde o centro da nossa arquitetura, onde estão os OAs, se faz necessária uma visão de projeto arquitetural que tenha sinergia com IAGen;
 \item \textbf{Casos de Uso (Vermelho)}: Operações de alto nível e regras de negócio do sistema. Em outras palavras, esta camada é responsável por orquestrar as regras encapsuladas nos OAs, função comumente chamada de ``dança das entidades'';
 \item \textbf{Adaptadores (Verde)}: Tem a responsabilidade de converter os dados para um formato conveniente, considerando as necessidades das camadas com as quais faz fronteira;
-\item \textbf{Infraestrutura (Azul)}: Abrange questões técnicas e específicas, como \textit{frameworks}, \textit{drivers} e integrações externas. Nesse sentido, conexões com \sigla{BD}{Bancos de Dados}, serviços de ASR/STT ou eventuais integrações com APIs de IAGen fariam parte desta camada. Além disso, ela inclui a \sigla{UI}{Interface do Usuário}, permitindo o desenvolvimento de aplicações educacionais concretas (\textit{d-learning}, \textit{e-learning}, \textit{m-learning} etc) ou repositórios de OAs;
+\item \textbf{Infraestrutura (Azul)}: Abrange questões técnicas e específicas, como \textit{frameworks}, \textit{drivers} e integrações externas. Nesse sentido, conexões com \sigla{BDs}{Bancos de Dados}, serviços de ASR/STT ou eventuais integrações com APIs de IAGen fariam parte desta camada. Além disso, ela inclui a \sigla{UI}{Interface do Usuário}, abrangendo a conexão com aplicações educacionais concretas (\textit{d-learning}, \textit{e-learning}, \textit{m-learning} etc) ou repositórios de OAs;
 \item \textbf{Principal e Configuração (Cinza)}: Estabelece todas as conexões entre interfaces e suas implementações concretas, além de ser responsável por configurar e executar a aplicação.
 \end{itemize}
 
 A ``Regra de Dependência'' define que as dependências de código devem apontar apenas para dentro, em direção aos OAs, nunca para fora. Desse modo, a \textit{Speech2Learning} favorece a adaptabilidade, independência tecnológica e testabilidade, fornecendo uma orientação estrutural para a criação de soluções educacionais mais acessíveis. 
 
-Para alcançar esses objetivos, é fundamental que as responsabilidades e boas práticas de suas camadas sejam bem compreendidas, pois elas estruturam diretrizes de projeto genéricas para a criação de soluções de TA baseadas em reconhecimento de fala. As seções a seguir detalham cada uma dessas camadas.
+Portanto, é fundamental que as responsabilidades e boas práticas de suas camadas sejam bem compreendidas, pois elas estruturam diretrizes de projeto genéricas para a criação de soluções de TA baseadas em ASR. As seções a seguir detalham cada uma dessas camadas.
 
 \section{Camada de Entidades (Objetos de Aprendizagem)}
 
@@ -108,7 +108,7 @@ public class TranscribedAudio {
 }
 \end{codigo}
 
-Por fim, para garantir a acessibilidade plena dos OAs, é essencial que esta camada considere o ASR de forma multimodal, abrangendo tanto áudio quanto vídeo. Isso permite que os conteúdos educacionais audíveis sejam mais diversos e flexíveis às diferentes necessidades dos aprendizes. Além disso, a capacidade de suportar múltiplos idiomas é fundamental para a inclusão de aprendizes de diversas origens linguísticas, promovendo uma educação verdadeiramente inclusiva e global.
+Por fim, para garantir maior acessibilidade e internacionalização dos OAs, é essencial que esta camada considere o ASR de forma multimodal, abrangendo tanto áudio quanto vídeo. Isso permite que os conteúdos educacionais audíveis sejam mais diversos e flexíveis às diferentes necessidades dos aprendizes. Além disso, a capacidade de suportar múltiplos idiomas é fundamental para a inclusão de aprendizes de diversas origens linguísticas, promovendo uma educação verdadeiramente inclusiva e global.
 
 Adicionalmente, a IAGen pode ser utilizada para enriquecer os metadados dos OAs, gerando automaticamente descrições mais detalhadas e informativas, \textit{tags} relevantes e até mesmo traduções para diferentes idiomas, aumentando a descoberta e a reutilização dos OAs em diferentes contextos e por diferentes públicos.
 
@@ -118,7 +118,7 @@ Adicionalmente, a IAGen pode ser utilizada para enriquecer os metadados dos OAs,
 \centering
 \caption{Camada de Aplicação (Casos de Uso)}
 \label{fig:chapter3-speech2learning-layer2}
-\includegraphics[width=1\textwidth]{images/chapter3-speech2learning-layer2.png}
+\includegraphics[width=.98\textwidth]{images/chapter3-speech2learning-layer2.png}
 \fadaptada{FalvoJr2023_HICSS, Lemos2022}
 \end{figure}
 
@@ -127,12 +127,12 @@ A Camada de Aplicação na arquitetura \textit{Speech2Learning} é responsável 
 \begin{itemize}
     \item \textbf{Orquestração de Regras de Negócio}: Implementar e gerenciar as regras de negócio que definem o comportamento dos OAs, garantindo que as operações de ensino e aprendizagem sejam conduzidas de maneira consistente com os objetivos de acessibilidade e inclusão.
 
-    \item \textbf{Coordenação de Fluxos de Trabalho}: Coordenar os diversos fluxos de trabalho relacionados aos processos de ensino-aprendizagem, incluindo a transcrição de áudio, legendagem de vídeos e geração de metadados, assegurando que todas as etapas sejam integradas de forma harmoniosa.
+    \item \textbf{Coordenação de Fluxos de Trabalho}: Coordenar os diversos fluxos de trabalho relacionados aos processos de ensino-aprendizagem, incluindo a transcrição, legendagem e geração de metadados, assegurando que todas as etapas sejam integradas de forma harmoniosa.
 
     \item \textbf{Interação com Outras Camadas}: Facilitar a comunicação entre a Camada de Entidades e as externas (Adaptadores e Infraestrutura), garantindo que as operações sejam executadas corretamente e que os dados sejam processados/transmitidos conforme necessário.
 \end{itemize}
 
-Para a \textit{Speech2Learning}, algumas abstrações são essenciais para a implementação eficaz dos casos de uso. Como sugestões de abstrações que fazem sentido para essa arquitetura destacam-se:
+Na prática, algumas abstrações são essenciais para a implementação eficaz dos casos de uso. Como sugestões de abstrações que fazem sentido para essa arquitetura destacam-se:
 
 \begin{itemize}
     \item \textbf{Controladores de Casos de Uso}: Classes ou componentes que implementam casos de uso específicos, orquestrando as operações de acordo com as regras de negócio. Por exemplo, um controlador pode gerenciar o processo de transcrição de um conteúdo de áudio, interagindo com a Camada de Entidades para armazenar os resultados e atualizar os metadados do OA.
@@ -143,7 +143,7 @@ Para a \textit{Speech2Learning}, algumas abstrações são essenciais para a imp
 
     \item \textbf{\sigla{DTO}{\textit{Data Transfer Objects}}}: Objetos de transferência de dados utilizados para encapsular e transportar dados entre as diferentes camadas da arquitetura. Os DTOs garantem que os dados sejam transmitidos de maneira eficiente e coerente, facilitando a comunicação entre controladores de casos de uso e outros componentes do sistema.
 
-    \item \textbf{Interfaces de Serviços Externos}: Abstrações que representam serviços externos necessários para a execução dos casos de uso, como APIs de reconhecimento de fala, serviços de tradução ou plataformas de gestão de conteúdos educacionais. Estas interfaces permitem que a Camada de Aplicação interaja com serviços externos de maneira flexível e desacoplada.
+    \item \textbf{Interfaces de Serviços Externos}: Abstrações que representam serviços externos necessários para a execução dos casos de uso, como APIs de ASR, serviços de tradução ou plataformas de gestão de conteúdos educacionais. Estas interfaces permitem que a Camada de Aplicação interaja com serviços externos de maneira flexível e desacoplada.
 \end{itemize}
 
 Nesse contexto, tem-se como exemplo um caso de uso que orquestra o processo de transcrição de áudio para texto, interagindo com serviços de reconhecimento de fala e atualizando os metadados do OA para incluir a transcrição gerada. Essa implementação fez parte de uma das POCs implementadas ao longo deste trabalho de doutorado e pode ser acessada neste repositório \textit{open-source}: \url{https://bit.ly/S2L-UseCase}.
@@ -175,16 +175,16 @@ A Camada de Adaptadores na arquitetura \textit{Speech2Learning} tem a responsabi
 Na \textit{Speech2Learning}, algumas abstrações são essenciais para a implementação eficaz dos adaptadores. Como sugestões de abstrações que fazem sentido para essa arquitetura destacam-se:
 
 \begin{itemize}
-    \item \textbf{Adaptadores de Entrada}: Componentes responsáveis por receber dados de fontes externas (como APIs, bancos de dados, ou interfaces de usuário) e convertê-los para um formato que possa ser processado pela Camada de Aplicação. Por exemplo, um adaptador de entrada pode receber dados de áudio de uma API de reconhecimento de fala e convertê-los em texto para processamento posterior.
+    \item \textbf{Adaptadores de Entrada}: Componentes responsáveis por receber dados de fontes externas (como APIs, BDs ou UI) e convertê-los para um formato que possa ser processado pela Camada de Aplicação. Por exemplo, um adaptador de entrada pode receber dados de áudio de uma API de ASR e convertê-los em texto para processamento posterior.
 
-    \item \textbf{Adaptadores de Saída}: Componentes que transformam dados gerados pela Camada de Aplicação em um formato que pode ser utilizado por sistemas externos ou armazenado em bancos de dados. Por exemplo, um adaptador de saída pode transformar transcrições de texto em um formato adequado para armazenamento em um ROAs.
+    \item \textbf{Adaptadores de Saída}: Componentes que transformam dados gerados pela Camada de Aplicação em um formato que pode ser utilizado por sistemas externos ou armazenado em BDs. Por exemplo, um adaptador de saída pode transformar transcrições de texto em um formato adequado para armazenamento em um ROAs.
 
     \item \textbf{Interfaces de Conversão de Dados}: Abstrações que definem métodos para converter dados entre diferentes formatos e protocolos. Estas interfaces garantem que a lógica de conversão seja desacoplada das implementações específicas, promovendo reutilização e facilidade de manutenção.
 
-    \item \textbf{Serviços de Mapeamento de Dados}: Componentes que encapsulam a lógica de mapeamento entre diferentes estruturas de dados, facilitando a conversão de objetos complexos e a integração com sistemas heterogêneos. Por exemplo, um serviço de mapeamento pode converter objetos de dados internos para formatos compatíveis com padrões de metadados como SCORM ou LOM.
+    \item \textbf{Serviços de Mapeamento de Dados}: Componentes responsáveis por mapear diferentes estruturas de dados, simplificando a conversão de objetos complexos e a integração com sistemas variados. Por exemplo, um serviço pode converter objetos de uma linguagem de programação específica em metadados compatíveis com padrões como SCORM ou LOM.
 \end{itemize}
 
-Para ilustrar a aplicação das abstrações sugeridas, considere um exemplo de um adaptador de entrada que implementa um cliente \textit{Open Feign} para interagir com um serviço externo de transcrição, especificamente a API da OpenAI. Este adaptador recebe dados de áudio, converte-os para um formato adequado para a API, e traduz as respostas da API para um formato compreensível pelo domínio. 
+Para ilustrar a aplicação das abstrações sugeridas, considere um exemplo de um adaptador de entrada que implementa um cliente HTTP, como o \textit{Open Feign}, para interagir com um serviço externo de transcrição, especificamente a API da OpenAI. Este adaptador recebe dados de áudio, converte-os para um formato adequado para a API, e traduz as respostas da API para um formato compreensível pelo domínio. 
 
 Essa implementação foi desenvolvida em colaboração com a DIO e está disponível neste repositório \textit{open-source}: \url{https://bit.ly/S2L-Adapters}. Tais abstrações e exemplos demonstram como a Camada de Adaptadores pode ser estruturada para garantir a conversão eficiente de dados entre diferentes partes do sistema \textit{Speech2Learning}, promovendo a interoperabilidade e a flexibilidade necessárias para uma solução educacional baseada em reconhecimento de fala.
 
@@ -200,10 +200,10 @@ Adicionalmente, a IAGen pode ser integrada aos adaptadores para realizar tarefas
 \fadaptada{FalvoJr2023_HICSS, Lemos2022}
 \end{figure}
 
-A Camada de Infraestrutura na Arquitetura \textit{Speech2Learning} abrange questões técnicas e específicas, como \textit{frameworks}, \textit{drivers} e integrações externas. Nesse sentido, conexões com Bancos de Dados (BD) e serviços de ASR/STT fazem parte desta camada. Além disso, inclui a Interface do Usuário (UI), permitindo o desenvolvimento de aplicações educacionais concretas (\textit{d-learning}, \textit{e-learning}, \textit{m-learning}, etc) ou repositórios de OAs (\autoref{fig:chapter3-speech2learning-layer4}). As principais responsabilidades da Camada de Infraestrutura incluem:
+A Camada de Infraestrutura na Arquitetura \textit{Speech2Learning} abrange questões técnicas e específicas, como \textit{frameworks}, \textit{drivers} e integrações externas. Nesse sentido, conexões com BDs e serviços de ASR/STT fazem parte desta camada. Além disso, inclui a Interface do Usuário (UI), permitindo o desenvolvimento de aplicações educacionais concretas (\textit{d-learning}, \textit{e-learning}, \textit{m-learning}, etc) ou repositórios de OAs (\autoref{fig:chapter3-speech2learning-layer4}). As principais responsabilidades da Camada de Infraestrutura incluem:
 
 \begin{itemize}
-    \item \textbf{Gerenciamento de Dados}: Conectar e interagir com sistemas de gerenciamento de bancos de dados para armazenar, recuperar e manipular os dados necessários para a aplicação, garantindo que os dados sejam acessíveis e seguros.
+    \item \textbf{Gerenciamento de Dados}: Conectar e interagir com sistemas de gerenciamento de BDs para armazenar, recuperar e manipular os dados necessários para a aplicação, garantindo que os dados sejam acessíveis e seguros.
 
     \item \textbf{Integrações Externas}: Gerenciar a comunicação com serviços externos, como APIs de reconhecimento de fala e serviços de tradução, garantindo que a aplicação possa utilizar funcionalidades fornecidas por terceiros.
 
@@ -215,13 +215,13 @@ A Camada de Infraestrutura na Arquitetura \textit{Speech2Learning} abrange quest
 Para a \textit{Speech2Learning}, algumas abstrações são essenciais para a implementação eficaz da infraestrutura. Entre as sugestões de abstrações que fazem sentido para essa arquitetura tem-se:
 
 \begin{itemize}
-    \item \textbf{Repositórios de Dados}: Interfaces e implementações responsáveis por gerenciar a persistência dos dados, encapsulando a lógica de acesso a bancos de dados e garantindo a independência da Camada de Aplicação em relação às tecnologias de armazenamento.
+    \item \textbf{Repositórios de Dados}: Interfaces e implementações responsáveis por gerenciar a persistência dos dados, encapsulando a lógica de acesso ao BD e garantindo a independência da Camada de Aplicação em relação às tecnologias de armazenamento.
 
     \item \textbf{Serviços de Integração}: Componentes que facilitam a comunicação com serviços externos, fornecendo interfaces padronizadas para interagir com APIs de reconhecimento de fala, serviços de tradução e outras ferramentas externas.
 
     \item \textbf{Gerenciadores de UI}: Abstrações que suportam o desenvolvimento e a operação das interfaces de usuário, assegurando que a experiência do usuário seja consistente e acessível.
 
-    \item \textbf{\textit{Drivers} e Bibliotecas}: Componentes técnicos que fornecem funcionalidades específicas necessárias para a operação da aplicação, como \textit{drivers} de banco de dados, bibliotecas de manipulação de áudio e ferramentas de desenvolvimento de UI.
+    \item \textbf{\textit{Drivers} e Bibliotecas}: Componentes técnicos que fornecem funcionalidades específicas necessárias para a operação da aplicação, como \textit{drivers} de BDs, bibliotecas de manipulação de áudio e ferramentas de desenvolvimento de UI.
 \end{itemize}
 
 Para que se tenha uma perspectiva prática, segue um exemplo de um adaptador que implementa a persistência de dados de áudio transcritos utilizando o \textit{MongoDB} e seu sistema de arquivos \textit{GridFS}. Este adaptador lida com operações de \sigla{CRUD}{\textit{Create, Read, Update and Delete}} para entidades de áudio transcritas, gerenciando o armazenamento de conteúdo e metadados de maneira eficiente. Essa implementação está disponível no seguinte repositório \textit{open-source}: \url{https://bit.ly/S2L-Infra}.
@@ -248,7 +248,7 @@ A Pseudo-camada Principal \& Configuração na Arquitetura \textit{Speech2Learni
     \item \textbf{Gerenciamento de Ciclo de Vida}: Controlar o ciclo de vida dos componentes, incluindo a criação, a configuração e a destruição de instâncias conforme necessário. Isso assegura que os recursos sejam gerenciados de maneira eficiente e que os componentes estejam sempre em um estado consistente.
 \end{itemize}
 
-Para a \textit{Speech2Learning}, algumas abstrações são essenciais para a implementação eficaz da Pseudo-camada Principal \& Configuração. Como sugestões de abstrações que fazem sentido para essa arquitetura tem-se:
+Alguns exemplos de abstrações alinhadas à \textit{Speech2Learning} para a implementação da Pseudo-camada Principal \& Configuração, são:
 
 \begin{itemize}
     \item \textbf{Módulos de Configuração}: Componentes que centralizam a configuração dos diferentes aspectos da aplicação, como casos de uso, repositórios de dados e serviços de integração. Estes módulos garantem que a configuração seja organizada e fácil de gerenciar.
@@ -260,7 +260,7 @@ Para a \textit{Speech2Learning}, algumas abstrações são essenciais para a imp
 
 Para ilustrar a aplicação das abstrações listadas, considere um módulo de configuração que define e gerencia os casos de uso relacionados à transcrição de áudio. Este módulo centraliza a configuração das dependências necessárias para os casos de uso, promovendo a independência e a modularidade dos componentes em relação ao \textit{Spring Framework}. Exemplo em um projeto real disponível no repositório \textit{open-source}: \url{https://bit.ly/S2L-Adapters}.
 
-Estas abstrações e exemplos demonstram como a Pseudo-camada Principal \& Configuração pode ser estruturada para garantir a configuração e a inicialização eficiente dos componentes do sistema \textit{Speech2Learning}. Ao centralizar a configuração e a gestão de dependências, esta camada promove a modularidade e a flexibilidade necessárias para uma solução educacional baseada em reconhecimento de fala.
+Estas abstrações e exemplos demonstram como a Pseudo-camada Principal \& Configuração pode ser estruturada. Ao centralizar a configuração e a gestão de dependências, esta camada promove a modularidade e a flexibilidade necessárias para uma solução educacional baseada em reconhecimento de fala.
 
 \section{Considerações Finais}
 
