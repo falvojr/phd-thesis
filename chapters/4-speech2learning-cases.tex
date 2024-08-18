@@ -1,20 +1,35 @@
 \section{Considerações Iniciais}
 
-Conforme discutido anteriormente, a acessibilidade em ambientes de aprendizagem é uma necessidade crescente na era digital, onde as TICs podem desempenhar um papel crucial ao tornar o conteúdos educacionais acessíveis a todos os alunos, independentemente de individualidades físicas ou sensoriais \cite{Mayer2021}. Nesse contexto, no presente trabalho de doutorado é investigado como o enriquecimento de OAs com transcrições/legendas automáticas pode aumentar a inclusão e o engajamento na educação \cite{FalvoJr2023_HICSS,FalvoJr2024_FIE}.
+Conforme discutido anteriormente, a acessibilidade em ambientes de aprendizagem é uma necessidade crescente na era digital, onde as TICs desempenham um papel crucial ao tornar os conteúdos educacionais acessíveis a todos os alunos, independentemente de suas individualidades físicas ou sensoriais \cite{Mayer2021}. Neste contexto, o presente trabalho de doutorado investiga como o enriquecimento de OAs com transcrições e legendas automáticas pode aumentar a inclusão e o engajamento na educação \cite{FalvoJr2023_HICSS, FalvoJr2024_FIE}.
 
-O conceito de OAs é central para as práticas pedagógicas atuais, uma vez que desempenham o papel de recursos digitais flexíveis que podem ser reutilizados para apoiar o processo de ensino-aprendizagem \cite{Parakh2022}. Com isso, a Arquitetura \textit{Speech2Learning} é a principal contribuição deste trabalho de doutorado, através da qual propõe-se o aprimoramento de OAs audíveis por meio de ASR/STT, promovendo a geração automática de legendas, transcrições ou traduções. Assim, videoaulas podem ser acessíveis em diferentes línguas e até mesmo sinalizadas por avatares de línguas de sinais baseados em texto.
+O conceito de OAs é central para as práticas pedagógicas atuais, pois esses recursos digitais flexíveis podem ser reutilizados para apoiar o processo de ensino-aprendizagem \cite{Parakh2022}. A principal contribuição deste trabalho de doutorado é a Arquitetura \textit{Speech2Learning}, que propõe o aprimoramento de OAs audíveis por meio de tecnologias de ASR/STT, promovendo a geração automática de legendas, transcrições ou traduções. Dessa forma, videoaulas podem se tornar acessíveis em diferentes línguas e até mesmo sinalizadas por avatares de línguas de sinais baseados em texto.
 
-Este capítulo detalha a aplicação prática da \textit{Speech2Learning} por meio de dois estudos de caso, projetados como instâncias concretas da arquitetura. Esses estudos foram conduzidos em colaboração com a \textit{EdTech} brasileira DIO, que foi essencial para viabilizar avaliações empíricas em OAs de uma plataforma educacional real, marcando um passo significativo na direção de soluções mais acessíveis e inclusivas. Todos os procedimentos éticos relacionados aos estudos de caso foram aprovados pelo CEP, garantindo a conformidade com as diretrizes éticas exigidas.
+Este capítulo detalha a aplicação prática da \textit{Speech2Learning} por meio de dois estudos de caso, concebidos como instâncias concretas da arquitetura. Cada estudo é apresentado individualmente (\autoref{c4:cs1} e \autoref{c4:cs2}) e segue uma estrutura comum de subseções para facilitar a compreensão. As subseções incluem: ``Relação com a Arquitetura \textit{Speech2Learning}'', que descreve como a arquitetura foi implementada e integrada no contexto do estudo; ``Prova de Conceito'', que apresenta a solução desenvolvida como um exemplo prático da \textit{Speech2Learning}; ``Metodologia'', discorre sobre os métodos e procedimentos utilizados na condução do estudo; e ``Resultados e Discussões'', onde são analisados os dados coletados e discutidas as implicações dos achados para a acessibilidade educacional e a arquitetura \textit{Speech2Learning}.
+
+Esses estudos foram conduzidos em colaboração com a \textit{EdTech} brasileira DIO, que desempenhou um papel essencial ao viabilizar avaliações empíricas em OAs de uma plataforma educacional real, marcando um passo significativo na direção de soluções mais acessíveis e inclusivas. Todos os procedimentos éticos relacionados aos estudos de caso foram aprovados pelo CEP, garantindo a conformidade com as diretrizes éticas exigidas.
 
 \section{Estudo de Caso 1: Legendas em Videoaulas}
+\label{c4:cs1}
 
 O primeiro estudo de caso buscou investigar a precisão dos principais serviços de ASR, uma vez que essa tecnologia é central na Arquitetura \textit{Speech2Learning}. Na prática, foi utilizado um conjunto de recursos educacionais, disponíveis na plataforma de \textit{e-learning} da DIO, para a construção de uma \sigla{POC}{Prova de Conceito} focada na transcrição e legendagem desses OAs através de serviços de ASR.
 
-Sendo assim, o objetivo do estudo foi expandir a compreensão sobre o papel das transcrições e legendas automáticas para um processo de ensino-aprendizagem mais acessível. Para tal propósito, discutiu-se a convergência dos resultados quantitativos e qualitativos obtidos por meio de três fontes de dados distintas, uma estratégia oriunda da metodologia de triangulação de dados \cite{LimaJunior2021}.
+Sendo assim, o objetivo do estudo foi expandir a compreensão sobre o papel das transcrições automáticas no processo de ensino-aprendizagem mais acessível. Para isso, foi discutida a convergência dos resultados quantitativos e qualitativos obtidos a partir de três fontes de evidência, seguindo a premissa da metodologia de triangulação de dados \cite{LimaJunior2021}.
 
 Segundo \cite{Farquhar2020}, é possível explorar múltiplas fontes de evidências (quantitativas e/ou qualitativas) e discutir suas respectivas convergências por meio de uma abordagem de triangulação de dados. No contexto deste estudo de caso, as seguintes fontes foram observadas: (i) métodos de similaridade léxica; (ii) respostas de um \textit{survey} anônimo; e (iii) estudos de uma pesquisa documental complementar.
 
-As seções a seguir abordam desde a implementação da POC junto a \textit{EdTech} DIO até os detalhes metodológicos e resultados obtidos.
+As subseções a seguir exploram o estudo em detalhes, abordando desde a relação com a Arquitetura \textit{Speech2Learning} e a implementação de uma POC em colaboração com a \textit{EdTech} DIO, até os pormenores metodológicos e os resultados alcançados.
+
+\subsection{Relação com a Arquitetura \textit{Speech2Learning}}
+
+No primeiro estudo de caso, a Arquitetura \textit{Speech2Learning} foi implementada como uma API REST, projetada para seguir rigorosamente as responsabilidades de suas camadas e os padrões do estilo arquitetural REST. A adoção da \textit{Speech2Learning} forneceu diretrizes claras para a separação de interesses entre as camadas da API, facilitando a manutenção e a testabilidade do sistema, além de permitir a substituição ágil do serviço de ASR. Esse \textit{design} modular garante que diferentes provedores de ASR possam ser integrados ou trocados sem grandes impactos na estrutura da API, preservando a consistência e a transparência no funcionamento geral.
+
+O diferencial da \textit{Speech2Learning} está na sua aderência a padrões de metadados dos OAs, assegurando que esses recursos sejam enriquecidos com transcrições e legendas de forma padronizada. Essa característica facilita a reutilização dos OAs em diversos contextos educacionais, garantindo acessibilidade e consistência em termos de estrutura e conteúdo.
+
+Embora a avaliação do estudo de caso se concentre na instância concreta da arquitetura, a flexibilidade inerente à \textit{Speech2Learning} possibilitou a criação de uma API robusta, capaz de se conectar a múltiplos serviços de ASR. Esses serviços são implementados por meio de \textit{Gateways} que seguem uma interface comum, permitindo a troca entre componentes de forma transparente e eficiente. Essa abordagem permite uma avaliação abrangente dos provedores de ASR, sem comprometer a integridade da API ou dos OAs gerados.
+
+Simplificando, a relação entre a \textit{Speech2Learning} e este estudo de caso resultou em uma API REST construída em conformidade com os \textit{guidelines} da arquitetura. Na prática, a \textit{Speech2Learning} atende a um requisito essencial deste estudo, que é a necessidade de múltiplos provedores de ASR/STT desacoplados para a geração e avaliação das transcrições automáticas de videoaulas. Para isso, foi iniciada uma POC estratégica com o objetivo de mensurar a complexidade do desenvolvimento e a viabilidade técnica (inicialmente com um único provedor).
+
+A POC é detalhada na seção a seguir e representa a primeira instância concreta da \textit{Speech2Learning}. Sendo assim, essa implementação proporcionou inúmeros aprendizados e explorou a essência da arquitetura, promovendo a acessibilidade por meio do ASR em OAs existentes na plataforma educacional da DIO. A oportunidade de testar a arquitetura em um ecossistema de aprendizagem real foi um passo significativo para a maturidade da \textit{Speech2Learning}.
 
 \subsection{Prova de Conceito: API REST para Legendar Videoaulas}
 
@@ -119,7 +134,7 @@ Neste estudo, foram aplicados os três métodos mencionados, destacando sua rele
 
 Para essa finalidade, foram integrados os principais provedores de ASR/STT baseados em IA do mercado \cite{Gartner2023}: Amazon, Google, IBM, Microsoft e OpenAI. Ademais, em colaboração com a DIO, garantiu-se que o \textit{dataset} deste estudo de caso, devidamente revisado e sintetizado no \autoref{quadro:c4:poc-audios-summary}, estivesse disponível com todas as transcrições de referência dos OAs.
 
-Com os áudios otimizados do \textit{dataset}, foram integrados os serviços de ASR/STT de cada provedor e geradas suas respectivas transcrições automáticas. Para uma implementação organizada e documentada, utilizou-se o Google Colab, detalhando todo o processo em um notebook público\footnote{Colab Notebook - Transcrições Automáticas com ASR/STT: \url{https://bit.ly/S2L-CS1-STTServices}}. De forma similar, foram comparadas as 15 transcrições automáticas com as transcrições de referência usando os três métodos de similaridade léxica (CS, JI e LD) em um segundo notebook\footnote{Colab Notebook - Algoritmos de Similaridade Léxica: \url{https://bit.ly/S2L-CS1-LexicalAnalysis}}.
+A partir dos áudios do \textit{dataset}, foram integrados os serviços de ASR de cada provedor e geradas suas respectivas transcrições automáticas. Para uma implementação organizada e documentada, utilizou-se o Google Colab, detalhando todo o processo em um notebook público\footnote{Colab Notebook - Transcrições Automáticas com ASR/STT: \url{https://bit.ly/S2L-CS1-STTServices}}. De forma similar, foram comparadas as 15 transcrições automáticas com as transcrições de referência usando os três métodos de similaridade léxica (CS, JI e LD) em um segundo notebook\footnote{Colab Notebook - Algoritmos de Similaridade Léxica: \url{https://bit.ly/S2L-CS1-LexicalAnalysis}}.
 
 \subsubsection{2ª Fonte de Evidência: Respostas do \textit{Survey}}
 
@@ -133,7 +148,7 @@ Para mitigar vieses, os provedores foram anonimizados e receberam um identificad
 
 \subsubsection{3ª Fonte de Evidência: Pesquisa Documental}
 
-Para contextualizar e enriquecer os dados quantitativos, foi realizada uma revisão de literatura que complementa os achados empíricos, identificando estudos relevantes sobre tecnologias ASR e STT. Esta revisão proporciona uma compreensão mais profunda do potencial e das limitações das tecnologias atuais baseadas em ASR.
+Para aprofundar a análise dos dados quantitativos, foi realizada uma revisão de literatura que complementa os achados empíricos, identificando estudos relevantes com foco em ASR. Esta revisão oferece uma compreensão mais ampla do potencial e das limitações das tecnologias atuais baseadas em ASR/STT.
 
 Foi utilizada a \textit{Grounded Theory}, ou \sigla{TFD}{Teoria Fundamentada nos Dados}, como um \textit{framework} orientador para a análise documental. A TFD é uma metodologia sistemática e rigorosa utilizada na pesquisa qualitativa para desenvolver teorias emergentes diretamente dos dados \cite{Charmaz2009}. Diferentemente de abordagens que partem de hipóteses preconcebidas, a Teoria Fundamentada nos Dados permite a descoberta de temas e padrões de maneira indutiva, por meio de um processo iterativo de coleta e análise de dados.
 
@@ -149,7 +164,7 @@ A triangulação, originalmente uma técnica geométrica para determinação de 
 
 Neste estudo, adotou-se uma abordagem de triangulação que engloba múltiplas fontes de evidência e suas respectivas técnicas. Esta abordagem de métodos mistos combina resultados qualitativos e quantitativos para aprimorar a análise e a interpretação dos dados coletados. Em particular, a triangulação de dados utiliza várias fontes de evidência para corroborar o mesmo fato ou fenômeno \cite{Yin2015}.
 
-Na Engenharia de Software, a triangulação contribui significativamente para o rigor e a validade da pesquisa. A integração de vários métodos, como pesquisas quantitativas, entrevistas qualitativas e análise documental, permite aos pesquisadores verificar os resultados de forma cruzada e obter uma compreensão mais aprofundada de fenômenos complexos. Esta abordagem é particularmente valiosa na análise da eficácia das práticas de desenvolvimento de software, experiência do usuário e adoção de tecnologias \cite{Runeson2009}.
+Na Engenharia de Software, a triangulação contribui significativamente para o rigor e a validade da pesquisa. A integração de vários métodos, como pesquisas quantitativas, entrevistas qualitativas e análise documental, permite aos pesquisadores verificar os resultados por meio de uma análise cruzada e obter uma compreensão ainda mais aprofundada de fenômenos complexos. Esta abordagem é particularmente valiosa na análise da eficácia das práticas de desenvolvimento de software, experiência do usuário e adoção de tecnologias \cite{Runeson2009}.
 
 A \autoref{fig:chapter4-cs1-triangulation-methodology} representa a metodologia de triangulação de dados utilizada neste trabalho de doutorado. Este diagrama esboça o objeto de estudo, as três fontes distintas de evidência, suas respectivas técnicas de coleta e o processo de convergência de dados que resulta no corpus de dados. Esta abordagem completa e multifacetada garante uma validação robusta e proporciona uma compreensão profunda de como as tecnologias ASR podem melhorar a acessibilidade educacional.
 
@@ -549,10 +564,21 @@ Sendo assim, pesquisas futuras podem se concentrar em fechar a lacuna entre a pr
 Seguindo esta linha de investigação, o próximo estudo de caso explorará a POC implementada no primeiro estudo de caso para acelerar o desenvolvimento de um \textit{player} de vídeo aderente ao conceito de \textit{Design} Universal. Esta POC se aproveita das transcrições e legendas para integrar o \textit{player} com avatares de Libras baseados em texto, ampliando ainda mais a acessibilidade e a inclusão em ambientes educacionais.
 
 \section{Estudo de Caso 2: \textit{Player} com Avatar de Libras}
+\label{c4:cs2}
 
 O segundo estudo concentrou-se no desenvolvimento de um \textit{player} de vídeo, projetado com base no conceito de \textit{Design} Universal para criar um produto final mais flexível e acessível do ponto de vista educacional \cite{UNESCO2023, GovBr2023}. Este estudo também contou com o apoio da DIO, utilizando a API REST desenvolvida como prova de conceito no primeiro estudo de caso, facilitando o acesso às videoaulas da \textit{EdTech}. Na prática, essa integração permite que o \textit{player} utilize transcrições/legendas como elementos centrais para tornar seus OAs mais acessíveis.
 
 A relevância deste estudo reside em sua capacidade de explorar o impacto de avatares de Libras baseados em texto na acessibilidade educacional para a comunidade surda. Para isso, foram conduzidas avaliações quantitativas por meio de um \textit{survey} com intérpretes de Libras, seguido por entrevistas qualitativas, investigando como essa solução tecnológica pode melhorar a acessibilidade de OAs audíveis.
+
+\subsection{Relação com a Arquitetura \textit{Speech2Learning}}
+
+No segundo estudo de caso, a Arquitetura \textit{Speech2Learning} desempenhou um papel central ao fornecer a base estrutural para a integração entre o \textit{player} de vídeo desenvolvido e a API REST criada no primeiro estudo de caso. Essa API, responsável por enriquecer OAs audíveis com transcrições e legendas, foi utilizada como um serviço de TA, permitindo que o \textit{player} acessasse e utilizasse esses OAs diretamente, funcionando de maneira semelhante a um repositório de OAs.
+
+A principal contribuição da \textit{Speech2Learning} neste estudo de caso é a sua capacidade de oferecer um ecossistema flexível e adaptável para o desenvolvimento de soluções mais acessíveis. A API REST, implementada como um serviço desacoplado, facilitou a integração do \textit{player} de vídeo com avatares de Libras, promovendo uma nova camada de acessibilidade para usuários surdos. Isso foi possível graças à aderência da API aos padrões de metadados, que garantem que as transcrições e legendas estejam prontamente disponíveis e padronizadas para uso em diferentes contextos educacionais.
+
+Além disso, a arquitetura permitiu que o \textit{player} utilizasse os metadados fornecidos pela API para sinalizar os textos em Libras, aproveitando a flexibilidade da \textit{Speech2Learning} para criar um ambiente de aprendizagem mais inclusivo. O \textit{design} modular e a separação de responsabilidades entre as camadas da API e do \textit{player} de vídeo asseguraram que a integração fosse feita de maneira eficiente, sem comprometer a qualidade ou a integridade dos OAs.
+
+De modo geral, a relação entre a \textit{Speech2Learning} e este estudo de caso exemplifica como uma arquitetura bem planejada pode servir como a espinha dorsal para soluções educacionais mais acessíveis, possibilitando a criação de ferramentas que não apenas atendem às necessidades de acessibilidade, mas também exploram novas formas de interação e aprendizado.
 
 \subsection{Prova de Conceito: \textit{Player} de Vídeo com \textit{Design} Universal}
 
@@ -568,7 +594,7 @@ A \autoref{fig:chapter4-cs2-poc-diagram} ilustra, por meio de um diagrama de seq
 
 A integração entre o \textit{player} de vídeo e a API REST ilustra a capacidade da arquitetura \textit{Speech2Learning} de fomentar ambientes educacionais mais inclusivos. Adotando esta abordagem, os desenvolvedores podem criar sistemas robustos, tecnologicamente independentes e flexíveis, capazes de atender às especificidades de cada projeto.
 
-O objetivo central deste estudo é projetar, implementar e avaliar um \textit{player} de vídeo que siga as recomendações do ``Guia de Boas Práticas para Acessibilidade Digital'' definidas por \citeonline{GovBr2023} e os princípios de \textit{Design} Universal promovidos pela \citeonline{UNESCO2023}. Este \textit{player}, integrado com a arquitetura \textit{Speech2Learning}, visa promover a educação inclusiva para surdos através da Libras.
+O objetivo central deste estudo de caso é projetar, construir e avaliar um \textit{player} de vídeo que siga as recomendações do ``Guia de Boas Práticas para Acessibilidade Digital'' definidas por \citeonline{GovBr2023}, além dos princípios de \textit{Design} Universal promovidos pela \citeonline{UNESCO2023}. Este \textit{player}, integrado com a arquitetura \textit{Speech2Learning}, visa promover a educação inclusiva para surdos através da Libras.
 
 Tecnicamente, o \textit{player} foi implementado utilizando HTML, CSS e JavaScript de forma ``pura'' (\textit{vanilla}), ou seja, evitando bibliotecas e/ou implementações alternativas para uma solução mais padronizada e manutenível baseada na Web \cite{GovBr2023}. Os \textit{wireframes} preliminares na Figura \ref{fig:chapter4-cs2-poc-wireframes} oferecem uma visão simplificada, destacando características universais e o símbolo ``Acessível em Libras'', sublinhando o compromisso com a educação inclusiva.
 
@@ -730,7 +756,15 @@ Para concluir, a \textit{Speech2Learning} oferece um arcabouço genérico e aber
 
 \section{Considerações Finais}
 
-Os dois estudos de caso apresentados destacam a importância e a viabilidade de utilizar tecnologias de reconhecimento de fala para promover a inclusão educacional. No primeiro estudo de caso, focado em legendas automáticas para videoaulas, observou-se que transcrições automáticas com maior precisão podem aumentar significativamente o potencial de reuso e acessibilidade de OAs audíveis. O segundo estudo, que envolveu o desenvolvimento de um \textit{player} de vídeo com \textit{Design} Universal e integração de transcrições automáticas, demonstrou potencial para atender algumas das necessidades da comunidade surda, mas também revelou limitações significativas. Esses desafios sublinham a necessidade de contínuas melhorias e adaptações para alcançar uma inclusão educacional efetiva.
+Os dois estudos de caso apresentados destacam a importância e a viabilidade de utilizar tecnologias de reconhecimento de fala para promover a inclusão educacional. No primeiro estudo de caso, focado em legendas automáticas para videoaulas, observou-se que transcrições automáticas com maior precisão podem aumentar significativamente o potencial de reuso e acessibilidade de OAs audíveis. As contribuições obtidas neste estudo foram detalhadas e discutidas em publicações recentes, destacando a análise lexical das transcrições automáticas e a triangulação de dados para avaliar a acessibilidade dos OAs audíveis:
+
+\begin{itemize}
+    \item \fullcite{\textbf{FALVOJR, V.}; MARCOLINO, A.; BRUNO, D.; MARTINS FALVO, C.; OSÓRIO, F.; BARBOSA, E.}{Lexical Analysis of Automatic Transcriptions Using Speech-to-Text Services: A Statistically Evaluated Case Study}{Hawaii International Conference on System Sciences (HICSS)}{2024}{Disponível em \url{hdl.handle.net/10125/107023}}
+
+    \item \fullcite{\textbf{FALVOJR, V.}; MARCOLINO, A.; BRUNO, D.; MARTINS FALVO, C.; OSÓRIO, F.; BARBOSA, E.}{Enhancing Learning Objects Accessibility Through Speech-To-Text Based Architecture: A Comprehensive Triangulation Study}{Frontiers in Education (FIE)}{2024}{Submetido em 20/05/2024 e Aprovado em 23/07/2024}
+\end{itemize}
+
+O segundo estudo de caso, que envolveu o desenvolvimento de um \textit{player} de vídeo com \textit{Design} Universal e integração de transcrições automáticas, demonstrou potencial para atender algumas das necessidades da comunidade surda, mas também revelou limitações significativas. Esses desafios sublinham a necessidade de contínuas melhorias e adaptações para alcançar uma inclusão educacional efetiva.
 
 Os resultados obtidos até o momento indicam que a integração de tecnologias como ASR/STT com soluções educacionais pode facilitar uma educação mais inclusiva e acessível. A continuidade deste trabalho incluirá a análise detalhada dos dados coletados nas entrevistas com intérpretes de Libras. Além disso, futuras pesquisas podem explorar a adaptação de avatares de outras línguas de sinais e o uso de novas tecnologias de IA para aprimorar ainda mais as soluções desenvolvidas.
 
