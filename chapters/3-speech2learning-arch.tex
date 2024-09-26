@@ -8,7 +8,7 @@ Além disso, a \textit{Speech2Learning} adota uma abordagem modular e escalável
 
 A evolução da área de IA, especialmente com modelos generativos, tem o potencial de expandir ainda mais as capacidades da \textit{Speech2Learning}. A IAGen, com a habilidade de processar e gerar texto de forma autônoma, pode ser utilizada para aprimorar a acessibilidade e a personalização dos OAs, abrindo novas possibilidades para a criação de conteúdo e interação com os alunos.
 
-Nesse sentido, a \textit{Speech2Learning} não apenas aborda a lacuna identificada em relação à falta de padrões, mas também estabelece um \textit{framework} robusto e inclusivo para o desenvolvimento de soluções educacionais baseadas em reconhecimento automático de fala. Esta arquitetura visa transformar a maneira como os conteúdos educacionais audíveis são criados e acessados, promovendo uma educação mais inclusiva e acessível para todos os aprendizes.
+Nesse sentido, a \textit{Speech2Learning} não apenas aborda a lacuna identificada em relação à falta de padrões, mas também estabelece um \textit{framework} robusto e inclusivo para o desenvolvimento de soluções educacionais baseadas em reconhecimento automático de fala. A arquitetura visa transformar a maneira como os conteúdos educacionais audíveis são criados e acessados, promovendo uma educação mais inclusiva e acessível para todos os aprendizes.
 
 \section{Principais Referências e Inspirações}
 
@@ -26,7 +26,7 @@ Essas iniciativas compartilham a ideia central de separar o código em camadas i
 \fadaptada{FalvoJr2023_HICSS}
 \end{figure}
 
-Cada camada da \textit{Speech2Learning} contribui de forma significativa para OAs mais acessíveis por meio dos conceitos de ASR/STT, os quais, em conjunto com os metadados, são cruciais para promover a acessibilidade dos OAs de forma padronizada e consistente. Vale ressaltar que uma arquitetura não tem como objetivo definir detalhes de implementação, mas sim abstrações de software que podem ser adaptadas de acordo com as necessidades de cada domínio de aplicação. A seguir, apresenta-se uma síntese de cada uma das camadas definidas pela arquitetura \textit{Speech2Learning}:
+Cada camada da \textit{Speech2Learning} contribui de forma significativa para OAs mais acessíveis por meio dos conceitos de ASR/STT, os quais, em conjunto com os metadados, são cruciais para promover a acessibilidade dos OAs de forma padronizada e consistente. Vale ressaltar que uma arquitetura não tem como objetivo definir detalhes de implementação, mas sim abstrações de software que podem ser adaptadas de acordo com as necessidades de cada domínio de aplicação. A seguir, apresenta-se uma síntese de cada uma das camadas definidas pela arquitetura:
 
 \begin{itemize}
 \item \textbf{Objetos de Aprendizagem (Amarelo)}: Responsável pelos modelos e regras de negócio do domínio. Para garantir que os OAs sejam mais acessíveis e padronizados, as entidades podem incluir transcrição, legendagem e outras capacidades compatíveis com o domínio de aplicação e o padrão de metadados dos OAs audíveis. Além disso, o processo de reconhecimento de fala deve ser, idealmente, multimodal (abrangendo áudio e vídeo) e suportar múltiplos idiomas. Nesse sentido, considerar IAs, especialmente as generativas, é recomendado uma vez que elas resolvem de forma efetiva muitos desses desafios técnicos. Sendo assim, desde o centro da nossa arquitetura, onde estão os OAs, se faz necessária uma visão de projeto arquitetural que tenha sinergia com IAGen;
@@ -146,7 +146,7 @@ Na prática, algumas abstrações são essenciais para a implementação eficaz 
     \item \textbf{Interfaces de Serviços Externos}: Abstrações que representam serviços externos necessários para a execução dos casos de uso, como APIs de ASR, serviços de tradução ou plataformas de gestão de conteúdos educacionais. Estas interfaces permitem que a Camada de Aplicação interaja com serviços externos de maneira flexível e desacoplada.
 \end{itemize}
 
-Nesse contexto, tem-se como exemplo um caso de uso que orquestra o processo de transcrição de áudio para texto, interagindo com serviços de reconhecimento de fala e atualizando os metadados do OA para incluir a transcrição gerada. Essa implementação fez parte de uma das POCs implementadas ao longo deste trabalho de doutorado e pode ser acessada neste repositório \textit{open-source}: \url{https://bit.ly/S2L-UseCase}.
+Nesse contexto, tem-se como exemplo um caso de uso que orquestra o processo de transcrição de áudio para texto, interagindo com serviços de reconhecimento de fala e atualizando os metadados do OA para incluir a transcrição gerada. Essa implementação foi parte de uma das POCs realizadas ao longo deste trabalho de doutorado, discutida no \autoref{chapter4}, e está disponível neste repositório \textit{open-source}: \url{https://bit.ly/S2L-UseCase}.
 
 Tais abstrações e exemplos demonstram como a Camada de Aplicação pode ser estruturada para orquestrar de forma eficiente os OAs aderentes aos princípios da \textit{Speech2Learning}, promovendo a acessibilidade por meio de soluções baseadas em reconhecimento de fala.
 
@@ -264,7 +264,7 @@ Estas abstrações e exemplos demonstram como a Pseudo-camada Principal \& Confi
 
 \section{Considerações Finais}
 
-A arquitetura \textit{Speech2Learning} foi concebida para promover a inclusão e a acessibilidade no domínio educacional, utilizando tecnologias avançadas de reconhecimento de fala, como o ASR e STT. Ao longo deste trabalho de doutorado, foi discutida a estrutura e as camadas fundamentais da \textit{Speech2Learning}, enfatizando sua modularidade, escalabilidade e conformidade com padrões de mercado. Essas características permitem que a arquitetura seja adaptável a diversos contextos educacionais e atenda às necessidades específicas de diferentes aprendizes, promovendo um ambiente de aprendizagem mais inclusivo e acessível.
+A arquitetura \textit{Speech2Learning} foi concebida para promover a inclusão e a acessibilidade no domínio educacional, utilizando tecnologias avançadas de reconhecimento de fala, como o ASR e STT. Ao longo deste capítulo foi discutida a estrutura e as camadas fundamentais da \textit{Speech2Learning}, enfatizando sua modularidade, escalabilidade e conformidade com padrões de mercado. Essas características permitem que a arquitetura seja adaptável a diversos contextos educacionais e atenda às necessidades específicas de diferentes aprendizes, promovendo um ambiente de aprendizagem mais inclusivo e acessível.
 
 A implementação das camadas da \textit{Speech2Learning} demonstrou como a integração de serviços de ASR e STT pode ser realizada de maneira estruturada e eficaz. A arquitetura não só facilita o desenvolvimento de soluções educacionais inclusivas, mas também promove a interoperabilidade entre diferentes plataformas e ferramentas educacionais. Além disso, a adoção de padrões de metadados como Dublin Core, SCORM, MISB, LOM e RDF garante que os OAs sejam estruturados de forma consistente e reutilizável, facilitando o compartilhamento de recursos educacionais.
 
