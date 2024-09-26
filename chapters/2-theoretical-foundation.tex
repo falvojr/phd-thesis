@@ -2,7 +2,7 @@
 
 A fundamentação teórica deste doutorado tem como base um MS, cujo objetivo foi identificar a interseção entre as TICs e as línguas de sinais no contexto educacional. A \autoref{section:foundation:sm} oferece um resumo deste MS, enquanto análises mais detalhadas dos estudos primários, que abrangem tanto o panorama nacional quanto internacional, estão disponíveis em uma série de publicações \cite{FalvoJr2020_FIE, FalvoJr2020_SBIE, FalvoJr2021_RENOTE}, que foram essenciais para o desenvolvimento do trabalho.
 
-A realização deste estudo permitiu identificar \textit{gaps} tecnológicos no uso de línguas de sinais no ensino-aprendizagem, destacando a necessidade de novas pesquisas na literatura. De modo complementar ao MS, um levantamento bibliográfico foi conduzido para explorar conceitos e TICs promissoras que possam enfrentar esses desafios. As próximas seções aprofundam as temáticas de Arquiteturas de Software, OAs e ASR. Esses tópicos fornecem a base teórica para a \textit{Speech2Learning}, uma arquitetura detalhada no \autoref{chapter3}, projetada para tornar OAs audíveis mais acessíveis por meio de ASR.
+A realização deste estudo permitiu identificar \textit{gaps} tecnológicos no uso de línguas de sinais no ensino-aprendizagem, destacando a necessidade de novas pesquisas na literatura. De modo complementar ao MS, um levantamento bibliográfico foi conduzido para explorar conceitos e TICs promissoras que possam enfrentar esses desafios. As Seções \ref{section:foundation:arch}, \ref{section:foundation:lo} e \ref{section:foundation:asr} aprofundam as temáticas de Arquiteturas de Software, OAs e ASR. Esses tópicos fornecem a base teórica para a \textit{Speech2Learning}, uma arquitetura detalhada no \autoref{chapter3}, projetada para tornar OAs audíveis mais acessíveis por meio de ASR.
 
 \section{Mapeamento Sistemático: TICs e Línguas de Sinais na Educação}
 \label{section:foundation:sm}
@@ -121,7 +121,7 @@ Tendo em vista a busca automatizada, duas estratégias para identificação de p
     (technology OR technologies)
 \end{codigo}
 
-A \autoref{table:c2:automated-search} resume os resultados da busca automatizada, onde a seleção dos estudos seguiu o mesmo racional apresentado na busca manual. Além disso, a busca automatizada retornou a maioria dos estudos selecionados pela busca manual (QGS), o que sugere uma boa sensibilidade da string de busca. Nesse sentido, \citeonline{Zhang2011} propõem o conceito de \textit{quasi-sensibility}, uma derivação da sensibilidade tradicional que incorpora o QGS como critério de qualidade (\autoref{method:equation:quasi-sensitivity}).
+A \autoref{table:c2:automated-search} resume os resultados da busca automatizada, onde a seleção dos estudos seguiu o mesmo raciocínio apresentado na busca manual. Além disso, a busca automatizada retornou a maioria dos estudos selecionados pela busca manual (QGS), o que sugere uma boa sensibilidade da string de busca. Nesse sentido, \citeonline{Zhang2011} propõem o conceito de \textit{quasi-sensibility}, uma derivação da sensibilidade tradicional que incorpora o QGS como critério de qualidade (\autoref{method:equation:quasi-sensitivity}).
 
 \begin{table}[htb]
 \centering
@@ -184,7 +184,7 @@ Línguas de sinais & Quais línguas de sinais foram encontradas. & QP3 \\ \hline
 \subsection{Resultados e Discussões}
 \label{ms:resultados}
 
-O MS contou com 185 estudos primários selecionados: 46 da busca manual nacional e 139 da busca sistemática baseada em QGS. Lembrando que, as informações mais relevantes para responder cada QP foram obtidas por meio do formulário de extração de dados. Primeiramente, considerando a quantidade de publicações por ano, uma linha de tendência linear crescente foi identificada (\autoref{results:figure:publications-year}). Portanto, é estatisticamente possível que este domínio de pesquisa esteja em ascensão globalmente.
+O MS contou com 185 estudos primários selecionados: 46 da busca manual nacional e 139 da busca sistemática baseada em QGS. Ressalta-se que as informações mais relevantes para responder cada QP foram obtidas por meio do formulário de extração de dados. Primeiramente, considerando a quantidade de publicações por ano, uma linha de tendência linear crescente foi identificada (\autoref{results:figure:publications-year}). Portanto, é estatisticamente possível que este domínio de pesquisa esteja em ascensão globalmente.
 
 
 \begin{figure}[htb]
@@ -389,7 +389,7 @@ Por sua vez, as \textbf{recomendações estruturais} dizem respeito à organiza�
 
 Portanto, uma arquitetura de software bem projetada não só atende aos requisitos funcionais imediatos, mas também oferece uma base sólida que permite a evolução e adaptação contínua do sistema, especialmente em áreas críticas como a educação inclusiva. A flexibilidade da arquitetura é essencial para suportar a evolução contínua das TICs e a adaptação às necessidades dos aprendizes, garantindo que as soluções sejam sustentáveis e capazes de atender às necessidades dos alunos a longo prazo.
 
-Nesse contexto, a arquitetura \textit{Speech2Learning} surge como uma proposta para impulsionar a construção de recursos e serviços de TA. Projetada para integrar soluções de ASR, ela visa facilitar a criação de OAs mais acessíveis a uma ampla gama de aprendizes. Nos próximos capítulos, são explorados em detalhes os conceitos de OAs e ASR, aprofundando o entendimento sobre como essas tecnologias se entrelaçam e formam a base da \textit{Speech2Learning}.
+Nesse contexto, a arquitetura \textit{Speech2Learning} surge como uma proposta para impulsionar a construção de recursos e serviços de TA. Projetada para integrar soluções de ASR, ela visa facilitar a criação de OAs mais acessíveis a uma ampla gama de aprendizes. Nas próximas seções são explorados em detalhes os conceitos de OAs e ASR, aprofundando o entendimento sobre como essas tecnologias se entrelaçam e formam a base da \textit{Speech2Learning}.
 
 \section{Objetos de Aprendizagem: Diversidade em Conteúdos Educacionais}
 \label{section:foundation:lo}
@@ -555,11 +555,11 @@ De acordo com \citeonline{Tarouco2021}, o uso de novas tecnologias é um fator d
 \centering
 \caption{Impacto de Diferentes Estratégias de Interatividade na Aprendizagem}
 \label{figure:chapter2-lo-engagement}
-\includegraphics[width=.96\textwidth]{images/chapter2-lo-engagement.jpg}
+\includegraphics[width=.94\textwidth]{images/chapter2-lo-engagement.jpg}
 \fadaptada{Tarouco2021}
 \end{figure}
 
-Na seção a seguir, discute-se como o reconhecimento de fala pode promover a acessibilidade digital por meio do ASR, abordando intrinsecamente subáreas fundamentais da IAGen, como \sigla{NLP}{Processamento de Linguagem Natural} e \sigla{LLMs}{Grandes Modelos de Linguagem}. Através dessas tecnologias disruptivas, pretende-se potencializar ainda mais o alcance e a qualidade dos OAs nos mais diversos ambientes educacionais.
+A seguir, discute-se como o reconhecimento de fala pode promover a acessibilidade digital por meio do ASR, abordando intrinsecamente subáreas fundamentais da IAGen, como \sigla{NLP}{Processamento de Linguagem Natural} e \sigla{LLMs}{Grandes Modelos de Linguagem}. Através dessas tecnologias disruptivas, pretende-se potencializar ainda mais o alcance e a qualidade dos OAs nos mais diversos ambientes educacionais.
 
 \section{Reconhecimento de Fala: Promovendo Acessibilidade Digital com IA}
 \label{section:foundation:asr}
@@ -590,7 +590,7 @@ O fluxo de processamento de fala em sistemas ASR é ilustrado na \autoref{figure
 \centering
 \caption{Fluxo do Processamento de Fala em Sistemas ASR}
 \label{figure:chapter2-asr-diagram}
-\includegraphics[width=0.95\textwidth]{images/chapter2-asr-diagram.png}
+\includegraphics[width=0.94\textwidth]{images/chapter2-asr-diagram.png}
 \fadaptada{Li2018}
 \end{figure}
 
@@ -630,14 +630,14 @@ Dessa forma, ao reconhecer a importância das novas TICs, especialmente aquelas 
 
 \section{Considerações Finais}
 
-As análises e discussões apresentadas nesta fundamentação teórica permitiram uma compreensão abrangente das interseções entre TICs e línguas de sinais no contexto educacional. O MS realizado, detalhado na \autoref{section:foundation:sm}, revelou importantes lacunas tecnológicas e de pesquisa na utilização de línguas de sinais para o ensino-aprendizagem, destacando áreas onde inovações são necessárias. Nesse sentido, esse estudo sistemático resultou na publicação de uma série de artigos, os quais discutem múltiplas perspectivas:
+As análises e discussões apresentadas nesta fundamentação teórica permitiram uma compreensão abrangente das interseções entre TICs e línguas de sinais no contexto educacional. O MS realizado, detalhado na \autoref{section:foundation:sm}, revelou lacunas tecnológicas e de pesquisa no uso de línguas de sinais na educação, destacando a necessidade de inovações. Esse estudo sistemático resultou na publicação de uma série de artigos, os quais discutem múltiplas perspectivas:
 
 \begin{itemize}
-    \item \fullcite{\textbf{FALVOJR, V.}; MARTINS FALVO, C.; SCATALON, L.; BARBOSA, E.}{Tecnologias Aplicadas ao Ensino e Aprendizagem de LIBRAS: Um Mapeamento Sistemático}{Simpósio Brasileiro de Informática na Educação (SBIE)}{2020}{Disponível em \url{doi.org/10.5753/cbie.sbie.2020.812}}
+    \item \citeonline{FalvoJr2020_SBIE}: \fullcite{FALVOJR, V.; MARTINS FALVO, C.; SCATALON, L.; BARBOSA, E.}{Tecnologias Aplicadas ao Ensino e Aprendizagem de LIBRAS: Um Mapeamento Sistemático}{Simpósio Brasileiro de Informática na Educação (SBIE)}{2020}{Disponível em \url{doi.org/10.5753/cbie.sbie.2020.812}}
 
-    \item \fullcite{\textbf{FALVOJR, V.}; SCATALON, L.; BARBOSA, E.}{The Role of Technology to Teaching and Learning Sign Languages: A Systematic Mapping}{Frontiers in Education Conference (FIE)}{2020}{Disponível em \url{doi.org/10.1109/FIE44824.2020.9274169}}
+    \item \citeonline{FalvoJr2020_FIE}: \fullcite{FALVOJR, V.; SCATALON, L.; BARBOSA, E.}{The Role of Technology to Teaching and Learning Sign Languages: A Systematic Mapping}{Frontiers in Education Conference (FIE)}{2020}{Disponível em \url{doi.org/10.1109/FIE44824.2020.9274169}}
 
-    \item \fullcite{\textbf{FALVOJR, V.}; MARTINS FALVO, C.; SCATALON, L.; BARBOSA, E.}{Tecnologias Aplicadas ao Ensino e Aprendizagem com Línguas de Sinais: Um Mapeamento Sistemático Sob as Perspectivas Nacional e Internacional}{Revista Novas Tecnologias na Educação (RENOTE)}{2021}{Disponível em \url{doi.org/10.22456/1679-1916.110217}}
+    \item \citeonline{FalvoJr2021_RENOTE}: \fullcite{FALVOJR, V.; MARTINS FALVO, C.; SCATALON, L.; BARBOSA, E.}{Tecnologias Aplicadas ao Ensino e Aprendizagem com Línguas de Sinais: Um Mapeamento Sistemático Sob as Perspectivas Nacional e Internacional}{Revista Novas Tecnologias na Educação (RENOTE)}{2021}{Disponível em \url{doi.org/10.22456/1679-1916.110217}}
 \end{itemize}
 
 As lacunas tecnológicas identificadas foram essenciais para orientar a condução de um levantamento bibliográfico adicional, visando identificar e explorar TICs promissoras que pudessem mitigar os desafios identificados e promover uma educação mais inclusiva.
