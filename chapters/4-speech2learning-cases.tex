@@ -11,7 +11,7 @@ Esses estudos foram conduzidos em colaboração com a \textit{EdTech} brasileira
 \section{Estudo de Caso 1: Legendas em Videoaulas}
 \label{c4:cs1}
 
-O primeiro estudo de caso buscou investigar a precisão dos principais serviços de ASR, uma vez que essa tecnologia é central na arquitetura \textit{Speech2Learning}. Na prática, foi utilizado um conjunto de recursos educacionais, disponíveis na plataforma de \textit{e-learning} da DIO, para a construção de uma \sigla{POC}{Prova de Conceito} focada na transcrição e legendagem desses OAs através de serviços de ASR.
+O primeiro estudo de caso buscou investigar a precisão dos principais serviços de ASR, uma vez que essa tecnologia é central na arquitetura \textit{Speech2Learning}. Na prática, foi utilizado um conjunto de recursos educacionais, disponíveis na plataforma de \textit{e-learning} da DIO, para a construção de uma POC focada na transcrição e legendagem desses OAs através de serviços de ASR.
 
 Sendo assim, o objetivo do estudo foi expandir a compreensão sobre o papel das transcrições automáticas no processo de ensino-aprendizagem mais acessível. Para isso, foi discutida a convergência dos resultados quantitativos e qualitativos obtidos a partir de três fontes de evidência, seguindo a premissa da metodologia de triangulação de dados \cite{LimaJunior2021}.
 
@@ -105,13 +105,13 @@ Como dito anteriormente, foi estabelecida uma parceria com a \textit{EdTech} DIO
 
 Como consequência, tanto os dados de similaridade léxica quanto as respostas do \textit{survey} avaliaram o mesmo conjunto de 15 videoaulas: 5 em inglês, 5 em português e 5 em espanhol. Essa abordagem facilitou a obtenção de duas perspectivas quantitativas distintas sobre a qualidade das transcrições automáticas: uma derivada de algoritmos de similaridade léxica e a outra baseada nas percepções dos aprendizes.
 
-Adicionalmente, a metodologia integra um terceiro aspecto de coleta de dados através de uma pesquisa documental focada em ASR/STT, além de aplicar a Teoria Fundamentada \cite{Charmaz2009} para assegurar um processo de análise de conteúdo. Portanto, a pesquisa documental visa fornecer dados qualitativos sobre o fenômeno observado \cite{LimaJunior2021}.
+Adicionalmente, a metodologia incluiu um terceiro aspecto de coleta de dados, por meio de uma pesquisa documental focada em ASR/STT. \textcolor{red}{Para a análise, foram utilizadas técnicas de codificação qualitativa baseadas na codificação inicial (de primeiro nível), com ênfase na codificação aberta, que segue uma abordagem indutiva para identificar e organizar temas emergentes diretamente dos dados \cite{Charmaz2006, Martinelli2023}. Essa estratégia permitiu categorizar e estruturar os dados qualitativos de forma sistemática, fornecendo uma base sólida para análise documental e triangulação com as demais fontes de evidência \cite{LimaJunior2021}. Essa adaptação, embora limitada a um estágio inicial de codificação, foi suficiente para organizar e compreender os dados coletados no contexto desta pesquisa.}
 
 Ao triangular os dados coletados de similaridade léxica, das respostas do \textit{survey} anônimo e da pesquisa documental complementar (\autoref{fig:chap4:triangulation-sources}), pretende-se oferecer uma compreensão abrangente dos desafios e oportunidades associados à utilização de tecnologias ASR para aumentar a acessibilidade de OAs no domínio educacional. 
 
 \begin{figure}[htb]
 \centering
-\includegraphics[width=0.77\textwidth]{images/chapter4-cs1-triangulation-sources.png}
+\includegraphics[width=0.8\textwidth]{images/chapter4-cs1-triangulation-sources.png}
 \caption{Triangulação de Dados: Fontes de Evidência.}
 \label{fig:chap4:triangulation-sources}
 \fdireta{FalvoJr2024_FIE}
@@ -137,7 +137,7 @@ Medir a semelhança entre textos é uma prática amplamente investigada em pesqu
 
 Neste estudo, foram aplicados os três métodos mencionados, destacando sua relevância. Primeiramente, foram geradas e revisadas as transcrições de referência usando a instância da \textit{Speech2Learning}, desenvolvida como uma POC. Em seguida, cada OA foi transcrito automaticamente utilizando diferentes serviços de ASR/STT, permitindo a comparação entre as transcrições de referência e as automáticas. Dessa forma, foram utilizados os métodos de similaridade léxica CS, JI e LD como métricas de precisão.
 
-Para essa finalidade, foram integrados os principais provedores de ASR/STT baseados em IA do mercado \cite{Gartner2023}: Amazon, Google, IBM, Microsoft e OpenAI. Ademais, em colaboração com a \textit{EdTech} DIO, garantiu-se que o \textit{dataset} deste estudo de caso, devidamente revisado e sintetizado no \autoref{quadro:c4:poc-audios-summary}, estivesse disponível com todas as transcrições de referência dos OAs.
+Para essa finalidade, foram integrados os principais provedores de ASR/STT baseados em IA do mercado \cite{Gartner2023}: Amazon, Google, IBM, Microsoft e OpenAI. Ademais, em colaboração com a \textit{EdTech} DIO, garantiu-se que o \textit{dataset} deste estudo de caso, devidamente sintetizado no \autoref{quadro:c4:poc-audios-summary}, estivesse disponível com todas as transcrições de referência dos OAs.
 
 A partir dos áudios do \textit{dataset}, foram integrados os serviços de ASR de cada provedor e geradas suas respectivas transcrições automáticas. Para uma implementação organizada e documentada, utilizou-se o Google Colab, detalhando todo o processo em um primeiro \textit{notebook}\footnote{Colab Notebook - Transcrições Automáticas com ASR/STT: \url{https://bit.ly/S2L-CS1-STTServices}} focado nessas integrações. De forma similar, foram comparadas as 15 transcrições automáticas com as transcrições de referência usando os três métodos de similaridade léxica (CS, JI e LD) em um segundo \textit{notebook}\footnote{Colab Notebook - Algoritmos de Similaridade Léxica: \url{https://bit.ly/S2L-CS1-LexicalAnalysis}}.
 
@@ -153,15 +153,15 @@ Para mitigar possíveis vieses, os provedores foram anonimizados e substituídos
 
 \subsubsection{3ª Fonte de Evidência: Pesquisa Documental}
 
-Para aprofundar a análise dos dados quantitativos, foi realizada uma revisão de literatura que complementa os achados empíricos, identificando estudos relevantes com foco em ASR. Esta revisão oferece uma compreensão mais ampla do potencial e das limitações das tecnologias atuais baseadas em ASR/STT.
+Para complementar a análise dos dados quantitativos, foi realizada uma revisão de literatura que integra achados empíricos e identifica estudos relevantes focados em ASR. Esta revisão contribui para ampliar a compreensão do potencial e das limitações das tecnologias ASR/STT no contexto educacional.
 
-Foi utilizada a \textit{Grounded Theory}, ou \sigla{TFD}{Teoria Fundamentada nos Dados}, como um \textit{framework} orientador para a análise documental. A TFD é uma metodologia sistemática e rigorosa utilizada na pesquisa qualitativa para desenvolver teorias emergentes diretamente dos dados \cite{Charmaz2009}. Diferentemente de abordagens que partem de hipóteses preconcebidas, a TFD permite a descoberta de temas e padrões de maneira indutiva, por meio de um processo iterativo de coleta e análise de dados.
+\textcolor{red}{No planejamento e execução da pesquisa documental, utilizamos técnicas de codificação qualitativa como estratégia central. O processo envolveu a identificação de temas recorrentes e a organização de categorias com base nos dados coletados, alinhando-se a uma abordagem iterativa de análise que prioriza a sistematização e o rigor. Especificamente, foi empregada a codificação aberta, permitindo que os temas emergissem indutivamente dos dados analisados, garantindo maior flexibilidade e alinhamento ao contexto explorado \cite{Martinelli2023}.}
 
-Neste estudo, utilizou-se a TFD para examinar os estudos selecionados na pesquisa documental. Este processo incluiu a codificação aberta dos dados, a identificação de temas recorrentes e a integração desses temas em uma teoria coesa. Assim, garantiu-se que as conclusões fossem baseadas diretamente nas evidências coletadas, sem impor noções preconcebidas.
+\textcolor{red}{A pesquisa documental foi conduzida a partir de uma revisão abrangente de literatura, incluindo artigos acadêmicos, livros e relatórios. Esses materiais foram examinados com o objetivo de mapear padrões, identificar lacunas na pesquisa existente e estabelecer diretrizes teóricas relevantes para tecnologias ASR e STT voltadas à acessibilidade educacional. Nesse sentido, a análise documental seguiu os princípios propostos por \citeonline{LimaJunior2021}, que destacam a importância de um percurso metodológico bem estruturado para garantir a validade e a aplicabilidade dos resultados obtidos.}
 
-A pesquisa documental envolveu uma revisão complementar da literatura, incluindo artigos, livros e relatórios, focando nas tecnologias ASR e STT no contexto da acessibilidade educacional. Através dessa análise, buscou-se identificar temas recorrentes, diretrizes teóricas e lacunas nas pesquisas existentes, contribuindo para uma compreensão mais detalhada do assunto.
+\textcolor{red}{Além disso, a abordagem utilizada para organizar e analisar os dados qualitativos inspira-se nas técnicas de codificação descritas por \citeonline{Martinelli2023}, que enfatizam a importância da categorização como base para a construção de visualizações claras e informativas em pesquisas qualitativas. Essa integração metodológica garantiu uma análise robusta e transparente, alinhada às melhores práticas da literatura.}
 
-Ao integrar \textit{insights} do conjunto de dados de similaridade lexical, das respostas do \textit{survey} e da pesquisa documental, foi possível fornecer uma visão abrangente e multidimensional do papel do ASR e do STT na melhoria da acessibilidade educacional.
+\textcolor{red}{Por meio dessa abordagem, foi possível alinhar os \textit{insights} obtidos a partir dos dados de similaridade lexical, das respostas do \textit{survey} e da pesquisa documental, oferecendo uma visão integrada e multidimensional. Essa triangulação fortaleceu a análise ao explorar as interconexões entre evidências qualitativas e quantitativas, destacando os desafios e oportunidades para a aplicação das tecnologias ASR/STT no aprimoramento da acessibilidade educacional.}
 
 \subsubsection{Triangulação de Dados}
 
@@ -173,13 +173,13 @@ Neste estudo, adotou-se uma abordagem de triangulação que engloba múltiplas f
 
 Na Engenharia de Software, a triangulação contribui significativamente para o rigor e a validade da pesquisa. A integração de vários métodos, como pesquisas quantitativas, entrevistas qualitativas e análise documental, permite aos pesquisadores verificar os resultados por meio de uma análise cruzada e obter uma compreensão ainda mais aprofundada de fenômenos complexos. Esta abordagem é particularmente valiosa na análise da eficácia das práticas de desenvolvimento de software, experiência do usuário e adoção de tecnologias \cite{Runeson2009}.
 
-A \autoref{fig:chapter4-cs1-triangulation-methodology} representa a metodologia de triangulação de dados utilizada neste trabalho de doutorado. O diagrama esboça o objeto de estudo, as três fontes distintas de evidência, suas respectivas técnicas de coleta e o processo de convergência de dados que resulta no corpus de dados. Esta abordagem completa e multifacetada garante uma validação robusta e proporciona uma compreensão profunda de como as tecnologias ASR podem melhorar a acessibilidade educacional.
+A \autoref{fig:chapter4-cs1-triangulation-methodology} representa a metodologia de triangulação de dados utilizada neste trabalho. O diagrama esboça o objeto de estudo, as três fontes distintas de evidência, suas respectivas técnicas de coleta e o processo de convergência de dados que resulta no corpus de dados. Esta abordagem completa e multifacetada garante uma validação robusta e proporciona uma compreensão profunda de como as tecnologias ASR podem melhorar a acessibilidade educacional.
 
 \begin{figure}[htb]
 \centering
 \caption{Metodologia de Triangulação de Dados Utilizada no Estudo de Caso 1.}
 \label{fig:chapter4-cs1-triangulation-methodology}
-\includegraphics[width=0.9\textwidth]{images/chapter4-cs1-triangulation-methodology.png}
+\includegraphics[width=.9\textwidth]{images/chapter4-cs1-triangulation-methodology.png}
 \fdireta{FalvoJr2024_FIE}
 \end{figure}
 
@@ -187,16 +187,16 @@ Para as fontes de evidência quantitativas, similaridade léxica e respostas do 
 
 \begin{itemize}
 \item \textbf{Hipótese Nula ($H^0$)}: Não há diferença estatisticamente significativa na qualidade das transcrições automáticas entre os provedores.
-\item \textbf{Hipótese Alternativa ($H^1$)}: Há uma diferença estatisticamente significativa na qualidade das transcrições automáticas entre os provedores.
+\item \textbf{Hipótese Alternativa 1 ($H^1$)}: Há uma diferença estatisticamente significativa na qualidade das transcrições automáticas entre os provedores.
 \end{itemize}
 
 Em seguida, foi avaliada a qualidade das transcrições automáticas considerando os idiomas Português, Inglês e Espanhol. As hipóteses são delineadas conforme se segue:
 
 \begin{itemize}
 \item \textbf{Hipótese Nula ($H^0$)}: Não há diferença estatisticamente significativa na qualidade das transcrições automáticas para Português, Inglês e Espanhol entre os provedores.
-\item \textbf{Hipótese Alternativa ($H^1$)}: Há uma diferença estatisticamente significativa na qualidade das transcrições automáticas para Português entre os provedores.
-\item \textbf{Hipótese Alternativa ($H^2$)}: Há uma diferença estatisticamente significativa na qualidade das transcrições automáticas para Inglês entre os provedores.
-\item \textbf{Hipótese Alternativa ($H^3$)}: Há uma diferença estatisticamente significativa na qualidade das transcrições automáticas para Espanhol entre os provedores.
+\item \textbf{Hipótese Alternativa 1 ($H^1$)}: Há uma diferença estatisticamente significativa na qualidade das transcrições automáticas para Português entre os provedores.
+\item \textbf{Hipótese Alternativa 2 ($H^2$)}: Há uma diferença estatisticamente significativa na qualidade das transcrições automáticas para Inglês entre os provedores.
+\item \textbf{Hipótese Alternativa 3 ($H^3$)}: Há uma diferença estatisticamente significativa na qualidade das transcrições automáticas para Espanhol entre os provedores.
 \end{itemize}
 
 Para a pesquisa documental, adotou-se uma abordagem qualitativa para investigar de maneira mais ampla e exploratória como as tecnologias de reconhecimento de fala para transcrição automática (ASR e STT) influenciam a acessibilidade dos OAs. \textcolor{red}{Essa análise foi orientada pela seguinte questão de pesquisa, que direcionou a investigação deste estudo de caso:}
@@ -205,7 +205,7 @@ Para a pesquisa documental, adotou-se uma abordagem qualitativa para investigar 
 \textcolor{red}{\textbf{QP do Estudo de Caso 1}: De que maneira as tecnologias de ASR podem contribuir para melhorar a acessibilidade educacional? (\autoref{chapter1:research-questions})}
 \end{citacao}
 
-A combinação de hipóteses quantitativas e uma QP qualitativa permitiu uma triangulação robusta de dados, fornecendo uma visão abrangente e multidimensional do impacto das tecnologias de ASR/STT na acessibilidade educacional. A análise das respostas do \textit{survey}, juntamente com os métodos de similaridade léxica e a pesquisa documental, revelou convergências significativas entre as fontes de evidências, enriquecendo as discussões e fortalecendo a validade do estudo como um todo.
+\textcolor{red}{A combinação de hipóteses quantitativas e uma QP qualitativa permitiu uma triangulação robusta de dados, fornecendo uma visão abrangente e multidimensional do impacto das tecnologias de ASR/STT na acessibilidade educacional. A análise das respostas do \textit{survey}, juntamente com os métodos de similaridade léxica e a pesquisa documental, revelou convergências significativas entre as fontes de evidências, enriquecendo as discussões e fortalecendo a validade do estudo como um todo.}
 
 Para apresentar uma visão formal, porém simplificada, deste primeiro estudo de caso, o \autoref{quadro:c4:cs1-summary} resume suas principais características. Esta síntese foi elaborada seguindo as diretrizes metodológicas e as perspectivas de pesquisa descritas por \citeonline{CastroFilho2021}, garantindo uma abordagem estruturada e coerente com os padrões de pesquisa científica em informática na educação.
 
@@ -496,9 +496,9 @@ O estudo de \citeonline{Ferraro2023} apresenta uma investigação extensa sobre 
 
 \citeonline{Cao2023} abordam as limitações das ferramentas tradicionais de transcrição de áudio em salas de aula ruidosas do mundo real. Sua pesquisa enfatiza o papel crucial de sistemas de aprendizagem inteligentes eficazes em ambientes colaborativos, particularmente na análise e compreensão de conversas entre alunos. Ao explorar a influência dos erros de ASR em modelos de conversação, destacam os desafios e oportunidades para melhorar a precisão do ASR em contextos educacionais.
 
-Com base nas contribuições desses estudos, foram aplicados os princípios da TFD \cite{Charmaz2009} para categorizar e analisar os dados qualitativos coletados na pesquisa. A Teoria Fundamentada fornece uma abordagem sistemática para explorar temas emergentes e enriquecer a compreensão dos fatores que influenciam a qualidade das transcrições automáticas.
+\textcolor{red}{Para organizar e analisar os dados qualitativos coletados, adotou-se uma abordagem sistemática que integra técnicas de codificação qualitativa e princípios metodológicos de revisão documental. A codificação aberta de primeiro nível, conforme descrita por \citeonline{Martinelli2023}, foi aplicada para estruturar a análise, permitindo a identificação e categorização iterativa de temas emergentes a partir dos dados. Complementarmente, os princípios da pesquisa documental apresentados por \citeonline{LimaJunior2021} forneceram orientações claras para a seleção, organização e interpretação dos estudos analisados, garantindo um percurso metodológico consistente e alinhado aos objetivos e ao rigor desta pesquisa.}
 
-Ao integrar os resultados coletados nas fontes de evidência, identificaram-se padrões \textit{insights} sobre o uso de tecnologias ASR e STT na melhoria da acessibilidade de OAs. Para facilitar essa análise, os achados de cada estudo foram categorizados, dentro da TFD, em temas distintos, permitindo uma compreensão ampla das implicações tecnológicas e educacionais das ferramentas ASR e STT. Essas categorias incluem:
+\textcolor{red}{Com base nessa abordagem integrada, foi possível categorizar os estudos em quatro grandes temas, que sintetizam de maneira abrangente as principais contribuições dos trabalhos analisados para o campo das tecnologias ASR/STT:}
 
 \begin{itemize}
 \item \textbf{Avaliação da Qualidade de Transcrição (AQT)}: Avaliação de desempenho e qualidade em soluções baseadas nas tecnologias de ASR e STT para tarefas de transcrição de fala. Esta categoria foca na precisão das transcrições, utilizando métricas como a WER e comparações entre diferentes serviços de STT, sejam eles de código aberto ou pagos.
@@ -510,11 +510,11 @@ Ao integrar os resultados coletados nas fontes de evidência, identificaram-se p
 \item \textbf{Desafios e Oportunidades (DO)}: Identificação de obstáculos e possibilidades para aprimorar a precisão e eficácia do ASR em contextos educacionais. Este tema envolve os desafios na implementação de tecnologias ASR em ambientes ruidosos e colaborativos, buscando soluções para um reconhecimento de fala assertivo mesmo em situações adversas.
 \end{itemize}
 
-No \autoref{quadro:c4:grounded-theory-results}, a categorização de cada estudo dentro da Teoria Fundamentada é apresentada, fornecendo uma visão detalhada dos temas abordados e sua relevância para os objetivos desta pesquisa. Esta análise permite estabelecer conexões críticas entre as diferentes vertentes de investigação, revelando como cada estudo contribui para a compreensão das tecnologias ASR e STT em contextos educacionais.
+No \autoref{quadro:c4:grounded-theory-results}, a categorização de cada estudo é apresentada, fornecendo uma visão detalhada dos temas identificados e sua relevância para os objetivos desta pesquisa. Essa análise permite estabelecer conexões críticas entre as diferentes vertentes de investigação, revelando como cada estudo contribui para a compreensão e aprimoramento das tecnologias ASR e STT em contextos educacionais.
 
 \begin{quadro}
 \centering
-\caption{Categorização dos Artigos usando Teoria Fundamentada}
+\caption{Categorização dos Artigos da Pesquisa Documental}
 \label{quadro:c4:grounded-theory-results} 
 \begin{tabular}{c|p{6.8cm}|p{5.7cm}}\hline
 \textbf{Categoria} & \textbf{Descrição} & \textbf{Estudos} \\ \hline
@@ -525,7 +525,7 @@ No \autoref{quadro:c4:grounded-theory-results}, a categorização de cada estudo
 \end{tabular}
 \end{quadro}
 
-A seguir, será discutida a convergência dos dados provenientes das três fontes de evidência investigadas: métodos de similaridade léxica, respostas do \textit{survey} e pesquisa documental. Ao integrar essas fontes, busca-se uma visão mais robusta sobre o impacto do ASR na acessibilidade dos OAs. Essa abordagem integrada permitirá identificar sinergias e discrepâncias, fornecendo um panorama detalhado e multifacetado dos estados da prática e da arte.
+A seguir, é discutida a convergência dos dados provenientes das três fontes de evidência investigadas: métodos de similaridade léxica, respostas do \textit{survey} e \textit{papers} da análise documental. Ao integrar essas fontes, busca-se uma visão mais robusta sobre o impacto do ASR na acessibilidade dos OAs. Essa abordagem integrada permitirá identificar sinergias e discrepâncias, fornecendo um panorama detalhado e multifacetado dos estados da prática e da arte.
 
 \subsubsection{Convergência de Dados}
 
@@ -545,7 +545,7 @@ A integração desses três conjuntos de dados (métodos de similaridade léxica
 
 \item \textbf{Similaridade Léxica vs. Percepções dos Usuários}: Os dados de similaridade léxica revelaram que diferentes provedores de ASR apresentam diferenças estatisticamente significativas na precisão das transcrições. Notavelmente, a OpenAI demonstrou um desempenho superior (geral e por idioma) quando comparada a outros provedores de peso como Google e IBM. No entanto, os resultados do \textit{survey}, que também focaram em avaliações quantitativas, mas usando escala Likert, indicam que a satisfação do usuário é influenciada por mais do que apenas a precisão léxica. Embora a OpenAI também tenha alcançado a maior satisfação entre os participantes, as diferenças estatísticas nas respostas do \textit{survey} sugerem que as percepções dos usuários são influenciadas por fatores como compreensão do contexto e tolerância a erros, que não são totalmente capturados pelas métricas de similaridade léxica.
 
-\item \textbf{\textit{Insights} Qualitativos da Pesquisa Documental}: A integração da TFD \cite{Charmaz2009} na análise documental permitiu uma compreensão mais profunda dos temas que afetam a qualidade das transcrições automáticas. Estudos relevantes, como os de \citeonline{Ferraro2023, Alshaikh2024}, destacam a importância de considerar a diversidade de dados e os ambientes de aprendizagem ao avaliar tecnologias de ASR/STT. Esses achados sugerem que a eficácia educacional das aplicações de reconhecimento de fala vai além da mera precisão da transcrição, abrangendo também a facilidade de integração, as capacidades de personalização e a adaptabilidade da tecnologia às necessidades educacionais diversificadas.
+\item \textbf{\textit{Insights} Qualitativos da Pesquisa Documental}: A análise documental, \textcolor{red}{embasada nos princípios metodológicos de \citeonline{LimaJunior2021} e enriquecida pelas técnicas de codificação qualitativa descritas por \citeonline{Martinelli2023}, proporcionou} uma compreensão mais aprofundada dos temas que afetam a qualidade das transcrições automáticas. Estudos relevantes, como os de \citeonline{Ferraro2023, Alshaikh2024}, destacam a importância de considerar a diversidade dos dados e os contextos de aprendizagem ao avaliar tecnologias de ASR/STT. Esses achados indicam que a eficácia educacional das aplicações de reconhecimento de fala vai além da mera precisão da transcrição, incluindo aspectos como facilidade de integração, capacidades de personalização e adaptabilidade às diversas necessidades educacionais.
 
 \item \textbf{Contexto Educacional e Acessibilidade/Inclusão}: Os dados triangulados destacam a necessidade de que as tecnologias de ASR/STT se alinhem aos princípios de acessibilidade e inclusividade. As discrepâncias entre a precisão mecânica das transcrições e a satisfação qualitativa dos usuários apontam para uma lacuna nas capacidades atuais do reconhecimento de fala. Essa lacuna indica a necessidade dos provedores inovarem além das métricas tradicionais de precisão e incorporarem \textit{feedbacks} dos usuários no desenvolvimento de soluções de transcrição mais conscientes do contexto e inclusivas.
 
@@ -636,7 +636,7 @@ Adotou-se uma metodologia de análise mista, integrando dados quantitativos e qu
 
 Complementando o \textit{survey}, cada intérprete teve a oportunidade de agendar uma entrevista, contribuindo com dados qualitativos que enriqueceram a análise. Essas entrevistas foram planejadas para explorar de modo mais aprofundado as percepções e experiências dos intérpretes com o uso do \textit{player} de vídeo e os avatares de Libras. A coleta de dados seguiu um protocolo semi-estruturado, garantindo que todas as áreas relevantes fossem abordadas.
 
-A análise dos dados qualitativos foi realizada utilizando a TFD \cite{Charmaz2009}, uma metodologia que permite o desenvolvimento de teorias emergentes diretamente dos dados coletados. Este processo envolveu a codificação aberta, identificando e categorizando os principais temas nas respostas dos intérpretes de Libras. Com isso, foi possível assegurar que os temas emergissem naturalmente dos dados, proporcionando uma compreensão aprofundada das percepções e experiências dos participantes, sem preconceitos prévios.
+\textcolor{red}{A análise dos dados qualitativos foi realizada utilizando a codificação aberta de primeiro nível, conforme descrito por \citeonline{Martinelli2023} e proposto por \citeonline{Charmaz2006}, permitindo identificar e categorizar os principais temas nas respostas dos intérpretes de Libras. Essa abordagem, também aplicada no primeiro estudo de caso, prioriza a identificação de temas emergentes diretamente dos dados, assegurando flexibilidade e rigor analítico. No entanto, diferentemente do primeiro estudo de caso, que incluiu uma análise documental, aqui o foco recai exclusivamente nas entrevistas, garantindo uma abordagem específica para o contexto investigado.}
 
 Com o objetivo de ampliar a acessibilidade de conteúdos educacionais para alunos surdos, este estudo investigou a eficácia de um \textit{player} de vídeo acessível, integrado a avatares de Libras baseados em texto, como uma segunda instância da arquitetura \textit{Speech2Learning}. Especificamente, buscou-se:
 
@@ -679,13 +679,9 @@ A análise dos dados, com base nos dois participantes revelou \textit{insights} 
 
 Os dados quantitativos sugerem que tanto o \textit{VLibras} quanto o \textit{Hand Talk} apresentaram limitações significativas na sinalização, com ambos os avatares recebendo avaliações que destacam a presença de erros capazes de comprometer a compreensão completa dos OAs. Esses resultados, embora limitados em escopo, fornecem um plano de fundo importante para a análise dos dados qualitativos, que ofereceram \textit{insights} adicionais sobre os obstáculos e potencialidades no uso dessas ferramentas.
 
-Por sua vez, a análise qualitativa foi conduzida com base na TFD e revelou temas centrais relacionados ao uso dos avatares de Libras. O roteiro completo das entrevistas com os intérpretes está disponível no \autoref{appendix:libras-interview}, assegurando transparência no processo de coleta de dados e permitindo a replicação dos métodos. Durante as entrevistas, o avatar \textit{VLibras} foi utilizado como a principal ferramenta de sinalização, priorizado em detrimento ao \textit{Hand Talk} devido a fatores como sua gratuidade, natureza \textit{open-source} e o suporte contínuo do governo brasileiro. %Além disso, o \textit{VLibras} oferece configurações avançadas de regionalidade e tem recebido atualizações frequentes nos últimos anos, tornando-o uma escolha adequada para este estudo.
+\textcolor{red}{Por sua vez, a análise qualitativa foi conduzida utilizando codificação de primeiro nível, permitindo identificar temas centrais a partir das entrevistas. O roteiro completo das entrevistas com os intérpretes está disponível no \autoref{appendix:libras-interview}, assegurando transparência no processo de coleta de dados e facilitando a replicação dos métodos. Durante as entrevistas, o avatar \textit{VLibras} foi utilizado como um recurso de TA para sinalização em Libras, priorizado em relação ao \textit{Hand Talk} devido a fatores como sua gratuidade, natureza \textit{open-source} e o suporte contínuo do governo brasileiro.}
 
-%Embora os resultados das entrevistas ainda estejam sendo conduzidas, a integração dos dados qualitativos e quantitativos fornecerá uma visão mais abrangente e detalhada dos impactos e desafios na adoção dessas tecnologias. O roteiro completo para as entrevistas com os intérpretes está disponível no \autoref{appendix:libras-interview}, assegurando transparência no processo de coleta de dados e permitindo a reprodutibilidade dos métodos.
-
-%Na prática, tendo em vista o nosso planejamento e previsão financeira, utilizamos apenas o \textit{VLibras} como avatar de Libras. Ele foi priorizado em detrimento ao \textit{Hand Talk} por ser gratuito, \textit{open-source} e mantido pelo governo brasileiro. Além disso, possui configurações avançadas relacionadas à regionalidade e, nos últimos anos, voltou a ser atualizado com frequência.
-
-As entrevistas foram transcritas e submetidas a um processo de codificação aberta, axial e seletiva \cite{Charmaz2009}. Durante a codificação aberta, segmentos de texto foram categorizados em conceitos iniciais. Em seguida, na codificação axial, esses conceitos foram organizados em categorias mais amplas, que estabelecem relações entre os diferentes conceitos identificados. Finalmente, a codificação seletiva sintetizou essas categorias em um tema central que reflete a percepção geral dos intérpretes sobre o \textit{player} de vídeo.
+\textcolor{red}{As entrevistas foram transcritas e analisadas por meio de um processo de codificação aberta, conforme descrito por \citeonline{Martinelli2023}. Durante essa etapa, segmentos de texto foram organizados em conceitos iniciais, que posteriormente foram agrupados em categorias para estabelecer conexões significativas entre os dados. Essa abordagem sistemática permitiu sintetizar os resultados em temas centrais, refletindo as percepções gerais dos intérpretes sobre o \textit{player} de vídeo e destacando tanto os desafios quanto os benefícios identificados.}
 
 Os intérpretes de Libras reconheceram que as transcrições automáticas utilizadas pelo \textit{player} de vídeo apresentaram um alto nível de precisão, um fator já validado no primeiro estudo de caso desta pesquisa. No entanto, a integração dessas transcrições com avatares de Libras revelou desafios significativos. A principal dificuldade mencionada pelos intérpretes está na incapacidade dos avatares de incluir o contexto apropriado em suas sinalizações, o que pode comprometer a transferência de conhecimento. A Libras, como uma língua visual-espacial, depende fortemente do contexto para a correta interpretação dos sinais \cite{Quadros2017, Quadros2019, Honora2021}. Quando este contexto não é adequadamente sinalizado pelo avatar, a mensagem pode se tornar incoerente ou incompleta, prejudicando o entendimento do conteúdo.
 
@@ -693,15 +689,15 @@ Outro ponto levantado pelos intérpretes refere-se às barreiras sociais enfrent
 
 Por outro lado, os intérpretes também destacaram o potencial das novas tecnologias de IA para transformar o campo da acessibilidade. Modelos de IA estão sendo treinados especificamente em Libras, o que promete inaugurar uma nova era de acessibilidade para a comunidade surda. Um exemplo citado nas entrevistas foi a iniciativa da Lenovo, que desenvolveu uma solução de tradução em tempo real para a Libras impulsionada por IA, mostrando resultados promissores \cite{Lenovo2023}. Esses avanços tecnológicos são vistos como oportunidades para superar as limitações atuais dos avatares de Libras e oferecer soluções mais eficazes e inclusivas no futuro.
 
-A análise das entrevistas indica que, embora o \textit{player} de vídeo desenvolvido como uma instância da arquitetura \textit{Speech2Learning} seja um passo significativo, há áreas críticas que precisam de melhorias. A principal delas é a integração de avatares de Libras que possam incluir o contexto necessário para uma comunicação assertiva. Além disso, as barreiras sociais e linguísticas enfrentadas por muitos surdos devem ser levadas em consideração no desenvolvimento de futuras soluções. O surgimento de soluções baseadas em IA, como os modelos mencionados pelos intérpretes, deve ser explorada para criar soluções que ofereçam uma tradução mais precisa e culturalmente adequada. O \autoref{quadro:c4:cs2-grounded-theory} sumariza as categorias e temas identificados na análise das entrevistas, utilizando a técnica da TFD.
+\textcolor{red}{A análise das entrevistas indica que, embora o \textit{player} de vídeo desenvolvido como uma instância da arquitetura \textit{Speech2Learning} represente um avanço significativo, ainda existem áreas críticas que demandam melhorias. A principal delas é a integração de avatares de Libras capazes de incluir o contexto necessário para uma comunicação eficaz. Além disso, as barreiras sociais e linguísticas enfrentadas por muitos surdos precisam ser devidamente consideradas em reflexões sobre trabalhos futuros. O surgimento de soluções baseadas em IA, como os modelos mencionados pelos intérpretes, apresenta um potencial promissor para criar ferramentas que proporcionem traduções mais precisas e culturalmente adequadas. O \autoref{quadro:c4:cs2-grounded-theory} sumariza as categorias identificados na análise das entrevistas, elaborada com base na técnica de codificação aberta de primeiro nível \cite{Martinelli2023}.}
 
 \begin{quadro}[htb]
 \centering
 \caption{Categorias e Temas Identificados na Análise das Entrevistas}
 \label{quadro:c4:cs2-grounded-theory}
-\begin{tabular}{l|p{10cm}}
+\begin{tabular}{c|p{10cm}}
 \hline
-\textbf{Categoria/Tema}              & \textbf{Descrição}                                                                 \\ \hline
+\textbf{Categoria}              & \textbf{Descrição}                                                                 \\ \hline
 \textbf{Acessibilidade}         & Avaliação sobre como o \textit{player} facilita o acesso à informação para usuários surdos.  \\ \hline
 \textbf{Qualidade Linguística}  & Percepção sobre a exatidão e clareza das transcrições automáticas.                 \\ \hline
 \textbf{Experiência do Usuário} & Comentários sobre a interface e facilidade de uso do \textit{player}.                                \\ \hline
